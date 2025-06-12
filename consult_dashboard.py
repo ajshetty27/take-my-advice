@@ -1,6 +1,16 @@
 # consult_dashboard.py
 
 import streamlit as st
+
+# DEBUG: dump out your secrets (mask the private_key so we don’t log it all)
+if "gcp_service_account" in st.secrets:
+    acct = dict(st.secrets["gcp_service_account"])
+    acct["private_key"] = "<hidden>"
+    st.sidebar.write("✅ Loaded gcp_service_account:", acct)
+else:
+    st.sidebar.error("❌ No gcp_service_account found in st.secrets!")
+
+    
 import gspread
 from google.oauth2.service_account import Credentials
 from datetime import datetime
@@ -24,14 +34,8 @@ creds = Credentials.from_service_account_info(creds_info, scopes=scopes)
 gc = gspread.authorize(creds)
 ws = gc.open_by_key(SHEET_ID).worksheet(WS_NAME)
 
-# DEBUG: dump out your secrets (mask the private_key so we don’t log it all)
-if "gcp_service_account" in st.secrets:
-    acct = dict(st.secrets["gcp_service_account"])
-    acct["private_key"] = "<hidden>"
-    st.sidebar.write("✅ Loaded gcp_service_account:", acct)
-else:
-    st.sidebar.error("❌ No gcp_service_account found in st.secrets!")
-    
+
+
 # --- ENSURE HEADER ROW EXISTS ---
 HEADERS = [
     # — your original form fields —
