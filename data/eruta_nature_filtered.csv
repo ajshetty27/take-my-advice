@@ -1,0 +1,40 @@
+Type,Menu,Menu group,"Item, open item",Size modifier,"Modifiers, special requests",Sales Category,Item tags,isDeferred,Qty sold,Avg. price,Avg. item price (not incl. mods),Gross sales,Discount amount,Refund amount,Void amount,Net sales,Tax,Waste count,Waste amount
+,Eruta Nature,,,,,,,,9260.0,7.08,,65592.88,1220.64,0.0,478.45,64372.24,6156.69,0.0,0.0
+,Eruta Nature,The Basics,,,,,,,4059.0,5.85,,23745.75,453.4,0.0,111.0,23292.35,2225.89,0.0,0.0
+menuItem,Eruta Nature,The Basics,Latte,,,NA Beverage,[],False,1553.0,5.83,5.02,9050.25,297.59,0.0,49.0,8752.66,837.89,0.0,0.0
+menuItem,Eruta Nature,The Basics,Machiatto,,,NA Beverage,[],False,2.0,5.25,5.0,10.5,0.0,0.0,0.0,10.5,1.0,0.0,0.0
+menuItem,Eruta Nature,The Basics,Americano,,,NA Beverage,[],False,210.0,4.62,4.51,970.25,0.45,0.0,23.0,969.8,93.03,0.0,0.0
+menuItem,Eruta Nature,The Basics,Doppio,,,NA Beverage,[],False,81.0,3.6,3.5,291.5,29.51,0.0,3.5,261.99,24.99,0.0,0.0
+menuItem,Eruta Nature,The Basics,Chai,,,NA Beverage,[],False,164.0,6.73,6.0,1103.25,4.3,0.0,0.0,1098.95,104.23,0.0,0.0
+menuItem,Eruta Nature,The Basics,Matcha,,,NA Beverage,[],False,1334.0,6.28,5.53,8376.0,43.13,0.0,30.5,8332.87,793.97,0.0,0.0
+menuItem,Eruta Nature,The Basics,Iced Shaken Espresso,,,NA Beverage,[],False,248.0,5.02,4.5,1244.25,49.25,0.0,5.0,1195.0,114.94,0.0,0.0
+menuItem,Eruta Nature,The Basics,Cold Brew,,,NA Beverage,[],False,275.0,5.87,5.51,1615.5,12.75,0.0,0.0,1602.75,153.44,0.0,0.0
+menuItem,Eruta Nature,The Basics,Mocha,,,NA Beverage,[],False,144.0,5.82,5.53,837.75,16.42,0.0,0.0,821.33,78.6,0.0,0.0
+menuItem,Eruta Nature,The Basics,Cappuccino,,,NA Beverage,[],False,48.0,5.14,5.0,246.5,0.0,0.0,0.0,246.5,23.8,0.0,0.0
+,Eruta Nature,Specialties,,,,,,,1939.0,6.72,,13029.25,92.45,0.0,73.75,12936.8,1238.18,0.0,0.0
+menuItem,Eruta Nature,Specialties,S'mores,,,NA Beverage,[],False,144.0,6.73,6.51,968.75,2.6,0.0,0.0,966.15,92.45,0.0,0.0
+menuItem,Eruta Nature,Specialties,Snickerdoodle,,,NA Beverage,[],False,629.0,6.74,6.51,4242.5,33.24,0.0,13.0,4209.26,403.48,0.0,0.0
+menuItem,Eruta Nature,Specialties,Eclipse,,,NA Beverage,[],False,265.0,6.72,6.5,1781.5,7.25,0.0,6.5,1774.25,169.91,0.0,0.0
+menuItem,Eruta Nature,Specialties,Mocha Hazelnut,,,NA Beverage,[],False,304.0,6.74,6.5,2047.75,25.99,0.0,19.5,2021.76,193.26,0.0,0.0
+menuItem,Eruta Nature,Specialties,Cookie Monster,,,NA Beverage,[],False,140.0,6.7,6.5,938.5,6.87,0.0,0.0,931.63,89.38,0.0,0.0
+menuItem,Eruta Nature,Specialties,Strawberry Peep,,,NA Beverage,[],False,126.0,6.74,6.5,849.75,3.25,0.0,21.0,846.5,80.67,0.0,0.0
+menuItem,Eruta Nature,Specialties,4 Leaf Clover,,,NA Beverage,[],False,117.0,6.41,6.0,750.0,6.75,0.0,0.0,743.25,70.93,0.0,0.0
+menuItem,Eruta Nature,Specialties,The Theta,,,NA Beverage,[],False,20.0,7.03,6.5,140.5,0.0,0.0,0.0,140.5,13.38,0.0,0.0
+menuItem,Eruta Nature,Specialties,Lucky Irish,,,NA Beverage,[],False,62.0,6.67,6.52,413.5,0.0,0.0,6.5,413.5,39.68,0.0,0.0
+menuItem,Eruta Nature,Specialties,Theta Regulars,,,NA Beverage,[],False,63.0,6.61,6.51,416.25,6.5,0.0,7.25,409.75,39.31,0.0,0.0
+menuItem,Eruta Nature,Specialties,Pumpkin Pie,,,NA Beverage,[],False,44.0,6.95,6.5,305.75,0.0,0.0,0.0,305.75,29.12,0.0,0.0
+menuItem,Eruta Nature,Specialties,Praline,,,NA Beverage,[],False,1.0,6.5,6.5,6.5,0.0,0.0,0.0,6.5,0.62,0.0,0.0
+menuItem,Eruta Nature,Specialties,Conquest,,,NA Beverage,[],False,24.0,7.0,6.5,168.0,0.0,0.0,0.0,168.0,15.99,0.0,0.0
+,Eruta Nature,Kitchen,,,,,,,1918.0,8.78,,16844.55,646.42,0.0,90.95,16198.13,1546.1,0.0,0.0
+menuItem,Eruta Nature,Kitchen,Not So Aburrito,,,Food,[],False,417.0,10.15,10.0,4230.5,142.5,0.0,10.0,4088.0,390.78,0.0,0.0
+menuItem,Eruta Nature,Kitchen,Kodiak Catch,,,Food,[],False,205.0,12.0,12.0,2460.0,56.4,0.0,36.0,2403.6,229.9,0.0,0.0
+menuItem,Eruta Nature,Kitchen,Mr. Can't Go wrong,,,Food,[],False,166.0,10.05,10.02,1667.5,15.0,0.0,0.0,1652.5,158.29,0.0,0.0
+menuItem,Eruta Nature,Kitchen,El Toro Rojo,,,Food,[],False,470.0,11.01,10.99,5174.0,299.2,0.0,11.0,4874.8,463.54,0.0,0.0
+menuItem,Eruta Nature,Kitchen,Berry  Best Bagel,,,Food,[],False,20.0,9.0,9.0,180.0,0.0,0.0,9.0,180.0,17.2,0.0,0.0
+menuItem,Eruta Nature,Kitchen,Pastrami Mami,,,Food,[],False,24.0,11.5,11.5,276.0,23.0,0.0,0.0,253.0,24.17,0.0,0.0
+menuItem,Eruta Nature,Kitchen,BBLT,,,Food,[],False,37.0,11.65,11.5,431.0,28.75,0.0,0.0,402.25,38.53,0.0,0.0
+menuItem,Eruta Nature,Kitchen,Assortment Of Danish,,,Food,[],False,56.0,3.82,3.82,213.8,7.2,0.0,3.95,206.6,19.73,0.0,0.0
+menuItem,Eruta Nature,Kitchen,Bagel,,,Food,[],False,473.0,4.05,0.17,1916.75,56.87,0.0,21.0,1859.88,177.59,0.0,0.0
+menuItem,Eruta Nature,Kitchen,Bagel & Shmear,,,Food,[],False,50.0,5.9,5.0,295.0,17.5,0.0,0.0,277.5,26.37,0.0,0.0
+,Eruta Nature,Bagel Combo,,,,,,,1344.0,8.91,,11973.33,28.37,0.0,202.75,11944.96,1146.52,0.0,0.0
+menuItem,Eruta Nature,Bagel Combo,Bagel Combo,,,Food,[],False,1344.0,8.91,8.06,11973.33,28.37,0.0,202.75,11944.96,1146.52,0.0,0.0
