@@ -10,7 +10,7 @@ if "gcp_service_account" in st.secrets:
 else:
     st.sidebar.error("❌ No gcp_service_account found in st.secrets!")
 
-    
+
 import gspread
 from google.oauth2.service_account import Credentials
 from datetime import datetime
@@ -28,7 +28,7 @@ from models.deep_dive_model import run_deep_dive
 SHEET_ID = "12Qvpi5jOdtWRaa1aL6yglCAJ5tFphW1fHsF8apTlEV4"
 WS_NAME  = "Data"
 
-creds_info = st.secrets["gcp_service_account"]
+creds_info = json.loads(st.secrets["gcp_json"]["raw"])
 scopes = ["https://www.googleapis.com/auth/spreadsheets"]
 creds = Credentials.from_service_account_info(creds_info, scopes=scopes)
 gc = gspread.authorize(creds)
