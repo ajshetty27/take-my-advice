@@ -1,6 +1,6 @@
 # consult_dashboard.py
 
-import streamlit as st
+import json, streamlit as st
 
 # DEBUG: dump out your secrets (mask the private_key so we don’t log it all)
 if "gcp_service_account" in st.secrets:
