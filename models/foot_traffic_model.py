@@ -12,9 +12,24 @@ SHEET_ID = "12Qvpi5jOdtWRaa1aL6yglCAJ5tFphW1fHsF8apTlEV4"
 WS_NAME = "Data"
 AUTH_SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
-creds_info = st.secrets["gcp"]
+# Load your raw secret
+info = st.secrets["gcp"].copy()
+
+# Re-build a perfectly chunked PEM:
+raw = info["private_key"].strip().splitlines()
+# strip off any leading/trailing blank lines
+b64 = "".join(raw[1:-1])              # join all base64 lines into one long string
+pem = (
+    "-----BEGIN PRIVATE KEY-----\n"
+    + "\n".join(textwrap.wrap(b64, 64))
+    + "\n-----END PRIVATE KEY-----\n"
+)
+info["private_key"] = pem
+
+# Now pass the normalized info to Google
 scopes = ["https://www.googleapis.com/auth/spreadsheets"]
-creds = Credentials.from_service_account_info(creds_info, scopes=scopes)
+creds = Credentials.from_service_account_info(info, scopes=scopes)
+
 gc = gspread.authorize(creds)
 ws = gc.open_by_key(SHEET_ID).worksheet(WS_NAME)
 
