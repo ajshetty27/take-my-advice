@@ -2,7 +2,7 @@
 import json
 import streamlit as st
 
-raw = st.secrets["gcp_json"]
+raw = st.secrets["gcp"]
 # Show the problem snippet
 loc = 172  # from the JSONDecodeError: char 172
 snippet = raw[max(0, loc-10):loc+10]
