@@ -1,5 +1,6 @@
 # consult_dashboard.py
 import json
+import os
 import streamlit as st
 import re
 import textwrap
