@@ -7,6 +7,8 @@ import os
 # Initialize the OpenAI client with your API key from Streamlit secrets
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
+client = OpenAI(OPENAI_API_KEY)
+
 def run_deep_dive(context: dict, queries: list[str]) -> dict:
     """
     For each query, construct a prompt that includes:
