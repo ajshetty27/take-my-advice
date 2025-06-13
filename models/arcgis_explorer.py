@@ -10,8 +10,8 @@ DEMOGRAPHICS_URL = "https://geoenrich.arcgis.com/arcgis/rest/services/World/geoe
 TOKEN_URL        = "https://www.arcgis.com/sharing/rest/generateToken"
 OVERPASS_URL     = "https://overpass-api.de/api/interpreter"
 
-USERNAME = st.secrets["arcgis_username"]
-PASSWORD = st.secrets["arcgis_password"]
+USERNAME = os.getenv("ARCGIS_USERNAME")
+PASSWORD = os.getenv("ARCGIS_PASSWORD")
 if not USERNAME or not PASSWORD:
     st.error("ArcGIS credentials missing.")
     st.stop()

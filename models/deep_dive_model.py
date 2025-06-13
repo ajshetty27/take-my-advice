@@ -4,7 +4,7 @@ import streamlit as st
 from openai import OpenAI
 
 # Initialize the OpenAI client with your API key from Streamlit secrets
-client = OpenAI(api_key=st.secrets["openai_api_key"])
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 def run_deep_dive(context: dict, queries: list[str]) -> dict:
     """

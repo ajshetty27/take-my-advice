@@ -1,7 +1,7 @@
 # consult_dashboard.py
 import json
 import streamlit as st
-import re 
+import re
 import textwrap
 import gspread
 from google.oauth2.service_account import Credentials
@@ -20,33 +20,12 @@ SHEET_ID    = "12Qvpi5jOdtWRaa1aL6yglCAJ5tFphW1fHsF8apTlEV4"
 WS_NAME     = "Data"
 AUTH_SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
-# 1) Pull the raw secret dict
-info = dict(st.secrets["gcp"])
-
-# 2) Grab the private_key blob and kill ALL nulls
-raw = info["private_key"]
-clean = raw.replace("\r", "").replace("\x00", "")
-
-# 3) Extract just the Base64 payload
-lines = clean.strip().splitlines()
-b64    = "".join(lines[1:-1])
-
-# 4) Strip *any* characters that aren’t A–Z, a–z, 0–9, +, /, or =:
-b64 = re.sub(r"[^A-Za-z0-9+/=]", "", b64)
-
-# 5) Re-wrap exactly at 64 chars/line
-wrapped = textwrap.wrap(b64, 64)
-pem     = (
-    "-----BEGIN PRIVATE KEY-----\n"
-    + "\n".join(wrapped)
-    + "\n-----END PRIVATE KEY-----\n"
+GCP_SA_JSON = os.getenv("GCP_SA_JSON")
+service_account_info = json.loads(GCP_SA_JSON)
+creds = Credentials.from_service_account_info(
+    service_account_info,
+    scopes=["https://www.googleapis.com/auth/spreadsheets"],
 )
-
-# 6) Put it back into the creds dict
-info["private_key"] = pem
-
-# 5. Create creds & open sheet
-creds = Credentials.from_service_account_info(info, scopes=AUTH_SCOPES)
 gc    = gspread.authorize(creds)
 ws    = gc.open_by_key(SHEET_ID).worksheet(WS_NAME)
 
