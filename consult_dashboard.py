@@ -1,6 +1,7 @@
 # consult_dashboard.py
 import json
 import streamlit as st
+import re 
 import textwrap
 import gspread
 from google.oauth2.service_account import Credentials
