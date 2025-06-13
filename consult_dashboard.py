@@ -2,13 +2,14 @@
 
 import json, streamlit as st
 
-# DEBUG: dump out your secrets (mask the private_key so we don’t log it all)
-if "gcp_service_account" in st.secrets:
-    acct = dict(st.secrets["gcp_service_account"])
-    acct["private_key"] = "<hidden>"
-    st.sidebar.write("✅ Loaded gcp_service_account:", acct)
+if st.secrets:
+    st.sidebar.write("🔑 Available secret tables:", list(st.secrets.keys()))
+    if "gcp_json" in st.secrets:
+        st.sidebar.success("✅ gcp_json loaded")
+    else:
+        st.sidebar.error("❌ gcp_json missing!")
 else:
-    st.sidebar.error("❌ No gcp_service_account found in st.secrets!")
+    st.sidebar.error("❌ No secrets at all!")
 
 
 import gspread
