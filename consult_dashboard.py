@@ -16,6 +16,7 @@ from models.deep_dive_model import run_deep_dive
 # --- GOOGLE SHEETS SETUP ---
 SHEET_ID = "12Qvpi5jOdtWRaa1aL6yglCAJ5tFphW1fHsF8apTlEV4"
 WS_NAME  = "Data"
+AUTH_SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
 # Load the JSON string from your secrets
 creds_info = json.loads(st.secrets["gcp_json"])
