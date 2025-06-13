@@ -14,23 +14,30 @@ SHEET_ID    = "12Qvpi5jOdtWRaa1aL6yglCAJ5tFphW1fHsF8apTlEV4"
 WS_NAME     = "Data"
 AUTH_SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
-# 1) grab your JSON dict
+# 1) Pull your dict straight from st.secrets
 info = dict(st.secrets["gcp"])
 
-# 2) sanitize & collapse the raw key
+# 2) Collapse & sanitize the raw PEM
 raw = info["private_key"]
-# remove carriage‐returns and any NULs
+# remove any carriage‐returns or hidden NULs
 clean = raw.replace("\r", "").replace("\x00", "")
 
-# split out the header/body/footer
+# 3) Extract the inner base64 lines
 lines = clean.strip().splitlines()
-b64   = "".join(lines[1:-1])               # everything between BEGIN/END
+b64   = "".join(lines[1:-1])
 
-# 3) wrap exactly 64 chars per line:
+# 4) *** Strip any leftover padding or null chars at ends ***
+b64 = b64.rstrip("\x00").rstrip("=") + "="  # ensure exactly one '=' if needed
+
+# 5) Re‐wrap at exactly 64 chars per line
 wrapped = textwrap.wrap(b64, 64)
-pem     = "-----BEGIN PRIVATE KEY-----\n" + "\n".join(wrapped) + "\n-----END PRIVATE KEY-----\n"
+pem     = (
+    "-----BEGIN PRIVATE KEY-----\n"
+    + "\n".join(wrapped)
+    + "\n-----END PRIVATE KEY-----\n"
+)
 
-# 4) shove it back into your dict
+# 6) Put it back into your creds dict
 info["private_key"] = pem
 
 # 5. Create creds & open sheet
