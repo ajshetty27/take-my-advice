@@ -1,15 +1,6 @@
 # consult_dashboard.py
 import json
 import streamlit as st
-
-raw = st.secrets["gcp"]
-# Show the problem snippet
-loc = 172  # from the JSONDecodeError: char 172
-snippet = raw[max(0, loc-10):loc+10]
-st.write("Around error:", repr(snippet))
-ch = raw[loc]
-st.write(f"Char at {loc!r}: repr={repr(ch)}, ord={ord(ch)}")
-
 import gspread
 from google.oauth2.service_account import Credentials
 from datetime import datetime
