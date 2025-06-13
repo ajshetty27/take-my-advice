@@ -1,4 +1,4 @@
-import json, streamlit as st
+import streamlit as st
 import textwrap
 import gspread
 from google.oauth2.service_account import Credentials
@@ -13,29 +13,11 @@ SHEET_ID    = "12Qvpi5jOdtWRaa1aL6yglCAJ5tFphW1fHsF8apTlEV4"
 WS_NAME     = "Data"
 AUTH_SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
-# DEBUG: show what secrets you actually have
-st.write("Available secrets:", list(st.secrets.keys()))
-st.write("st.secrets contents:", st.secrets)
-
-# Coerce into a real dict
-info = dict(st.secrets["gcp"])
-
-# Re-wrap the PEM perfectly at 64 chars/line
-raw = info["private_key"].strip().splitlines()
-b64 = "".join(raw[1:-1])
-pem = (
-    "-----BEGIN PRIVATE KEY-----\n"
-    + "\n".join(textwrap.wrap(b64, 64))
-    + "\n-----END PRIVATE KEY-----\n"
-)
-info["private_key"] = pem
-
-# --- DEBUG: show normalized PEM lines ---
-for i, line in enumerate(pem.splitlines(), start=1):
-    st.write(f"Normalized PEM Line {i}: {len(line)} chars")
+# Load the JSON string from your secrets
+creds_info = json.loads(st.secrets["gcp_json"])
 
 # Create the Sheets client
-creds = Credentials.from_service_account_info(info, scopes=AUTH_SCOPES)
+creds = Credentials.from_service_account_info(creds_info, scopes=AUTH_SCOPES)
 gc    = gspread.authorize(creds)
 ws    = gc.open_by_key(SHEET_ID).worksheet(WS_NAME)
 

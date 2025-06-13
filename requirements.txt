@@ -1,4 +1,5 @@
 streamlit
+json
 pandas
 scikit-learn
 matplotlib
