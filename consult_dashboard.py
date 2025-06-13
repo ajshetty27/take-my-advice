@@ -1,20 +1,13 @@
 # consult_dashboard.py
 
 import streamlit as st
-
-
-pem = st.secrets["gcp"]["private_key"].splitlines()
-for i, line in enumerate(pem):
-    st.write(f"Line {i+1}: {len(line)} chars — {repr(line)}")
-
-
+import textwrap
 import gspread
 from google.oauth2.service_account import Credentials
 from datetime import datetime
 from streamlit.components.v1 import html
 import pandas as pd
 from gspread_dataframe import set_with_dataframe
-
 
 from models.foot_traffic_model import run as run_foot_traffic
 from models.margin_model import run as run_margin
@@ -25,13 +18,10 @@ from models.deep_dive_model import run_deep_dive
 SHEET_ID = "12Qvpi5jOdtWRaa1aL6yglCAJ5tFphW1fHsF8apTlEV4"
 WS_NAME  = "Data"
 
-# Load your raw secret
+# Load and normalize the secret
 info = st.secrets["gcp"].copy()
-
-# Re-build a perfectly chunked PEM:
 raw = info["private_key"].strip().splitlines()
-# strip off any leading/trailing blank lines
-b64 = "".join(raw[1:-1])              # join all base64 lines into one long string
+b64 = "".join(raw[1:-1])  # join all base64 lines into one long string
 pem = (
     "-----BEGIN PRIVATE KEY-----\n"
     + "\n".join(textwrap.wrap(b64, 64))
@@ -39,16 +29,15 @@ pem = (
 )
 info["private_key"] = pem
 
+# Debug normalized PEM
 for i, line in enumerate(pem.splitlines(), start=1):
     st.write(f"Normalized PEM Line {i}: {len(line)} chars → {repr(line)}")
 
-# Now pass the normalized info to Google
+# Create credentials and open sheet
 scopes = ["https://www.googleapis.com/auth/spreadsheets"]
 creds = Credentials.from_service_account_info(info, scopes=scopes)
-
 gc = gspread.authorize(creds)
 ws = gc.open_by_key(SHEET_ID).worksheet(WS_NAME)
-
 
 
 # --- ENSURE HEADER ROW EXISTS ---

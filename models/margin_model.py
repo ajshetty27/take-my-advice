@@ -1,4 +1,5 @@
 import json, streamlit as st
+import textwrap
 import gspread
 from google.oauth2.service_account import Credentials
 import pandas as pd
@@ -8,17 +9,19 @@ from sklearn.metrics import mean_absolute_error, r2_score
 import matplotlib.pyplot as plt
 
 # Constants for Google Sheets
-SHEET_ID = "12Qvpi5jOdtWRaa1aL6yglCAJ5tFphW1fHsF8apTlEV4"
-WS_NAME = "Data"
+SHEET_ID    = "12Qvpi5jOdtWRaa1aL6yglCAJ5tFphW1fHsF8apTlEV4"
+WS_NAME     = "Data"
 AUTH_SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
-# Load your raw secret
-info = st.secrets["gcp"].copy()
+# --- DEBUG: show original PEM lines from secrets ---
+orig_pem = st.secrets["gcp"]["private_key"].splitlines()
+for i, line in enumerate(orig_pem, start=1):
+    st.write(f"Original PEM Line {i}: {len(line)} chars")
 
-# Re-build a perfectly chunked PEM:
+# Load and normalize the GCP service‐account key
+info = st.secrets["gcp"].copy()
 raw = info["private_key"].strip().splitlines()
-# strip off any leading/trailing blank lines
-b64 = "".join(raw[1:-1])              # join all base64 lines into one long string
+b64 = "".join(raw[1:-1])  # join all the wrapped base64 lines
 pem = (
     "-----BEGIN PRIVATE KEY-----\n"
     + "\n".join(textwrap.wrap(b64, 64))
@@ -26,12 +29,17 @@ pem = (
 )
 info["private_key"] = pem
 
-# Now pass the normalized info to Google
-scopes = ["https://www.googleapis.com/auth/spreadsheets"]
-creds = Credentials.from_service_account_info(info, scopes=scopes)
+# --- DEBUG: show normalized PEM lines ---
+for i, line in enumerate(pem.splitlines(), start=1):
+    st.write(f"Normalized PEM Line {i}: {len(line)} chars")
 
-gc = gspread.authorize(creds)
-ws = gc.open_by_key(SHEET_ID).worksheet(WS_NAME)
+# Create the Sheets client
+creds = Credentials.from_service_account_info(info, scopes=AUTH_SCOPES)
+gc    = gspread.authorize(creds)
+ws    = gc.open_by_key(SHEET_ID).worksheet(WS_NAME)
+
+# ...the rest of your code...
+
 
 
 def load_data():
