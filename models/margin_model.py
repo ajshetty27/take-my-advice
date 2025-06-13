@@ -8,16 +8,16 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error, r2_score
 import matplotlib.pyplot as plt
 
-# Constants for Google Sheets
+# --- GOOGLE SHEETS SETUP ---
 SHEET_ID    = "12Qvpi5jOdtWRaa1aL6yglCAJ5tFphW1fHsF8apTlEV4"
 WS_NAME     = "Data"
 AUTH_SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
-# Load the JSON string from your secrets
-creds_info = json.loads(st.secrets["gcp_json"])
+# Pull your service‐account dict straight from TOML:
+service_account_info = dict(st.secrets["gcp"])
 
-# Create the Sheets client
-creds = Credentials.from_service_account_info(creds_info, scopes=AUTH_SCOPES)
+# Build credentials & client in one go
+creds = Credentials.from_service_account_info(service_account_info, scopes=AUTH_SCOPES)
 gc    = gspread.authorize(creds)
 ws    = gc.open_by_key(SHEET_ID).worksheet(WS_NAME)
 

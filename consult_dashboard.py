@@ -23,15 +23,15 @@ from models.arcgis_explorer import run_explorer
 from models.deep_dive_model import run_deep_dive
 
 # --- GOOGLE SHEETS SETUP ---
-SHEET_ID = "12Qvpi5jOdtWRaa1aL6yglCAJ5tFphW1fHsF8apTlEV4"
-WS_NAME  = "Data"
+SHEET_ID    = "12Qvpi5jOdtWRaa1aL6yglCAJ5tFphW1fHsF8apTlEV4"
+WS_NAME     = "Data"
 AUTH_SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
-# Load the JSON string from your secrets
-creds_info = json.loads(st.secrets["gcp_json"])
+# Pull your service‐account dict straight from TOML:
+service_account_info = dict(st.secrets["gcp"])
 
-# Let Google do all the parsing
-creds = Credentials.from_service_account_info(creds_info, scopes=AUTH_SCOPES)
+# Build credentials & client in one go
+creds = Credentials.from_service_account_info(service_account_info, scopes=AUTH_SCOPES)
 gc    = gspread.authorize(creds)
 ws    = gc.open_by_key(SHEET_ID).worksheet(WS_NAME)
 
