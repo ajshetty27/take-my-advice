@@ -1,6 +1,7 @@
 import streamlit as st
 import json
 import gspread
+import textwrap
 from google.oauth2.service_account import Credentials
 import pandas as pd
 from sklearn.ensemble import RandomForestRegressor
@@ -13,11 +14,22 @@ SHEET_ID    = "12Qvpi5jOdtWRaa1aL6yglCAJ5tFphW1fHsF8apTlEV4"
 WS_NAME     = "Data"
 AUTH_SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
-# Pull your service‐account dict straight from TOML:
-service_account_info = dict(st.secrets["gcp"])
+# 1. Grab your secret dict
+info = dict(st.secrets["gcp"])
 
-# Build credentials & client in one go
-creds = Credentials.from_service_account_info(service_account_info, scopes=AUTH_SCOPES)
+# 2. Extract and normalize the base64 blob
+raw_lines = info["private_key"].strip().splitlines()
+b64 = "".join(raw_lines[1:-1])  # everything between BEGIN/END
+
+# 3. Re-wrap back to 64 chars per line
+wrapped = textwrap.wrap(b64, 64)
+pem = "-----BEGIN PRIVATE KEY-----\n" + "\n".join(wrapped) + "\n-----END PRIVATE KEY-----\n"
+
+# 4. Replace it in your dict
+info["private_key"] = pem
+
+# 5. Create creds & open sheet
+creds = Credentials.from_service_account_info(info, scopes=AUTH_SCOPES)
 gc    = gspread.authorize(creds)
 ws    = gc.open_by_key(SHEET_ID).worksheet(WS_NAME)
 
