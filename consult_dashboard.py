@@ -1,6 +1,13 @@
 # consult_dashboard.py
 
 import streamlit as st
+
+
+pem = st.secrets["gcp"]["private_key"].splitlines()
+for i, line in enumerate(pem):
+    st.write(f"Line {i+1}: {len(line)} chars — {repr(line)}")
+
+    
 import gspread
 from google.oauth2.service_account import Credentials
 from datetime import datetime
