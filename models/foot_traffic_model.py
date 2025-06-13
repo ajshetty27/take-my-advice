@@ -13,15 +13,17 @@ SHEET_ID    = "12Qvpi5jOdtWRaa1aL6yglCAJ5tFphW1fHsF8apTlEV4"
 WS_NAME     = "Data"
 AUTH_SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
-# --- DEBUG: show original PEM lines from secrets ---
-orig_pem = st.secrets["gcp"]["private_key"].splitlines()
-for i, line in enumerate(orig_pem, start=1):
-    st.write(f"Original PEM Line {i}: {len(line)} chars")
 
-# Load and normalize the GCP service‐account key
-info = st.secrets["gcp"].copy()
+# DEBUG: show what secrets you actually have
+st.write("Available secrets:", list(st.secrets.keys()))
+st.write("st.secrets contents:", st.secrets)
+
+# Coerce into a real dict
+info = dict(st.secrets["gcp"])
+
+# Re-wrap the PEM perfectly at 64 chars/line
 raw = info["private_key"].strip().splitlines()
-b64 = "".join(raw[1:-1])  # join all the wrapped base64 lines
+b64 = "".join(raw[1:-1])
 pem = (
     "-----BEGIN PRIVATE KEY-----\n"
     + "\n".join(textwrap.wrap(b64, 64))

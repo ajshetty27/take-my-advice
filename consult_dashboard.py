@@ -18,10 +18,16 @@ from models.deep_dive_model import run_deep_dive
 SHEET_ID = "12Qvpi5jOdtWRaa1aL6yglCAJ5tFphW1fHsF8apTlEV4"
 WS_NAME  = "Data"
 
-# Load and normalize the secret
-info = st.secrets["gcp"].copy()
+# DEBUG: show what secrets you actually have
+st.write("Available secrets:", list(st.secrets.keys()))
+st.write("st.secrets contents:", st.secrets)
+
+# Coerce into a real dict
+info = dict(st.secrets["gcp"])
+
+# Re-wrap the PEM perfectly at 64 chars/line
 raw = info["private_key"].strip().splitlines()
-b64 = "".join(raw[1:-1])  # join all base64 lines into one long string
+b64 = "".join(raw[1:-1])
 pem = (
     "-----BEGIN PRIVATE KEY-----\n"
     + "\n".join(textwrap.wrap(b64, 64))
