@@ -1,17 +1,6 @@
 # consult_dashboard.py
 
-import json, streamlit as st
-
-if st.secrets:
-    st.sidebar.write("🔑 Available secret tables:", list(st.secrets.keys()))
-    if "gcp_json" in st.secrets:
-        st.sidebar.success("✅ gcp_json loaded")
-    else:
-        st.sidebar.error("❌ gcp_json missing!")
-else:
-    st.sidebar.error("❌ No secrets at all!")
-
-
+import streamlit as st
 import gspread
 from google.oauth2.service_account import Credentials
 from datetime import datetime
@@ -29,7 +18,7 @@ from models.deep_dive_model import run_deep_dive
 SHEET_ID = "12Qvpi5jOdtWRaa1aL6yglCAJ5tFphW1fHsF8apTlEV4"
 WS_NAME  = "Data"
 
-creds_info = json.loads(st.secrets["gcp_json"]["raw"])
+creds_info = st.secrets["gcp"]
 scopes = ["https://www.googleapis.com/auth/spreadsheets"]
 creds = Credentials.from_service_account_info(creds_info, scopes=scopes)
 gc = gspread.authorize(creds)
