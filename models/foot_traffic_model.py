@@ -24,7 +24,7 @@ info = json.loads(sa_json)
 
 # 2) Build your creds & client
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
-creds = Credentials.from_service_account_info(info, scopes=SCOPES)
+creds = Credentials.from_service_account_info(info, scopes= AUTH_SCOPES)
 gc    = gspread.authorize(creds)
 ws    = gc.open_by_key(SHEET_ID).worksheet(WS_NAME)
 
