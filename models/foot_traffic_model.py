@@ -1,5 +1,6 @@
 import streamlit as st
 import re
+import base64
 import json
 import os
 import textwrap
@@ -16,13 +17,14 @@ SHEET_ID    = "12Qvpi5jOdtWRaa1aL6yglCAJ5tFphW1fHsF8apTlEV4"
 WS_NAME     = "Data"
 AUTH_SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
-GCP_SA_JSON = os.getenv("GCP_SA_JSON")
-service_account_info = json.loads(GCP_SA_JSON)
-creds = Credentials.from_service_account_info(
-    service_account_info,
-    scopes=["https://www.googleapis.com/auth/spreadsheets"],
-)
+# 1) Decode the base64 JSON
+b64 = os.environ["GCLOUD_SA_KEY_B64"]
+sa_json = base64.b64decode(b64).decode("utf-8")
+info = json.loads(sa_json)
 
+# 2) Build your creds & client
+SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
+creds = Credentials.from_service_account_info(info, scopes=SCOPES)
 gc    = gspread.authorize(creds)
 ws    = gc.open_by_key(SHEET_ID).worksheet(WS_NAME)
 
