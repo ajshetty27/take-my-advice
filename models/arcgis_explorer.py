@@ -6,6 +6,10 @@ import requests
 import folium
 import json
 
+from dotenv import load_dotenv
+load_dotenv()
+
+
 GEOCODE_URL      = "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates"
 DEMOGRAPHICS_URL = "https://geoenrich.arcgis.com/arcgis/rest/services/World/geoenrichmentserver/Geoenrichment/enrich"
 TOKEN_URL        = "https://www.arcgis.com/sharing/rest/generateToken"

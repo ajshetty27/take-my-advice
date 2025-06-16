@@ -12,6 +12,11 @@ from streamlit.components.v1 import html
 import pandas as pd
 from gspread_dataframe import set_with_dataframe
 
+
+from dotenv import load_dotenv
+load_dotenv()
+
+
 from models.foot_traffic_model import run as run_foot_traffic
 from models.margin_model import run as run_margin
 from models.arcgis_explorer import run_explorer
@@ -288,86 +293,102 @@ def main():
 
     # --- DEEP DIVE TAB ---
     with tab_deep:
-        st.header("Deep Dive Insights")
+       st.header("Deep Dive Insights")
 
-        # Load sheet into DataFrame
-        df = load_sheet_df()
-        if df.empty:
-            st.info("No data submitted yet.")
-            return
+       df = load_sheet_df()
+       if df.empty:
+           st.info("No data submitted yet.")
+           return
 
-        # Café selector dropdown
-        cafelist = df["Business Name"].unique().tolist()
-        selected = st.selectbox("Select café", cafelist)
+    # Café selector
+       cafelist = df["Business Name"].unique().tolist()
+       selected = st.selectbox("Select café", cafelist)
 
-        # Grab the selected row
-        record = df[df["Business Name"] == selected].iloc[0]
+    # Grab the selected record
+       record = df[df["Business Name"] == selected].iloc[0]
 
-        # Split form vs. demographics by finding "Timestamp" column index
-        cols = ws.row_values(1)
-        idx_ts = cols.index("Timestamp") + 1
-        form_data = {c: record[c] for c in cols[:idx_ts]}
-        demo_data = {c: record[c] for c in cols[idx_ts:] if pd.notna(record[c])}
+    # Split form vs. demographics
+       cols = ws.row_values(1)
+       idx_ts = cols.index("Timestamp") + 1
+       form_data = {c: record[c] for c in cols[:idx_ts]}
+       demo_data = {c: record[c] for c in cols[idx_ts:] if pd.notna(record[c])}
 
-        # Display the two sections
-        st.subheader("Form Data")
-        st.dataframe(form_data)
-        st.subheader("Demographics Data")
-        st.dataframe(demo_data)
+       st.subheader("Form Data")
+       st.dataframe(form_data)
+       st.subheader("Demographics Data")
+       st.dataframe(demo_data)
 
-        # Attempt to load POS Raw sheet
-        pos_data = []
-        try:
-            ws_pos = gc.open_by_key(SHEET_ID).worksheet("POS Raw")
-            raw = ws_pos.get_all_records()
-            df_pos = pd.DataFrame(raw)
-            st.subheader("Raw POS Data")
-            st.dataframe(df_pos)
-            pos_data = df_pos.to_dict(orient="records")
-        except gspread.WorksheetNotFound:
-            st.info("No POS Raw sheet found. Upload POS first.")
+    # Load POS if present
+       pos_data = []
+       try:
+           ws_pos = gc.open_by_key(SHEET_ID).worksheet("POS Raw")
+           df_pos = pd.DataFrame(ws_pos.get_all_records())
+           st.subheader("Raw POS Data")
+           st.dataframe(df_pos)
+           pos_data = df_pos.to_dict(orient="records")
+       except gspread.WorksheetNotFound:
+           st.info("No POS Raw sheet found. Upload POS first.")
 
-        # Build context for Deep Dive
-        context = {
-            "form": form_data,
-            "demographics": demo_data,
-            "pos": pos_data
-        }
+    # Let user pick which deep-dive goals
+       st.markdown("### Pick which Deep-Dive areas to run:")
+       do_marketing = st.checkbox("🟦 Marketing", value=True)
+       do_finance   = st.checkbox("🟥 Finance",   value=True)
+       do_compete   = st.checkbox("🟩 Competitor Insight", value=True)
 
-        # Predefined Deep Dive queries
-        queries = [
-            "Based on the demographic in the area and the best selling products, should I further push my top sellers, or is there a different product that would sell better with the local demographic?",
-            "Which products of ours are outselling that of competitors in a similar demographic?",
-            "Which products are underperforming?",
-            "Are there products we are missing out on?",
-            "Which days of the week are the top performers and why?",
-            "Is there a flow from certain communities that correlates with increased product sales on those days?",
-            "Which products are we losing the most money on due to waste?",
-            "Are there days or weeks where we should stock more of a certain item to avoid stock-outs?",
-            "What substitute SKUs can we carry to minimize inventory holding while still meeting demand?",
-            "Are there menu items we can add or delete to maximize profit margins and minimize costs?",
-            "Using competitor menus in our demographic, are there any items we can reposition on our menu to boost sales?",
-            "Based on our demographics, which food items or add-ons top sellers at other locations could we add to increase average transaction value?",
-            "Excluding seasonal products, which of our items are least consistent in sales volume, and what factors (traffic flow, marketing, demographics, time of day) cause those fluctuations?",
-            "What operational factors contribute most to the weekly transactions for this café?",
-            "Given the sales mix between drinks and food, what menu adjustments might improve profit margins?",
-            "How could the café leverage customer demographics to design targeted promotions?"
-        ]
+    # Define your question sets
+       marketing_qs = [
+           "Based on local ArcGIS demographics (age, income, ethnicity), do your current top-selling items align with dominant consumer preferences?",
+           "What percentage of your highest AOV customers belong to the reported target group (e.g., 18–24, students)?",
+           "Are there underserved demographic groups nearby (e.g., young professionals, working parents, older adults) who might respond to different offerings?",
+       ]
+       finance_qs = [
+           "Which top 10 selling items yield the highest vs. lowest net profit margins, after accounting for modifiers, discounts, and waste?",
+           "Are there high-volume, low-margin items (e.g., bagels, basic drinks) that could be bundled or upsold to increase AOV?",
+           "What % of weekly revenue comes from your top 3 items (e.g., Bagel Combo, Latte, Matcha)?",
+           "How do average order values differ between weekdays and weekends, and are certain hours consistently underperforming?",
+           "Based on item-level waste and refund rates, which products contribute most to unnecessary cost?",
+           "How many orders are fulfilled per employee during each shift, and where are the biggest bottlenecks?",
+       ]
+       competitor_qs = [
+           "How does your demographic profile (students 18–24) compare to those of your top 3 competitors within 1 mile?",
+           "Which competitors are leveraging seasonal specials, mobile ordering, or loyalty programs to drive repeat traffic — and what could you adapt?",
+           "Which product types (e.g., specialty drinks, protein-rich meals) are you not offering that competitors succeed with?",
+           "Is your revenue/sqft higher or lower than cafés with similar sales volume, seating, and staff count?",
+           "Which of your current differentiators (e.g., indoor space, menu creativity, healthiness) are under-leveraged based on online comparisons?"
+       ]
 
-        # Run the Deep Dive model
-        deep = run_deep_dive(context, queries)
-        for res in deep["responses"]:
-            st.subheader(res["query"])
-            st.write(res["answer"])
+    # Build the final queries list
+       queries: list[str] = []
+       if do_marketing:
+           queries += marketing_qs
+       if do_finance:
+           queries += finance_qs
+       if do_compete:
+           queries += competitor_qs
 
-        # Freeform chat
-        st.markdown("---")
-        st.subheader("Chat with the Café AI")
-        user_q = st.text_area("Your question")
-        if st.button("Send"):
-            follow = run_deep_dive(context, [user_q])
-            st.write(follow["responses"][0]["answer"])
+       if not queries:
+           st.warning("Select at least one area to deep-dive on.")
+       else:
+        # Build context
+           context = {
+               "form": form_data,
+               "demographics": demo_data,
+               "pos": pos_data
+           }
 
+        # Run the Deep Dive
+           deep = run_deep_dive(context, queries)
+           for res in deep["responses"]:
+               st.subheader(res["query"])
+               st.write(res["answer"])
+
+    # Freeform chat
+       st.markdown("---")
+       st.subheader("Chat with the Café AI")
+       user_q = st.text_area("Your question")
+       if st.button("Send"):
+           follow = run_deep_dive(context, [user_q])
+           st.write(follow["responses"][0]["answer"])
 
 if __name__ == "__main__":
     main()

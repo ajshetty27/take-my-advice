@@ -17,6 +17,8 @@ SHEET_ID    = "12Qvpi5jOdtWRaa1aL6yglCAJ5tFphW1fHsF8apTlEV4"
 WS_NAME     = "Data"
 AUTH_SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
+from dotenv import load_dotenv
+load_dotenv()
 
 # 1) Decode the base64 JSON
 b64 = os.environ["GCLOUD_SA_KEY_B64"]

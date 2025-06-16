@@ -12,6 +12,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error
 import matplotlib.pyplot as plt
 
+from dotenv import load_dotenv
+load_dotenv()
+
 # --- GOOGLE SHEETS SETUP ---
 SHEET_ID    = "12Qvpi5jOdtWRaa1aL6yglCAJ5tFphW1fHsF8apTlEV4"
 WS_NAME     = "Data"
