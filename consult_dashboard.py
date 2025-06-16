@@ -22,6 +22,7 @@ from models.margin_model import run as run_margin
 from models.arcgis_explorer import run_explorer
 from models.deep_dive_model import run_deep_dive
 
+
 # --- GOOGLE SHEETS SETUP ---
 SHEET_ID    = "12Qvpi5jOdtWRaa1aL6yglCAJ5tFphW1fHsF8apTlEV4"
 WS_NAME     = "Data"
@@ -34,14 +35,33 @@ info = json.loads(sa_json)
 
 # 2) Build your creds & client
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
-creds = Credentials.from_service_account_info(info, scopes= AUTH_SCOPES)
-gc    = gspread.authorize(creds)
-ws    = gc.open_by_key(SHEET_ID).worksheet(WS_NAME)
 
+@st.cache_resource(show_spinner=False)
+def get_gspread_client():
+    creds  = Credentials.from_service_account_info(info, scopes=AUTH_SCOPES)
+    return gspread.authorize(creds)
 
-# --- ENSURE HEADER ROW EXISTS ---
+@st.cache_resource(show_spinner=False)
+def get_worksheet():
+    client = get_gspread_client()
+    return client.open_by_key(SHEET_ID).worksheet(WS_NAME)
+
+@st.cache_resource(show_spinner=False)
+def get_pos_sheet():
+    client = get_gspread_client()
+    try:
+        return client.open_by_key(SHEET_ID).worksheet("POS Raw")
+    except gspread.WorksheetNotFound:
+        return None
+
+ws = get_worksheet()
+# Cache the header row once
+@st.cache_data(show_spinner=False)
+def get_headers():
+    return [h for h in ws.row_values(1) if h.strip()]
+
 HEADERS = [
-    # — your original form fields —
+    # your form fields + demos...
     "Business Name","Location Address","Location Type","Years in Operation","Days/Hours of Operation",
     "Seating Indoor","Seating Outdoor","Full Kitchen","Average Weekly Sales","Average Transaction Value",
     "Top Item 1","Top Item 2","Top Item 3","% Sales Drinks","% Sales Food","Peak Hours",
@@ -49,10 +69,9 @@ HEADERS = [
     "Avg Transactions/Day","Mobile/Online Ordering","Avg Wait Time","Target Age Range","Main Customer Segments",
     "% Regulars","Collect Contact Info","Run Surveys","# Competitors within 1mi","Competitor 1","Competitor 2","Competitor 3",
     "Near POI","Marketing Strategy","Partner Local","# Employees","Full-Time Staff","Part-Time Staff",
-    "Track Labor % of Revenue","Staffing Challenges","Training Procedures","Goal 1","Goal 2","Expansion/Relocation",
-    "Optimize Pricing/Product Mix","Want Location Report","POS Export Filename","Labor Report Filename","Benchmark Similar Businesses",
-    "Timestamp",
-    # — appended demographic keys (raw field codes) —
+    "Track Labor % of Revenue","Staffing Challenges","Training Procedures","POS Export Filename","Labor Report Filename","Benchmark Similar Businesses",
+    "Additional Insight","Timestamp",
+    # demographic keys...
     "Total Population (2024)", "Total Households (2024)", "Avg Household Size (2024)", "Median Household Income (2024)",
     "Per-Capita Income (2024)", "Diversity Index (2024)", "Pop. Growth Rate ’24–’29 (%)", "Median Home Value (2024)",
     "Avg Home Value (2024)", "Daytime Worker Pop. (2024)", "Median Age (2024)", "Owner-occupied Households (2024)",
@@ -60,38 +79,53 @@ HEADERS = [
     "Population Age 18 (2024)", "Population Age 25 (2024)", "Population Age 35 (2024)", "Population Age 65+ (2024)",
     "Age Dependency Ratio (2024)", "White Population (2024)", "Black Population (2024)", "Asian Population (2024)",
     "Unemployment Rate (2024)", "Household Growth Rate ’24–’29 (%)", "Eating & Drinking Businesses (2024)", "Group Quarters Population (2024)"
-
 ]
 
-existing = [h for h in ws.row_values(1) if h.strip() != ""]
-
-# If it doesn't exactly match, wipe & rewrite
-if existing != HEADERS:
+_existing = get_headers()
+if _existing != HEADERS:
+    # wipe & rewrite header row once
     ws.delete_rows(1)
     ws.insert_row(HEADERS, 1)
 
 def append_row_to_sheet(row: list):
     ws.append_row(row, value_input_option="USER_ENTERED")
 
-def save_demographics_to_sheet(address, demo):
-    # 1) Find the correct row
+# Cache the entire sheet as a DataFrame (refresh every 5 minutes)
+
+def load_sheet_df() -> pd.DataFrame:
+    values = ws.get_all_values()
+    if not values:
+        return pd.DataFrame()
+    raw_headers = values[0]
+    idxs = [i for i,h in enumerate(raw_headers) if h.strip()]
+    headers = [raw_headers[i] for i in idxs]
+    data = []
+    for row in values[1:]:
+        row += [""] * (len(raw_headers) - len(row))
+        data.append([row[i] for i in idxs])
+    return pd.DataFrame(data, columns=headers)
+
+# Save demographics helper
+def save_demographics_to_sheet(business_name: str, demo: dict):
+
     df = load_sheet_df()
     try:
-        row_idx = df.index[df["Location Address"] == address][0] + 2
+        # locate the row by Business Name
+        row_idx = df.index[df["Business Name"] == business_name][0] + 2
     except IndexError:
-        st.error("Address not found!")
+        st.error(f"Business '{business_name}' not found in sheet!")
         return
 
-    # 2) Get and clean current headers
+    # Fetch current headers
     headers = [h for h in ws.row_values(1) if h.strip() != ""]
 
-    # 3) Identify brand-new demo columns
+    # Add any new demo keys as columns
     new_cols = [k for k in demo if k not in headers]
     if new_cols:
         headers += new_cols
         ws.update("A1:1", [headers])
 
-    # 4) Write each cell individually (fast for ~10 cols)
+    # Write each demo value into its cell
     with st.spinner("Saving demographics…"):
         prog = st.progress(0)
         total = len(demo)
@@ -100,29 +134,12 @@ def save_demographics_to_sheet(address, demo):
             ws.update_cell(row_idx, col_idx, str(v))
             prog.progress(i / total)
 
-    st.success("Demographics saved to sheet!")
+    st.success("Demographics saved!")
 
 
-def load_sheet_df():
-    values = ws.get_all_values()  # raw matrix of strings
-    if not values:
-        return pd.DataFrame()
-
-    # Clean headers (drop any blanks)
-    raw_headers = values[0]
-    idxs = [i for i, h in enumerate(raw_headers) if h.strip() != ""]
-    headers = [raw_headers[i] for i in idxs]
-
-    # Build rows
-    data = []
-    for row in values[1:]:
-        row = row + [""] * (len(raw_headers) - len(row))
-        data.append([row[i] for i in idxs])
-
-    return pd.DataFrame(data, columns=headers)
 # --- STREAMLIT APP ---
 def main():
-    st.title("Local Café Consulting Dashboard")
+    st.title("Take My Advice [...]")
     tab_form, tab_results, tab_explore, tab_deep = st.tabs(
         ["Form","Results","Exploration","Deep Dive"]
     )
@@ -180,14 +197,6 @@ def main():
         staffing_challenges = st.text_area("Staffing challenges")
         training_procedures = st.radio("Standard training procedures?", ["Yes","No"])
 
-        st.header("OWNER GOALS")
-        goal1 = st.radio("Top goal #1", ["Increase foot traffic","Improve margins","Expand menu","Other"])
-        if goal1=="Other": goal1 = st.text_input("Specify goal #1")
-        goal2 = st.radio("Top goal #2", ["Increase foot traffic","Improve margins","Expand menu","Other"])
-        if goal2=="Other": goal2 = st.text_input("Specify goal #2")
-        expand_relocate = st.radio("Considering expansion/relocation?", ["Yes","No"])
-        optimize_mix     = st.radio("Help optimizing pricing/product mix?", ["Yes","No"])
-        location_report  = st.radio("Want location-based report?", ["Yes","No"])
 
         st.header("OPTIONAL TECHNICAL INPUTS")
         pos_export   = st.file_uploader("POS export (CSV)", type=["csv"])
@@ -213,6 +222,12 @@ def main():
         labor_report = st.file_uploader("Employee schedule/report", type=["csv","xlsx","pdf"])
         benchmark    = st.radio("Benchmark against similar businesses?", ["Yes","No"])
 
+                # NEW: freeform Additional Insight
+        additional_insight = st.text_area(
+            "Additional insight (any extra context for the Deep Dive)",
+            help="This will be saved alongside your form inputs and fed into the Deep Dive model."
+        )
+
         if st.button("Submit"):
             row = [
                 business_name, location_address, location_type, years_in_operation, days_hours,
@@ -225,8 +240,8 @@ def main():
                 age_range, ",".join(segments), pct_regulars, collect_emails, run_surveys,
                 num_competitors, comp1, comp2, comp3, near_poi, marketing, partner_local,
                 num_employees, full_time, part_time, track_labor_pct, staffing_challenges, training_procedures,
-                goal1, goal2, expand_relocate, optimize_mix, location_report,
                 pos_export.name if pos_export else "", labor_report.name if labor_report else "", benchmark,
+                additional_insight,                     # ← added here
                 datetime.utcnow().isoformat()
             ]
             append_row_to_sheet(row)
@@ -255,79 +270,72 @@ def main():
     with tab_explore:
         st.header("Exploration")
 
-        # Input address
-        address = st.text_input("Enter café address")
+        # load all existing cafés
+        df = load_sheet_df()
+        if df.empty:
+            st.info("No cafés on file yet.")
+        else:
+            # café selector instead of manual address entry
+            cafelist = df["Business Name"].unique().tolist()
+            selected = st.selectbox("Select café to explore", cafelist)
 
-        # When Explore is clicked, fetch and display map, demo, cafés
-        if st.button("Explore"):
-            map_html, demo, cafes = run_explorer(address)
-            if map_html:
-                # Store in session for later saving
-                st.session_state["last_address"] = address
-                st.session_state["last_demo"] = demo
+            # grab the stored address & demographics from that row
+            record = df[df["Business Name"] == selected].iloc[0]
+            address = record["Location Address"]
 
-                st.subheader("Map View")
-                html(map_html, height=450)
+            st.markdown(f"**Address:** {address}")
 
-                st.subheader("Key Demographics")
-                df_demo = pd.DataFrame(list(demo.items()), columns=["Description", "Value"])
-                df_demo["Value"] = df_demo["Value"].astype(str)
-                st.table(df_demo)
+            # do the exploration
+            if st.button("Explore"):
+                map_html, demo, cafes = run_explorer(address)
+                if map_html:
+                    st.session_state["last_demo"] = demo
 
-                st.subheader("Nearby Cafés")
-                df_cafes = pd.DataFrame(cafes)
-                for c in df_cafes.columns:
-                    df_cafes[c] = df_cafes[c].fillna("").astype(str)
-                st.table(df_cafes)
-            else:
-                st.error("Map generation failed.")
+                    st.subheader("Map View")
+                    html(map_html, height=450)
 
-        # After exploring, allow saving demographics
-        if "last_demo" in st.session_state:
-            if st.button("Save demographics"):
+                    st.subheader("Key Demographics")
+                    df_demo = pd.DataFrame(list(demo.items()), columns=["Description", "Value"])
+                    df_demo["Value"] = df_demo["Value"].astype(str)
+                    st.table(df_demo)
+
+                    st.subheader("Nearby Cafés")
+                    df_cafes = pd.DataFrame(cafes)
+                    for c in df_cafes.columns:
+                        df_cafes[c] = df_cafes[c].fillna("").astype(str)
+                    st.table(df_cafes)
+                else:
+                    st.error("Map generation failed.")
+
+            # save demographics back to the same row
+            if "last_demo" in st.session_state and st.button("Save demographics"):
                 with st.spinner("Saving demographics to sheet…"):
                     save_demographics_to_sheet(
-                        st.session_state["last_address"],
+                        selected,
                         st.session_state["last_demo"]
                     )
 
-    # --- DEEP DIVE TAB ---
+    # --- Deep Dive Tab ---
     with tab_deep:
        st.header("Deep Dive Insights")
-
        df = load_sheet_df()
        if df.empty:
-           st.info("No data submitted yet.")
-           return
+           st.info("No data submitted yet."); return
 
-    # Café selector
-       cafelist = df["Business Name"].unique().tolist()
-       selected = st.selectbox("Select café", cafelist)
-
-    # Grab the selected record
+       cafés = df["Business Name"].unique().tolist()
+       selected = st.selectbox("Select café", cafés)
        record = df[df["Business Name"] == selected].iloc[0]
 
-    # Split form vs. demographics
-       cols = ws.row_values(1)
-       idx_ts = cols.index("Timestamp") + 1
-       form_data = {c: record[c] for c in cols[:idx_ts]}
-       demo_data = {c: record[c] for c in cols[idx_ts:] if pd.notna(record[c])}
+       headers = get_headers()
+       cut    = headers.index("Timestamp") + 1
+       form_data = {c: record[c] for c in headers[:cut]}
+       demo_data = {c: record[c] for c in headers[cut:] if pd.notna(record[c])}
 
-       st.subheader("Form Data")
-       st.dataframe(form_data)
-       st.subheader("Demographics Data")
-       st.dataframe(demo_data)
+        # POS
+       ws_pos = get_pos_sheet()
+       pos_data = pd.DataFrame(ws_pos.get_all_records()).to_dict("records") if ws_pos else []
 
-    # Load POS if present
-       pos_data = []
-       try:
-           ws_pos = gc.open_by_key(SHEET_ID).worksheet("POS Raw")
-           df_pos = pd.DataFrame(ws_pos.get_all_records())
-           st.subheader("Raw POS Data")
-           st.dataframe(df_pos)
-           pos_data = df_pos.to_dict(orient="records")
-       except gspread.WorksheetNotFound:
-           st.info("No POS Raw sheet found. Upload POS first.")
+       extra = record.get("Additional Insight", "")
 
     # Let user pick which deep-dive goals
        st.markdown("### Pick which Deep-Dive areas to run:")
@@ -373,7 +381,8 @@ def main():
            context = {
                "form": form_data,
                "demographics": demo_data,
-               "pos": pos_data
+               "pos": pos_data,
+               "extra": extra
            }
 
         # Run the Deep Dive
@@ -387,8 +396,12 @@ def main():
        st.subheader("Chat with the Café AI")
        user_q = st.text_area("Your question")
        if st.button("Send"):
+    # show spinner until the entire deep dive finishes
+         with st.spinner("🤖 Café AI is thinking…"):
            follow = run_deep_dive(context, [user_q])
-           st.write(follow["responses"][0]["answer"])
+         for res in follow["responses"]:
+           st.subheader(res["query"])
+           st.write(res["answer"])
 
 if __name__ == "__main__":
     main()

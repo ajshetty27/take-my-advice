@@ -1,0 +1,6 @@
+[theme]
+# Your brand palette
+primaryColor             = "#bda967"
+backgroundColor          = "#121212"
+secondaryBackgroundColor = "#2b2b2b"
+textColor                = "#B0A698"

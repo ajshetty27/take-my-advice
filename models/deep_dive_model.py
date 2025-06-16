@@ -17,6 +17,7 @@ def run_deep_dive(context: dict, queries: list[str]) -> dict:
       - Form data
       - Demographics
       - POS data
+      - Extra additional insights
     Then invoke the web-enabled GPT model (gpt-4o-mini) with the built-in browsing tool,
     showing a progress bar as it goes.
     """
@@ -29,7 +30,7 @@ def run_deep_dive(context: dict, queries: list[str]) -> dict:
         prompt_parts = [
             # 1) Role & mission
             "You are a data-driven café optimization assistant. "
-            "Using ONLY (a) the provided internal data (Form inputs, Demographics, POS) and (b) reputable public sources on Gen Z/Millennial beverage & food trends, "
+            "Using ONLY (a) the provided internal data (Form inputs, Demographics, POS, extra additional insights) and (b) reputable public sources on Gen Z/Millennial beverage & food trends, "
             "produce an ultra-specific, bullet-pointed analysis with citations.",
 
             # 2) Desired response structure
@@ -54,6 +55,9 @@ def run_deep_dive(context: dict, queries: list[str]) -> dict:
 
             "=== POS Data ===",
             *(str(r) for r in context.get("pos", []) or ["No POS data provided."]),
+
+           "=== Additional Insight ===",
+            context["extra"] or "No additional insight provided.",
 
             # 4) The actual user question
             "=== Question ===",
