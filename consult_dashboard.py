@@ -12,6 +12,12 @@ from streamlit.components.v1 import html
 import pandas as pd
 from gspread_dataframe import set_with_dataframe
 
+import io
+from pptx import Presentation
+from pptx.util import Inches, Pt
+from reportlab.lib.pagesizes import letter
+from reportlab.pdfgen import canvas
+
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -317,91 +323,224 @@ def main():
 
     # --- Deep Dive Tab ---
     with tab_deep:
-       st.header("Deep Dive Insights")
-       df = load_sheet_df()
-       if df.empty:
-           st.info("No data submitted yet."); return
+        st.header("Deep Dive Insights")
 
-       cafés = df["Business Name"].unique().tolist()
-       selected = st.selectbox("Select café", cafés)
-       record = df[df["Business Name"] == selected].iloc[0]
+        # 1) Load submissions
+        df = load_sheet_df()
+        if df.empty:
+            st.info("No data submitted yet.")
+            st.stop()
 
-       headers = get_headers()
-       cut    = headers.index("Timestamp") + 1
-       form_data = {c: record[c] for c in headers[:cut]}
-       demo_data = {c: record[c] for c in headers[cut:] if pd.notna(record[c])}
+        # 2) Café selector
+        cafes = df["Business Name"].unique().tolist()
+        selected = st.selectbox("Select café", cafes)
+        record = df[df["Business Name"] == selected].iloc[0]
 
-        # POS
-       ws_pos = get_pos_sheet()
-       pos_data = pd.DataFrame(ws_pos.get_all_records()).to_dict("records") if ws_pos else []
+        # 3) Split form vs. demographics
+        headers = get_headers()
+        ts_index = headers.index("Timestamp") + 1
+        form_data = {c: record[c] for c in headers[:ts_index]}
+        demo_data = {c: record[c] for c in headers[ts_index:] if pd.notna(record[c])}
 
-       extra = record.get("Additional Insight", "")
+        # 4) Load POS if exists
+        ws_pos = get_pos_sheet()
+        pos_data = (
+            pd.DataFrame(ws_pos.get_all_records()).to_dict("records")
+            if ws_pos
+            else []
+        )
 
-    # Let user pick which deep-dive goals
-       st.markdown("### Pick which Deep-Dive areas to run:")
-       do_marketing = st.checkbox("🟦 Marketing", value=True)
-       do_finance   = st.checkbox("🟥 Finance",   value=True)
-       do_compete   = st.checkbox("🟩 Competitor Insight", value=True)
+        extra = record.get("Additional Insight", "")
 
-    # Define your question sets
-       marketing_qs = [
-           "Based on local ArcGIS demographics (age, income, ethnicity), do your current top-selling items align with dominant consumer preferences?",
-           "What percentage of your highest AOV customers belong to the reported target group (e.g., 18–24, students)?",
-           "Are there underserved demographic groups nearby (e.g., young professionals, working parents, older adults) who might respond to different offerings?",
-       ]
-       finance_qs = [
-           "Which top 10 selling items yield the highest vs. lowest net profit margins, after accounting for modifiers, discounts, and waste?",
-           "Are there high-volume, low-margin items (e.g., bagels, basic drinks) that could be bundled or upsold to increase AOV?",
-           "What % of weekly revenue comes from your top 3 items (e.g., Bagel Combo, Latte, Matcha)?",
-           "How do average order values differ between weekdays and weekends, and are certain hours consistently underperforming?",
-           "Based on item-level waste and refund rates, which products contribute most to unnecessary cost?",
-           "How many orders are fulfilled per employee during each shift, and where are the biggest bottlenecks?",
-       ]
-       competitor_qs = [
-           "How does your demographic profile (students 18–24) compare to those of your top 3 competitors within 1 mile?",
-           "Which competitors are leveraging seasonal specials, mobile ordering, or loyalty programs to drive repeat traffic — and what could you adapt?",
-           "Which product types (e.g., specialty drinks, protein-rich meals) are you not offering that competitors succeed with?",
-           "Is your revenue/sqft higher or lower than cafés with similar sales volume, seating, and staff count?",
-           "Which of your current differentiators (e.g., indoor space, menu creativity, healthiness) are under-leveraged based on online comparisons?"
-       ]
+        # 5) Pick which goals
+        st.markdown("### Pick which Deep-Dive areas to run:")
+        do_marketing = st.checkbox("🟦 Marketing", value=True)
+        do_finance   = st.checkbox("🟥 Finance", value=True)
+        do_compete   = st.checkbox("🟩 Competitor Insight", value=True)
 
-    # Build the final queries list
-       queries: list[str] = []
-       if do_marketing:
-           queries += marketing_qs
-       if do_finance:
-           queries += finance_qs
-       if do_compete:
-           queries += competitor_qs
+        # 6) Define question buckets
+        marketing_qs = [
+            "Based on local ArcGIS demographics (age, income, ethnicity), do your current top-selling items align with dominant consumer preferences?",
+            "What percentage of your highest AOV customers belong to the reported target group (e.g., 18–24, students)?",
+            "Are there underserved demographic groups nearby (e.g., young professionals, working parents, older adults) who might respond to different offerings?",
+        ]
+        finance_qs = [
+            "Which top 10 selling items yield the highest vs. lowest net profit margins, after accounting for modifiers, discounts, and waste?",
+            "Are there high-volume, low-margin items (e.g., bagels, basic drinks) that could be bundled or upsold to increase AOV?",
+            "What % of weekly revenue comes from your top 3 items (e.g., Bagel Combo, Latte, Matcha)?",
+            "How do average order values differ between weekdays and weekends, and are certain hours consistently underperforming?",
+            "Based on item-level waste and refund rates, which products contribute most to unnecessary cost?",
+            "How many orders are fulfilled per employee during each shift, and where are the biggest bottlenecks?",
+        ]
+        competitor_qs = [
+            "How does your demographic profile (students 18–24) compare to those of your top 3 competitors within 1 mile?",
+            "Which competitors are leveraging seasonal specials, mobile ordering, or loyalty programs to drive repeat traffic — and what could you adapt?",
+            "Which product types (e.g., specialty drinks, protein-rich meals) are you not offering that competitors succeed with?",
+            "Is your revenue/sqft higher or lower than cafés with similar sales volume, seating, and staff count?",
+            "Which of your current differentiators (e.g., indoor space, menu creativity, healthiness) are under-leveraged based on online comparisons?",
+        ]
 
-       if not queries:
-           st.warning("Select at least one area to deep-dive on.")
-       else:
-        # Build context
-           context = {
-               "form": form_data,
-               "demographics": demo_data,
-               "pos": pos_data,
-               "extra": extra
-           }
+        queries = []
+        if do_marketing:
+            queries += marketing_qs
+        if do_finance:
+            queries += finance_qs
+        if do_compete:
+            queries += competitor_qs
 
-        # Run the Deep Dive
-           deep = run_deep_dive(context, queries)
-           for res in deep["responses"]:
-               st.subheader(res["query"])
-               st.write(res["answer"])
+        if not queries:
+            st.warning("Select at least one area to deep-dive on.")
+        else:
+            context = {
+                "form": form_data,
+                "demographics": demo_data,
+                "pos": pos_data,
+                "extra": extra,
+            }
+            deep = run_deep_dive(context, queries)
 
-    # Freeform chat
-       st.markdown("---")
-       st.subheader("Chat with the Café AI")
-       user_q = st.text_area("Your question")
-       if st.button("Send"):
-    # show spinner until the entire deep dive finishes
-         with st.spinner("🤖 Café AI is thinking…"):
-           follow = run_deep_dive(context, [user_q])
-         for res in follow["responses"]:
-           st.subheader(res["query"])
-           st.write(res["answer"])
+            for resp in deep["responses"]:
+                st.subheader(resp["query"])
+                st.write(resp["answer"])
+
+            if st.button("📑 Generate PPT & PDF Report"):
+                from pptx import Presentation
+                from pptx.util import Pt, Inches
+                from pptx.dml.color import RGBColor
+                from pptx.enum.shapes import MSO_SHAPE
+                from reportlab.pdfgen import canvas
+                from reportlab.lib.pagesizes import letter
+                import io
+                from datetime import datetime
+                import math
+
+                prog = st.progress(0)
+                grouped = {}
+                for resp in deep["responses"]:
+                    q, a = resp["query"], resp["answer"]
+                    if q in marketing_qs:
+                        goal = "Marketing"
+                    elif q in finance_qs:
+                        goal = "Finance"
+                    else:
+                        goal = "Competitor Insight"
+                    grouped.setdefault(goal, []).append((q, a))
+                prog.progress(0.3)
+
+                prs = Presentation()
+                theme_gold = RGBColor(189, 169, 103)
+                theme_text = RGBColor(176, 166, 152)
+                theme_bg = RGBColor(18, 18, 18)
+
+                title_slide = prs.slides.add_slide(prs.slide_layouts[6])
+                shape = title_slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, prs.slide_width, prs.slide_height)
+                shape.fill.solid()
+                shape.fill.fore_color.rgb = theme_bg
+
+                title = title_slide.shapes.title or title_slide.shapes.add_textbox(Inches(0.5), Inches(2), Inches(9), Inches(1))
+                title_tf = title.text_frame
+                title_tf.clear()
+                p = title_tf.paragraphs[0]
+                p.text = f"Take my Advice – {selected}"
+                p.font.size = Pt(36)
+                p.font.bold = True
+                p.font.color.rgb = theme_gold
+
+                sub = title_slide.shapes.add_textbox(Inches(0.5), Inches(3), Inches(9), Inches(1)).text_frame
+                p = sub.paragraphs[0]
+                p.text = "Generated on " + datetime.utcnow().strftime("%Y-%m-%d")
+                p.font.size = Pt(18)
+                p.font.color.rgb = theme_text
+
+                all_qas = [(goal, q, a) for goal, qas in grouped.items() for q, a in qas]
+                total_qas = len(all_qas)
+                slides_needed = 10
+                chunk_size = math.ceil(total_qas / slides_needed)
+                chunks = [all_qas[i:i + chunk_size] for i in range(0, total_qas, chunk_size)]
+                while len(chunks) < slides_needed:
+                    chunks.append([])
+
+                for chunk in chunks:
+                    slide = prs.slides.add_slide(prs.slide_layouts[6])
+                    shape = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, prs.slide_width, prs.slide_height)
+                    shape.fill.solid()
+                    shape.fill.fore_color.rgb = theme_bg
+
+                    tf = slide.shapes.add_textbox(Inches(0.5), Inches(0.5), Inches(9), Inches(6)).text_frame
+                    tf.word_wrap = True
+                    for goal, q, a in chunk:
+                        p1 = tf.add_paragraph()
+                        p1.text = f"[{goal}]"
+                        p1.font.size = Pt(16)
+                        p1.font.bold = True
+                        p1.font.color.rgb = theme_gold
+
+                        p2 = tf.add_paragraph()
+                        p2.text = f"Q: {q}"
+                        p2.font.size = Pt(14)
+                        p2.font.bold = True
+                        p2.font.color.rgb = theme_text
+
+                        p3 = tf.add_paragraph()
+                        p3.text = f"A: {a}"
+                        p3.font.size = Pt(14)
+                        p3.font.color.rgb = theme_text
+
+                        tf.add_paragraph().text = ""
+
+                pptx_io = io.BytesIO()
+                prs.save(pptx_io)
+                pptx_bytes = pptx_io.getvalue()
+                prog.progress(0.6)
+
+                pdf_io = io.BytesIO()
+                c = canvas.Canvas(pdf_io, pagesize=letter)
+                width, height = letter
+                y = height - 50
+                c.setFont("Helvetica-Bold", 18)
+                c.setFillColorRGB(189/255, 169/255, 103/255)
+                c.drawString(50, y, f"Café Deep Dive – {selected}")
+                y -= 40
+                for goal, items in grouped.items():
+                    c.setFont("Helvetica-Bold", 14)
+                    c.setFillColorRGB(1, 1, 1)
+                    c.drawString(50, y, f"{goal} Insights")
+                    y -= 20
+                    c.setFont("Helvetica", 12)
+                    for q, a in items:
+                        lines = [f"Q: {q}", f"A: {a}"]
+                        for line in lines:
+                            for subline in line.split("\n"):
+                                c.drawString(70, y, subline)
+                                y -= 15
+                                if y < 50:
+                                    c.showPage()
+                                    y = height - 50
+                                    c.setFont("Helvetica", 12)
+                    y -= 20
+                c.save()
+                pdf_bytes = pdf_io.getvalue()
+                prog.progress(1.0)
+
+                st.download_button("Download PPTX", pptx_bytes, file_name=f"Take My Advice [{selected}].pptx", mime="application/vnd.openxmlformats-officedocument.presentationml.presentation")
+                st.download_button("Download PDF", pdf_bytes, file_name=f"Take My Advice [{selected}].pdf", mime="application/pdf")
+
+        st.markdown("---")
+        st.subheader("Chat with the Café AI")
+        user_q = st.text_area("Your question")
+        if st.button("Send"):
+            with st.spinner("🤖 Café AI is thinking…"):
+                follow = run_deep_dive(context, [user_q])
+            for resp in follow["responses"]:
+                st.subheader(resp["query"])
+                st.write(resp["answer"])
+
+
+
+
+
+
+
 
 if __name__ == "__main__":
     main()

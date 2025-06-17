@@ -1,6 +1,8 @@
 streamlit
 pandas
 dotenv
+python-pptx
+reportlab
 scikit-learn
 matplotlib
 requests
