@@ -27,6 +27,7 @@ from models.foot_traffic_model import run as run_foot_traffic
 from models.margin_model import run as run_margin
 from models.arcgis_explorer import run_explorer
 from models.deep_dive_model import run_deep_dive
+from models.optimizer import run_optimization
 
 
 # --- GOOGLE SHEETS SETUP ---
@@ -146,8 +147,8 @@ def save_demographics_to_sheet(business_name: str, demo: dict):
 # --- STREAMLIT APP ---
 def main():
     st.title("Take My Advice [...]")
-    tab_form, tab_results, tab_explore, tab_deep = st.tabs(
-        ["Form","Results","Exploration","Deep Dive"]
+    tab_form, tab_results, tab_explore, tab_optimize, tab_deep = st.tabs(
+        ["Form","Results","Exploration","Optimizer","Deep Dive"]
     )
 
     # --- Form Tab ---
@@ -320,6 +321,83 @@ def main():
                         selected,
                         st.session_state["last_demo"]
                     )
+
+    # --- Optimizer Tab ---
+    with tab_optimize:
+        st.header("🔧 Optimization Assistant")
+
+        # 1) Load submissions
+        df = load_sheet_df()
+        if df.empty:
+            st.info("No data submitted yet.")
+            st.stop()
+
+        # 2) Café selector
+        cafes = df["Business Name"].unique().tolist()
+        selected = st.selectbox("Select café", cafes, key="optimize_cafe")
+        record = df[df["Business Name"] == selected].iloc[0]
+
+        # 3) Split form vs. demographics
+        headers = get_headers()
+        ts_index = headers.index("Timestamp") + 1
+        form_data = {c: record[c] for c in headers[:ts_index]}
+        demo_data = {c: record[c] for c in headers[ts_index:] if pd.notna(record[c])}
+
+        # 4) Load POS
+        ws_pos = get_pos_sheet()
+        pos_data = (
+            pd.DataFrame(ws_pos.get_all_records()).to_dict("records")
+            if ws_pos else []
+        )
+
+        extra = record.get("Additional Insight", "")
+        context = {
+            "form": form_data,
+            "demographics": demo_data,
+            "pos": pos_data,
+            "pos_raw": pos_data,
+            "labor_raw": None,
+            "extra": extra,
+        }
+
+        if st.button("Run Optimization Engine"):
+            with st.spinner("Running GPT + ML to optimize your café operations..."):
+                results = run_optimization(context)
+
+            st.success("Optimization complete!")
+            for res in results["responses"]:
+                st.subheader(f"🧠 Prompt: {res['prompt']}")
+                st.markdown(res["answer"])
+
+            if "charts" in results:
+                st.markdown("---")
+                st.subheader("📊 Visual Insights")
+
+                if "prophet" in results["charts"]:
+                    st.markdown("**Sales Forecast (Prophet)**")
+                    st.pyplot(results["charts"]["prophet"])
+
+                if "kmeans" in results["charts"]:
+                    st.markdown("**Menu Clustering (KMeans)**")
+                    st.pyplot(results["charts"]["kmeans"])
+
+                if "regression" in results["charts"]:
+                    st.markdown("**Labor Efficiency (RandomForest)**")
+                    st.pyplot(results["charts"]["regression"])
+
+                if "xgboost" in results["charts"]:
+                    st.markdown("**Waste Drivers (XGBoost Feature Importance)**")
+                    st.pyplot(results["charts"]["xgboost"])
+
+        st.markdown("---")
+        st.subheader("Ask the Optimizer Directly")
+        custom_q = st.text_area("Enter a specific optimization question")
+        if st.button("Ask Optimizer"):
+            with st.spinner("Analyzing your custom request..."):
+                follow_up = run_optimization(context, prompts=[custom_q])
+            for res in follow_up["responses"]:
+                st.subheader(res["prompt"])
+                st.write(res["answer"])
 
     # --- Deep Dive Tab ---
     with tab_deep:
@@ -534,13 +612,6 @@ def main():
             for resp in follow["responses"]:
                 st.subheader(resp["query"])
                 st.write(resp["answer"])
-
-
-
-
-
-
-
 
 if __name__ == "__main__":
     main()

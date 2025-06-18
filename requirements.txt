@@ -11,3 +11,5 @@ gspread
 gspread-dataframe
 google-auth
 openai
+prophet
+statsmodels
