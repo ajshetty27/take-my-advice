@@ -4,10 +4,10 @@ import os
 import streamlit as st
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 from sklearn.linear_model import LinearRegression
-from sklearn.ensemble import RandomForestRegressor, GradientBoostingClassifier
+from sklearn.ensemble import RandomForestRegressor
+from statsmodels.tsa.arima.model import ARIMA
 from prophet import Prophet
 from openai import OpenAI
 from dotenv import load_dotenv
@@ -15,11 +15,9 @@ import warnings
 warnings.filterwarnings("ignore")
 
 load_dotenv()
-
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 client = OpenAI(api_key=OPENAI_API_KEY)
 
-# Optimization questions (10 prompts)
 OPTIMIZATION_PROMPTS = [
     "Using the provided POS sales volumes, menu recipes, and ingredient costs, identify 3 opportunities to reduce per-unit food costs—e.g. by bulk ordering, ingredient substitutions, or cross-utilization of stock—while maintaining product quality. For each, estimate annualized savings.",
     "Based on weekly sales seasonality and lead times for key ingredients, recommend an optimized ordering schedule (frequency & quantities) that minimizes spoilage and stockouts. Cite specific items and timing.",
@@ -57,9 +55,6 @@ def generate_extra_insights(pos_df: pd.DataFrame, labor_df: pd.DataFrame = None)
             model.fit(df)
             future = model.make_future_dataframe(periods=7)
             forecast = model.predict(future)
-            st.subheader("📈 Forecasted Weekly Sales (Prophet)")
-            fig1 = model.plot(forecast)
-            st.pyplot(fig1)
             insights.append("Prophet forecast completed for weekly sales trends.")
     except Exception as e:
         insights.append(f"[Prophet] Error: {str(e)}")
@@ -68,21 +63,12 @@ def generate_extra_insights(pos_df: pd.DataFrame, labor_df: pd.DataFrame = None)
         df = pos_df[['avg_item_price', 'qty_sold', 'net_sales']].dropna()
         kmeans = KMeans(n_clusters=3).fit(df)
         pos_df['cluster'] = kmeans.labels_
-
-        st.subheader("🔵 KMeans Clustering of Menu Items")
-        fig2, ax2 = plt.subplots()
-        scatter = ax2.scatter(df['avg_item_price'], df['qty_sold'], c=kmeans.labels_, cmap='viridis')
-        ax2.set_xlabel("Avg Item Price")
-        ax2.set_ylabel("Qty Sold")
-        ax2.set_title("Clusters by Price and Volume")
-        st.pyplot(fig2)
-
         insights.append("KMeans clustering applied to menu items by price, volume, and revenue.")
     except Exception as e:
         insights.append(f"[KMeans] Error: {str(e)}")
 
     try:
-        if labor_df is not None and 'num_employees' in labor_df.columns:
+        if labor_df is not None:
             X = labor_df[['num_employees']]
             y = labor_df['transactions']
             reg = RandomForestRegressor().fit(X, y)
@@ -90,26 +76,6 @@ def generate_extra_insights(pos_df: pd.DataFrame, labor_df: pd.DataFrame = None)
             insights.append(f"Labor regression R² score: {score:.2f}")
     except Exception as e:
         insights.append(f"[Regression] Error: {str(e)}")
-
-    try:
-        if 'waste_count' in pos_df.columns:
-            pos_df['high_waste'] = (pos_df['waste_count'] > 0).astype(int)
-            X = pos_df[['qty_sold', 'avg_item_price', 'net_sales']]
-            y = pos_df['high_waste']
-            model = GradientBoostingClassifier().fit(X, y)
-
-            st.subheader("🔥 Feature Importance for Waste Prediction")
-            fig3, ax3 = plt.subplots()
-            importance = model.feature_importances_
-            feature_names = ['qty_sold', 'avg_item_price', 'net_sales']
-            ax3.bar(feature_names, importance)
-            ax3.set_title("Feature Importances (Waste Prediction)")
-            st.pyplot(fig3)
-
-            acc = model.score(X, y)
-            insights.append(f"GradientBoosting classification accuracy on waste prediction: {acc:.2f}")
-    except Exception as e:
-        insights.append(f"[GBClassifier] Error: {str(e)}")
 
     return "\n".join(insights)
 
@@ -123,56 +89,50 @@ def run_optimization(context: dict, prompts: list[str] = OPTIMIZATION_PROMPTS) -
     labor_df = pd.DataFrame(context.get("labor_raw", [])) if context.get("labor_raw") else None
     extra_insights = generate_extra_insights(pos_df, labor_df)
 
-    # Summarize key insights across all domains
-    form_summary = "\n".join([f"- {k}: {v}" for k, v in context.get("form", {}).items()])
-    demo_summary = "\n".join([f"- {k}: {v}" for k, v in context.get("demographics", {}).items()])
-    pos_stats = []
-
-    try:
-        if 'qty_sold' in pos_df.columns and 'avg_item_price' in pos_df.columns:
-            pos_df['revenue'] = pos_df['qty_sold'] * pos_df['avg_item_price']
-            top_item = pos_df.sort_values('revenue', ascending=False).iloc[0]
-            total_sales = pos_df['revenue'].sum()
-            pos_stats = [
-                f"- Top-selling item: {top_item['item']} with ${top_item['revenue']:.2f} revenue",
-                f"- Total estimated sales revenue: ${total_sales:.2f}",
-                f"- Average price: ${pos_df['avg_item_price'].mean():.2f}",
-                f"- Total items sold: {pos_df['qty_sold'].sum():,.0f}",
-            ]
-    except Exception as e:
-        pos_stats = [f"- POS summary error: {str(e)}"]
+    def has_required_data(prompt_text: str) -> bool:
+        if "waste" in prompt_text.lower() and 'waste_count' not in pos_df.columns:
+            return False
+        return True
 
     for idx, prompt_text in enumerate(prompts, start=1):
-        preamble = [
-            "You are an expert in café operations, finance, and marketing optimization.",
-            "You are tasked with generating **data-backed, high-impact, non-obvious** suggestions using the information below.",
-            "Avoid repetition. Make smart assumptions. Propose cross-domain tactics that connect POS patterns, demographics, and internal inefficiencies.",
+        if not has_required_data(prompt_text):
+            continue
+
+        prompt_parts = [
+            "You are a senior café operations consultant optimizing restaurant operations across finance, staffing, waste, and demand.",
+            "Using the internal data (Form, POS, Demographics, ML insights) and external assumptions where helpful,",
+            "generate an optimized, actionable, quantified, and cross-functional recommendation. Then also rate its priority.",
             "",
-            "=== Café Profile Summary ===",
-            form_summary or "No form data available.",
+            "— Response Format —",
+            "1. Summary of issue",
+            "2. Supporting data (internal + public)",
+            "3. Why it matters (margin, efficiency, satisfaction)",
+            "4. Estimated impact (quantified)",
+            "5. Pilot plan",
+            "6. STAR-formatted Recommendations (Situation, Task, Action, Result)",
+            "7. Priority Score (1–5) based on ROI, Urgency, and Feasibility",
+            "8. Where this fits in the next-best action sequence",
             "",
-            "=== Local Demographics ===",
-            demo_summary or "No demographic data provided.",
+            "=== Form Data ===",
+            *[f"{k}: {v}" for k, v in context.get("form", {}).items()],
             "",
-            "=== POS Sales Summary ===",
-            "\n".join(pos_stats),
+            "=== Demographics ===",
+            *[f"{k}: {v}" for k, v in context.get("demographics", {}).items()],
             "",
-            "=== Machine Learning–Generated Insights ===",
-            extra_insights or "No ML insights available.",
+            "=== POS Data ===",
+            *(str(r) for r in context.get("pos", []) or ["No POS data provided."]),
             "",
-            "=== Tactical Question ===",
-            prompt_text,
+            "=== Additional Insight ===",
+            context.get("extra", "No additional insight provided."),
             "",
-            "=== Required Output Format ===",
-            "1. Summary of business issue",
-            "2. Supporting data from all relevant sources (with interpretation)",
-            "3. Why this matters (impact on revenue/profit/waste)",
-            "4. Quantified estimate of savings/revenue/margin improvement",
-            "5. Concrete plan of action (e.g. A/B test, pilot, negotiation)",
-            "6. Final STAR-format recommendation"
+            "=== Machine Learning Insights ===",
+            extra_insights,
+            "",
+            "=== Optimization Prompt ===",
+            prompt_text
         ]
 
-        full_prompt = "\n".join(preamble)
+        full_prompt = "\n\n".join(prompt_parts)
 
         resp = client.responses.create(
             model="gpt-4o-mini",
