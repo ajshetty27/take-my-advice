@@ -3,6 +3,7 @@ import json
 import os
 import base64
 import streamlit as st
+import streamlit.components.v1 as components
 import re
 import textwrap
 import gspread
@@ -11,6 +12,8 @@ from datetime import datetime
 from streamlit.components.v1 import html
 import pandas as pd
 from gspread_dataframe import set_with_dataframe
+
+from openai import OpenAI
 
 import io
 from pptx import Presentation
@@ -25,9 +28,10 @@ load_dotenv()
 
 from models.foot_traffic_model import run as run_foot_traffic
 from models.margin_model import run as run_margin
-from models.arcgis_explorer import run_explorer
+from models.arcgis_explorer import *
 from models.deep_dive_model import run_deep_dive
 from models.optimizer import run_optimization
+from models.presentation import generate_impress_html
 
 
 # --- GOOGLE SHEETS SETUP ---
@@ -42,6 +46,10 @@ info = json.loads(sa_json)
 
 # 2) Build your creds & client
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+client = OpenAI(api_key=OPENAI_API_KEY)
+
 
 @st.cache_resource(show_spinner=False)
 def get_gspread_client():
@@ -147,8 +155,8 @@ def save_demographics_to_sheet(business_name: str, demo: dict):
 # --- STREAMLIT APP ---
 def main():
     st.title("Take My Advice [...]")
-    tab_form, tab_results, tab_explore, tab_optimize, tab_deep = st.tabs(
-        ["Form","Results","Exploration","Optimizer","Deep Dive"]
+    tab_form, tab_results, tab_explore, tab_optimize, tab_deep ,tab_summary = st.tabs(
+        ["Form","Results","Exploration","Optimizer", "Deep Dive", "Summary"]
     )
 
     # --- Form Tab ---
@@ -277,50 +285,108 @@ def main():
     with tab_explore:
         st.header("Exploration")
 
-        # load all existing cafés
         df = load_sheet_df()
         if df.empty:
             st.info("No cafés on file yet.")
         else:
-            # café selector instead of manual address entry
             cafelist = df["Business Name"].unique().tolist()
             selected = st.selectbox("Select café to explore", cafelist)
 
-            # grab the stored address & demographics from that row
             record = df[df["Business Name"] == selected].iloc[0]
             address = record["Location Address"]
 
             st.markdown(f"**Address:** {address}")
 
-            # do the exploration
             if st.button("Explore"):
                 map_html, demo, cafes = run_explorer(address)
                 if map_html:
                     st.session_state["last_demo"] = demo
+                    st.session_state["last_cafes"] = cafes
+                    st.session_state["target_cafe_name"] = selected
+                    st.session_state["target_cafe_address"] = address
 
                     st.subheader("Map View")
-                    html(map_html, height=450)
+                    st.components.v1.html(map_html, height=450)
 
                     st.subheader("Key Demographics")
                     df_demo = pd.DataFrame(list(demo.items()), columns=["Description", "Value"])
-                    df_demo["Value"] = df_demo["Value"].astype(str)
                     st.table(df_demo)
 
                     st.subheader("Nearby Cafés")
                     df_cafes = pd.DataFrame(cafes)
                     for c in df_cafes.columns:
                         df_cafes[c] = df_cafes[c].fillna("").astype(str)
+                    st.session_state["last_cafes_df"] = df_cafes
                     st.table(df_cafes)
                 else:
                     st.error("Map generation failed.")
 
-            # save demographics back to the same row
             if "last_demo" in st.session_state and st.button("Save demographics"):
                 with st.spinner("Saving demographics to sheet…"):
                     save_demographics_to_sheet(
                         selected,
                         st.session_state["last_demo"]
                     )
+
+            # Compare with similar regions
+            if "last_demo" in st.session_state:
+                st.subheader("Compare with Similar Demographic Regions")
+                city = st.text_input("Enter city to search for similar regions", "Los Angeles")
+                k = st.slider("How many similar regions to find?", 1, 10, 5)
+
+                if st.button("Find Similar Regions"):
+                    token = get_token()
+                    lat, lon = geocode(city, token)
+                    if lat is not None:
+                        batch = fetch_demographics_batch(lat, lon, token, n=15)
+                        top_k = get_similar_regions(st.session_state["last_demo"], batch, k)
+                        st.session_state["top_k_regions"] = top_k
+
+                        region_names = top_k["_region_name"].tolist()
+                        selected_region = st.selectbox("Choose a similar region", region_names)
+
+                        selected_row = top_k[top_k["_region_name"] == selected_region].iloc[0]
+                        region_lat, region_lon = selected_row["_lat"], selected_row["_lon"]
+
+                        cafes_nearby = fetch_cafes_in_region(region_lat, region_lon)
+                        st.session_state["similar_region_cafes"] = cafes_nearby
+
+                        st.subheader("Cafés in Selected Similar Region")
+                        df_region_cafes = pd.DataFrame(cafes_nearby)
+                        st.session_state["region_cafe_df"] = df_region_cafes
+                        st.table(df_region_cafes)
+                    else:
+                        st.warning("Could not geocode city.")
+
+            if "region_cafe_df" in st.session_state:
+                        st.subheader("Compare with a Café from Selected Region")
+                        options = st.session_state["region_cafe_df"]["Name"].tolist()
+                        selected_comp = st.selectbox("Choose a competitor café", options)
+
+                        comp_row = st.session_state["region_cafe_df"][st.session_state["region_cafe_df"]["Name"] == selected_comp].iloc[0]
+
+                        # Construct GPT prompt
+                        prompt = f"""
+                        The target café is {st.session_state['target_cafe_name']} located at {st.session_state['target_cafe_address']}.
+                        Here are the key demographics: {st.session_state['last_demo']}.
+
+                        The competitor café is {comp_row['Name']} located at {comp_row['Address']}.
+                        It appears in a nearby region with similar demographics.
+
+                        Please compare these two cafés from a business strategy perspective:
+                        - Who they likely attract?
+                        - Opportunities for the target café to compete or differentiate?
+                        - What the competitor might be doing well?
+                        Return this in bullet points. Ensure each point has examples pulled from the internet or data to provide meaninfgul comparison
+                        """
+
+                        response = client.chat.completions.create(
+                            model="gpt-4o",
+                            messages=[{"role": "user", "content": prompt}]
+                        )
+
+                        st.subheader("GPT Insights")
+                        st.markdown(response.choices[0].message.content)
 
     # --- Optimizer Tab ---
     with tab_optimize:
@@ -398,6 +464,32 @@ def main():
             for res in follow_up["responses"]:
                 st.subheader(res["prompt"])
                 st.write(res["answer"])
+
+    # --- Presentation Tab ---
+    with tab_summary:
+        st.header("Interactive Presentation")
+        st.write("🧪 Presentation tab loaded correctly.")
+
+        # Example demo content (replace with real summaries later)
+        sections = [
+            ("Cafe Summary", ["Eruta Nature is a nature-themed café.", "Located in Los Angeles."]),
+            ("Key Demographics", ["Young adult population", "High diversity index"]),
+            ("Explore Insights", ["Strong regular base", "Bagel combo performs well"]),
+            ("Optimizer Suggestions", ["Reduce spend on underperforming items", "Optimize labor scheduling"]),
+            ("Deep Dive Goals", ["Align product mix with demographics", "Test targeted offers"]),
+            ("Next Steps", ["Pilot new menu items", "Monitor week-on-week revenue change"])
+        ]
+
+        if st.button("Generate Presentation"):
+            progress = st.progress(0.0)
+            progress.progress(0.3)
+
+            html = generate_impress_html(sections)
+            progress.progress(0.8)
+
+            components.html(html, height=600, scrolling=False)
+            progress.progress(1.0)
+
 
     # --- Deep Dive Tab ---
     with tab_deep:
@@ -612,6 +704,7 @@ def main():
             for resp in follow["responses"]:
                 st.subheader(resp["query"])
                 st.write(resp["answer"])
+
 
 if __name__ == "__main__":
     main()
