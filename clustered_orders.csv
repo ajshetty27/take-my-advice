@@ -1,0 +1,1188 @@
+Order #,Time,Server,Item,Modifiers,Price,Qty,Tax,Total,Payment Type,Parsed Time,Hour,Cluster
+4,"5/1/25, 8:39 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Matcha, Vanilla, 1/3 Sweet, Iced",9.0,1,9.0,0.88,Mastercard 3139,2025-05-01 08:39:00,8,2
+5,"5/1/25, 8:42 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Latte, Cin Sug. Bagel, Plain CC",8.0,1,8.0,0.78,Visa 6469,2025-05-01 08:42:00,8,2
+6,"5/1/25, 8:43 AM","(5/1/25, 8:36 AM - 8:37 AM)",Iced Shaken Espresso,"Iced, Spl Almond, Cold foam, Bsc Cf",5.5,1,5.5,0.54,Visa 6961,2025-05-01 08:43:00,8,4
+6,"5/1/25, 8:43 AM","(5/1/25, 8:36 AM - 8:37 AM)",Iced Shaken Espresso,"Iced, Spl Almond, Cold foam, Bsc Cf",5.5,1,5.5,0.54,Visa 6961,2025-05-01 08:43:00,8,4
+7,"5/1/25, 8:44 AM","(5/1/25, 8:36 AM - 8:37 AM)",Landscape,"Iced, Latte",6.5,1,6.5,0.63,Visa 4780,2025-05-01 08:44:00,8,4
+7,"5/1/25, 8:44 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel,"1 Bagel, Plain, Plain CC",4.0,1,4.0,0.39,Visa 4780,2025-05-01 08:44:00,8,1
+8,"5/1/25, 8:48 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Latte, Caramel, Almond Milk",9.25,1,9.25,0.9,Mastercard 3139,2025-05-01 08:48:00,8,2
+8,"5/1/25, 8:48 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel,"1 Bagel, Asiago, No CC",2.5,1,2.5,0.24,Mastercard 3139,2025-05-01 08:48:00,8,1
+9,"5/1/25, 8:49 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Latte, Everything Bagel, Garlic Herb CC, Vanilla, Chocolate Milano, Smores",9.5,1,9.5,0.93,Visa 7281,2025-05-01 08:49:00,8,2
+10,"5/1/25, 8:50 AM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Vanilla",5.5,1,5.5,0.54,Visa 2948,2025-05-01 08:50:00,8,4
+11,"5/1/25, 8:58 AM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Caramel",5.5,1,5.5,0.54,Visa 3248,2025-05-01 08:58:00,8,4
+12,"5/1/25, 8:59 AM","(5/1/25, 8:36 AM - 8:37 AM)",S'mores,"Iced, Oat Milk, Latte",7.25,1,7.25,0.71,Mastercard 4808,2025-05-01 08:59:00,8,4
+13,"5/1/25, 8:59 AM","(5/1/25, 8:36 AM - 8:37 AM)",White Macadamia,"Iced, Latte",6.5,1,6.5,0.63,Visa 7289,2025-05-01 08:59:00,8,4
+14,"5/1/25, 9:02 AM","(5/1/25, 8:36 AM - 8:37 AM)",Landscape,"Iced, Latte",6.5,1,6.5,0.63,Visa 7743,2025-05-01 09:02:00,9,4
+15,"5/1/25, 9:03 AM","(5/1/25, 8:36 AM - 8:37 AM)",Mr. Can't Go wrong,Add Garlic Herb Cc,10.5,1,10.5,1.02,Visa 7737,2025-05-01 09:03:00,9,2
+15,"5/1/25, 9:03 AM","(5/1/25, 8:36 AM - 8:37 AM)",S'mores,"Iced, Latte",6.5,1,6.5,0.63,Visa 7737,2025-05-01 09:03:00,9,4
+16,"5/1/25, 9:08 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Matcha, Landacape, Iced",9.5,1,9.5,0.93,Visa 6298,2025-05-01 09:08:00,9,2
+17,"5/1/25, 9:09 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Sesame Bagel, Maple CC, Latte, Vanilla, Sugar Free, Cold Foam, Iced",9.5,1,9.5,0.93,Amex 1151,2025-05-01 09:09:00,9,2
+18,"5/1/25, 9:10 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Plain Bagel, Maple CC, Matcha, Strawberry, Iced",9.0,1,9.0,0.88,Visa 5135,2025-05-01 09:10:00,9,2
+19,"5/1/25, 9:14 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Cin Sug. Bagel, Maple CC, Latte, Hazelnut, Iced",8.5,1,8.5,0.83,Discover 4989,2025-05-01 09:14:00,9,2
+20,"5/1/25, 9:16 AM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,"Iced, Cane",5.5,1,5.5,0.54,Visa 7334,2025-05-01 09:16:00,9,4
+21,"5/1/25, 9:16 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Latte, Asiago Bagel, Garlic Herb CC, Vanilla",8.5,1,8.5,0.83,Mastercard 7279,2025-05-01 09:16:00,9,2
+22,"5/1/25, 9:19 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Matcha, Asiago Bagel, Garlic Herb CC, Cane",9.0,1,9.0,0.88,Visa 2068,2025-05-01 09:19:00,9,2
+3,"5/1/25, 8:37 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Chai, Vanilla, Iced",9.0,1,9.0,0.88,Visa 9638,2025-05-01 08:37:00,8,2
+4,"5/1/25, 8:39 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Matcha, Vanilla, 1/3 Sweet, Iced",9.0,1,9.0,0.88,Mastercard 3139,2025-05-01 08:39:00,8,2
+5,"5/1/25, 8:42 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Latte, Cin Sug. Bagel, Plain CC",8.0,1,8.0,0.78,Visa 6469,2025-05-01 08:42:00,8,2
+6,"5/1/25, 8:43 AM","(5/1/25, 8:36 AM - 8:37 AM)",Iced Shaken Espresso,"Iced, Spl Almond, Cold foam, Bsc Cf",5.5,1,5.5,0.54,Visa 6961,2025-05-01 08:43:00,8,4
+6,"5/1/25, 8:43 AM","(5/1/25, 8:36 AM - 8:37 AM)",Iced Shaken Espresso,"Iced, Spl Almond, Cold foam, Bsc Cf",5.5,1,5.5,0.54,Visa 6961,2025-05-01 08:43:00,8,4
+7,"5/1/25, 8:44 AM","(5/1/25, 8:36 AM - 8:37 AM)",Landscape,"Iced, Latte",6.5,1,6.5,0.63,Visa 4780,2025-05-01 08:44:00,8,4
+7,"5/1/25, 8:44 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel,"1 Bagel, Plain, Plain CC",4.0,1,4.0,0.39,Visa 4780,2025-05-01 08:44:00,8,1
+8,"5/1/25, 8:48 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Latte, Caramel, Almond Milk",9.25,1,9.25,0.9,Mastercard 3139,2025-05-01 08:48:00,8,2
+8,"5/1/25, 8:48 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel,"1 Bagel, Asiago, No CC",2.5,1,2.5,0.24,Mastercard 3139,2025-05-01 08:48:00,8,1
+9,"5/1/25, 8:49 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Latte, Everything Bagel, Garlic Herb CC, Vanilla, Chocolate Milano, Smores",9.5,1,9.5,0.93,Visa 7281,2025-05-01 08:49:00,8,2
+10,"5/1/25, 8:50 AM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Vanilla",5.5,1,5.5,0.54,Visa 2948,2025-05-01 08:50:00,8,4
+11,"5/1/25, 8:58 AM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Caramel",5.5,1,5.5,0.54,Visa 3248,2025-05-01 08:58:00,8,4
+12,"5/1/25, 8:59 AM","(5/1/25, 8:36 AM - 8:37 AM)",S'mores,"Iced, Oat Milk, Latte",7.25,1,7.25,0.71,Mastercard 4808,2025-05-01 08:59:00,8,4
+13,"5/1/25, 8:59 AM","(5/1/25, 8:36 AM - 8:37 AM)",White Macadamia,"Iced, Latte",6.5,1,6.5,0.63,Visa 7289,2025-05-01 08:59:00,8,4
+14,"5/1/25, 9:02 AM","(5/1/25, 8:36 AM - 8:37 AM)",Landscape,"Iced, Latte",6.5,1,6.5,0.63,Visa 7743,2025-05-01 09:02:00,9,4
+15,"5/1/25, 9:03 AM","(5/1/25, 8:36 AM - 8:37 AM)",Mr. Can't Go wrong,Add Garlic Herb Cc,10.5,1,10.5,1.02,Visa 7737,2025-05-01 09:03:00,9,2
+15,"5/1/25, 9:03 AM","(5/1/25, 8:36 AM - 8:37 AM)",S'mores,"Iced, Latte",6.5,1,6.5,0.63,Visa 7737,2025-05-01 09:03:00,9,4
+16,"5/1/25, 9:08 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Matcha, Landacape, Iced",9.5,1,9.5,0.93,Visa 6298,2025-05-01 09:08:00,9,2
+17,"5/1/25, 9:09 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Sesame Bagel, Maple CC, Latte, Vanilla, Sugar Free, Cold Foam, Iced",9.5,1,9.5,0.93,Amex 1151,2025-05-01 09:09:00,9,2
+18,"5/1/25, 9:10 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Plain Bagel, Maple CC, Matcha, Strawberry, Iced",9.0,1,9.0,0.88,Visa 5135,2025-05-01 09:10:00,9,2
+19,"5/1/25, 9:14 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Cin Sug. Bagel, Maple CC, Latte, Hazelnut, Iced",8.5,1,8.5,0.83,Discover 4989,2025-05-01 09:14:00,9,2
+20,"5/1/25, 9:16 AM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,"Iced, Cane",5.5,1,5.5,0.54,Visa 7334,2025-05-01 09:16:00,9,4
+21,"5/1/25, 9:16 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Latte, Asiago Bagel, Garlic Herb CC, Vanilla",8.5,1,8.5,0.83,Mastercard 7279,2025-05-01 09:16:00,9,2
+22,"5/1/25, 9:19 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Matcha, Asiago Bagel, Garlic Herb CC, Cane",9.0,1,9.0,0.88,Visa 2068,2025-05-01 09:19:00,9,2
+43,"5/1/25, 10:08 AM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Caramel, Oat Milk",6.25,1,6.25,0.61,Mastercard 6206,2025-05-01 10:08:00,10,4
+43,"5/1/25, 10:08 AM","(5/1/25, 8:36 AM - 8:37 AM)",$0.00,El Toro Rojo,11.0,1,11.0,1.07,Mastercard 6206,2025-05-01 10:08:00,10,2
+44,"5/1/25, 10:09 AM","(5/1/25, 8:36 AM - 8:37 AM)",Americano,"Iced, Honey, Almond Milk",5.25,1,5.25,0.51,Amex 5977,2025-05-01 10:09:00,10,4
+45,"5/1/25, 10:15 AM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,"Iced, Strawberry",6.0,1,6.0,0.58,Visa 5438,2025-05-01 10:15:00,10,4
+46,"5/1/25, 10:16 AM","(5/1/25, 8:36 AM - 8:37 AM)",Chai,Iced,6.0,1,6.0,0.58,Visa 1866,2025-05-01 10:16:00,10,4
+47,"5/1/25, 10:16 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Everything Bagel, Plain CC, Latte, Vanilla",8.5,1,8.5,0.83,Visa 9424,2025-05-01 10:16:00,10,2
+48,"5/1/25, 10:20 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Everything Bagel, Garlic Herb CC, Shaken Espresso, Spl Milk, Iatmikk",8.0,1,8.0,0.78,Visa 6406,2025-05-01 10:20:00,10,2
+49,"5/1/25, 10:21 AM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Oat Milk",5.75,1,5.75,0.56,Visa 3272,2025-05-01 10:21:00,10,4
+50,"5/1/25, 10:23 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Matcha, Hoeny, Oat Milk, Asiago Bagel, Diablo CC",9.75,1,9.75,0.95,Visa 5046,2025-05-01 10:23:00,10,2
+51,"5/1/25, 10:25 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Sesame Bagel, Plain CC, Matcha, Vanilla, Iced",9.0,1,9.0,0.88,Visa 8233,2025-05-01 10:25:00,10,2
+52,"5/1/25, 10:26 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Everything Bagel, Garlic Herb CC, Matcha, Vanilla, Almond Milk, Iced",9.75,1,9.75,0.95,Amex 6438,2025-05-01 10:26:00,10,2
+53,"5/1/25, 10:28 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Plain Bagel, Plain CC, Matcha, Almond Milk",9.25,1,9.25,0.9,Visa 0400,2025-05-01 10:28:00,10,2
+54,"5/1/25, 10:29 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Latte, Vanilla, Plain Bagel, Plain CC",8.5,1,8.5,0.83,Visa 9951,2025-05-01 10:29:00,10,2
+55,"5/1/25, 10:30 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Cin Sug. Bagel, Blueberry CC, Matcha, Lanfscaoe",9.5,1,9.5,0.93,Visa 3093,2025-05-01 10:30:00,10,2
+55,"5/1/25, 10:30 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Shaken Espresso, Asiago Bagel, Garlic Herb CC",8.0,1,8.0,0.78,Visa 3093,2025-05-01 10:30:00,10,2
+56,"5/1/25, 10:32 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Plain Bagel, Diablo CC, Latte, Oat Milk, Iced",8.75,1,8.75,0.85,Amex 0258,2025-05-01 10:32:00,10,2
+57,"5/1/25, 10:32 AM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Vanilla, Oat Milk",6.25,1,6.25,0.61,Visa 1012,2025-05-01 10:32:00,10,4
+58,"5/1/25, 10:35 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel,"1 Bagel, Everything, Garlic Herb CC",4.25,1,4.25,0.41,Visa 8414,2025-05-01 10:35:00,10,1
+59,"5/1/25, 10:36 AM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,"Iced, Vanilla, Cold foam",7.0,1,7.0,0.68,Visa 7783,2025-05-01 10:36:00,10,4
+60,"5/1/25, 10:37 AM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Oat Milk, Vanilla",6.25,1,6.25,0.61,Visa 4671,2025-05-01 10:37:00,10,4
+61,"5/1/25, 10:40 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Latte, HOT, Plain Bagel, Blueberry CC",8.0,2,16.0,1.56,Visa 5067,2025-05-01 10:40:00,10,3
+62,"5/1/25, 10:44 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Sesame Bagel, Plain CC, Matcha, Vanilla, Iced",9.0,1,9.0,0.88,Mastercard 7853,2025-05-01 10:44:00,10,2
+66,"5/1/25, 10:46 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Everything Bagel, Garlic Herb CC, Latte, Caramel, Oat Milk",9.25,1,9.25,0.9,Visa 7846,2025-05-01 10:46:00,10,2
+73,"5/1/25, 10:51 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Everything Bagel, Plain CC, Matcha, Oat Milk, Vanilla, Iced",9.75,1,9.75,0.95,Mastercard 9462,2025-05-01 10:51:00,10,2
+75,"5/1/25, 10:52 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Cin Sug. Bagel, Maple CC, Matcha, Oat Milk, Strawberry, Iced",9.75,1,9.75,0.95,Mastercard 0610,2025-05-01 10:52:00,10,2
+78,"5/1/25, 10:53 AM","(5/1/25, 8:36 AM - 8:37 AM)",Mocha,Iced,5.5,1,5.5,0.54,Visa 8183,2025-05-01 10:53:00,10,4
+79,"5/1/25, 10:56 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Matcha, Asiago Bagel, Plain CC, Toadted Marshmallow",9.0,1,9.0,0.88,Visa 0800,2025-05-01 10:56:00,10,2
+82,"5/1/25, 10:58 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Asiago Bagel, Plain CC, Latte, Caramel, Oat Milk, Cold Foam",10.25,1,10.25,1.0,Visa 9227,2025-05-01 10:58:00,10,2
+83,"5/1/25, 10:58 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel,"1 Bagel, Asiago, Garlic Herb CC",4.25,1,4.25,0.41,Visa 3500,2025-05-01 10:58:00,10,1
+85,"5/1/25, 10:59 AM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Vanilla, Almond Milk",6.25,1,6.25,0.61,Visa 6894,2025-05-01 10:59:00,10,4
+86,"5/1/25, 11:00 AM","(5/1/25, 8:36 AM - 8:37 AM)",Snickerdoodle,"Iced, Almond Milk, Latte",7.25,1,7.25,0.71,Mastercard 0100,2025-05-01 11:00:00,11,4
+87,"5/1/25, 11:01 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Plain Bagel, Plain CC, Matcha, Vanilla, Strawberry",9.5,1,9.5,0.93,Mastercard 4707,2025-05-01 11:01:00,11,2
+88,"5/1/25, 11:03 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Asiago Bagel, Plain CC, Matcha, Strawberry",9.0,1,9.0,0.88,Visa 8562,2025-05-01 11:03:00,11,2
+91,"5/1/25, 11:05 AM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,"Iced, Strawberry, Oat Milk",6.75,1,6.75,0.66,Visa 8754,2025-05-01 11:05:00,11,4
+93,"5/1/25, 11:06 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Plain Bagel, Plain CC, Latte, Oat Milk, Honey",9.25,1,9.25,0.9,Visa 9597,2025-05-01 11:06:00,11,2
+94,"5/1/25, 11:08 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Matcha, Almond Milk, Sugar Free Vanilla, Everything Bagel, Garlic Herb CC",9.25,1,9.25,0.9,Visa 0488,2025-05-01 11:08:00,11,2
+96,"5/1/25, 11:11 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Matcha, Extra Shot, Plain Bagel, Maple CC",9.5,1,9.5,0.93,Discover 5167,2025-05-01 11:11:00,11,2
+98,"5/1/25, 11:12 AM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Oat Milk",5.75,1,5.75,0.56,Visa 0327,2025-05-01 11:12:00,11,4
+99,"5/1/25, 11:13 AM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Oat Milk",5.75,1,2.87,0.28,Amex 7678,2025-05-01 11:13:00,11,4
+101,"5/1/25, 11:14 AM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Vanilla, Almond Milk, Sufar Free, Cinnamon",6.25,1,3.13,0.31,Mastercard 7763,2025-05-01 11:14:00,11,4
+102,"5/1/25, 11:15 AM","(5/1/25, 8:36 AM - 8:37 AM)",Landscape,"Iced, Latte",6.5,1,6.5,0.63,Mastercard 2048,2025-05-01 11:15:00,11,4
+104,"5/1/25, 11:17 AM","(5/1/25, 8:36 AM - 8:37 AM)",Snickerdoodle,"Iced, Latte, Extra Shot",7.5,1,7.5,0.73,Visa 2757,2025-05-01 11:17:00,11,4
+106,"5/1/25, 11:18 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Plain Bagel, Blueberry CC, Latte, Oat Milk, Vanilla, Iced",9.25,1,9.25,0.9,Visa 9112,2025-05-01 11:18:00,11,2
+107,"5/1/25, 11:19 AM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,"Iced, Strawberry",6.0,1,6.0,0.58,Amex 6230,2025-05-01 11:19:00,11,4
+109,"5/1/25, 11:21 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel,"1 Bagel, Asiago, Garlic Herb CC",4.25,1,4.25,0.41,Visa 4208,2025-05-01 11:21:00,11,1
+113,"5/1/25, 11:21 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Everything Bagel, Plain CC, Matcha, Vanilla, Iced",9.0,1,9.0,0.88,Visa 9062,2025-05-01 11:21:00,11,2
+116,"5/1/25, 11:22 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Everything Bagel, Plain CC, Shaken Espresso, Oat Milk, BSC",9.25,1,9.25,0.9,Visa 2524,2025-05-01 11:22:00,11,2
+118,"5/1/25, 11:23 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel,"1 Bagel, Plain, Plain CC",4.0,1,4.0,0.39,Visa 3866,2025-05-01 11:23:00,11,1
+119,"5/1/25, 11:24 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Asiago Bagel, Plain CC, Latte, Snikerdoodle, Light Ice",9.0,1,9.0,0.88,Visa 8773,2025-05-01 11:24:00,11,2
+126,"5/1/25, 11:26 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Plain Bagel, Blueberry CC, Latte, Moccahazelnut, Oat Milk, Ices",8.75,1,8.75,0.85,Visa 3170,2025-05-01 11:26:00,11,2
+126,"5/1/25, 11:26 AM","(5/1/25, 8:36 AM - 8:37 AM)",Cold Brew,Iced,5.5,1,5.5,0.54,Visa 3170,2025-05-01 11:26:00,11,4
+127,"5/1/25, 11:27 AM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Oat Milk",5.75,1,5.75,0.56,Mastercard 5856,2025-05-01 11:27:00,11,4
+128,"5/1/25, 11:27 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Everything Bagel, Diablo CC, Shaken Espresso",8.0,1,8.0,0.78,Mastercard 9816,2025-05-01 11:27:00,11,2
+129,"5/1/25, 11:28 AM","(5/1/25, 8:36 AM - 8:37 AM)",Snickerdoodle,"Iced, Oat Milk, Latte",7.25,1,7.25,0.71,Visa 4789,2025-05-01 11:28:00,11,4
+130,"5/1/25, 11:29 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Cin Sug. Bagel, Maple CC, Latte, Vanilla, Cold Foam",9.5,1,9.5,0.93,Visa 6689,2025-05-01 11:29:00,11,2
+131,"5/1/25, 11:30 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Matcha, Strawberry",9.0,1,9.0,0.88,Visa 5664,2025-05-01 11:30:00,11,2
+132,"5/1/25, 11:30 AM","(5/1/25, 8:36 AM - 8:37 AM)",Landscape,"Iced, Oat Milk, Latte",7.25,1,7.25,0.71,Mastercard 4955,2025-05-01 11:30:00,11,4
+138,"5/1/25, 11:37 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Cold Brew, Everything Bagel, Garlic Herb CC, Cold Foam",9.0,1,9.0,0.88,Visa 0402,2025-05-01 11:37:00,11,2
+138,"5/1/25, 11:37 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Latte, Everything Bagel, Garlic Herb CC",8.0,1,8.0,0.78,Visa 0402,2025-05-01 11:37:00,11,2
+139,"5/1/25, 11:38 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Everything Bagel, Plain CC, Latte, Oat Milk, Smores",9.75,1,9.75,0.95,Visa 8866,2025-05-01 11:38:00,11,2
+141,"5/1/25, 11:39 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Latte, Smores, Everything Bagel, Plain CC",9.0,1,9.0,0.88,Mastercard 7845,2025-05-01 11:39:00,11,2
+143,"5/1/25, 11:40 AM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Almond Milk, Vanilla",6.25,1,0.0,0.0,,2025-05-01 11:40:00,11,4
+145,"5/1/25, 11:41 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Matcha, Strawberry, Van Cf, Cold Foam, Everything Bagel, Plain CC",10.0,1,10.0,0.98,Visa 6523,2025-05-01 11:41:00,11,2
+147,"5/1/25, 11:43 AM","(5/1/25, 8:36 AM - 8:37 AM)",Iced Shaken Espresso,"Iced, One Shot, Spl Almond, Cold foam, A Little Cf",5.5,1,4.12,0.4,Amex 1212,2025-05-01 11:43:00,11,4
+151,"5/1/25, 11:44 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Latte, Vanilla, Cold Foam, Asiago Bagel, Diablo CC",9.5,1,9.5,0.93,Visa 7852,2025-05-01 11:44:00,11,2
+155,"5/1/25, 11:46 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Shaken Espresso, Vanilla, Spl Oat, Asiago Bagel, Diablo CC",8.5,1,8.5,0.83,Visa 5605,2025-05-01 11:46:00,11,2
+161,"5/1/25, 11:47 AM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel,"1 Bagel, Asiago, Garlic Herb CC",4.25,1,4.25,0.41,Visa 5540,2025-05-01 11:47:00,11,1
+163,"5/1/25, 11:48 AM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Vanilla",5.5,1,5.5,0.54,Mastercard 9779,2025-05-01 11:48:00,11,4
+164,"5/1/25, 11:51 AM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Vanilla",5.5,2,11.0,1.07,Mastercard 6378,2025-05-01 11:51:00,11,3
+166,"5/1/25, 11:53 AM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Whitemacadamia, 1/2sweet",5.0,1,5.0,0.49,Visa 5291,2025-05-01 11:53:00,11,4
+171,"5/1/25, 11:57 AM","(5/1/25, 8:36 AM - 8:37 AM)",Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Visa 0321,2025-05-01 11:57:00,11,4
+171,"5/1/25, 11:57 AM","(5/1/25, 8:36 AM - 8:37 AM)",White Macadamia,"Iced, Latte",6.5,1,6.5,0.63,Visa 0321,2025-05-01 11:57:00,11,4
+173,"5/1/25, 12:00 PM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,"Iced, Marshmallow",6.0,1,6.0,0.58,Amex 1039,2025-05-01 12:00:00,12,5
+173,"5/1/25, 12:00 PM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,Iced,5.5,1,5.5,0.54,Amex 1039,2025-05-01 12:00:00,12,5
+173,"5/1/25, 12:00 PM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel,"1 Bagel, Cinnamon Sugar, Maple CC",4.25,1,4.25,0.41,Amex 1039,2025-05-01 12:00:00,12,1
+176,"5/1/25, 12:01 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,Iced,5.0,1,5.0,0.49,Visa 7950,2025-05-01 12:01:00,12,6
+183,"5/1/25, 12:04 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Strawberry",5.5,1,5.5,0.54,Discover 0987,2025-05-01 12:04:00,12,6
+184,"5/1/25, 12:06 PM","(5/1/25, 8:36 AM - 8:37 AM)",$0.00,Mr. Can't Go wrong,10.0,1,10.0,0.98,Visa 7900,2025-05-01 12:06:00,12,0
+184,"5/1/25, 12:06 PM","(5/1/25, 8:36 AM - 8:37 AM)",Landscape,"Iced, Almond Milk, Latte",7.25,1,7.25,0.71,Visa 7900,2025-05-01 12:06:00,12,5
+184,"5/1/25, 12:06 PM","(5/1/25, 8:36 AM - 8:37 AM)",Chai,"Iced, Extra Shot, Oat Milk, One Shot",7.75,1,7.75,0.76,Visa 7900,2025-05-01 12:06:00,12,5
+190,"5/1/25, 12:07 PM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Everything Bagel, Plain CC, Americano",8.0,1,8.0,0.78,Visa 8896,2025-05-01 12:07:00,12,0
+193,"5/1/25, 12:10 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Extra Ice, Less Milk",5.0,1,5.0,0.49,Visa 8159,2025-05-01 12:10:00,12,6
+193,"5/1/25, 12:10 PM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,Iced,5.5,1,5.5,0.54,Visa 8159,2025-05-01 12:10:00,12,5
+195,"5/1/25, 12:12 PM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Plain Bagel, Plain CC, Latte, Caramel, Extra Sweet",8.5,1,8.5,0.83,Visa 9485,2025-05-01 12:12:00,12,0
+202,"5/1/25, 12:13 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Oat Milk, One Pum Hazel",5.75,1,5.75,0.56,Visa 8369,2025-05-01 12:13:00,12,6
+203,"5/1/25, 12:14 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Vanilla, Oat Milk",6.25,1,6.25,0.61,Visa 7817,2025-05-01 12:14:00,12,6
+204,"5/1/25, 12:14 PM","(5/1/25, 8:36 AM - 8:37 AM)",Snickerdoodle,"Iced, Almond Milk, Latte",7.25,1,7.25,0.71,Amex 2036,2025-05-01 12:14:00,12,5
+208,"5/1/25, 12:17 PM","(5/1/25, 8:36 AM - 8:37 AM)",Easter Bunny,"Iced, Cold Brew",6.5,1,6.5,0.63,Visa 7809,2025-05-01 12:17:00,12,5
+208,"5/1/25, 12:17 PM","(5/1/25, 8:36 AM - 8:37 AM)",$0.00,Mr. Can't Go wrong,10.0,1,10.0,0.98,Visa 7809,2025-05-01 12:17:00,12,0
+213,"5/1/25, 12:21 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Hazelnut, Almond Milk",6.25,1,6.25,0.61,Visa 3742,2025-05-01 12:21:00,12,6
+217,"5/1/25, 12:23 PM","(5/1/25, 8:36 AM - 8:37 AM)",Bagel Combo,"_, Plain Bagel, Garlic Herb CC, Latte, Vanilla",8.5,1,8.5,0.83,Visa 8426,2025-05-01 12:23:00,12,0
+218,"5/1/25, 12:24 PM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,"Iced, Strawberry",6.0,1,6.0,0.58,Visa 2904,2025-05-01 12:24:00,12,5
+222,"5/1/25, 12:27 PM","(5/1/25, 8:36 AM - 8:37 AM)",Not So Aburrito,Diablo Salsa,10.0,1,10.0,0.98,Mastercard 8256,2025-05-01 12:27:00,12,0
+224,"5/1/25, 12:29 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Caramel",5.5,1,2.75,0.27,Visa 3552,2025-05-01 12:29:00,12,6
+230,"5/1/25, 12:31 PM","(5/1/25, 8:36 AM - 8:37 AM)",Americano,"Oat Milk, Hot",5.25,1,5.25,0.51,Amex 2001,2025-05-01 12:31:00,12,5
+243,"5/1/25, 12:40 PM","(5/1/25, 8:36 AM - 8:37 AM)",White Macadamia,"Iced, Latte",6.5,1,6.5,0.63,Discover 5978,2025-05-01 12:40:00,12,5
+246,"5/1/25, 12:43 PM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,Iced,5.5,1,5.5,0.54,Amex 1018,2025-05-01 12:43:00,12,5
+246,"5/1/25, 12:43 PM","(5/1/25, 8:36 AM - 8:37 AM)",Cold Brew,Iced,5.5,1,5.5,0.54,Amex 1018,2025-05-01 12:43:00,12,5
+250,"5/1/25, 12:47 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Caramel, Extra, Oat Milk",6.25,1,6.25,0.61,Visa 9259,2025-05-01 12:47:00,12,6
+252,"5/1/25, 12:48 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Caramel",5.5,1,5.5,0.54,Mastercard 3118,2025-05-01 12:48:00,12,6
+253,"5/1/25, 12:48 PM","(5/1/25, 8:36 AM - 8:37 AM)",Snickerdoodle,"Iced, Halfvsweet, Latte, Oat Milk",7.25,1,7.25,0.71,Amex 6972,2025-05-01 12:48:00,12,5
+254,"5/1/25, 12:49 PM",,Not So Aburrito,Add Diablo,10.0,1,5.0,0.49,Visa 9884,2025-05-01 12:49:00,12,0
+256,"5/1/25, 12:51 PM","(5/1/25, 8:36 AM - 8:37 AM)",BBLT,"No Tomato, On Sourdougg",11.5,1,5.75,0.56,Visa 3552,2025-05-01 12:51:00,12,0
+258,"5/1/25, 12:52 PM","(5/1/25, 8:36 AM - 8:37 AM)",Landscape,"Iced, Latte",6.5,1,6.5,0.63,Visa 0789,2025-05-01 12:52:00,12,5
+259,"5/1/25, 12:52 PM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,"Iced, Almond Milk",6.25,1,6.25,0.61,Visa 3597,2025-05-01 12:52:00,12,5
+262,"5/1/25, 12:55 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Macadamia, Almond Milk",6.25,1,6.25,0.61,Mastercard 5438,2025-05-01 12:55:00,12,6
+264,"5/1/25, 12:58 PM",,Americano,"Iced, Van Cf, Cold foam",5.5,1,5.5,0.54,Amex 2687,2025-05-01 12:58:00,12,5
+267,"5/1/25, 1:05 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Vanilla, Oat Milk",6.25,1,6.25,0.61,Mastercard 0958,2025-05-01 13:05:00,13,6
+270,"5/1/25, 1:05 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Vanilla",5.5,1,5.5,0.54,Visa 7153,2025-05-01 13:05:00,13,6
+271,"5/1/25, 1:08 PM","(5/1/25, 8:36 AM - 8:37 AM)",Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Visa 2984,2025-05-01 13:08:00,13,5
+276,"5/1/25, 1:15 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Vanilla",5.5,1,5.5,0.54,Visa 7348,2025-05-01 13:15:00,13,6
+276,"5/1/25, 1:15 PM","(5/1/25, 8:36 AM - 8:37 AM)",Sourdough,Add Salmon And Cream Cheese,5.0,1,5.0,0.49,Visa 7348,2025-05-01 13:15:00,13,5
+278,"5/1/25, 1:16 PM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,"Iced, Cane",5.5,1,5.5,0.54,Discover 5439,2025-05-01 13:16:00,13,5
+295,"5/1/25, 1:23 PM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,"Iced, Rasberrt",6.0,1,6.0,0.58,Visa 5632,2025-05-01 13:23:00,13,5
+295,"5/1/25, 1:23 PM","(5/1/25, 8:36 AM - 8:37 AM)",Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Visa 5632,2025-05-01 13:23:00,13,5
+302,"5/1/25, 1:25 PM",,Snickerdoodle,"Iced, Oat Milk, Latte",7.25,1,7.25,0.71,Visa 3062,2025-05-01 13:25:00,13,5
+307,"5/1/25, 1:28 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Caramel, Almond Milk",6.25,1,6.25,0.61,Visa 0451,2025-05-01 13:28:00,13,6
+311,"5/1/25, 1:30 PM","(5/1/25, 8:36 AM - 8:37 AM)",Cold Brew,"Iced, Spl Whole",5.5,1,5.5,0.54,Visa 7030,2025-05-01 13:30:00,13,5
+313,"5/1/25, 1:32 PM","(5/1/25, 8:36 AM - 8:37 AM)",Cold Brew,Iced,5.5,1,5.5,0.54,Visa 0725,2025-05-01 13:32:00,13,5
+319,"5/1/25, 1:34 PM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,"Iced, Vanilla, Oat Milk",6.75,1,6.75,0.66,Visa 8760,2025-05-01 13:34:00,13,5
+325,"5/1/25, 1:38 PM","(5/1/25, 8:36 AM - 8:37 AM)",Mocha Hazelnut,"Iced, Latte, Oat Milk, No Cf",7.25,1,7.25,0.71,Visa 9708,2025-05-01 13:38:00,13,5
+325,"5/1/25, 1:38 PM","(5/1/25, 8:36 AM - 8:37 AM)",Mocha Hazelnut,"Iced, Almond Milk, Latte",7.25,1,3.63,0.35,Visa 9708,2025-05-01 13:38:00,13,5
+329,"5/1/25, 1:40 PM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,"Iced, Vanilla, Oat Milk, Light Ice",6.75,1,6.75,0.66,Visa 3733,2025-05-01 13:40:00,13,5
+331,"5/1/25, 1:42 PM","(5/1/25, 8:36 AM - 8:37 AM)",Iced Shaken Espresso,Iced,4.5,1,4.5,0.44,Visa 3874,2025-05-01 13:42:00,13,5
+334,"5/1/25, 1:43 PM",,Latte,Iced,5.0,1,5.0,0.49,Mastercard 5264,2025-05-01 13:43:00,13,6
+338,"5/1/25, 1:46 PM","(5/1/25, 8:36 AM - 8:37 AM)",Landscape,"Iced, Latte",6.5,1,6.5,0.63,Visa 8159,2025-05-01 13:46:00,13,5
+338,"5/1/25, 1:46 PM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,"Iced, Vanilla",6.0,1,6.0,0.58,Visa 8159,2025-05-01 13:46:00,13,5
+343,"5/1/25, 1:52 PM","(5/1/25, 8:36 AM - 8:37 AM)",White Macadamia,"Iced, Latte",6.5,1,6.5,0.63,Visa 8785,2025-05-01 13:52:00,13,5
+343,"5/1/25, 1:52 PM","(5/1/25, 8:36 AM - 8:37 AM)",$0.00,Not So Aburrito,10.0,1,10.0,0.98,Visa 8785,2025-05-01 13:52:00,13,0
+347,"5/1/25, 1:53 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Honey",5.0,1,5.0,0.49,Amex 1025,2025-05-01 13:53:00,13,6
+347,"5/1/25, 1:53 PM","(5/1/25, 8:36 AM - 8:37 AM)",$0.00,Not So Aburrito,10.0,1,10.0,0.98,Amex 1025,2025-05-01 13:53:00,13,0
+348,"5/1/25, 1:54 PM","(5/1/25, 8:36 AM - 8:37 AM)",Cappuccino,Iced,5.0,2,10.0,0.98,Visa 9085,2025-05-01 13:54:00,13,3
+350,"5/1/25, 1:57 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Almond Milk, Light Ice, Hazelnut, 1/3 Sweet",6.25,1,6.25,0.61,Mastercard 2426,2025-05-01 13:57:00,13,6
+351,"5/1/25, 1:59 PM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,"Iced, Strawberry, Oat Milk",6.75,1,6.75,0.66,Mastercard 1538,2025-05-01 13:59:00,13,5
+351,"5/1/25, 1:59 PM","(5/1/25, 8:36 AM - 8:37 AM)",$0.00,Not So Aburrito,10.0,1,10.0,0.98,Mastercard 1538,2025-05-01 13:59:00,13,0
+354,"5/1/25, 2:02 PM","(5/1/25, 8:36 AM - 8:37 AM)",S'mores,"Iced, Latte",6.5,1,6.5,0.63,Visa 0215,2025-05-01 14:02:00,14,5
+354,"5/1/25, 2:02 PM","(5/1/25, 8:36 AM - 8:37 AM)",Mocha Hazelnut,"Iced, Half Sweet, Latte",6.5,1,6.5,0.63,Visa 0215,2025-05-01 14:02:00,14,5
+354,"5/1/25, 2:02 PM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,"Iced, Strawberry",6.0,1,6.0,0.58,Visa 0215,2025-05-01 14:02:00,14,5
+358,"5/1/25, 2:05 PM","(5/1/25, 8:36 AM - 8:37 AM)",Mocha,"Iced, Almond Milk",6.25,1,6.25,0.61,Visa 5579,2025-05-01 14:05:00,14,5
+361,"5/1/25, 2:05 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,Hot,5.0,1,5.0,0.49,Visa 9925,2025-05-01 14:05:00,14,6
+362,"5/1/25, 2:09 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Strawberry, Marshmallow, Cold foam, Strawv Cf",7.0,1,7.0,0.68,Discover 4742,2025-05-01 14:09:00,14,6
+365,"5/1/25, 2:10 PM","(5/1/25, 8:36 AM - 8:37 AM)",Landscape,"Iced, Oat Milk, Latte",7.25,1,7.25,0.71,Visa 6906,2025-05-01 14:10:00,14,5
+369,"5/1/25, 2:15 PM","(5/1/25, 8:36 AM - 8:37 AM)",Mocha Hazelnut,"Iced, Latte",6.5,1,6.5,0.63,Amex 0533,2025-05-01 14:15:00,14,5
+372,"5/1/25, 2:17 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Vanilla, Oat Milk, Half Sweer",6.25,1,6.25,0.61,Amex 0618,2025-05-01 14:17:00,14,6
+372,"5/1/25, 2:17 PM","(5/1/25, 8:36 AM - 8:37 AM)",$0.00,Not So Aburrito,10.0,1,10.0,0.98,Amex 0618,2025-05-01 14:17:00,14,0
+378,"5/1/25, 2:18 PM","(5/1/25, 8:36 AM - 8:37 AM)",Mocha,"Iced, Extra Shot",6.5,1,6.5,0.63,Visa 2124,2025-05-01 14:18:00,14,5
+386,"5/1/25, 2:26 PM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,"Iced, Almond Milk, Strawberry, Sf Straw",6.75,1,6.75,0.66,Visa 8220,2025-05-01 14:26:00,14,5
+391,"5/1/25, 2:29 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Oat Milk",5.75,1,5.75,0.56,Visa 1799,2025-05-01 14:29:00,14,6
+395,"5/1/25, 2:41 PM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,"Iced, Strawberry, Almond Milk",6.75,1,6.75,0.66,Visa 3892,2025-05-01 14:41:00,14,5
+407,"5/1/25, 2:41 PM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,"Iced, Vanilla",6.0,1,6.0,0.58,Visa 2925,2025-05-01 14:41:00,14,5
+408,"5/1/25, 2:46 PM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,"Iced, Almond Milk, Cold foam, Van Cf",7.25,1,7.25,0.71,Visa 0540,2025-05-01 14:46:00,14,5
+411,"5/1/25, 2:47 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Brown Sugar Cinnamon, Cold foam, Vanilla Cf",6.5,1,6.5,0.63,Visa 8635,2025-05-01 14:47:00,14,6
+412,"5/1/25, 2:48 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Caramel",5.5,1,5.5,0.54,Visa 1292,2025-05-01 14:48:00,14,6
+413,"5/1/25, 2:50 PM","(5/1/25, 8:36 AM - 8:37 AM)",Machiatto,Iced,5.0,1,5.0,0.49,Discover 9267,2025-05-01 14:50:00,14,5
+413,"5/1/25, 2:50 PM","(5/1/25, 8:36 AM - 8:37 AM)",Cold Brew,Iced,5.5,1,5.5,0.54,Discover 9267,2025-05-01 14:50:00,14,5
+413,"5/1/25, 2:50 PM","(5/1/25, 8:36 AM - 8:37 AM)",El Toro Rojo,On Sourdough,11.0,1,11.0,1.07,Discover 9267,2025-05-01 14:50:00,14,0
+347,"5/1/25, 1:53 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Honey",5.0,1,5.0,0.49,Amex 1025,2025-05-01 13:53:00,13,6
+347,"5/1/25, 1:53 PM","(5/1/25, 8:36 AM - 8:37 AM)",$0.00,Not So Aburrito,10.0,1,10.0,0.98,Amex 1025,2025-05-01 13:53:00,13,0
+348,"5/1/25, 1:54 PM","(5/1/25, 8:36 AM - 8:37 AM)",Cappuccino,Iced,5.0,2,10.0,0.98,Visa 9085,2025-05-01 13:54:00,13,3
+350,"5/1/25, 1:57 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Almond Milk, Light Ice, Hazelnut, 1/3 Sweet",6.25,1,6.25,0.61,Mastercard 2426,2025-05-01 13:57:00,13,6
+351,"5/1/25, 1:59 PM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,"Iced, Strawberry, Oat Milk",6.75,1,6.75,0.66,Mastercard 1538,2025-05-01 13:59:00,13,5
+351,"5/1/25, 1:59 PM","(5/1/25, 8:36 AM - 8:37 AM)",$0.00,Not So Aburrito,10.0,1,10.0,0.98,Mastercard 1538,2025-05-01 13:59:00,13,0
+354,"5/1/25, 2:02 PM","(5/1/25, 8:36 AM - 8:37 AM)",S'mores,"Iced, Latte",6.5,1,6.5,0.63,Visa 0215,2025-05-01 14:02:00,14,5
+354,"5/1/25, 2:02 PM","(5/1/25, 8:36 AM - 8:37 AM)",Mocha Hazelnut,"Iced, Half Sweet, Latte",6.5,1,6.5,0.63,Visa 0215,2025-05-01 14:02:00,14,5
+354,"5/1/25, 2:02 PM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,"Iced, Strawberry",6.0,1,6.0,0.58,Visa 0215,2025-05-01 14:02:00,14,5
+358,"5/1/25, 2:05 PM","(5/1/25, 8:36 AM - 8:37 AM)",Mocha,"Iced, Almond Milk",6.25,1,6.25,0.61,Visa 5579,2025-05-01 14:05:00,14,5
+361,"5/1/25, 2:05 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,Hot,5.0,1,5.0,0.49,Visa 9925,2025-05-01 14:05:00,14,6
+362,"5/1/25, 2:09 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Strawberry, Marshmallow, Cold foam, Strawv Cf",7.0,1,7.0,0.68,Discover 4742,2025-05-01 14:09:00,14,6
+365,"5/1/25, 2:10 PM","(5/1/25, 8:36 AM - 8:37 AM)",Landscape,"Iced, Oat Milk, Latte",7.25,1,7.25,0.71,Visa 6906,2025-05-01 14:10:00,14,5
+369,"5/1/25, 2:15 PM","(5/1/25, 8:36 AM - 8:37 AM)",Mocha Hazelnut,"Iced, Latte",6.5,1,6.5,0.63,Amex 0533,2025-05-01 14:15:00,14,5
+372,"5/1/25, 2:17 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Vanilla, Oat Milk, Half Sweer",6.25,1,6.25,0.61,Amex 0618,2025-05-01 14:17:00,14,6
+372,"5/1/25, 2:17 PM","(5/1/25, 8:36 AM - 8:37 AM)",$0.00,Not So Aburrito,10.0,1,10.0,0.98,Amex 0618,2025-05-01 14:17:00,14,0
+378,"5/1/25, 2:18 PM","(5/1/25, 8:36 AM - 8:37 AM)",Mocha,"Iced, Extra Shot",6.5,1,6.5,0.63,Visa 2124,2025-05-01 14:18:00,14,5
+386,"5/1/25, 2:26 PM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,"Iced, Almond Milk, Strawberry, Sf Straw",6.75,1,6.75,0.66,Visa 8220,2025-05-01 14:26:00,14,5
+391,"5/1/25, 2:29 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Oat Milk",5.75,1,5.75,0.56,Visa 1799,2025-05-01 14:29:00,14,6
+395,"5/1/25, 2:41 PM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,"Iced, Strawberry, Almond Milk",6.75,1,6.75,0.66,Visa 3892,2025-05-01 14:41:00,14,5
+407,"5/1/25, 2:41 PM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,"Iced, Vanilla",6.0,1,6.0,0.58,Visa 2925,2025-05-01 14:41:00,14,5
+408,"5/1/25, 2:46 PM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,"Iced, Almond Milk, Cold foam, Van Cf",7.25,1,7.25,0.71,Visa 0540,2025-05-01 14:46:00,14,5
+411,"5/1/25, 2:47 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Brown Sugar Cinnamon, Cold foam, Vanilla Cf",6.5,1,6.5,0.63,Visa 8635,2025-05-01 14:47:00,14,6
+412,"5/1/25, 2:48 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Caramel",5.5,1,5.5,0.54,Visa 1292,2025-05-01 14:48:00,14,6
+413,"5/1/25, 2:50 PM","(5/1/25, 8:36 AM - 8:37 AM)",Machiatto,Iced,5.0,1,5.0,0.49,Discover 9267,2025-05-01 14:50:00,14,5
+413,"5/1/25, 2:50 PM","(5/1/25, 8:36 AM - 8:37 AM)",Cold Brew,Iced,5.5,1,5.5,0.54,Discover 9267,2025-05-01 14:50:00,14,5
+413,"5/1/25, 2:50 PM","(5/1/25, 8:36 AM - 8:37 AM)",El Toro Rojo,On Sourdough,11.0,1,11.0,1.07,Discover 9267,2025-05-01 14:50:00,14,0
+416,"5/1/25, 2:55 PM","(5/1/25, 8:36 AM - 8:37 AM)",Landscape,"Iced, Half Sweet, Latte",6.5,1,6.5,0.63,Visa 8785,2025-05-01 14:55:00,14,5
+419,"5/1/25, 2:56 PM","(5/1/25, 8:36 AM - 8:37 AM)",Matcha,"Iced, Almond Milk",6.25,1,6.25,0.61,Visa 7471,2025-05-01 14:56:00,14,5
+423,"5/1/25, 3:00 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Brown Sugar Cinnamon",5.5,1,5.5,0.54,Mastercard 4502,2025-05-01 15:00:00,15,6
+424,"5/1/25, 3:01 PM","(5/1/25, 8:36 AM - 8:37 AM)",Landscape,"Iced, Half Sweet, Latte",6.5,1,6.5,0.63,Visa 1472,2025-05-01 15:01:00,15,5
+426,"5/1/25, 3:03 PM","(5/1/25, 8:36 AM - 8:37 AM)",Latte,"Iced, Less Milk",5.0,1,5.0,0.49,Visa 0405,2025-05-01 15:03:00,15,6
+430,"5/1/25, 3:07 PM","(5/1/25, 8:36 AM - 8:37 AM)",Snickerdoodle,"Iced, Jalf Sweet, Almond Milk, Latte",7.25,1,7.25,0.71,Visa 4565,2025-05-01 15:07:00,15,5
+3,"5/2/25, 8:31 AM","(5/2/25, 8:30 AM - 8:31 AM)",Cold Brew,"Iced, Cold foam",6.5,1,6.5,0.63,Visa 4270,2025-05-02 08:31:00,8,4
+4,"5/2/25, 8:36 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Plain Bagel, Plain CC, Matcha, Almond Milk, Slice In Half, Cut in Half",9.25,1,9.25,0.9,Visa 6559,2025-05-02 08:36:00,8,2
+5,"5/2/25, 8:46 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Plain Bagel, Plain CC, Matcha, Oat Milk, Strawberry, Hot",9.75,1,9.75,0.95,Visa 3902,2025-05-02 08:46:00,8,2
+6,"5/2/25, 8:51 AM","(5/2/25, 8:30 AM - 8:31 AM)",Latte,"Iced, Oat Milk",5.75,1,5.75,0.56,Visa 4872,2025-05-02 08:51:00,8,4
+7,"5/2/25, 9:09 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Everything Bagel, Plain CC, Americano, Iced",8.0,1,8.0,0.78,Visa 0796,2025-05-02 09:09:00,9,2
+8,"5/2/25, 9:14 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Poppy Bagel, Plain CC, Latte, Moccahazelnut, Oat Milk, Iced",9.75,1,9.75,0.95,Visa 2922,2025-05-02 09:14:00,9,2
+9,"5/2/25, 9:31 AM","(5/2/25, 8:30 AM - 8:31 AM)",Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Visa 9156,2025-05-02 09:31:00,9,4
+10,"5/2/25, 9:33 AM","(5/2/25, 8:30 AM - 8:31 AM)",Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Visa 8576,2025-05-02 09:33:00,9,4
+11,"5/2/25, 9:35 AM","(5/2/25, 8:30 AM - 8:31 AM)",Snickerdoodle,"Iced, Latte, One Shot",6.5,1,6.5,0.63,Visa 8259,2025-05-02 09:35:00,9,4
+12,"5/2/25, 9:45 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Matcha, Cold Foam, Cin Sug. Bagel, Blueberry CC, Honey",9.5,1,9.5,0.93,Visa 2058,2025-05-02 09:45:00,9,2
+13,"5/2/25, 9:45 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Latte, Caramel, Ligt Ice, Asiago Bagel, Diablo CC",8.5,1,8.5,0.83,Visa 6709,2025-05-02 09:45:00,9,2
+14,"5/2/25, 9:47 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Everything Bagel, Plain CC, Latte, Caramel, Toasted",8.5,1,8.5,0.83,Visa 4780,2025-05-02 09:47:00,9,2
+15,"5/2/25, 9:49 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Chai, Extra Shot, Plain Bagel, Maple CC",9.5,1,9.5,0.93,Visa 9105,2025-05-02 09:49:00,9,2
+16,"5/2/25, 9:52 AM","(5/2/25, 8:30 AM - 8:31 AM)",Chai,"Iced, Extra Shot, Almond Milk",7.75,1,7.75,0.76,Visa 5534,2025-05-02 09:52:00,9,4
+17,"5/2/25, 9:53 AM","(5/2/25, 8:30 AM - 8:31 AM)",Latte,"Iced, Oat Milk",5.75,1,5.75,0.56,Visa 6576,2025-05-02 09:53:00,9,4
+17,"5/2/25, 9:53 AM","(5/2/25, 8:30 AM - 8:31 AM)",Latte,"Iced, Oat Milk",5.75,1,5.75,0.56,Visa 6576,2025-05-02 09:53:00,9,4
+18,"5/2/25, 9:55 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Oat Milk, Strawberry, Matcha, Everything Bagel, Plain CC",9.75,2,19.5,1.9,Mastercard 8756,2025-05-02 09:55:00,9,3
+19,"5/2/25, 9:59 AM","(5/2/25, 8:30 AM - 8:31 AM)",Matcha,"Iced, Almond Milk, Honey",6.25,1,6.25,0.61,Visa 3534,2025-05-02 09:59:00,9,4
+20,"5/2/25, 9:59 AM","(5/2/25, 8:30 AM - 8:31 AM)",Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Visa 2079,2025-05-02 09:59:00,9,4
+21,"5/2/25, 10:02 AM","(5/2/25, 8:30 AM - 8:31 AM)",Matcha,"Iced, Oat Milk, Cane",6.25,1,6.25,0.61,Visa 3502,2025-05-02 10:02:00,10,4
+22,"5/2/25, 10:03 AM","(5/2/25, 8:30 AM - 8:31 AM)",Latte,"Iced, Oat Milk",5.75,1,5.75,0.56,Mastercard 5856,2025-05-02 10:03:00,10,4
+23,"5/2/25, 10:04 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Cin Sug. Bagel, Plain CC, Matcha, Strawberry",9.0,1,9.0,0.88,Visa 4123,2025-05-02 10:04:00,10,2
+24,"5/2/25, 10:06 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel,"1 Bagel, Asiago, Plain CC",4.0,1,4.0,0.39,Mastercard 0953,2025-05-02 10:06:00,10,1
+25,"5/2/25, 10:07 AM","(5/2/25, 8:30 AM - 8:31 AM)",Matcha,"Iced, Strawberry, Oat Milk, Cold foam, Van Cf",7.75,1,7.75,0.76,Visa 7651,2025-05-02 10:07:00,10,4
+26,"5/2/25, 10:08 AM","(5/2/25, 8:30 AM - 8:31 AM)",Mocha,"Vanilla, Hot",5.5,1,5.5,0.54,Visa 8308,2025-05-02 10:08:00,10,4
+27,"5/2/25, 10:11 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Everything Bagel, Toasted, Plain CC, Shaken Espresso, Vanilla, Spl Milk, Oat",8.5,1,8.5,0.83,Mastercard 5460,2025-05-02 10:11:00,10,2
+28,"5/2/25, 10:13 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel,"1 Bagel, Everything, Plain CC, Toasted",4.0,1,4.0,0.39,Visa 4930,2025-05-02 10:13:00,10,1
+28,"5/2/25, 10:13 AM","(5/2/25, 8:30 AM - 8:31 AM)",Latte,"Iced, Vanilla, Cold foam, Vani Cf",6.5,1,6.5,0.63,Visa 4930,2025-05-02 10:13:00,10,4
+29,"5/2/25, 10:16 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel,"1 Bagel, Everything, Plain CC",4.0,1,4.0,0.39,Mastercard 0953,2025-05-02 10:16:00,10,1
+30,"5/2/25, 10:22 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Everything Bagel, Plain CC, Latte, Snikerdoodle, Iced",9.5,1,9.5,0.93,Visa 3984,2025-05-02 10:22:00,10,2
+30,"5/2/25, 10:22 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Plain Bagel, Plain CC, Latte, Snikerdoodle, Iced",9.5,1,9.5,0.93,Visa 3984,2025-05-02 10:22:00,10,2
+30,"5/2/25, 10:22 AM","(5/2/25, 8:30 AM - 8:31 AM)",Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Visa 3984,2025-05-02 10:22:00,10,4
+31,"5/2/25, 10:25 AM","(5/2/25, 8:30 AM - 8:31 AM)",Matcha,"Iced, Strawberry, 1/2 Sweet, Light Milk",6.0,1,6.0,0.58,Visa 9099,2025-05-02 10:25:00,10,4
+31,"5/2/25, 10:25 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel,"1 Bagel, Plain, Garlic Herb CC",4.25,1,4.25,0.41,Visa 9099,2025-05-02 10:25:00,10,1
+31,"5/2/25, 10:25 AM","(5/2/25, 8:30 AM - 8:31 AM)",$0.00,Kodiak Catch,12.0,1,12.0,1.17,Visa 9099,2025-05-02 10:25:00,10,2
+31,"5/2/25, 10:25 AM","(5/2/25, 8:30 AM - 8:31 AM)",Matcha,Iced,5.5,1,5.5,0.54,Visa 9099,2025-05-02 10:25:00,10,4
+33,"5/2/25, 10:27 AM","(5/2/25, 8:30 AM - 8:31 AM)",Matcha,Iced,5.5,1,5.5,0.54,Amex 1005,2025-05-02 10:27:00,10,4
+34,"5/2/25, 10:30 AM","(5/2/25, 8:30 AM - 8:31 AM)",Matcha,"Iced, Almond Milk",6.25,1,6.25,0.61,Visa 3597,2025-05-02 10:30:00,10,4
+35,"5/2/25, 10:35 AM","(5/2/25, 8:30 AM - 8:31 AM)",Iced Shaken Espresso,"Iced, Spl Almond",4.5,1,4.5,0.44,Mastercard 8695,2025-05-02 10:35:00,10,4
+36,"5/2/25, 10:36 AM","(5/2/25, 8:30 AM - 8:31 AM)",Doppio,Iced,3.5,1,3.5,0.34,Visa 6180,2025-05-02 10:36:00,10,1
+37,"5/2/25, 10:39 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Plain Bagel, Garlic Herb CC, Matcha, Chocolate Milano, Iced",9.0,1,9.0,0.88,Visa 6906,2025-05-02 10:39:00,10,2
+38,"5/2/25, 10:39 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel,"1 Bagel, Plain, Blueberry CC",4.25,1,4.25,0.41,Visa 7827,2025-05-02 10:39:00,10,1
+39,"5/2/25, 10:41 AM","(5/2/25, 8:30 AM - 8:31 AM)",Matcha,"Iced, Vanilla",6.0,1,6.0,0.58,Mastercard 9362,2025-05-02 10:41:00,10,4
+39,"5/2/25, 10:41 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Cin Sug. Bagel, Plain CC, Matcha, Strawberry, Cold Foam, Str Cf",10.0,1,10.0,0.98,Mastercard 9362,2025-05-02 10:41:00,10,2
+40,"5/2/25, 10:43 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Plain Bagel, Garlic Herb CC, Shaken Espresso, Oat Milk, Bsc",8.75,1,8.75,0.85,Visa 4942,2025-05-02 10:43:00,10,2
+41,"5/2/25, 10:44 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Everything Bagel, Garlic Herb CC, Matcha, Oat Milk, Icdx",9.25,1,9.25,0.9,Visa 4152,2025-05-02 10:44:00,10,2
+42,"5/2/25, 10:46 AM","(5/2/25, 8:30 AM - 8:31 AM)",Latte,"Iced, Brown Sugar Cinnamon, 1 Pump",5.5,1,2.75,0.27,Visa 3552,2025-05-02 10:46:00,10,4
+42,"5/2/25, 10:46 AM","(5/2/25, 8:30 AM - 8:31 AM)",El Toro Rojo,Everything,11.0,1,5.5,0.54,Visa 3552,2025-05-02 10:46:00,10,2
+43,"5/2/25, 10:46 AM","(5/2/25, 8:30 AM - 8:31 AM)",Latte,"Iced, Vanilla, Oat Milk",6.25,1,6.25,0.61,Mastercard 9864,2025-05-02 10:46:00,10,4
+44,"5/2/25, 10:52 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel,"1 Bagel, Everything, Plain CC",4.0,1,4.0,0.39,Visa 2335,2025-05-02 10:52:00,10,1
+44,"5/2/25, 10:52 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel,"1 Bagel, Asiago, Garlic Herb CC",4.25,1,4.25,0.41,Visa 2335,2025-05-02 10:52:00,10,1
+45,"5/2/25, 10:53 AM",,Eclipse,"Iced, Latte",6.5,1,6.5,0.63,Visa 9870,2025-05-02 10:53:00,10,4
+47,"5/2/25, 10:56 AM","(5/2/25, 8:30 AM - 8:31 AM)",Matcha,"Iced, Strawberry, Oat Milk",6.75,1,6.75,0.66,Visa 6427,2025-05-02 10:56:00,10,4
+49,"5/2/25, 10:58 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Plain Bagel, Plain CC, Latte, Caramel, Oat Milk, Extracaramel, Iced",9.75,1,9.75,0.95,Visa 6296,2025-05-02 10:58:00,10,2
+50,"5/2/25, 10:59 AM","(5/2/25, 8:30 AM - 8:31 AM)",Landscape,"Iced, Latte",6.5,1,6.5,0.63,Visa 0592,2025-05-02 10:59:00,10,4
+50,"5/2/25, 10:59 AM","(5/2/25, 8:30 AM - 8:31 AM)",$0.00,Mr. Can't Go wrong,10.0,1,10.0,0.98,Visa 0592,2025-05-02 10:59:00,10,2
+52,"5/2/25, 11:02 AM","(5/2/25, 8:30 AM - 8:31 AM)",Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Visa 3319,2025-05-02 11:02:00,11,4
+53,"5/2/25, 11:03 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Cin Sug. Bagel, Plain CC, Matcha, Strawberry, Iced",9.0,1,9.0,0.88,Visa 8645,2025-05-02 11:03:00,11,2
+54,"5/2/25, 11:04 AM","(5/2/25, 8:30 AM - 8:31 AM)",Chai,"Iced, Extra Shot, Oat Milk",7.75,1,7.75,0.76,Mastercard 1929,2025-05-02 11:04:00,11,4
+54,"5/2/25, 11:04 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel,"1 Bagel, Everything, Garlic Herb CC",4.25,1,4.25,0.41,Mastercard 1929,2025-05-02 11:04:00,11,1
+56,"5/2/25, 11:08 AM","(5/2/25, 8:30 AM - 8:31 AM)",Landscape,"Iced, Latte",6.5,1,6.5,0.63,Mastercard 0610,2025-05-02 11:08:00,11,4
+58,"5/2/25, 11:12 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Latte, Caramel",8.5,1,8.5,0.83,Visa 7226,2025-05-02 11:12:00,11,2
+60,"5/2/25, 11:14 AM","(5/2/25, 8:30 AM - 8:31 AM)",Matcha,"Iced, Strawberry, Oat Milk",6.75,1,6.75,0.66,Visa 1305,2025-05-02 11:14:00,11,4
+60,"5/2/25, 11:14 AM","(5/2/25, 8:30 AM - 8:31 AM)",Matcha,"Iced, Extra Shot, Almond Milk, Spl Almond, Honey",7.25,1,7.25,0.71,Visa 1305,2025-05-02 11:14:00,11,4
+62,"5/2/25, 11:17 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Plain Bagel, Plain CC, Latte, Vanilla, Almond Milk, Iced",9.25,1,9.25,0.9,Visa 8790,2025-05-02 11:17:00,11,2
+64,"5/2/25, 11:18 AM","(5/2/25, 8:30 AM - 8:31 AM)",Latte,"Iced, Vanilla, Oat Milk",6.25,1,6.25,0.61,Visa 1717,2025-05-02 11:18:00,11,4
+65,"5/2/25, 11:19 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Everything Bagel, Garlic Herb CC, Matcha, Oat Milk, Honey, Iced",9.25,1,9.25,0.9,Mastercard 7658,2025-05-02 11:19:00,11,2
+68,"5/2/25, 11:23 AM","(5/2/25, 8:30 AM - 8:31 AM)",Latte,"Iced, Almond Milk, Vanilla, Cerosugar",6.25,1,6.25,0.61,Visa 4670,2025-05-02 11:23:00,11,4
+70,"5/2/25, 11:24 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Everything Bagel, Garlic Herb CC, Latte, BSC, Oat Milk, Iced",9.25,1,9.25,0.9,Visa 8454,2025-05-02 11:24:00,11,2
+71,"5/2/25, 11:25 AM","(5/2/25, 8:30 AM - 8:31 AM)",Latte,"Iced, Vanilla, Extra Shot",6.5,1,6.5,0.63,Visa 0369,2025-05-02 11:25:00,11,4
+72,"5/2/25, 11:26 AM","(5/2/25, 8:30 AM - 8:31 AM)",Latte,"Iced, Caramel, Extra Shot, One Shot",6.5,1,6.5,0.63,Amex 5242,2025-05-02 11:26:00,11,4
+73,"5/2/25, 11:29 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Everything Bagel, Plain CC, Matcha, Cold Foam, Str, Oat Milk",10.25,1,10.25,1.0,Visa 1574,2025-05-02 11:29:00,11,2
+74,"5/2/25, 11:30 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Everything Bagel, Plain CC, Latte, Vanilla, Iced",8.5,1,8.5,0.83,Visa 6259,2025-05-02 11:30:00,11,2
+75,"5/2/25, 11:32 AM","(5/2/25, 8:30 AM - 8:31 AM)",Latte,"Iced, Vanilla, Oat Milk",6.25,1,6.25,0.61,Visa 4680,2025-05-02 11:32:00,11,4
+75,"5/2/25, 11:32 AM","(5/2/25, 8:30 AM - 8:31 AM)",Matcha,"Iced, Vanilla, Almond Milk",6.75,1,6.75,0.66,Visa 4680,2025-05-02 11:32:00,11,4
+80,"5/2/25, 11:35 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Asiago Bagel, Diablo CC, Matcha, Almond Milk, Cane",9.25,1,9.25,0.9,Visa 6748,2025-05-02 11:35:00,11,2
+81,"5/2/25, 11:38 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Plain Bagel, Maple CC, Latte, Vanilla, Iced",8.5,1,8.5,0.83,Visa 6391,2025-05-02 11:38:00,11,2
+83,"5/2/25, 11:39 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Everything Bagel, Plain CC, Latte, Vanilla, Almond Milk, Hot",9.25,1,9.25,0.9,Visa 5751,2025-05-02 11:39:00,11,2
+85,"5/2/25, 11:42 AM","(5/2/25, 8:30 AM - 8:31 AM)",Latte,"Iced, Vanilla, Extra Ice",5.5,1,5.5,0.54,Visa 7612,2025-05-02 11:42:00,11,4
+86,"5/2/25, 11:43 AM","(5/2/25, 8:30 AM - 8:31 AM)",Matcha,"Iced, Oat Milk, Vanilla, Cold foam",7.75,1,7.75,0.76,Visa 3319,2025-05-02 11:43:00,11,4
+87,"5/2/25, 11:45 AM","(5/2/25, 8:30 AM - 8:31 AM)",Latte,"Iced, Caramel, Cold foam, Caramel Cf",6.5,1,6.5,0.63,Visa 5259,2025-05-02 11:45:00,11,4
+88,"5/2/25, 11:46 AM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Plain Bagel, Blueberry CC, Latte, Raspberry, Cold Foam, Strawberry Cf",9.0,1,9.0,0.88,Mastercard 7174,2025-05-02 11:46:00,11,2
+91,"5/2/25, 11:52 AM","(5/2/25, 8:30 AM - 8:31 AM)",El Toro Rojo,"Everything Bagel, Cut In Half",11.0,1,11.0,1.07,Visa 5575,2025-05-02 11:52:00,11,2
+91,"5/2/25, 11:52 AM","(5/2/25, 8:30 AM - 8:31 AM)",Kodiak Catch,"Everything Bagel, Cut I. Half",12.0,1,12.0,1.17,Visa 5575,2025-05-02 11:52:00,11,2
+91,"5/2/25, 11:52 AM","(5/2/25, 8:30 AM - 8:31 AM)",S'mores,"Iced, Latte, Cold foam, Tm",7.5,1,7.5,0.73,Visa 5575,2025-05-02 11:52:00,11,4
+91,"5/2/25, 11:52 AM","(5/2/25, 8:30 AM - 8:31 AM)",Latte,"Iced, Capuccino, Oat Milk, Extra Shot",6.75,1,6.75,0.66,Visa 5575,2025-05-02 11:52:00,11,4
+92,"5/2/25, 11:55 AM","(5/2/25, 8:30 AM - 8:31 AM)",Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Visa 8368,2025-05-02 11:55:00,11,4
+96,"5/2/25, 12:00 PM","(5/2/25, 8:30 AM - 8:31 AM)",Snickerdoodle,"Iced, Cold Brew",6.5,1,6.5,0.63,Mastercard 4847,2025-05-02 12:00:00,12,5
+99,"5/2/25, 12:03 PM",,Bagel Combo,"_, Asiago Bagel, Plain CC, Latte, Vanilla, Oat Milk, Iced",9.25,1,9.25,0.9,Visa 4593,2025-05-02 12:03:00,12,0
+101,"5/2/25, 12:05 PM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Everything Bagel, Plain CC, Tomatoes, Shaken Espresso, Almond Milk",9.75,1,9.75,0.95,Visa 4169,2025-05-02 12:05:00,12,0
+102,"5/2/25, 12:06 PM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Cin Sug. Bagel, Plain CC, Matcha, Strawberry",9.0,1,9.0,0.88,Visa 8754,2025-05-02 12:06:00,12,0
+103,"5/2/25, 12:09 PM","(5/2/25, 8:30 AM - 8:31 AM)",Latte,Iced,5.0,1,5.0,0.49,Mastercard 9707,2025-05-02 12:09:00,12,6
+105,"5/2/25, 12:10 PM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Plain Bagel, Plain CC, Matcha, Vanilla, Oat Milk, Iced",9.75,1,9.75,0.95,Mastercard 6388,2025-05-02 12:10:00,12,0
+108,"5/2/25, 12:11 PM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Plain Bagel, Blueberry CC, Matcha, Raspberry, Iced",8.5,1,8.5,0.83,Visa 3846,2025-05-02 12:11:00,12,0
+114,"5/2/25, 12:17 PM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Plain Bagel, Plain CC, Latte, Eclipse",8.5,1,8.5,0.83,Visa 4361,2025-05-02 12:17:00,12,0
+115,"5/2/25, 12:18 PM","(5/2/25, 8:30 AM - 8:31 AM)",Latte,"Iced, Strawberry",5.5,1,5.5,0.54,Visa 0451,2025-05-02 12:18:00,12,6
+122,"5/2/25, 12:21 PM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Everything Bagel, Plain CC, Matcha, Cane, Light Ice",8.5,1,8.5,0.83,Visa 9386,2025-05-02 12:21:00,12,0
+125,"5/2/25, 12:22 PM","(5/2/25, 8:30 AM - 8:31 AM)",Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Discover 6416,2025-05-02 12:22:00,12,5
+127,"5/2/25, 12:23 PM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Everything Bagel, Garlic Herb CC, Latte, Eclipse, Iced",9.5,1,9.5,0.93,Visa 6698,2025-05-02 12:23:00,12,0
+131,"5/2/25, 12:25 PM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Everything Bagel, Diablo CC, Matcha, Vanilla, Iced",9.0,1,9.0,0.88,Mastercard 8624,2025-05-02 12:25:00,12,0
+132,"5/2/25, 12:28 PM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Everything Bagel, Blueberry CC, Matcha, Hot, Strawberry",9.0,1,9.0,0.88,Discover 5423,2025-05-02 12:28:00,12,0
+140,"5/2/25, 12:30 PM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Everything Bagel, Garlic Herb CC, Shaken Espresso, Splash Whole",8.0,1,8.0,0.78,Visa 1540,2025-05-02 12:30:00,12,0
+145,"5/2/25, 12:36 PM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Plain Bagel, Plain CC, Latte, Caramel, Iced",8.5,1,8.5,0.83,Amex 1044,2025-05-02 12:36:00,12,0
+147,"5/2/25, 12:36 PM",,Matcha,Hot,5.5,1,5.5,0.54,Mastercard 4338,2025-05-02 12:36:00,12,5
+151,"5/2/25, 12:38 PM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Cin Sug. Bagel, Maple CC, Latte, Snickerdooe",9.58,1,9.58,0.93,Visa 4109,2025-05-02 12:38:00,12,0
+152,"5/2/25, 12:40 PM","(5/2/25, 8:30 AM - 8:31 AM)",White Macadamia,"Iced, Extra Shot, Latte",7.5,1,7.5,0.73,Visa 5291,2025-05-02 12:40:00,12,5
+154,"5/2/25, 12:43 PM","(5/2/25, 8:30 AM - 8:31 AM)",Cold Brew,"Iced, Vanilla",6.0,1,6.0,0.58,Visa 0955,2025-05-02 12:43:00,12,5
+154,"5/2/25, 12:43 PM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Cin Sug. Bagel, Maple CC, Cold Brew, Extra Shot",9.0,1,9.0,0.88,Visa 0955,2025-05-02 12:43:00,12,0
+157,"5/2/25, 12:45 PM","(5/2/25, 8:30 AM - 8:31 AM)",Matcha,"Iced, Almond Milk",6.25,1,6.25,0.61,Visa 1006,2025-05-02 12:45:00,12,5
+159,"5/2/25, 12:46 PM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Matcha",8.5,1,8.5,0.83,Mastercard 4305,2025-05-02 12:46:00,12,0
+163,"5/2/25, 12:47 PM","(5/2/25, 8:30 AM - 8:31 AM)",Latte,"Iced, Oat Milk, Honey",5.75,1,5.75,0.56,Discover 5866,2025-05-02 12:47:00,12,6
+165,"5/2/25, 12:50 PM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel,"1 Bagel, Cinnamon Sugar, Maple CC",4.25,1,4.25,0.41,Mastercard 9883,2025-05-02 12:50:00,12,1
+166,"5/2/25, 12:52 PM","(5/2/25, 8:30 AM - 8:31 AM)",Eclipse,"Iced, Latte",6.5,1,6.5,0.63,Visa 5308,2025-05-02 12:52:00,12,5
+166,"5/2/25, 12:52 PM","(5/2/25, 8:30 AM - 8:31 AM)",Eclipse,"Iced, Latte, Almond Milk",7.25,1,7.25,0.71,Visa 5308,2025-05-02 12:52:00,12,5
+169,"5/2/25, 12:53 PM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Everything Bagel, Plain CC, Cold Brew",8.0,1,8.0,0.78,Visa 2739,2025-05-02 12:53:00,12,0
+170,"5/2/25, 12:53 PM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Everything Bagel, Plain CC, Cold Brew",8.0,1,8.0,0.78,Visa 6295,2025-05-02 12:53:00,12,0
+173,"5/2/25, 12:56 PM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Everything Bagel, Garlic Herb CC, Latte, Eclipse",9.5,1,9.5,0.93,Visa 8195,2025-05-02 12:56:00,12,0
+186,"5/2/25, 1:05 PM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel,"1 Bagel, Garlic Herb CC, Sesame",4.25,1,4.25,0.41,Mastercard 1612,2025-05-02 13:05:00,13,1
+189,"5/2/25, 1:06 PM","(5/2/25, 8:30 AM - 8:31 AM)",Matcha,"Iced, Strawberry, Double Matcha, Oat Milk",8.0,1,8.0,0.78,Visa 5281,2025-05-02 13:06:00,13,5
+191,"5/2/25, 1:10 PM","(5/2/25, 8:30 AM - 8:31 AM)",Matcha,"Iced, Almond Milk, Honey",6.25,2,12.5,1.22,Visa 9080,2025-05-02 13:10:00,13,3
+201,"5/2/25, 1:23 PM","(5/2/25, 8:30 AM - 8:31 AM)",Matcha,"Iced, Strawberry, Oat Milk",6.75,1,6.75,0.66,Visa 6661,2025-05-02 13:23:00,13,5
+204,"5/2/25, 1:24 PM",,Landscape,"Iced, Latte, Oat Milk",7.25,1,7.25,0.71,Visa 5664,2025-05-02 13:24:00,13,5
+205,"5/2/25, 1:28 PM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Cin Sug. Bagel, Blueberry CC, Matcha, Doublematcha, Extra Shot, Oat Milk, Garluc Herb Cc",10.75,1,10.75,1.05,Visa 1351,2025-05-02 13:28:00,13,0
+207,"5/2/25, 1:29 PM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel Combo,"_, Everything Bagel, Plain CC, Latte, Caramel, Oat Milk, Iced",9.25,1,9.25,0.9,Mastercard 0507,2025-05-02 13:29:00,13,0
+207,"5/2/25, 1:29 PM","(5/2/25, 8:30 AM - 8:31 AM)",Bagel,"1 Bagel, Plain, Plain CC",4.0,1,4.0,0.39,Mastercard 0507,2025-05-02 13:29:00,13,1
+211,"5/2/25, 1:31 PM","(5/2/25, 8:30 AM - 8:31 AM)",Landscape,"Iced, Latte, Oat Milk",7.25,1,7.25,0.71,Visa 9915,2025-05-02 13:31:00,13,5
+214,"5/2/25, 1:34 PM","(5/2/25, 8:30 AM - 8:31 AM)",Snickerdoodle,"Iced, Latte, Light Ice, 1/2 Sweet, 1 Shot",6.5,1,6.5,0.63,Visa 9985,2025-05-02 13:34:00,13,5
+218,"5/2/25, 1:37 PM",,Eclipse,"Iced, Latte",6.5,1,6.5,0.63,Mastercard 1158,2025-05-02 13:37:00,13,5
+223,"5/2/25, 1:47 PM","(5/2/25, 8:30 AM - 8:31 AM)",El Toro Rojo,Asiago,11.0,1,0.0,0.0,Visa 4642,2025-05-02 13:47:00,13,0
+226,"5/2/25, 1:48 PM","(5/2/25, 8:30 AM - 8:31 AM)",Latte,"Iced, Oat Milk",5.75,1,5.75,0.56,Visa 0327,2025-05-02 13:48:00,13,6
+226,"5/2/25, 1:48 PM","(5/2/25, 8:30 AM - 8:31 AM)",El Toro Rojo,Asiago,11.0,1,0.0,0.0,Visa 0327,2025-05-02 13:48:00,13,0
+228,"5/2/25, 1:49 PM",,S'mores,"Iced, Latte",6.5,1,6.5,0.63,Visa 5179,2025-05-02 13:49:00,13,5
+231,"5/2/25, 1:51 PM","(5/2/25, 8:30 AM - 8:31 AM)",S'mores,"Iced, Oat Milk, Latte",7.25,1,7.25,0.71,Visa 2126,2025-05-02 13:51:00,13,5
+267,"5/2/25, 2:36 PM","(5/2/25, 8:30 AM - 8:31 AM)",Tenders,"5, BBQ, Fries",10.0,1,5.0,0.49,Visa 3964,2025-05-02 14:36:00,14,0
+1,"5/3/25, 9:13 AM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Plain Bagel, Plain CC, Latte, Cupcake, Almond Milk, Iced",8.75,1,8.75,0.85,Amex 1038,2025-05-03 09:13:00,9,2
+2,"5/3/25, 9:15 AM","(5/3/25, 8:42 AM - 8:43 AM)",Landscape,"Iced, Double Matcha, Oat Milk, Latte",8.5,1,8.5,0.83,Visa 1305,2025-05-03 09:15:00,9,2
+2,"5/3/25, 9:15 AM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel,"1 Bagel, Plain, Plain CC",4.0,1,4.0,0.39,Visa 1305,2025-05-03 09:15:00,9,1
+3,"5/3/25, 9:24 AM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,"Iced, Vanilla, Light Ice, Less Milk",5.5,1,5.5,0.54,Visa 7612,2025-05-03 09:24:00,9,4
+4,"5/3/25, 9:35 AM","(5/3/25, 8:42 AM - 8:43 AM)",Doppio,Iced,3.5,1,3.5,0.34,Visa 6180,2025-05-03 09:35:00,9,1
+5,"5/3/25, 9:39 AM","(5/3/25, 8:42 AM - 8:43 AM)",El Toro Rojo,No Aioli,11.0,1,11.0,1.07,Visa 6180,2025-05-03 09:39:00,9,2
+6,"5/3/25, 9:59 AM","(5/3/25, 8:42 AM - 8:43 AM)",Iced Shaken Espresso,"Iced, Canesugar, Spl Oat",4.5,1,2.25,0.22,Amex 7678,2025-05-03 09:59:00,9,4
+7,"5/3/25, 10:05 AM","(5/3/25, 8:42 AM - 8:43 AM)",Cold Brew,"Iced, Cold foam, Tm",6.5,1,6.5,0.63,Visa 4270,2025-05-03 10:05:00,10,4
+8,"5/3/25, 10:15 AM","(5/3/25, 8:42 AM - 8:43 AM)",Landscape,"Iced, Latte, Oat Milk",7.25,1,7.25,0.71,Mastercard 9461,2025-05-03 10:15:00,10,4
+9,"5/3/25, 10:16 AM","(5/3/25, 8:42 AM - 8:43 AM)",Landscape,"Iced, Latte, Oat Milk",7.25,1,7.25,0.71,Visa 6637,2025-05-03 10:16:00,10,4
+10,"5/3/25, 10:19 AM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Latte, Everything Bagel, Garlic Herb CC, BSC",8.5,1,8.5,0.83,Mastercard 1124,2025-05-03 10:19:00,10,2
+11,"5/3/25, 10:28 AM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,"Iced, Oat Milk, Hot",5.75,1,5.75,0.56,Visa 4638,2025-05-03 10:28:00,10,4
+11,"5/3/25, 10:28 AM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,"Vanilla, Hot",5.5,1,5.5,0.54,Visa 4638,2025-05-03 10:28:00,10,4
+12,"5/3/25, 10:31 AM","(5/3/25, 8:42 AM - 8:43 AM)",El Toro Rojo,Ni Bacon,11.0,1,11.0,1.07,Visa 5719,2025-05-03 10:31:00,10,2
+13,"5/3/25, 10:32 AM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel,"1 Bagel, Plain, No CC",2.5,1,2.5,0.24,Visa 2147,2025-05-03 10:32:00,10,1
+214,"5/2/25, 1:34 PM","(5/2/25, 8:30 AM - 8:31 AM)",Snickerdoodle,"Iced, Latte, Light Ice, 1/2 Sweet, 1 Shot",6.5,1,6.5,0.63,Visa 9985,2025-05-02 13:34:00,13,5
+218,"5/2/25, 1:37 PM",,Eclipse,"Iced, Latte",6.5,1,6.5,0.63,Mastercard 1158,2025-05-02 13:37:00,13,5
+223,"5/2/25, 1:47 PM","(5/2/25, 8:30 AM - 8:31 AM)",El Toro Rojo,Asiago,11.0,1,0.0,0.0,Visa 4642,2025-05-02 13:47:00,13,0
+226,"5/2/25, 1:48 PM","(5/2/25, 8:30 AM - 8:31 AM)",Latte,"Iced, Oat Milk",5.75,1,5.75,0.56,Visa 0327,2025-05-02 13:48:00,13,6
+226,"5/2/25, 1:48 PM","(5/2/25, 8:30 AM - 8:31 AM)",El Toro Rojo,Asiago,11.0,1,0.0,0.0,Visa 0327,2025-05-02 13:48:00,13,0
+228,"5/2/25, 1:49 PM",,S'mores,"Iced, Latte",6.5,1,6.5,0.63,Visa 5179,2025-05-02 13:49:00,13,5
+231,"5/2/25, 1:51 PM","(5/2/25, 8:30 AM - 8:31 AM)",S'mores,"Iced, Oat Milk, Latte",7.25,1,7.25,0.71,Visa 2126,2025-05-02 13:51:00,13,5
+267,"5/2/25, 2:36 PM","(5/2/25, 8:30 AM - 8:31 AM)",Tenders,"5, BBQ, Fries",10.0,1,5.0,0.49,Visa 3964,2025-05-02 14:36:00,14,0
+1,"5/3/25, 9:13 AM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Plain Bagel, Plain CC, Latte, Cupcake, Almond Milk, Iced",8.75,1,8.75,0.85,Amex 1038,2025-05-03 09:13:00,9,2
+2,"5/3/25, 9:15 AM","(5/3/25, 8:42 AM - 8:43 AM)",Landscape,"Iced, Double Matcha, Oat Milk, Latte",8.5,1,8.5,0.83,Visa 1305,2025-05-03 09:15:00,9,2
+2,"5/3/25, 9:15 AM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel,"1 Bagel, Plain, Plain CC",4.0,1,4.0,0.39,Visa 1305,2025-05-03 09:15:00,9,1
+3,"5/3/25, 9:24 AM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,"Iced, Vanilla, Light Ice, Less Milk",5.5,1,5.5,0.54,Visa 7612,2025-05-03 09:24:00,9,4
+4,"5/3/25, 9:35 AM","(5/3/25, 8:42 AM - 8:43 AM)",Doppio,Iced,3.5,1,3.5,0.34,Visa 6180,2025-05-03 09:35:00,9,1
+5,"5/3/25, 9:39 AM","(5/3/25, 8:42 AM - 8:43 AM)",El Toro Rojo,No Aioli,11.0,1,11.0,1.07,Visa 6180,2025-05-03 09:39:00,9,2
+6,"5/3/25, 9:59 AM","(5/3/25, 8:42 AM - 8:43 AM)",Iced Shaken Espresso,"Iced, Canesugar, Spl Oat",4.5,1,2.25,0.22,Amex 7678,2025-05-03 09:59:00,9,4
+7,"5/3/25, 10:05 AM","(5/3/25, 8:42 AM - 8:43 AM)",Cold Brew,"Iced, Cold foam, Tm",6.5,1,6.5,0.63,Visa 4270,2025-05-03 10:05:00,10,4
+8,"5/3/25, 10:15 AM","(5/3/25, 8:42 AM - 8:43 AM)",Landscape,"Iced, Latte, Oat Milk",7.25,1,7.25,0.71,Mastercard 9461,2025-05-03 10:15:00,10,4
+9,"5/3/25, 10:16 AM","(5/3/25, 8:42 AM - 8:43 AM)",Landscape,"Iced, Latte, Oat Milk",7.25,1,7.25,0.71,Visa 6637,2025-05-03 10:16:00,10,4
+10,"5/3/25, 10:19 AM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Latte, Everything Bagel, Garlic Herb CC, BSC",8.5,1,8.5,0.83,Mastercard 1124,2025-05-03 10:19:00,10,2
+11,"5/3/25, 10:28 AM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,"Iced, Oat Milk, Hot",5.75,1,5.75,0.56,Visa 4638,2025-05-03 10:28:00,10,4
+11,"5/3/25, 10:28 AM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,"Vanilla, Hot",5.5,1,5.5,0.54,Visa 4638,2025-05-03 10:28:00,10,4
+12,"5/3/25, 10:31 AM","(5/3/25, 8:42 AM - 8:43 AM)",El Toro Rojo,Ni Bacon,11.0,1,11.0,1.07,Visa 5719,2025-05-03 10:31:00,10,2
+13,"5/3/25, 10:32 AM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel,"1 Bagel, Plain, No CC",2.5,1,2.5,0.24,Visa 2147,2025-05-03 10:32:00,10,1
+39,"5/3/25, 11:26 AM","(5/3/25, 8:42 AM - 8:43 AM)",Not So Aburrito,Side Diablo Sauce,10.0,1,10.0,0.98,Visa 4424,2025-05-03 11:26:00,11,2
+41,"5/3/25, 11:28 AM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,"Iced, Almond Milk",5.75,1,5.75,0.56,Visa 7592,2025-05-03 11:28:00,11,4
+42,"5/3/25, 11:29 AM","(5/3/25, 8:42 AM - 8:43 AM)",S'mores,"Iced, Latte",6.5,1,6.5,0.63,Mastercard 9461,2025-05-03 11:29:00,11,4
+43,"5/3/25, 11:31 AM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,"Iced, Vanilla, Almond Milk",6.25,1,6.25,0.61,Visa 5246,2025-05-03 11:31:00,11,4
+46,"5/3/25, 11:37 AM","(5/3/25, 8:42 AM - 8:43 AM)",Doppio,Iced,3.5,1,3.5,0.34,Visa 6180,2025-05-03 11:37:00,11,1
+47,"5/3/25, 11:40 AM","(5/3/25, 8:42 AM - 8:43 AM)",El Toro Rojo,Diablo Spread On The Side,11.0,1,11.0,1.07,Visa 0387,2025-05-03 11:40:00,11,2
+47,"5/3/25, 11:40 AM","(5/3/25, 8:42 AM - 8:43 AM)",S'mores,"Iced, Latte, Oat Milk",7.25,1,7.25,0.71,Visa 0387,2025-05-03 11:40:00,11,4
+48,"5/3/25, 11:42 AM","(5/3/25, 8:42 AM - 8:43 AM)",Mocha,"Iced, Extra Shot",6.5,1,6.5,0.63,Visa 7690,2025-05-03 11:42:00,11,4
+49,"5/3/25, 11:46 AM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Sesame Bagel, Garlic Herb CC, Latte, Vanilla, Oat Milk, Iced",9.25,1,9.25,0.9,Mastercard 8005,2025-05-03 11:46:00,11,2
+51,"5/3/25, 11:47 AM","(5/3/25, 8:42 AM - 8:43 AM)",BBLT,Avocado,11.5,1,11.5,1.12,Visa 4564,2025-05-03 11:47:00,11,2
+52,"5/3/25, 11:52 AM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel,"1 Bagel, Everything, No CC, Add Salmon On Top",5.0,1,5.0,0.49,Mastercard 8521,2025-05-03 11:52:00,11,1
+58,"5/3/25, 11:55 AM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Everything Bagel, Plain CC, Latte, Iced",8.0,1,8.0,0.78,Visa 3117,2025-05-03 11:55:00,11,2
+59,"5/3/25, 11:58 AM","(5/3/25, 8:42 AM - 8:43 AM)",Not So Aburrito,"No Cheese, Extra Salsa On Side",10.0,1,10.0,0.98,Visa 3140,2025-05-03 11:58:00,11,2
+60,"5/3/25, 12:00 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Matcha, Vanilla",9.0,1,9.0,0.88,Visa 3476,2025-05-03 12:00:00,12,0
+61,"5/3/25, 12:01 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Cin Sug. Bagel, Plain CC, Matcha, Vanilla",9.0,1,9.0,0.88,Visa 5775,2025-05-03 12:01:00,12,0
+63,"5/3/25, 12:03 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Latte, Vanilla",8.5,1,8.5,0.83,Visa 4778,2025-05-03 12:03:00,12,0
+64,"5/3/25, 12:04 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel,"1 Bagel, Asiago, No CC",2.5,1,2.5,0.24,Visa 3471,2025-05-03 12:04:00,12,1
+65,"5/3/25, 12:05 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel,"1 Bagel, Everything, Garlic Herb CC",4.25,1,4.25,0.41,Visa 5427,2025-05-03 12:05:00,12,1
+66,"5/3/25, 12:06 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Everything Bagel, Plain CC, Latte, Hot",8.0,1,8.0,0.78,Visa 2739,2025-05-03 12:06:00,12,0
+66,"5/3/25, 12:06 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel,"1 Bagel, Everything, Garlic Herb CC",4.25,1,4.25,0.41,Visa 2739,2025-05-03 12:06:00,12,1
+68,"5/3/25, 12:08 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Latte, Honey, Iced",8.0,1,8.0,0.78,Discover 8486,2025-05-03 12:08:00,12,0
+69,"5/3/25, 12:09 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Cold Brew, Cold Foam, Van Cf, Asiago Bagel, Garlic Herb CC",9.0,1,9.0,0.88,Visa 5622,2025-05-03 12:09:00,12,0
+73,"5/3/25, 12:12 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Sesame Bagel, Plain CC, Latte, Eclipse, Iced",8.5,1,8.5,0.83,Visa 8358,2025-05-03 12:12:00,12,0
+77,"5/3/25, 12:14 PM","(5/3/25, 8:42 AM - 8:43 AM)",Chai,"Iced, Cold foam, Vani Cf",7.0,1,7.0,0.68,Visa 7003,2025-05-03 12:14:00,12,5
+77,"5/3/25, 12:14 PM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,"Iced, Vanilla, Cold foam",6.5,1,6.5,0.63,Visa 7003,2025-05-03 12:14:00,12,6
+77,"5/3/25, 12:14 PM","(5/3/25, 8:42 AM - 8:43 AM)",Matcha,"Iced, Chocolate Milano",6.0,1,6.0,0.58,Visa 7003,2025-05-03 12:14:00,12,5
+78,"5/3/25, 12:20 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Everything Bagel, Garlic Herb CC, Matcha, Less Ice",8.5,1,8.5,0.83,Visa 6921,2025-05-03 12:20:00,12,0
+79,"5/3/25, 12:21 PM","(5/3/25, 8:42 AM - 8:43 AM)",Matcha,"Iced, Strawberry",6.0,1,6.0,0.58,Visa 6364,2025-05-03 12:21:00,12,5
+79,"5/3/25, 12:21 PM","(5/3/25, 8:42 AM - 8:43 AM)",$0.00,Kodiak Catch,12.0,1,12.0,1.17,Visa 6364,2025-05-03 12:21:00,12,0
+81,"5/3/25, 12:23 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Cin Sug. Bagel, Blueberry CC, Matcha, Strawberry, No Ice, Oat Milk",9.75,1,9.75,0.95,Visa 6825,2025-05-03 12:23:00,12,0
+85,"5/3/25, 12:25 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Latte, Vanilla, Almond Milk, Asiago Bagel, Plain CC",9.25,1,9.25,0.9,Visa 3340,2025-05-03 12:25:00,12,0
+87,"5/3/25, 12:27 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Everything Bagel, Garlic Herb CC, Latte",8.0,1,8.0,0.78,Visa 3951,2025-05-03 12:27:00,12,0
+93,"5/3/25, 12:29 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel,"1 Bagel, Sesame, Garlic Herb CC",4.25,1,4.25,0.41,Visa 3007,2025-05-03 12:29:00,12,1
+95,"5/3/25, 12:30 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Chai, Everything Bagel, Blueberry CC",8.5,1,8.5,0.83,Visa 9592,2025-05-03 12:30:00,12,0
+98,"5/3/25, 12:31 PM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,"Iced, Cold foam",6.0,1,6.0,0.58,Visa 8914,2025-05-03 12:31:00,12,6
+99,"5/3/25, 12:33 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Everything Bagel, Garlic Herb CC, Latte, Snick",9.5,1,9.5,0.93,Visa 8579,2025-05-03 12:33:00,12,0
+101,"5/3/25, 12:35 PM","(5/3/25, 8:42 AM - 8:43 AM)",Mr. Can't Go wrong,"No Garlic Spread, Add Diablo Spread",10.0,1,10.0,0.98,Visa 0667,2025-05-03 12:35:00,12,0
+101,"5/3/25, 12:35 PM","(5/3/25, 8:42 AM - 8:43 AM)",Matcha,"Iced, Oat Milk, Extra Shot, 2 Shots",7.25,1,7.25,0.71,Visa 0667,2025-05-03 12:35:00,12,5
+102,"5/3/25, 12:38 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Plain Bagel, Garlic Herb CC, Latte, Snicker, Iced",8.5,1,8.5,0.83,Visa 9579,2025-05-03 12:38:00,12,0
+103,"5/3/25, 12:39 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Latte, BSC, Cold Foam, Iced",9.5,1,9.5,0.93,Discover 8099,2025-05-03 12:39:00,12,0
+104,"5/3/25, 12:42 PM","(5/3/25, 8:42 AM - 8:43 AM)",Matcha,"Iced, Strawberry, Almond Milk",6.75,1,6.75,0.66,Visa 6065,2025-05-03 12:42:00,12,5
+105,"5/3/25, 12:44 PM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,"Iced, Almond Milk, Brown Sugar Cinnamon",6.25,1,6.25,0.61,Visa 2840,2025-05-03 12:44:00,12,6
+107,"5/3/25, 12:46 PM","(5/3/25, 8:42 AM - 8:43 AM)",Snickerdoodle,"Iced, Latte, Almond Milk",7.25,1,7.25,0.71,Amex 1998,2025-05-03 12:46:00,12,5
+108,"5/3/25, 12:48 PM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,"Iced, Almond Milk",5.75,1,5.75,0.56,Visa 8635,2025-05-03 12:48:00,12,6
+110,"5/3/25, 12:50 PM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,"Iced, Less Milk",5.0,1,5.0,0.49,Visa 4380,2025-05-03 12:50:00,12,6
+112,"5/3/25, 12:52 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Cin Sug. Bagel, Maple CC, Latte, Smores",9.5,1,9.5,0.93,Visa 3930,2025-05-03 12:52:00,12,0
+112,"5/3/25, 12:52 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Plain Bagel, Plain CC, Latte, Rasp, Almond Milk",9.25,1,9.25,0.9,Visa 3930,2025-05-03 12:52:00,12,0
+114,"5/3/25, 12:55 PM","(5/3/25, 8:42 AM - 8:43 AM)",White Macadamia,"Iced, Latte",6.5,1,6.5,0.63,Visa 9685,2025-05-03 12:55:00,12,5
+115,"5/3/25, 12:57 PM","(5/3/25, 8:42 AM - 8:43 AM)",Eclipse,"Iced, Latte",6.5,1,6.5,0.63,Mastercard 3917,2025-05-03 12:57:00,12,5
+118,"5/3/25, 1:01 PM","(5/3/25, 8:42 AM - 8:43 AM)",S'mores,"Iced, Latte, Oat Milk",7.25,1,7.25,0.71,Visa 4299,2025-05-03 13:01:00,13,5
+119,"5/3/25, 1:02 PM","(5/3/25, 8:42 AM - 8:43 AM)",Eclipse,"Iced, Latte, Light Ice, One And Half",6.5,1,6.5,0.63,Visa 9985,2025-05-03 13:02:00,13,5
+120,"5/3/25, 1:04 PM","(5/3/25, 8:42 AM - 8:43 AM)",S'mores,"Iced, Latte, Oat Milk",7.25,1,7.25,0.71,Mastercard 0223,2025-05-03 13:04:00,13,5
+121,"5/3/25, 1:08 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Asiago Bagel, Plain CC, Latte, Eclipse",9.5,1,9.5,0.93,Mastercard 1517,2025-05-03 13:08:00,13,0
+127,"5/3/25, 1:10 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Latte, Exlipse",9.5,1,9.5,0.93,Mastercard 9340,2025-05-03 13:10:00,13,0
+128,"5/3/25, 1:11 PM","(5/3/25, 8:42 AM - 8:43 AM)",Wings,"5, BBQ, Blue Cheese, Fries",10.0,1,5.0,0.49,Visa 3964,2025-05-03 13:11:00,13,0
+131,"5/3/25, 1:11 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Plain Bagel, Plain CC, Latte, Eclipse",9.5,1,9.5,0.93,Visa 5737,2025-05-03 13:11:00,13,0
+131,"5/3/25, 1:11 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel,"1 Bagel, Plain, Plain CC",4.0,1,4.0,0.39,Visa 5737,2025-05-03 13:11:00,13,1
+136,"5/3/25, 1:14 PM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,"Iced, Caramel",5.5,1,5.5,0.54,Visa 5877,2025-05-03 13:14:00,13,6
+136,"5/3/25, 1:14 PM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,"Iced, Vanilla",5.5,1,5.5,0.54,Visa 5877,2025-05-03 13:14:00,13,6
+136,"5/3/25, 1:14 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Plain Bagel, Plain CC, Americano",8.0,1,8.0,0.78,Visa 5877,2025-05-03 13:14:00,13,0
+136,"5/3/25, 1:14 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Everything Bagel, Garlic Herb CC, Latte, BSC",8.5,1,8.5,0.83,Visa 5877,2025-05-03 13:14:00,13,0
+140,"5/3/25, 1:19 PM","(5/3/25, 8:42 AM - 8:43 AM)",Eclipse,"Hot, Latte",6.5,1,6.5,0.63,Visa 3405,2025-05-03 13:19:00,13,5
+141,"5/3/25, 1:20 PM","(5/3/25, 8:42 AM - 8:43 AM)",Eclipse,"Hot, Latte, Almond Milk",7.25,1,7.25,0.71,Amex 5469,2025-05-03 13:20:00,13,5
+142,"5/3/25, 1:22 PM","(5/3/25, 8:42 AM - 8:43 AM)",Mr. Can't Go wrong,"Sesame Bagel, Sub Potatos For Bacon",10.0,1,10.0,0.98,Visa 2458,2025-05-03 13:22:00,13,0
+143,"5/3/25, 1:23 PM","(5/3/25, 8:42 AM - 8:43 AM)",Mr. Can't Go wrong,Everything Bagel,10.0,1,10.0,0.98,Visa 1470,2025-05-03 13:23:00,13,0
+144,"5/3/25, 1:23 PM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,"Iced, Vanilla",5.5,1,5.5,0.54,Visa 4876,2025-05-03 13:23:00,13,6
+147,"5/3/25, 1:25 PM","(5/3/25, 8:42 AM - 8:43 AM)",Mocha Hazelnut,"Iced, Latte",6.5,1,6.5,0.63,Discover 5718,2025-05-03 13:25:00,13,5
+149,"5/3/25, 1:26 PM","(5/3/25, 8:42 AM - 8:43 AM)",Matcha,"Iced, Oat Milk",6.25,1,6.25,0.61,Visa 2874,2025-05-03 13:26:00,13,5
+153,"5/3/25, 1:28 PM","(5/3/25, 8:42 AM - 8:43 AM)",S'mores,"Iced, Latte, Oat Milk",7.25,1,7.25,0.71,Visa 3502,2025-05-03 13:28:00,13,5
+163,"5/3/25, 1:32 PM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,"Iced, Hazelnut, Mocha, Oat Milk",6.25,1,6.25,0.61,Mastercard 1792,2025-05-03 13:32:00,13,6
+168,"5/3/25, 1:34 PM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,"Iced, Hazelnut, Almond Milk",6.25,1,6.25,0.61,Visa 8220,2025-05-03 13:34:00,13,6
+172,"5/3/25, 1:37 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel,"1 Bagel, Plain, Plain CC",4.0,1,4.0,0.39,Visa 6403,2025-05-03 13:37:00,13,1
+173,"5/3/25, 1:37 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel,"1 Bagel, Everything, Blueberry CC",4.25,1,4.25,0.41,Visa 3070,2025-05-03 13:37:00,13,1
+175,"5/3/25, 1:39 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Matcha, Oat Milk, Plain Bagel, None, NO BAGEL. Just Cheesy Scrambled Eggs, Vanilla",10.25,1,10.25,1.0,Visa 3099,2025-05-03 13:39:00,13,0
+181,"5/3/25, 1:42 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Asiago Bagel, Plain CC, Toasted, Cut in Half, Matcha, Oat Milk, Vanilla, Less Ice",9.75,1,9.75,0.95,Amex 7923,2025-05-03 13:42:00,13,0
+181,"5/3/25, 1:42 PM","(5/3/25, 8:42 AM - 8:43 AM)",Not So Aburrito,No Pico,10.0,1,10.0,0.98,Amex 7923,2025-05-03 13:42:00,13,0
+181,"5/3/25, 1:42 PM","(5/3/25, 8:42 AM - 8:43 AM)",Chai,"Iced, Vanilla",6.5,1,6.5,0.63,Amex 7923,2025-05-03 13:42:00,13,5
+187,"5/3/25, 1:46 PM","(5/3/25, 8:42 AM - 8:43 AM)",Iced Shaken Espresso,"Iced, Spl Oat, Hazelnut, One Pump",5.0,1,5.0,0.49,Mastercard 4019,2025-05-03 13:46:00,13,5
+192,"5/3/25, 1:50 PM","(5/3/25, 8:42 AM - 8:43 AM)",The Dark Side,"Iced, Latte, Oat Milk, Cold foam",7.25,1,7.25,0.71,Visa 9227,2025-05-03 13:50:00,13,5
+194,"5/3/25, 1:51 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Asiago Bagel, Diablo CC, Latte",8.0,1,8.0,0.78,Mastercard 9945,2025-05-03 13:51:00,13,0
+197,"5/3/25, 1:54 PM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,"Iced, Strawberry",5.5,1,5.5,0.54,Visa 0451,2025-05-03 13:54:00,13,6
+199,"5/3/25, 1:56 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Plain Bagel, Plain CC, Latte, Vanilla, Iced",8.5,1,8.5,0.83,Visa 3740,2025-05-03 13:56:00,13,0
+200,"5/3/25, 1:57 PM","(5/3/25, 8:42 AM - 8:43 AM)",Cold Brew,"Iced, Light Ice, Spl Whole",5.5,1,5.5,0.54,Amex 0803,2025-05-03 13:57:00,13,5
+202,"5/3/25, 1:59 PM","(5/3/25, 8:42 AM - 8:43 AM)",Matcha,"Iced, Vanilla, Oat Milk",6.75,1,6.75,0.66,Visa 8930,2025-05-03 13:59:00,13,5
+203,"5/3/25, 2:01 PM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,"Iced, Dark Side, 1/2 Sweet",5.0,1,5.0,0.49,Visa 5710,2025-05-03 14:01:00,14,6
+206,"5/3/25, 2:03 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Cin Sug. Bagel, Blueberry CC, Latte, Cane",8.0,1,8.0,0.78,Visa 1701,2025-05-03 14:03:00,14,0
+209,"5/3/25, 2:06 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Latte, Everything Bagel, Plain CC",8.0,1,8.0,0.78,Mastercard 1505,2025-05-03 14:06:00,14,0
+213,"5/3/25, 2:07 PM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,Iced,5.0,1,5.0,0.49,Visa 4392,2025-05-03 14:07:00,14,6
+214,"5/3/25, 2:08 PM","(5/3/25, 8:42 AM - 8:43 AM)",Mocha,Iced,5.5,1,5.5,0.54,Visa 2502,2025-05-03 14:08:00,14,5
+216,"5/3/25, 2:08 PM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,"Iced, Darkaide",5.5,1,5.5,0.54,Discover 3780,2025-05-03 14:08:00,14,6
+217,"5/3/25, 2:11 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Plain Bagel, Maple CC, Latte, Caramel, Almond Milk, Iced",9.25,1,9.25,0.9,Mastercard 5789,2025-05-03 14:11:00,14,0
+222,"5/3/25, 2:16 PM","(5/3/25, 8:42 AM - 8:43 AM)",Matcha,"Iced, Strawberry",6.0,1,6.0,0.58,Visa 5446,2025-05-03 14:16:00,14,5
+223,"5/3/25, 2:22 PM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,"Iced, Strawberry",5.5,1,5.5,0.54,Visa 2196,2025-05-03 14:22:00,14,6
+238,"5/3/25, 2:31 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Cin Sug. Bagel, Maple CC, Latte",8.0,1,8.0,0.78,Visa 9238,2025-05-03 14:31:00,14,0
+239,"5/3/25, 2:37 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Plain Bagel, Plain CC, Cold Brew, Smores",8.5,1,8.5,0.83,Visa 4998,2025-05-03 14:37:00,14,0
+242,"5/3/25, 2:37 PM","(5/3/25, 8:42 AM - 8:43 AM)",Cold Brew,Iced,5.5,1,5.5,0.54,Visa 3170,2025-05-03 14:37:00,14,5
+243,"5/3/25, 2:40 PM","(5/3/25, 8:42 AM - 8:43 AM)",Mocha,"Iced, Light Ice",5.5,1,5.5,0.54,Mastercard 4883,2025-05-03 14:40:00,14,5
+244,"5/3/25, 2:41 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Matcha, Honey, Plain Bagel, Blueberry CC, Iced",8.5,1,8.5,0.83,Visa 5324,2025-05-03 14:41:00,14,0
+246,"5/3/25, 2:44 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Everything Bagel, Garlic Herb CC, Shaken Espresso, Hazelnut, Spl Milk, Cold Foam",9.5,1,9.5,0.93,Visa 5626,2025-05-03 14:44:00,14,0
+252,"5/3/25, 2:47 PM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,"Iced, Vanilla, Sf Van",5.5,1,5.5,0.54,Visa 6856,2025-05-03 14:47:00,14,6
+255,"5/3/25, 2:48 PM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,"Iced, Vanilla, Sf Van",5.5,1,5.5,0.54,Visa 0369,2025-05-03 14:48:00,14,6
+256,"5/3/25, 2:50 PM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,"Iced, Vanilla",5.5,1,5.5,0.54,Amex 0843,2025-05-03 14:50:00,14,6
+259,"5/3/25, 2:51 PM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,"Iced, Vanilla",5.5,1,5.5,0.54,Visa 3348,2025-05-03 14:51:00,14,6
+261,"5/3/25, 2:52 PM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,"Iced, Vanilla, Oat Milk",6.25,1,6.25,0.61,Visa 9286,2025-05-03 14:52:00,14,6
+262,"5/3/25, 2:54 PM","(5/3/25, 8:42 AM - 8:43 AM)",Matcha,"Iced, Vanilla, Sf Van",6.0,1,6.0,0.58,Visa 3141,2025-05-03 14:54:00,14,5
+266,"5/3/25, 2:56 PM","(5/3/25, 8:42 AM - 8:43 AM)",Matcha,"Iced, Cane",5.5,1,5.5,0.54,Amex 5149,2025-05-03 14:56:00,14,5
+269,"5/3/25, 2:57 PM","(5/3/25, 8:42 AM - 8:43 AM)",Matcha,"Iced, Cane",5.5,1,5.5,0.54,Visa 5773,2025-05-03 14:57:00,14,5
+271,"5/3/25, 2:58 PM","(5/3/25, 8:42 AM - 8:43 AM)",Latte,"Iced, Hazelnut",5.5,1,5.5,0.54,Visa 3844,2025-05-03 14:58:00,14,6
+272,"5/3/25, 3:01 PM","(5/3/25, 8:42 AM - 8:43 AM)",Bagel Combo,"_, Cin Sug. Bagel, Latte, Snickerdoodle Light Ice, None",9.5,1,9.5,0.93,Visa 1660,2025-05-03 15:01:00,15,0
+275,"5/3/25, 3:05 PM","(5/3/25, 8:42 AM - 8:43 AM)",Matcha,"Iced, Vanilla, Oat Milk, Cold foam, Van Cf",7.75,1,7.75,0.76,Mastercard 0490,2025-05-03 15:05:00,15,5
+3,"5/4/25, 8:26 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Matcha, Vanilla, Double Match",10.5,1,10.5,1.02,Visa 5849,2025-05-04 08:26:00,8,2
+4,"5/4/25, 8:31 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Cold Brew",8.0,1,8.0,0.78,Visa 6124,2025-05-04 08:31:00,8,2
+5,"5/4/25, 8:33 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Everything Bagel, Garlic Herb CC, Chai, Iced",8.5,1,8.5,0.83,Discover 8594,2025-05-04 08:33:00,8,2
+6,"5/4/25, 8:34 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Sesame Bagel, Garlic Herb CC, Chai, Vanilla, Iced",9.0,1,9.0,0.88,Visa 4152,2025-05-04 08:34:00,8,2
+7,"5/4/25, 8:53 AM","(5/4/25, 8:26 AM - 8:27 AM)",Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Visa 9156,2025-05-04 08:53:00,8,4
+8,"5/4/25, 8:54 AM",,Latte,"Iced, Almond Milk",5.75,1,5.75,0.56,Visa 7307,2025-05-04 08:54:00,8,4
+9,"5/4/25, 8:58 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Asiago Bagel, Plain CC, Matcha, Strawberry, Oat Milk, Iced",9.75,1,9.75,0.95,Amex 1001,2025-05-04 08:58:00,8,2
+10,"5/4/25, 9:19 AM","(5/4/25, 8:26 AM - 8:27 AM)",Matcha,"Iced, Almond Milk, Double Matcha",7.5,1,7.5,0.73,Visa 1964,2025-05-04 09:19:00,9,4
+11,"5/4/25, 9:34 AM","(5/4/25, 8:26 AM - 8:27 AM)",Doppio,Iced,3.5,1,3.5,0.34,Visa 6852,2025-05-04 09:34:00,9,1
+11,"5/4/25, 9:34 AM","(5/4/25, 8:26 AM - 8:27 AM)",El Toro Rojo,No Aioli,11.0,1,11.0,1.07,Visa 6852,2025-05-04 09:34:00,9,2
+12,"5/4/25, 9:36 AM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,"Iced, Darkaide",5.0,1,5.0,0.49,Visa 5632,2025-05-04 09:36:00,9,4
+12,"5/4/25, 9:36 AM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,"Iced, Darkaide, Almond Milk",5.75,1,5.75,0.56,Visa 5632,2025-05-04 09:36:00,9,4
+12,"5/4/25, 9:36 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel,"1 Bagel, Plain, Garlic Herb CC",4.25,1,4.25,0.41,Visa 5632,2025-05-04 09:36:00,9,1
+13,"5/4/25, 9:37 AM","(5/4/25, 8:26 AM - 8:27 AM)",Cold Brew,"Iced, Spl Whole",5.5,1,5.5,0.54,Discover 2537,2025-05-04 09:37:00,9,4
+14,"5/4/25, 9:41 AM","(5/4/25, 8:26 AM - 8:27 AM)",Cold Brew,"Iced, Cold foam, Straw Cf",6.5,1,6.5,0.63,Visa 5622,2025-05-04 09:41:00,9,4
+15,"5/4/25, 10:03 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Matcha, Cane Sugar, Asiago Bagel, Garlic Herb CC",8.5,1,8.5,0.83,Mastercard 9118,2025-05-04 10:03:00,10,2
+16,"5/4/25, 10:05 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel,"1 Bagel, Cinnamon Sugar, Maple CC",4.25,1,4.25,0.41,Amex 9807,2025-05-04 10:05:00,10,1
+17,"5/4/25, 10:06 AM","(5/4/25, 8:26 AM - 8:27 AM)",Kodiak Catch,With Regular Cream Cheese,12.0,1,12.0,1.17,Visa 1964,2025-05-04 10:06:00,10,2
+18,"5/4/25, 10:07 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Everything Bagel, Plain CC, Matcha, Vanilla, Strawberry, Iced",9.5,1,9.5,0.93,Mastercard 6605,2025-05-04 10:07:00,10,2
+19,"5/4/25, 10:08 AM","(5/4/25, 8:26 AM - 8:27 AM)",Kodiak Catch,Everthing,12.0,1,12.0,1.17,Visa 6608,2025-05-04 10:08:00,10,2
+19,"5/4/25, 10:08 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel,"1 Bagel, Plain, Plain CC",4.0,1,4.0,0.39,Visa 6608,2025-05-04 10:08:00,10,1
+20,"5/4/25, 10:10 AM","(5/4/25, 8:26 AM - 8:27 AM)",Iced Shaken Espresso,"Iced, Brown Sugar Cinnamon, Spl Almond",5.0,1,5.0,0.49,Mastercard 4182,2025-05-04 10:10:00,10,4
+21,"5/4/25, 10:12 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Cin Sug. Bagel, Blueberry CC, Latte, Hot",8.0,1,8.0,0.78,Visa 9102,2025-05-04 10:12:00,10,2
+22,"5/4/25, 10:14 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Everything Bagel, Diablo CC, Latte, Cold Foam, Van Cf, Lucky Irish, Iced, Oat Milk",10.25,1,10.25,1.0,Visa 9548,2025-05-04 10:14:00,10,2
+23,"5/4/25, 10:16 AM","(5/4/25, 8:26 AM - 8:27 AM)",Matcha,"Iced, Chocolate Milano, Light Ice, Shot Ots, Extra Shot",7.0,1,7.0,0.68,Visa 8101,2025-05-04 10:16:00,10,4
+24,"5/4/25, 10:23 AM",,Latte,"Iced, Almond Milk",5.75,1,5.75,0.56,Amex 8252,2025-05-04 10:23:00,10,4
+27,"5/4/25, 10:29 AM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,"Oat Milk, Hot",5.75,1,5.75,0.56,Visa 4638,2025-05-04 10:29:00,10,4
+27,"5/4/25, 10:29 AM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,"Hot, Vanilla",5.5,1,5.5,0.54,Visa 4638,2025-05-04 10:29:00,10,4
+28,"5/4/25, 10:36 AM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,"Iced, Brown Sugar Cinnamon, 1/2 Sweet",5.5,1,5.5,0.54,Visa 6492,2025-05-04 10:36:00,10,4
+29,"5/4/25, 10:42 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Everything Bagel, Plain CC, Latte, Hot, Oat Milk, Honey",8.75,1,8.75,0.85,Visa 5695,2025-05-04 10:42:00,10,2
+33,"5/4/25, 10:45 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Plain Bagel, Garlic Herb CC, Cold Brew, Cold Foam, Van Foam",9.0,1,9.0,0.88,Visa 3357,2025-05-04 10:45:00,10,2
+34,"5/4/25, 10:46 AM","(5/4/25, 8:26 AM - 8:27 AM)",Matcha,"Iced, Strawberry, Cold foam, Strawberry Foam Too",7.0,1,7.0,0.68,Visa 3439,2025-05-04 10:46:00,10,4
+35,"5/4/25, 10:47 AM","(5/4/25, 8:26 AM - 8:27 AM)",Matcha,"Iced, Almond Milk, Cane Sugar",6.25,1,6.25,0.61,Visa 1674,2025-05-04 10:47:00,10,4
+36,"5/4/25, 10:50 AM","(5/4/25, 8:26 AM - 8:27 AM)",Matcha,"Iced, Strawberry, Cold foam, Van Foam",7.0,1,7.0,0.68,Mastercard 5000,2025-05-04 10:50:00,10,4
+37,"5/4/25, 10:52 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Plain Bagel, Plain CC, Cold Brew, Dark Side",8.0,1,8.0,0.78,Visa 4411,2025-05-04 10:52:00,10,2
+37,"5/4/25, 10:52 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Sesame Bagel, Diablo CC, Latte, Oat Milk, Light Side",9.25,1,9.25,0.9,Visa 4411,2025-05-04 10:52:00,10,2
+39,"5/4/25, 10:54 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Everything Bagel, Plain CC, Latte, Chocolate Milano, Marshmallow, No Ice",9.0,1,9.0,0.88,Visa 4770,2025-05-04 10:54:00,10,2
+39,"5/4/25, 10:54 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Everything Bagel, Garlic Herb CC, Matcha, Strawberry, Light Ice",9.0,1,9.0,0.88,Visa 4770,2025-05-04 10:54:00,10,2
+42,"5/4/25, 11:00 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Everything Bagel, Diablo CC, Americano, Iced",8.0,1,8.0,0.78,Visa 8257,2025-05-04 11:00:00,11,2
+43,"5/4/25, 11:02 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Everything Bagel, Garlic Herb CC, Latte, Hazelnut",8.5,1,8.5,0.83,Amex 1022,2025-05-04 11:02:00,11,2
+45,"5/4/25, 11:04 AM","(5/4/25, 8:26 AM - 8:27 AM)",The Light Side,"Iced, Latte, Oat Milk",6.25,1,6.25,0.61,Visa 8390,2025-05-04 11:04:00,11,4
+45,"5/4/25, 11:04 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel,"1 Bagel, Everything, Plain CC",4.0,1,4.0,0.39,Visa 8390,2025-05-04 11:04:00,11,1
+46,"5/4/25, 11:05 AM","(5/4/25, 8:26 AM - 8:27 AM)",Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Visa 8025,2025-05-04 11:05:00,11,4
+47,"5/4/25, 11:07 AM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,"Iced, Vanilla, Almond Milk, 1/2 Sweet",6.25,1,6.25,0.61,Amex 0618,2025-05-04 11:07:00,11,4
+47,"5/4/25, 11:07 AM","(5/4/25, 8:26 AM - 8:27 AM)",$0.00,Not So Aburrito,10.0,1,10.0,0.98,Amex 0618,2025-05-04 11:07:00,11,2
+48,"5/4/25, 11:09 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Chai, Everything Bagel, Diablo CC",8.5,1,8.5,0.83,Visa 8069,2025-05-04 11:09:00,11,2
+49,"5/4/25, 11:10 AM","(5/4/25, 8:26 AM - 8:27 AM)",Not So Aburrito,No Avocado Cream,10.0,1,10.0,0.98,Mastercard 0920,2025-05-04 11:10:00,11,2
+51,"5/4/25, 11:13 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Latte, Vanilla, Oat Milk, Cold Foam, Van Foam Too",10.25,1,10.25,1.0,Mastercard 1612,2025-05-04 11:13:00,11,2
+52,"5/4/25, 11:15 AM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,"Iced, Cold foam, Van Foam, Vanilla, Oat Milk",7.25,1,7.25,0.71,Visa 7157,2025-05-04 11:15:00,11,4
+52,"5/4/25, 11:15 AM","(5/4/25, 8:26 AM - 8:27 AM)",$0.00,Not So Aburrito,10.0,1,10.0,0.98,Visa 7157,2025-05-04 11:15:00,11,2
+53,"5/4/25, 11:16 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Poppy Bagel, Diablo CC, Matcha, Hazelnut, Half Sweet",9.0,1,9.0,0.88,Discover 0769,2025-05-04 11:16:00,11,2
+54,"5/4/25, 11:17 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Everything Bagel, Garlic Herb CC, Latte, BSC",8.5,1,8.5,0.83,Visa 0501,2025-05-04 11:17:00,11,2
+55,"5/4/25, 11:19 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel,"1 Bagel, Plain, Blueberry CC",4.25,1,4.25,0.41,Visa 7584,2025-05-04 11:19:00,11,1
+56,"5/4/25, 11:20 AM","(5/4/25, 8:26 AM - 8:27 AM)",Matcha,"Iced, Oat Milk",6.25,1,6.25,0.61,Visa 4546,2025-05-04 11:20:00,11,4
+57,"5/4/25, 11:21 AM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,"Iced, Vanilla, Oat Milk",6.25,1,6.25,0.61,Visa 1012,2025-05-04 11:21:00,11,4
+57,"5/4/25, 11:21 AM","(5/4/25, 8:26 AM - 8:27 AM)",$0.00,Not So Aburrito,10.0,1,10.0,0.98,Visa 1012,2025-05-04 11:21:00,11,2
+58,"5/4/25, 11:23 AM","(5/4/25, 8:26 AM - 8:27 AM)",Cold Brew,"Iced, Spl Almond, Honey, Cinnamon Powder",5.5,1,5.5,0.54,Visa 3976,2025-05-04 11:23:00,11,4
+60,"5/4/25, 11:24 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Latte, BSC, Cold Foam, Snickerdoodle",9.5,1,9.5,0.93,Mastercard 9368,2025-05-04 11:24:00,11,2
+61,"5/4/25, 11:25 AM","(5/4/25, 8:26 AM - 8:27 AM)",Snickerdoodle,"Iced, Latte, Oat Milk",7.25,1,7.25,0.71,Visa 2335,2025-05-04 11:25:00,11,4
+62,"5/4/25, 11:27 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Latte, Plain Bagel, Blueberry CC, Chocolate Milano, Hot",8.5,1,8.5,0.83,Mastercard 5430,2025-05-04 11:27:00,11,2
+63,"5/4/25, 11:29 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Everything Bagel, Plain CC, Latte, Hazelnut, Hot",8.5,1,8.5,0.83,Mastercard 7167,2025-05-04 11:29:00,11,2
+65,"5/4/25, 11:30 AM","(5/4/25, 8:26 AM - 8:27 AM)",Matcha,"Iced, Vanilla",6.0,1,6.0,0.58,Mastercard 5492,2025-05-04 11:30:00,11,4
+66,"5/4/25, 11:35 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Sesame Bagel, Garlic Herb CC, Latte",8.0,1,8.0,0.78,Visa 5085,2025-05-04 11:35:00,11,2
+66,"5/4/25, 11:35 AM","(5/4/25, 8:26 AM - 8:27 AM)",Matcha,Iced,5.5,1,5.5,0.54,Visa 5085,2025-05-04 11:35:00,11,4
+66,"5/4/25, 11:35 AM","(5/4/25, 8:26 AM - 8:27 AM)",$0.00,El Toro Rojo,11.0,1,11.0,1.07,Visa 5085,2025-05-04 11:35:00,11,2
+67,"5/4/25, 11:37 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Asiago Bagel, Diablo CC, Matcha",8.5,1,8.5,0.83,Mastercard 0250,2025-05-04 11:37:00,11,2
+68,"5/4/25, 11:38 AM","(5/4/25, 8:26 AM - 8:27 AM)",S'mores,"Iced, Latte",6.5,1,6.5,0.63,Visa 7031,2025-05-04 11:38:00,11,4
+68,"5/4/25, 11:38 AM","(5/4/25, 8:26 AM - 8:27 AM)",$0.00,Not So Aburrito,10.0,1,10.0,0.98,Visa 7031,2025-05-04 11:38:00,11,2
+70,"5/4/25, 11:40 AM","(5/4/25, 8:26 AM - 8:27 AM)",Iced Shaken Espresso,"Iced, Spl Almond, Cold foam, Bsc Cf",5.5,1,5.5,0.54,Visa 6961,2025-05-04 11:40:00,11,4
+70,"5/4/25, 11:40 AM","(5/4/25, 8:26 AM - 8:27 AM)",Iced Shaken Espresso,"Iced, Spl Almond, Cold foam, Bsc Cf",5.5,1,5.5,0.54,Visa 6961,2025-05-04 11:40:00,11,4
+71,"5/4/25, 11:42 AM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Plain Bagel, Garlic Herb CC, Latte, Almond Milk, Iced",8.75,1,8.75,0.85,Visa 8964,2025-05-04 11:42:00,11,2
+73,"5/4/25, 11:43 AM","(5/4/25, 8:26 AM - 8:27 AM)",Eclipse,"Iced, Latte, Light Ice",6.5,1,6.5,0.63,Mastercard 9340,2025-05-04 11:43:00,11,4
+75,"5/4/25, 11:45 AM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,Hot,5.0,1,5.0,0.49,Visa 8367,2025-05-04 11:45:00,11,4
+75,"5/4/25, 11:45 AM","(5/4/25, 8:26 AM - 8:27 AM)",$0.00,El Toro Rojo,11.0,1,11.0,1.07,Visa 8367,2025-05-04 11:45:00,11,2
+107,"5/4/25, 12:27 PM","(5/4/25, 8:26 AM - 8:27 AM)",Doppio,Iced,3.5,1,3.5,0.34,Visa 6852,2025-05-04 12:27:00,12,1
+109,"5/4/25, 12:31 PM","(5/4/25, 8:26 AM - 8:27 AM)",Mocha Hazelnut,"Iced, Latte",6.5,1,6.5,0.63,Discover 6416,2025-05-04 12:31:00,12,5
+110,"5/4/25, 12:32 PM","(5/4/25, 8:26 AM - 8:27 AM)",Eclipse,"Iced, Latte",6.5,1,6.5,0.63,Mastercard 5892,2025-05-04 12:32:00,12,5
+111,"5/4/25, 12:33 PM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,Iced,5.0,1,5.0,0.49,Mastercard 5264,2025-05-04 12:33:00,12,6
+112,"5/4/25, 12:34 PM","(5/4/25, 8:26 AM - 8:27 AM)",Matcha,"Iced, Vanilla, Almond Milk",6.75,1,6.75,0.66,Mastercard 4888,2025-05-04 12:34:00,12,5
+113,"5/4/25, 12:35 PM","(5/4/25, 8:26 AM - 8:27 AM)",Matcha,"Iced, Strawberry",6.0,1,6.0,0.58,Mastercard 9362,2025-05-04 12:35:00,12,5
+113,"5/4/25, 12:35 PM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,"Iced, Vanilla",5.5,1,5.5,0.54,Mastercard 9362,2025-05-04 12:35:00,12,6
+114,"5/4/25, 12:35 PM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,"Iced, Vanilla",5.5,1,5.5,0.54,Visa 4876,2025-05-04 12:35:00,12,6
+116,"5/4/25, 12:41 PM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,"Iced, Oat Milk, Extra Ice",5.75,1,5.75,0.56,Amex 1025,2025-05-04 12:41:00,12,6
+116,"5/4/25, 12:41 PM","(5/4/25, 8:26 AM - 8:27 AM)",$0.00,Side Plain Cc,0.5,1,0.5,0.05,Amex 1025,2025-05-04 12:41:00,12,1
+117,"5/4/25, 12:44 PM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Shaken Espresso, Cold Foam, BSC, Van Cf, Splash Whole",9.5,1,9.5,0.93,Visa 6723,2025-05-04 12:44:00,12,0
+118,"5/4/25, 12:45 PM","(5/4/25, 8:26 AM - 8:27 AM)",Americano,Iced,4.5,1,4.5,0.44,Visa 5710,2025-05-04 12:45:00,12,5
+119,"5/4/25, 12:50 PM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Everything Bagel, Garlic Herb CC, Latte, Oat Milk, BSC, Cold Foam",10.25,1,10.25,1.0,Visa 8454,2025-05-04 12:50:00,12,0
+120,"5/4/25, 12:51 PM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,"Hot, Oat Milk",5.75,1,5.75,0.56,Visa 0892,2025-05-04 12:51:00,12,6
+121,"5/4/25, 12:53 PM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,"Iced, Brown Sugar Cinnamon, Oat Milk",6.25,1,6.25,0.61,Visa 4779,2025-05-04 12:53:00,12,6
+123,"5/4/25, 12:53 PM","(5/4/25, 8:26 AM - 8:27 AM)",Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Visa 4780,2025-05-04 12:53:00,12,5
+124,"5/4/25, 12:54 PM","(5/4/25, 8:26 AM - 8:27 AM)",Snickerdoodle,"Iced, Latte, Oat Milk",7.25,1,7.25,0.71,Visa 3730,2025-05-04 12:54:00,12,5
+124,"5/4/25, 12:54 PM","(5/4/25, 8:26 AM - 8:27 AM)",$0.00,El Toro Rojo,11.0,1,11.0,1.07,Visa 3730,2025-05-04 12:54:00,12,0
+126,"5/4/25, 12:56 PM","(5/4/25, 8:26 AM - 8:27 AM)",Bagel Combo,"_, Plain Bagel, Plain CC, Latte, Vanilla, Extra Sweet",8.5,1,8.5,0.83,Visa 9485,2025-05-04 12:56:00,12,0
+129,"5/4/25, 1:01 PM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,Iced,5.0,1,5.0,0.49,Mastercard 2687,2025-05-04 13:01:00,13,6
+131,"5/4/25, 1:04 PM",,Latte,"Iced, Caramel",5.5,1,5.5,0.54,Visa 0787,2025-05-04 13:04:00,13,6
+135,"5/4/25, 1:06 PM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,"Iced, Oat Milk, Honey",5.75,1,5.75,0.56,Discover 3754,2025-05-04 13:06:00,13,6
+137,"5/4/25, 1:07 PM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,"Iced, Oat Milk",5.75,1,5.75,0.56,Visa 4872,2025-05-04 13:07:00,13,6
+139,"5/4/25, 1:09 PM","(5/4/25, 8:26 AM - 8:27 AM)",Iced Shaken Espresso,"Iced, Spl Almond, Cold foam, Bsc Foam",5.5,1,5.5,0.54,Amex 1212,2025-05-04 13:09:00,13,5
+140,"5/4/25, 1:11 PM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,"Iced, Light Ice, Hazelnut",5.5,1,5.5,0.54,Visa 1373,2025-05-04 13:11:00,13,6
+140,"5/4/25, 1:11 PM","(5/4/25, 8:26 AM - 8:27 AM)",El Toro Rojo,GF Bun,11.0,1,11.0,1.07,Visa 1373,2025-05-04 13:11:00,13,0
+141,"5/4/25, 1:12 PM","(5/4/25, 8:26 AM - 8:27 AM)",Matcha,"Iced, Cane",5.5,1,5.5,0.54,Discover 2750,2025-05-04 13:12:00,13,5
+141,"5/4/25, 1:12 PM","(5/4/25, 8:26 AM - 8:27 AM)",$0.00,BBLT,11.5,1,11.5,1.12,Discover 2750,2025-05-04 13:12:00,13,0
+142,"5/4/25, 1:14 PM","(5/4/25, 8:26 AM - 8:27 AM)",Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Visa 5664,2025-05-04 13:14:00,13,5
+143,"5/4/25, 1:15 PM","(5/4/25, 8:26 AM - 8:27 AM)",The Dark Side,"Iced, Latte",5.5,1,5.5,0.54,Mastercard 7809,2025-05-04 13:15:00,13,5
+144,"5/4/25, 1:16 PM","(5/4/25, 8:26 AM - 8:27 AM)",Eclipse,"Iced, Latte, Chcolate Cf",6.5,1,6.5,0.63,Visa 9870,2025-05-04 13:16:00,13,5
+145,"5/4/25, 1:19 PM","(5/4/25, 8:26 AM - 8:27 AM)",Matcha,"Iced, Raspberry",6.0,1,6.0,0.58,Discover 5515,2025-05-04 13:19:00,13,5
+146,"5/4/25, 1:21 PM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,"Iced, Vanilla, Oat Milk",6.25,1,6.25,0.61,Visa 1124,2025-05-04 13:21:00,13,6
+147,"5/4/25, 1:22 PM","(5/4/25, 8:26 AM - 8:27 AM)",Mocha,Iced,5.5,1,5.5,0.54,Visa 3248,2025-05-04 13:22:00,13,5
+148,"5/4/25, 1:23 PM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,"Iced, Oat Milk, Brown Sugar Cinnamon",6.25,1,6.25,0.61,Mastercard 4400,2025-05-04 13:23:00,13,6
+149,"5/4/25, 1:24 PM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,"Iced, Brown Sugar Cinnamon, Almond Milk, Cold foam, Van Cf",7.25,1,7.25,0.71,Discover 7361,2025-05-04 13:24:00,13,6
+151,"5/4/25, 1:26 PM","(5/4/25, 8:26 AM - 8:27 AM)",Kodiak Catch,Sourdough,12.0,1,12.0,1.17,Discover 2517,2025-05-04 13:26:00,13,0
+151,"5/4/25, 1:26 PM","(5/4/25, 8:26 AM - 8:27 AM)",The Dark Side,"Iced, Latte",5.5,1,5.5,0.54,Discover 2517,2025-05-04 13:26:00,13,5
+152,"5/4/25, 1:28 PM","(5/4/25, 8:26 AM - 8:27 AM)",Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Visa 8228,2025-05-04 13:28:00,13,5
+153,"5/4/25, 1:30 PM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,"Iced, Almond Milk, Extra Shot",6.75,1,6.75,0.66,Mastercard 6880,2025-05-04 13:30:00,13,6
+155,"5/4/25, 1:33 PM","(5/4/25, 8:26 AM - 8:27 AM)",Matcha,"Iced, Strawberry, Cold foam",7.0,1,7.0,0.68,Mastercard 0490,2025-05-04 13:33:00,13,5
+156,"5/4/25, 1:39 PM","(5/4/25, 8:26 AM - 8:27 AM)",S'mores,"Iced, Latte",6.5,1,6.5,0.63,Mastercard 7209,2025-05-04 13:39:00,13,5
+159,"5/4/25, 1:40 PM",,El Toro Rojo,Tortilla,11.0,1,11.0,1.07,Mastercard 6880,2025-05-04 13:40:00,13,0
+161,"5/4/25, 1:44 PM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,"Iced, Almond Milk, Honey",5.75,1,2.87,0.28,Mastercard 3951,2025-05-04 13:44:00,13,6
+162,"5/4/25, 1:46 PM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,"Iced, Vanilla, Oat Milk, Cold foam, Van Foam Toi",7.25,1,7.25,0.71,Mastercard 1575,2025-05-04 13:46:00,13,6
+162,"5/4/25, 1:46 PM","(5/4/25, 8:26 AM - 8:27 AM)",El Toro Rojo,On Sourdough,11.0,1,11.0,1.07,Mastercard 1575,2025-05-04 13:46:00,13,0
+163,"5/4/25, 1:49 PM",,Matcha,"Iced, Strawberry, Almond Milk",6.75,1,6.75,0.66,Amex 2036,2025-05-04 13:49:00,13,5
+165,"5/4/25, 1:50 PM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,"Iced, Vanilla",5.5,1,5.5,0.54,Visa 2948,2025-05-04 13:50:00,13,6
+166,"5/4/25, 1:51 PM","(5/4/25, 8:26 AM - 8:27 AM)",Matcha,"Iced, Strawberry",6.0,1,6.0,0.58,Visa 6253,2025-05-04 13:51:00,13,5
+166,"5/4/25, 1:51 PM","(5/4/25, 8:26 AM - 8:27 AM)",$0.00,Not So Aburrito,10.0,1,10.0,0.98,Visa 6253,2025-05-04 13:51:00,13,0
+167,"5/4/25, 1:54 PM","(5/4/25, 8:26 AM - 8:27 AM)",Matcha,"Iced, Oat Milk, Honey, Personal Cup",6.25,1,6.25,0.61,Visa 3592,2025-05-04 13:54:00,13,5
+167,"5/4/25, 1:54 PM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,Iced,5.0,1,5.0,0.49,Visa 3592,2025-05-04 13:54:00,13,6
+169,"5/4/25, 1:55 PM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,"Iced, Almond Milk",5.75,1,5.75,0.56,Visa 7128,2025-05-04 13:55:00,13,6
+170,"5/4/25, 1:57 PM",,Cold Brew,Iced,5.5,1,5.5,0.54,Visa 9915,2025-05-04 13:57:00,13,5
+173,"5/4/25, 2:12 PM","(5/4/25, 8:26 AM - 8:27 AM)",Latte,"Iced, Almond Milk",5.75,1,5.75,0.56,Visa 7939,2025-05-04 14:12:00,14,6
+177,"5/4/25, 2:31 PM",,Americano,Iced,4.5,1,4.5,0.44,Mastercard 3487,2025-05-04 14:31:00,14,5
+178,"5/4/25, 2:35 PM","(5/4/25, 8:26 AM - 8:27 AM)",Americano,Iced,4.5,1,4.5,0.44,Visa 2388,2025-05-04 14:35:00,14,5
+180,"5/4/25, 2:51 PM","(5/4/25, 8:26 AM - 8:27 AM)",Cold Brew,"Iced, Vanilla, Spl Whole",6.0,1,6.0,0.58,Visa 0614,2025-05-04 14:51:00,14,5
+180,"5/4/25, 2:51 PM","(5/4/25, 8:26 AM - 8:27 AM)",$0.00,Pastrami Mami,11.5,1,11.5,1.12,Visa 0614,2025-05-04 14:51:00,14,0
+181,"5/4/25, 2:58 PM",,Mocha,"Iced, Extra Shot",6.5,1,6.5,0.63,Visa 5805,2025-05-04 14:58:00,14,5
+182,"5/4/25, 3:00 PM","(5/4/25, 8:26 AM - 8:27 AM)",The Dark Side,"Iced, Latte",5.5,1,5.5,0.54,Visa 1660,2025-05-04 15:00:00,15,5
+2,"5/5/25, 8:33 AM","(5/5/25, 8:32 AM - 8:33 AM)",Matcha,"Iced, Oat Milk, Strawberry",6.75,1,6.75,0.66,Visa 5217,2025-05-05 08:33:00,8,4
+2,"5/5/25, 8:33 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel,"1 Bagel, Cinnamon Sugar, Blueberry CC",4.25,1,4.25,0.41,Visa 5217,2025-05-05 08:33:00,8,1
+3,"5/5/25, 8:34 AM","(5/5/25, 8:32 AM - 8:33 AM)",Mocha Hazelnut,"Iced, Latte, Oat Milk, Extra Shot",8.25,1,8.25,0.8,Mastercard 7174,2025-05-05 08:34:00,8,2
+4,"5/5/25, 8:39 AM","(5/5/25, 8:32 AM - 8:33 AM)",Latte,"Iced, Almond Milk",5.75,1,5.75,0.56,Visa 7307,2025-05-05 08:39:00,8,4
+5,"5/5/25, 8:42 AM","(5/5/25, 8:32 AM - 8:33 AM)",Matcha,"Iced, Oat Milk, Cane",6.25,1,6.25,0.61,Visa 0333,2025-05-05 08:42:00,8,4
+5,"5/5/25, 8:42 AM","(5/5/25, 8:32 AM - 8:33 AM)",Matcha,Iced,5.5,1,5.5,0.54,Visa 0333,2025-05-05 08:42:00,8,4
+6,"5/5/25, 8:55 AM","(5/5/25, 8:32 AM - 8:33 AM)",El Toro Rojo,Everything Bagel,11.0,1,11.0,1.07,Amex 7951,2025-05-05 08:55:00,8,2
+6,"5/5/25, 8:55 AM","(5/5/25, 8:32 AM - 8:33 AM)",S'mores,"Iced, Latte, Oat Milk",7.25,1,7.25,0.71,Amex 7951,2025-05-05 08:55:00,8,4
+7,"5/5/25, 8:57 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Latte, Almond Milk, Coconut",9.25,1,9.25,0.9,Discover 4169,2025-05-05 08:57:00,8,2
+8,"5/5/25, 8:59 AM","(5/5/25, 8:32 AM - 8:33 AM)",Latte,"Hot, Hazelnut",5.5,1,5.5,0.54,Visa 5354,2025-05-05 08:59:00,8,4
+8,"5/5/25, 8:59 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel,"1 Bagel, Everything, Plain CC",4.0,1,4.0,0.39,Visa 5354,2025-05-05 08:59:00,8,1
+9,"5/5/25, 9:28 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Latte, Everything Bagel, Garlic Herb CC",8.0,1,8.0,0.78,Visa 9942,2025-05-05 09:28:00,9,2
+9,"5/5/25, 9:28 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel,"1 Bagel, Asiago, Garlic Herb CC",4.25,1,4.25,0.41,Visa 9942,2025-05-05 09:28:00,9,1
+10,"5/5/25, 9:29 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel,"1 Bagel, Cinnamon Sugar, No CC, Toasted",2.5,1,2.5,0.24,Amex 1054,2025-05-05 09:29:00,9,1
+10,"5/5/25, 9:29 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel,"1 Bagel, Cinnamon Sugar, No CC, Toasted",2.5,1,2.5,0.24,Amex 1054,2025-05-05 09:29:00,9,1
+10,"5/5/25, 9:29 AM","(5/5/25, 8:32 AM - 8:33 AM)",Matcha,"Iced, Spl Oat",5.5,1,5.5,0.54,Amex 1054,2025-05-05 09:29:00,9,4
+11,"5/5/25, 9:32 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel,"1 Bagel, Cinnamon Sugar, Maple CC",4.25,1,4.25,0.41,Visa 4883,2025-05-05 09:32:00,9,1
+11,"5/5/25, 9:32 AM","(5/5/25, 8:32 AM - 8:33 AM)",Latte,"Iced, Caramel",5.5,1,5.5,0.54,Visa 4883,2025-05-05 09:32:00,9,4
+12,"5/5/25, 9:35 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Latte, Oat Milk, Cin Sug. Bagel, Blueberry CC",8.75,1,8.75,0.85,Mastercard 4618,2025-05-05 09:35:00,9,2
+13,"5/5/25, 9:39 AM","(5/5/25, 8:32 AM - 8:33 AM)",Latte,"Iced, Brown Sugar Cinnamon, Vanilla",6.0,1,6.0,0.58,Visa 9156,2025-05-05 09:39:00,9,4
+14,"5/5/25, 9:42 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Latte, Vanilla, Everything Bagel, Plain CC",8.5,1,8.5,0.83,Visa 2760,2025-05-05 09:42:00,9,2
+15,"5/5/25, 9:43 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Chai, Plain Bagel, Maple CC",8.5,1,8.5,0.83,Visa 5974,2025-05-05 09:43:00,9,2
+17,"5/5/25, 9:49 AM","(5/5/25, 8:32 AM - 8:33 AM)",Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Visa 3801,2025-05-05 09:49:00,9,4
+17,"5/5/25, 9:49 AM","(5/5/25, 8:32 AM - 8:33 AM)",Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Visa 3801,2025-05-05 09:49:00,9,4
+18,"5/5/25, 9:51 AM","(5/5/25, 8:32 AM - 8:33 AM)",Doppio,Iced,3.5,1,3.5,0.34,Visa 6852,2025-05-05 09:51:00,9,1
+19,"5/5/25, 9:52 AM","(5/5/25, 8:32 AM - 8:33 AM)",Iced Shaken Espresso,"Iced, Spl Almond, Cold foam, Bsc Cf",5.5,1,5.5,0.54,Visa 6961,2025-05-05 09:52:00,9,4
+20,"5/5/25, 9:55 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Sesame Bagel, Latte, Caramel, Vanilla, Half Swee, Plain CC",9.0,1,9.0,0.88,Visa 7718,2025-05-05 09:55:00,9,2
+21,"5/5/25, 9:56 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Matcha, Plain Bagel, Plain CC, Cane",9.0,1,9.0,0.88,Visa 2155,2025-05-05 09:56:00,9,2
+22,"5/5/25, 10:02 AM",,Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Visa 3801,2025-05-05 10:02:00,10,4
+23,"5/5/25, 10:06 AM","(5/5/25, 8:32 AM - 8:33 AM)",El Toro Rojo,No Aioli,11.0,1,11.0,1.07,Visa 6852,2025-05-05 10:06:00,10,2
+24,"5/5/25, 10:08 AM","(5/5/25, 8:32 AM - 8:33 AM)",Eclipse,"Iced, Latte",6.5,1,6.5,0.63,Visa 6298,2025-05-05 10:08:00,10,4
+26,"5/5/25, 10:11 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Chai, Lite Ice, Everything Bagel, Plain CC",8.5,1,8.5,0.83,Mastercard 3131,2025-05-05 10:11:00,10,2
+27,"5/5/25, 10:13 AM","(5/5/25, 8:32 AM - 8:33 AM)",Latte,"Iced, Oat Milk",5.75,1,5.75,0.56,Visa 0327,2025-05-05 10:13:00,10,4
+28,"5/5/25, 10:14 AM","(5/5/25, 8:32 AM - 8:33 AM)",Latte,"Iced, Oat Milk",5.75,1,2.87,0.28,Amex 7678,2025-05-05 10:14:00,10,4
+29,"5/5/25, 10:15 AM","(5/5/25, 8:32 AM - 8:33 AM)",Latte,"Iced, Almond Milk, Honey",5.75,1,5.75,0.56,Amex 5977,2025-05-05 10:15:00,10,4
+30,"5/5/25, 10:17 AM","(5/5/25, 8:32 AM - 8:33 AM)",Iced Shaken Espresso,"Iced, Brown Sugar Cinnamon, Spl Oat",5.0,1,5.0,0.49,Mastercard 3171,2025-05-05 10:17:00,10,4
+31,"5/5/25, 10:17 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel,"1 Bagel, Sesame, Garlic Herb CC",4.25,1,4.25,0.41,Visa 7322,2025-05-05 10:17:00,10,1
+32,"5/5/25, 10:19 AM","(5/5/25, 8:32 AM - 8:33 AM)",Eclipse,"Iced, Latte, Light Ice",6.5,1,6.5,0.63,Amex 6795,2025-05-05 10:19:00,10,4
+33,"5/5/25, 10:22 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Shaken Espresso, Hazelnut, Half Sweet, Spl Milk, Everything Bagel, Plain CC",8.5,1,8.5,0.83,Visa 6026,2025-05-05 10:22:00,10,2
+34,"5/5/25, 10:25 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Cin Sug. Bagel, Maple CC, Shaken Espresso, Marshmallow",8.5,1,8.5,0.83,Mastercard 9472,2025-05-05 10:25:00,10,2
+35,"5/5/25, 10:26 AM","(5/5/25, 8:32 AM - 8:33 AM)",Matcha,"Iced, Almond Milk",6.25,1,6.25,0.61,Visa 6559,2025-05-05 10:26:00,10,4
+36,"5/5/25, 10:30 AM","(5/5/25, 8:32 AM - 8:33 AM)",Matcha,"Iced, Strawberry",6.0,1,6.0,0.58,Visa 9254,2025-05-05 10:30:00,10,4
+37,"5/5/25, 10:33 AM","(5/5/25, 8:32 AM - 8:33 AM)",Latte,"Iced, Brown Sugar Cinnamon, Oat Milk",6.25,1,6.25,0.61,Visa 2832,2025-05-05 10:33:00,10,4
+38,"5/5/25, 10:35 AM","(5/5/25, 8:32 AM - 8:33 AM)",Americano,"Iced, Spl Oat",4.5,1,4.5,0.44,Visa 5410,2025-05-05 10:35:00,10,4
+39,"5/5/25, 10:37 AM","(5/5/25, 8:32 AM - 8:33 AM)",Cold Brew,"Iced, Cold foam, Bsc Cf",6.5,1,6.5,0.63,Mastercard 7725,2025-05-05 10:37:00,10,4
+40,"5/5/25, 10:38 AM","(5/5/25, 8:32 AM - 8:33 AM)",Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Visa 0205,2025-05-05 10:38:00,10,4
+40,"5/5/25, 10:38 AM","(5/5/25, 8:32 AM - 8:33 AM)",$0.00,Kodiak Catch,12.0,1,12.0,1.17,Visa 0205,2025-05-05 10:38:00,10,2
+41,"5/5/25, 10:39 AM","(5/5/25, 8:32 AM - 8:33 AM)",Not So Aburrito,No Pico,10.0,1,10.0,0.98,Visa 0082,2025-05-05 10:39:00,10,2
+41,"5/5/25, 10:39 AM","(5/5/25, 8:32 AM - 8:33 AM)",S'mores,"Iced, Latte",6.5,1,6.5,0.63,Visa 0082,2025-05-05 10:39:00,10,4
+42,"5/5/25, 10:46 AM","(5/5/25, 8:32 AM - 8:33 AM)",Mocha,Iced,5.5,1,5.5,0.54,Visa 8240,2025-05-05 10:46:00,10,4
+43,"5/5/25, 10:47 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel,"1 Bagel, Everything, No CC",2.5,1,2.5,0.24,Visa 8914,2025-05-05 10:47:00,10,1
+44,"5/5/25, 10:48 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel,"1 Bagel, Everything, Plain CC, Toasted",4.0,1,4.0,0.39,Visa 2637,2025-05-05 10:48:00,10,1
+44,"5/5/25, 10:48 AM","(5/5/25, 8:32 AM - 8:33 AM)",Latte,"Iced, Oat Milk, Vanilla",6.25,1,6.25,0.61,Visa 2637,2025-05-05 10:48:00,10,4
+45,"5/5/25, 10:50 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Cold Brew, Everything Bagel, Plain CC, Spl Milk, Sploat",8.0,1,8.0,0.78,Visa 8390,2025-05-05 10:50:00,10,2
+46,"5/5/25, 10:52 AM","(5/5/25, 8:32 AM - 8:33 AM)",Latte,"Iced, Sf Van",5.5,1,5.5,0.54,Amex 1151,2025-05-05 10:52:00,10,4
+46,"5/5/25, 10:52 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel,"1 Bagel, Sesame, Maple CC",4.25,1,4.25,0.41,Amex 1151,2025-05-05 10:52:00,10,1
+47,"5/5/25, 10:54 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Latte, Cold Foam, Oat Milk, Chocolate Milano, Hazelnut, Everything Bagel, Blueberry CC",10.75,1,10.75,1.05,Visa 9042,2025-05-05 10:54:00,10,2
+48,"5/5/25, 10:56 AM","(5/5/25, 8:32 AM - 8:33 AM)",Latte,"Iced, Caramel",5.5,1,5.5,0.54,Visa 9602,2025-05-05 10:56:00,10,4
+49,"5/5/25, 10:58 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Asiago Bagel, Diablo CC, Matcha, Oat Milk, Vanilla",9.75,1,9.75,0.95,Visa 1360,2025-05-05 10:58:00,10,2
+50,"5/5/25, 10:59 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Latte, Everything Bagel, Diablo CC, Hazelnut",8.5,1,8.5,0.83,Visa 6504,2025-05-05 10:59:00,10,2
+51,"5/5/25, 11:00 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel,"1 Bagel, Asiago, Garlic Herb CC",4.25,1,4.25,0.41,Mastercard 0623,2025-05-05 11:00:00,11,1
+52,"5/5/25, 11:03 AM","(5/5/25, 8:32 AM - 8:33 AM)",Iced Shaken Espresso,"Iced, Spl Almond, Cold foam, Bsc Cf",5.5,1,5.5,0.54,Amex 1212,2025-05-05 11:03:00,11,4
+54,"5/5/25, 11:03 AM","(5/5/25, 8:32 AM - 8:33 AM)",Latte,"Iced, Vanilla",5.5,1,5.5,0.54,Mastercard 4693,2025-05-05 11:03:00,11,4
+56,"5/5/25, 11:04 AM","(5/5/25, 8:32 AM - 8:33 AM)",Latte,"Iced, Vanilla",5.5,1,5.5,0.54,Visa 4320,2025-05-05 11:04:00,11,4
+57,"5/5/25, 11:07 AM","(5/5/25, 8:32 AM - 8:33 AM)",Americano,Iced,4.5,1,4.5,0.44,Visa 4564,2025-05-05 11:07:00,11,4
+59,"5/5/25, 11:09 AM","(5/5/25, 8:32 AM - 8:33 AM)",Eclipse,"Iced, Latte",6.5,1,6.5,0.63,Visa 8099,2025-05-05 11:09:00,11,4
+60,"5/5/25, 11:11 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Plain Bagel, Diablo CC, Matcha, Extra Shot, Both Shots, Oat Milk",10.25,1,10.25,1.0,Visa 0667,2025-05-05 11:11:00,11,2
+61,"5/5/25, 11:12 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Latte, Vanilla, Oat Milk, Plain Bagel, Garlic Herb CC",9.25,1,9.25,0.9,Mastercard 6731,2025-05-05 11:12:00,11,2
+64,"5/5/25, 11:14 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Chai, Sesame Bagel, Diablo CC",8.5,1,8.5,0.83,Mastercard 1514,2025-05-05 11:14:00,11,2
+65,"5/5/25, 11:16 AM","(5/5/25, 8:32 AM - 8:33 AM)",Matcha,"Iced, Vanilla, Cold foam",7.0,1,7.0,0.68,Visa 8562,2025-05-05 11:16:00,11,4
+65,"5/5/25, 11:16 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel,"1 Bagel, Plain, No CC",2.5,1,2.5,0.24,Visa 8562,2025-05-05 11:16:00,11,1
+66,"5/5/25, 11:18 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel,"1 Bagel, Everything, Plain CC",4.0,1,4.0,0.39,Visa 2427,2025-05-05 11:18:00,11,1
+67,"5/5/25, 11:19 AM","(5/5/25, 8:32 AM - 8:33 AM)",Latte,"Iced, Oat Milk",5.75,1,5.75,0.56,Visa 2771,2025-05-05 11:19:00,11,4
+67,"5/5/25, 11:19 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel,"1 Bagel, Plain, Plain CC",4.0,1,4.0,0.39,Visa 2771,2025-05-05 11:19:00,11,1
+68,"5/5/25, 11:22 AM","(5/5/25, 8:32 AM - 8:33 AM)",Matcha,"Iced, Almond Milk, Cold foam, Cane",7.25,1,7.25,0.71,Mastercard 0490,2025-05-05 11:22:00,11,4
+68,"5/5/25, 11:22 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel,"1 Bagel, Sesame, Garlic Herb CC",4.25,1,4.25,0.41,Mastercard 0490,2025-05-05 11:22:00,11,1
+69,"5/5/25, 11:23 AM","(5/5/25, 8:32 AM - 8:33 AM)",Iced Shaken Espresso,"Iced, Vanilla, Spl Whole",5.0,1,5.0,0.49,Visa 7177,2025-05-05 11:23:00,11,4
+71,"5/5/25, 11:26 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Latte, Vanilla, Everything Bagel, Butter",8.5,1,8.5,0.83,Visa 3399,2025-05-05 11:26:00,11,2
+71,"5/5/25, 11:26 AM","(5/5/25, 8:32 AM - 8:33 AM)",Matcha,"Iced, Oat Milk, Strawberry",6.75,1,6.75,0.66,Visa 3399,2025-05-05 11:26:00,11,4
+71,"5/5/25, 11:26 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel,"1 Bagel, Asiago, Diablo CC",4.25,1,4.25,0.41,Visa 3399,2025-05-05 11:26:00,11,1
+72,"5/5/25, 11:29 AM","(5/5/25, 8:32 AM - 8:33 AM)",Matcha,"Iced, Almond Milk, Dbl Matha, Honey",7.25,1,7.25,0.71,Mastercard 4151,2025-05-05 11:29:00,11,4
+74,"5/5/25, 11:31 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Lite Side, Cin Sug. Bagel, Plain CC, Latte",8.5,1,8.5,0.83,Mastercard 0295,2025-05-05 11:31:00,11,2
+81,"5/5/25, 11:36 AM","(5/5/25, 8:32 AM - 8:33 AM)",Latte,"Iced, Vanilla, Almond Milk",6.25,2,12.5,1.22,Mastercard 9993,2025-05-05 11:36:00,11,3
+83,"5/5/25, 11:38 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Latte, Caramel, Plain Bagel, Plain CC",8.5,1,8.5,0.83,Mastercard 2487,2025-05-05 11:38:00,11,2
+84,"5/5/25, 11:39 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Cin Sug. Bagel, Plain CC, Latte, Caramel, Extra Caramle, Oat Milk",9.25,1,9.25,0.9,Mastercard 7419,2025-05-05 11:39:00,11,2
+86,"5/5/25, 11:41 AM","(5/5/25, 8:32 AM - 8:33 AM)",Latte,"Iced, Caramel, Oat Milk, Exta Carname",6.25,1,6.25,0.61,Visa 9259,2025-05-05 11:41:00,11,4
+86,"5/5/25, 11:41 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel,"1 Bagel, Cinnamon Sugar, Plain CC",4.0,1,4.0,0.39,Visa 9259,2025-05-05 11:41:00,11,1
+87,"5/5/25, 11:43 AM","(5/5/25, 8:32 AM - 8:33 AM)",Latte,Iced,5.0,1,5.0,0.49,Amex 2039,2025-05-05 11:43:00,11,4
+88,"5/5/25, 11:47 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Plain Bagel, Cut in Half, Toasted, Plain CC, Chai, Extra Shot",9.5,1,9.5,0.93,Amex 9200,2025-05-05 11:47:00,11,2
+90,"5/5/25, 11:49 AM","(5/5/25, 8:32 AM - 8:33 AM)",Snickerdoodle,"Latte, Hot",6.5,1,6.5,0.63,Visa 8563,2025-05-05 11:49:00,11,4
+90,"5/5/25, 11:49 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel,"1 Bagel, Everything, Diablo CC",4.25,1,4.25,0.41,Visa 8563,2025-05-05 11:49:00,11,1
+91,"5/5/25, 11:53 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Cin Sug. Bagel, Maple CC, Latte, Dark Sidr",8.5,1,8.5,0.83,Mastercard 5136,2025-05-05 11:53:00,11,2
+91,"5/5/25, 11:53 AM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Sesame Bagel, Plain CC, Latte, Vanilla",8.5,1,8.5,0.83,Mastercard 5136,2025-05-05 11:53:00,11,2
+92,"5/5/25, 11:56 AM","(5/5/25, 8:32 AM - 8:33 AM)",Eclipse,"Iced, Latte, Oat Milk",7.25,1,7.25,0.71,Mastercard 4512,2025-05-05 11:56:00,11,4
+93,"5/5/25, 11:57 AM","(5/5/25, 8:32 AM - 8:33 AM)",Latte,"Iced, Vanilla, Oat Milk, Cold foam, Van Cf",7.25,1,7.25,0.71,Amex 1016,2025-05-05 11:57:00,11,4
+94,"5/5/25, 11:58 AM","(5/5/25, 8:32 AM - 8:33 AM)",Latte,"Iced, Vanilla, Almond Milk",6.25,1,6.25,0.61,Visa 8480,2025-05-05 11:58:00,11,4
+95,"5/5/25, 11:59 AM","(5/5/25, 8:32 AM - 8:33 AM)",Latte,"Iced, Vanilla, Oat Milk, Cold foam, Van Cf",7.25,1,7.25,0.71,Visa 8678,2025-05-05 11:59:00,11,4
+99,"5/5/25, 12:07 PM","(5/5/25, 8:32 AM - 8:33 AM)",Matcha,"Iced, Strawberry",6.0,1,6.0,0.58,Amex 6011,2025-05-05 12:07:00,12,5
+99,"5/5/25, 12:07 PM","(5/5/25, 8:32 AM - 8:33 AM)",Matcha,Iced,5.5,1,5.5,0.54,Amex 6011,2025-05-05 12:07:00,12,5
+102,"5/5/25, 12:08 PM","(5/5/25, 8:32 AM - 8:33 AM)",Mocha Hazelnut,"Iced, Latte, Almond Milk",7.25,1,7.25,0.71,Visa 9697,2025-05-05 12:08:00,12,5
+102,"5/5/25, 12:08 PM","(5/5/25, 8:32 AM - 8:33 AM)",Mocha Hazelnut,"Iced, Latte, Almond Milk",7.25,1,7.25,0.71,Visa 9697,2025-05-05 12:08:00,12,5
+105,"5/5/25, 12:11 PM","(5/5/25, 8:32 AM - 8:33 AM)",The Dark Side,"Iced, Latte",5.5,1,5.5,0.54,Discover 1812,2025-05-05 12:11:00,12,5
+106,"5/5/25, 12:12 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Latte, Asiago Bagel, Garlic Herb CC, Marshmallow, Dark",8.5,1,8.5,0.83,Visa 1289,2025-05-05 12:12:00,12,0
+107,"5/5/25, 12:15 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Cin Sug. Bagel, Blueberry CC, Americano, Cold Foam",9.0,1,9.0,0.88,Amex 1013,2025-05-05 12:15:00,12,0
+109,"5/5/25, 12:17 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Latte, Everything Bagel, Plain CC, Vanilla, Oat Milk",9.25,1,9.25,0.9,Visa 6210,2025-05-05 12:17:00,12,0
+111,"5/5/25, 12:18 PM","(5/5/25, 8:32 AM - 8:33 AM)",S'mores,"Iced, Oat Milk, Latte",7.25,1,7.25,0.71,Visa 3491,2025-05-05 12:18:00,12,5
+112,"5/5/25, 12:20 PM","(5/5/25, 8:32 AM - 8:33 AM)",Eclipse,"Iced, Almond Milk, Latte",7.25,1,7.25,0.71,Visa 7900,2025-05-05 12:20:00,12,5
+112,"5/5/25, 12:20 PM","(5/5/25, 8:32 AM - 8:33 AM)",$0.00,Pastrami Mami,11.5,1,11.5,1.12,Visa 7900,2025-05-05 12:20:00,12,0
+112,"5/5/25, 12:20 PM","(5/5/25, 8:32 AM - 8:33 AM)",The Light Side,"Iced, Oat Milk, Latte",6.25,1,6.25,0.61,Visa 7900,2025-05-05 12:20:00,12,5
+116,"5/5/25, 12:22 PM","(5/5/25, 8:32 AM - 8:33 AM)",Matcha,"Iced, Oat Milk",6.25,1,6.25,0.61,Visa 2725,2025-05-05 12:22:00,12,5
+117,"5/5/25, 12:24 PM","(5/5/25, 8:32 AM - 8:33 AM)",Matcha,"Iced, Oat Milk",6.25,1,6.25,0.61,Visa 2890,2025-05-05 12:24:00,12,5
+118,"5/5/25, 12:27 PM","(5/5/25, 8:32 AM - 8:33 AM)",Matcha,"Iced, Vanilla",6.0,1,6.0,0.58,Mastercard 4912,2025-05-05 12:27:00,12,5
+119,"5/5/25, 12:29 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Matcha, Strawberry",9.0,1,9.0,0.88,Visa 3149,2025-05-05 12:29:00,12,0
+121,"5/5/25, 12:30 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Latte, Marshmallow, Vanilla, Smores, Plain Bagel, Garlic Herb CC",9.0,1,9.0,0.88,Mastercard 4110,2025-05-05 12:30:00,12,0
+123,"5/5/25, 12:31 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Matcha, Oat Milk, Asiago Bagel, Garlic Herb CC, Strawberry",9.75,1,9.75,0.95,Mastercard 4327,2025-05-05 12:31:00,12,0
+124,"5/5/25, 12:33 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Latte, Vanilla, Everything Bagel, Plain CC",8.5,1,8.5,0.83,Visa 0499,2025-05-05 12:33:00,12,0
+125,"5/5/25, 12:35 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Cold Foam, BSC, Vanilla, Snicker, Everything Bagel, Garlic Herb CC, Latte",10.0,1,10.0,0.98,Visa 8454,2025-05-05 12:35:00,12,0
+127,"5/5/25, 12:37 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Cin Sug. Bagel, Blueberry CC, Matcha",8.5,1,8.5,0.83,Discover 8803,2025-05-05 12:37:00,12,0
+129,"5/5/25, 12:40 PM","(5/5/25, 8:32 AM - 8:33 AM)",El Toro Rojo,No Aioli,11.0,1,5.5,0.54,Visa 6493,2025-05-05 12:40:00,12,0
+130,"5/5/25, 12:41 PM","(5/5/25, 8:32 AM - 8:33 AM)",Mocha,"Iced, Extra Shot",6.5,1,6.5,0.63,Mastercard 2305,2025-05-05 12:41:00,12,5
+131,"5/5/25, 12:45 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Latte, Vanilla, Asiago Bagel, Garlic Herb CC",8.5,1,8.5,0.83,Visa 2937,2025-05-05 12:45:00,12,0
+133,"5/5/25, 12:46 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel,"1 Bagel, Plain, Plain CC",4.0,1,3.2,0.31,Mastercard 9634,2025-05-05 12:46:00,12,1
+133,"5/5/25, 12:46 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel,"1 Bagel, Plain, Plain CC",4.0,1,3.2,0.31,Mastercard 9634,2025-05-05 12:46:00,12,1
+134,"5/5/25, 12:47 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Latte, Vanilla, Almond Milk, Everything Bagel, Plain CC",9.25,1,9.25,0.9,Visa 7949,2025-05-05 12:47:00,12,0
+136,"5/5/25, 12:48 PM","(5/5/25, 8:32 AM - 8:33 AM)",Latte,"Iced, Oat Milk",5.75,1,5.75,0.56,Visa 7097,2025-05-05 12:48:00,12,6
+137,"5/5/25, 12:48 PM","(5/5/25, 8:32 AM - 8:33 AM)",Iced Shaken Espresso,"Iced, Caramel, Spl Whole",5.0,1,5.0,0.49,Mastercard 6246,2025-05-05 12:48:00,12,5
+138,"5/5/25, 12:51 PM","(5/5/25, 8:32 AM - 8:33 AM)",Iced Shaken Espresso,"Iced, Brown Sugar Cinnamon, Spl Oat",5.0,1,5.0,0.49,Visa 1160,2025-05-05 12:51:00,12,5
+139,"5/5/25, 12:53 PM","(5/5/25, 8:32 AM - 8:33 AM)",Matcha,"Iced, Strawberry",6.0,1,6.0,0.58,Visa 5073,2025-05-05 12:53:00,12,5
+139,"5/5/25, 12:53 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel,"1 Bagel, Asiago, Diablo CC",4.25,1,4.25,0.41,Visa 5073,2025-05-05 12:53:00,12,1
+140,"5/5/25, 12:54 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel,"1 Bagel, Everything, Plain CC, Toasted, Extra Cream Cheese, Extra Toasted",4.75,1,4.75,0.46,Visa 8256,2025-05-05 12:54:00,12,1
+142,"5/5/25, 12:55 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Latte, Oat Milk, Honey, Plain Bagel, Plain CC",8.75,1,7.0,0.68,Visa 9597,2025-05-05 12:55:00,12,0
+143,"5/5/25, 12:56 PM","(5/5/25, 8:32 AM - 8:33 AM)",Latte,"Iced, Oat Milk, Caramel",6.25,1,6.25,0.61,Visa 8889,2025-05-05 12:56:00,12,6
+146,"5/5/25, 1:01 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Everything Bagel, Diablo CC, Latte, Oat Milk, White Mac, Cold Foam, Coco Powder",9.75,1,9.75,0.95,Visa 9548,2025-05-05 13:01:00,13,0
+150,"5/5/25, 1:03 PM","(5/5/25, 8:32 AM - 8:33 AM)",The Dark Side,"Iced, Latte, 1/2 Sweet",5.5,1,5.5,0.54,Visa 7911,2025-05-05 13:03:00,13,5
+150,"5/5/25, 1:03 PM","(5/5/25, 8:32 AM - 8:33 AM)",BBLT,Sesame Bagel,11.5,1,11.5,1.12,Visa 7911,2025-05-05 13:03:00,13,0
+150,"5/5/25, 1:03 PM","(5/5/25, 8:32 AM - 8:33 AM)",Matcha,"Iced, Black Cherry",6.0,1,6.0,0.58,Visa 7911,2025-05-05 13:03:00,13,5
+152,"5/5/25, 1:08 PM","(5/5/25, 8:32 AM - 8:33 AM)",Latte,"Hot, Oat Milk",5.75,1,5.75,0.56,Visa 9739,2025-05-05 13:08:00,13,6
+152,"5/5/25, 1:08 PM","(5/5/25, 8:32 AM - 8:33 AM)",Americano,Hot,4.5,1,4.5,0.44,Visa 9739,2025-05-05 13:08:00,13,5
+152,"5/5/25, 1:08 PM","(5/5/25, 8:32 AM - 8:33 AM)",Americano,"Iced, Spl Oat",4.5,1,4.5,0.44,Visa 9739,2025-05-05 13:08:00,13,5
+152,"5/5/25, 1:08 PM","(5/5/25, 8:32 AM - 8:33 AM)",Americano,"Iced, Spl Almond",4.5,1,4.5,0.44,Visa 9739,2025-05-05 13:08:00,13,5
+155,"5/5/25, 1:20 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel,"1 Bagel, Everything, Plain CC",4.0,1,4.0,0.39,Visa 2637,2025-05-05 13:20:00,13,1
+155,"5/5/25, 1:20 PM","(5/5/25, 8:32 AM - 8:33 AM)",$0.00,Lemonade,3.99,1,3.99,0.39,Visa 2637,2025-05-05 13:20:00,13,5
+156,"5/5/25, 1:21 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Cin Sug. Bagel, Latte, Vanilla, Plain CC",8.5,1,8.5,0.83,Visa 5689,2025-05-05 13:21:00,13,0
+157,"5/5/25, 1:22 PM","(5/5/25, 8:32 AM - 8:33 AM)",Latte,"Iced, Vanilla, Almond Milk",6.25,1,6.25,0.61,Mastercard 7987,2025-05-05 13:22:00,13,6
+158,"5/5/25, 1:23 PM","(5/5/25, 8:32 AM - 8:33 AM)",Latte,"Hot, Vanilla",5.5,1,5.5,0.54,Visa 6682,2025-05-05 13:23:00,13,6
+160,"5/5/25, 1:27 PM","(5/5/25, 8:32 AM - 8:33 AM)",The Dark Side,"Iced, Latte",5.5,1,5.5,0.54,Visa 3353,2025-05-05 13:27:00,13,5
+167,"5/5/25, 1:31 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Everything Bagel, Garlic Herb CC, Latte, Smores, Tm Cf",9.5,1,9.5,0.93,Visa 5575,2025-05-05 13:31:00,13,0
+170,"5/5/25, 1:34 PM","(5/5/25, 8:32 AM - 8:33 AM)",Americano,"Iced, Spl Oat",4.5,1,4.5,0.44,Visa 5657,2025-05-05 13:34:00,13,5
+173,"5/5/25, 1:36 PM","(5/5/25, 8:32 AM - 8:33 AM)",The Light Side,"Iced, Latte",5.5,1,5.5,0.54,Mastercard 5264,2025-05-05 13:36:00,13,5
+174,"5/5/25, 1:37 PM","(5/5/25, 8:32 AM - 8:33 AM)",Iced Shaken Espresso,"Iced, Spl Whole",4.5,1,4.5,0.44,Visa 0442,2025-05-05 13:37:00,13,5
+175,"5/5/25, 1:38 PM","(5/5/25, 8:32 AM - 8:33 AM)",Matcha,"Iced, Vanilla, Oat Milk",6.75,1,6.75,0.66,Visa 3733,2025-05-05 13:38:00,13,5
+176,"5/5/25, 1:40 PM","(5/5/25, 8:32 AM - 8:33 AM)",Latte,"Iced, Honey",5.0,1,5.0,0.49,Visa 4892,2025-05-05 13:40:00,13,6
+177,"5/5/25, 1:42 PM","(5/5/25, 8:32 AM - 8:33 AM)",Latte,"Iced, Hazelnut, Oat Milk",6.25,1,6.25,0.61,Visa 5020,2025-05-05 13:42:00,13,6
+177,"5/5/25, 1:42 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel,"1 Bagel, Asiago, Garlic Herb CC",4.25,1,4.25,0.41,Visa 5020,2025-05-05 13:42:00,13,1
+180,"5/5/25, 1:43 PM","(5/5/25, 8:32 AM - 8:33 AM)",Matcha,"Iced, Vanilla, Sf, Almond Milk",6.75,1,6.75,0.66,Visa 8220,2025-05-05 13:43:00,13,5
+185,"5/5/25, 1:46 PM","(5/5/25, 8:32 AM - 8:33 AM)",Snickerdoodle,"Hot, Latte",6.5,2,13.0,1.27,Visa 7642,2025-05-05 13:46:00,13,3
+187,"5/5/25, 1:48 PM","(5/5/25, 8:32 AM - 8:33 AM)",Doppio,Iced,3.5,1,3.5,0.34,Visa 0459,2025-05-05 13:48:00,13,5
+189,"5/5/25, 1:50 PM","(5/5/25, 8:32 AM - 8:33 AM)",The Dark Side,"Iced, Latte",5.5,1,5.5,0.54,Discover 6950,2025-05-05 13:50:00,13,5
+192,"5/5/25, 1:53 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, BSC, Vanilla, Cold Foam, Everything Bagel, Garlic Herb CC, Latte",10.0,1,10.0,0.98,Mastercard 7005,2025-05-05 13:53:00,13,0
+196,"5/5/25, 1:55 PM","(5/5/25, 8:32 AM - 8:33 AM)",Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Visa 2561,2025-05-05 13:55:00,13,5
+42001,"5/5/25, 1:57 PM","(5/5/25, 8:32 AM - 8:33 AM)",Matcha,"Iced, Oat Milk, Vanilla",6.75,1,6.75,0.66,Mastercard 4400,2025-05-05 13:57:00,13,5
+202,"5/5/25, 2:01 PM",,The Dark Side,"Iced, Latte",5.5,1,5.5,0.54,Visa 8833,2025-05-05 14:01:00,14,5
+205,"5/5/25, 2:02 PM","(5/5/25, 8:32 AM - 8:33 AM)",Eclipse,"Iced, Latte",6.5,1,6.5,0.63,Visa 9870,2025-05-05 14:02:00,14,5
+208,"5/5/25, 2:04 PM","(5/5/25, 8:32 AM - 8:33 AM)",The Dark Side,"Iced, Latte",5.5,1,5.5,0.54,Visa 0451,2025-05-05 14:04:00,14,5
+212,"5/5/25, 2:07 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Poppy Bagel, Plain CC, Latte",8.0,1,8.0,0.78,Visa 5664,2025-05-05 14:07:00,14,0
+213,"5/5/25, 2:09 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Latte, Asiago Bagel, Oat Milk, Garlic Herb CC",8.75,1,8.75,0.85,Visa 5954,2025-05-05 14:09:00,14,0
+217,"5/5/25, 2:10 PM","(5/5/25, 8:32 AM - 8:33 AM)",Matcha,"Iced, Almond Milk",6.25,1,6.25,0.61,Visa 1519,2025-05-05 14:10:00,14,5
+219,"5/5/25, 2:13 PM",,Latte,Iced,5.0,1,5.0,0.49,Visa 1057,2025-05-05 14:13:00,14,6
+222,"5/5/25, 2:16 PM",,Snickerdoodle,"Iced, Almond Milk, Latte",7.25,1,7.25,0.71,Visa 4565,2025-05-05 14:16:00,14,5
+226,"5/5/25, 2:19 PM","(5/5/25, 8:32 AM - 8:33 AM)",Matcha,"Iced, Oat Milk",6.25,1,6.25,0.61,Visa 0346,2025-05-05 14:19:00,14,5
+228,"5/5/25, 2:22 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel,"1 Bagel, Plain, Poppy Seef, Plain CC",4.0,1,4.0,0.39,Visa 2107,2025-05-05 14:22:00,14,1
+229,"5/5/25, 2:23 PM",,Americano,Hot,4.5,1,4.5,0.44,Visa 8257,2025-05-05 14:23:00,14,5
+231,"5/5/25, 2:24 PM","(5/5/25, 8:32 AM - 8:33 AM)",Matcha,"Iced, Light Ice",5.5,1,5.5,0.54,Visa 6348,2025-05-05 14:24:00,14,5
+232,"5/5/25, 2:28 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel,"1 Bagel, Asiago, Garlic Herb CC",4.25,3,12.75,1.24,Amex 1007,2025-05-05 14:28:00,14,3
+232,"5/5/25, 2:28 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel,"1 Bagel, Poppy Seed, Diablo CC",4.25,1,4.25,0.41,Amex 1007,2025-05-05 14:28:00,14,5
+238,"5/5/25, 2:29 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Sesame Bagel, Plain CC, Matcha, Almond Milk, Strawberry",9.75,1,9.75,0.95,Visa 5863,2025-05-05 14:29:00,14,0
+241,"5/5/25, 2:32 PM",,Latte,Iced,5.0,1,5.0,0.49,Amex 4989,2025-05-05 14:32:00,14,6
+243,"5/5/25, 2:34 PM",,Matcha,"Iced, Strawberry",6.0,1,6.0,0.58,Visa 0037,2025-05-05 14:34:00,14,5
+246,"5/5/25, 2:37 PM",,Latte,"Iced, Vanilla",5.5,1,5.5,0.54,Mastercard 4890,2025-05-05 14:37:00,14,6
+249,"5/5/25, 2:43 PM",,Latte,"Iced, Vanilla",5.5,1,5.5,0.54,Visa 2948,2025-05-05 14:43:00,14,6
+250,"5/5/25, 2:43 PM",,Latte,"Iced, Vanilla",5.5,1,5.5,0.54,Visa 3248,2025-05-05 14:43:00,14,6
+252,"5/5/25, 2:45 PM","(5/5/25, 8:32 AM - 8:33 AM)",Kodiak Catch,Plain Bagek,12.0,1,12.0,1.17,Amex 7387,2025-05-05 14:45:00,14,0
+254,"5/5/25, 2:47 PM",,The Dark Side,"Iced, Latte, Matcha",6.0,1,6.0,0.58,Visa 7471,2025-05-05 14:47:00,14,5
+256,"5/5/25, 2:50 PM",,The Light Side,"Iced, Latte, Oat Milk, Extra Shot",7.25,1,7.25,0.71,Visa 5617,2025-05-05 14:50:00,14,5
+257,"5/5/25, 2:53 PM","(5/5/25, 8:32 AM - 8:33 AM)",S'mores,"Iced, Latte",6.5,1,6.5,0.63,Visa 8813,2025-05-05 14:53:00,14,5
+257,"5/5/25, 2:53 PM","(5/5/25, 8:32 AM - 8:33 AM)",Matcha,"Iced, Almond Milk, Vanilla",6.75,1,6.75,0.66,Visa 8813,2025-05-05 14:53:00,14,5
+258,"5/5/25, 2:58 PM",,Mocha,"Iced, Strawberry, Oat Milk",6.75,1,6.75,0.66,Mastercard 3951,2025-05-05 14:58:00,14,5
+258,"5/5/25, 2:58 PM",,Latte,"Iced, Almond Milk",5.75,1,2.87,0.28,Mastercard 3951,2025-05-05 14:58:00,14,6
+261,"5/5/25, 3:03 PM",,The Dark Side,"Iced, Latte, Oat Milk",6.25,1,6.25,0.61,Visa 5281,2025-05-05 15:03:00,15,5
+265,"5/5/25, 3:04 PM",,The Dark Side,"Iced, Oat Milk, Latte",6.25,1,6.25,0.61,Mastercard 5460,2025-05-05 15:04:00,15,5
+266,"5/5/25, 3:06 PM","(5/5/25, 8:32 AM - 8:33 AM)",Bagel Combo,"_, Plain Bagel, Plain CC, Latte, Snick",9.5,1,9.5,0.93,Amex 3991,2025-05-05 15:06:00,15,0
+4,"5/6/25, 8:35 AM",,Cold Brew,"Iced, Cold foam",6.5,1,6.5,0.63,Visa 4270,2025-05-06 08:35:00,8,4
+5,"5/6/25, 8:37 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel,"1 Bagel, Asiago, Garlic Herb CC",4.25,1,4.25,0.41,Visa 5849,2025-05-06 08:37:00,8,1
+8,"5/6/25, 8:44 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Asiago Bagel, Plain CC, Matcha, Oat Milk, Iced",9.25,1,9.25,0.9,Amex 1001,2025-05-06 08:44:00,8,2
+9,"5/6/25, 8:46 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Matcha, Lavender, Oat Milk, Icdd",9.25,1,9.25,0.9,Visa 9081,2025-05-06 08:46:00,8,2
+10,"5/6/25, 8:51 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Everything Bagel, Garlic Herb CC, Latte, Oat Milk, Iced",8.75,1,8.75,0.85,Visa 8665,2025-05-06 08:51:00,8,2
+11,"5/6/25, 8:53 AM","(5/6/25, 8:34 AM - 8:35 AM)",Latte,"Iced, Vanilla, Cold foam, Vani Cf",6.5,1,6.5,0.63,Visa 9156,2025-05-06 08:53:00,8,4
+12,"5/6/25, 9:05 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Sesame Bagel, Maple CC, Shaken Espresso, Cold Foam, Splash Almont, Vanill Cf, Vanilla, 1/2 Sweet",9.5,1,9.5,0.93,Mastercard 6121,2025-05-06 09:05:00,9,2
+53,"5/6/25, 10:35 AM","(5/6/25, 8:34 AM - 8:35 AM)",El Toro Rojo,Everything,11.0,1,11.0,1.07,Visa 0327,2025-05-06 10:35:00,10,2
+53,"5/6/25, 10:35 AM","(5/6/25, 8:34 AM - 8:35 AM)",Latte,"Iced, Oat Milk",5.75,1,5.75,0.56,Visa 0327,2025-05-06 10:35:00,10,4
+54,"5/6/25, 10:42 AM","(5/6/25, 8:34 AM - 8:35 AM)",Mocha,Iced,5.5,1,5.5,0.54,Visa 8183,2025-05-06 10:42:00,10,4
+55,"5/6/25, 10:43 AM","(5/6/25, 8:34 AM - 8:35 AM)",Snickerdoodle,"Iced, Latte, Oat Milk",7.25,1,7.25,0.71,Amex 2036,2025-05-06 10:43:00,10,4
+55,"5/6/25, 10:43 AM","(5/6/25, 8:34 AM - 8:35 AM)",Snickerdoodle,"Iced, Latte, Almond Milk",7.25,1,7.25,0.71,Amex 2036,2025-05-06 10:43:00,10,4
+56,"5/6/25, 10:44 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel,"1 Bagel, Asiago, Garlic Herb CC",4.25,1,4.25,0.41,Mastercard 0623,2025-05-06 10:44:00,10,1
+57,"5/6/25, 10:45 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Cin Sug. Bagel, Blueberry CC, Latte, Snickerdoodle, Oat Milk, Iced",8.75,1,8.75,0.85,Mastercard 0638,2025-05-06 10:45:00,10,2
+58,"5/6/25, 10:50 AM","(5/6/25, 8:34 AM - 8:35 AM)",Snickerdoodle,"Iced, Latte, Oat Milk",7.25,1,7.25,0.71,Mastercard 3123,2025-05-06 10:50:00,10,4
+58,"5/6/25, 10:50 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel,"1 Bagel, Asiago, Plain CC",4.0,1,4.0,0.39,Mastercard 3123,2025-05-06 10:50:00,10,1
+60,"5/6/25, 10:51 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Asiago Bagel, Plain CC, Shaken Espresso, Spl Milk",8.0,1,8.0,0.78,Mastercard 6603,2025-05-06 10:51:00,10,2
+61,"5/6/25, 10:52 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel,"1 Bagel, Plain, Plain CC",4.0,1,4.0,0.39,Visa 5719,2025-05-06 10:52:00,10,1
+62,"5/6/25, 10:53 AM","(5/6/25, 8:34 AM - 8:35 AM)",Snickerdoodle,"Iced, Latte, Almond Milk",7.25,1,7.25,0.71,Amex 3991,2025-05-06 10:53:00,10,4
+63,"5/6/25, 10:54 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Matcha, Asiago Bagel, Garlic Herb CC, Vanilla",9.0,1,9.0,0.88,Visa 1195,2025-05-06 10:54:00,10,2
+64,"5/6/25, 10:55 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Matcha, Vanilla, Plain Bagel, Plain CC",9.0,1,9.0,0.88,Visa 8562,2025-05-06 10:55:00,10,2
+65,"5/6/25, 10:56 AM","(5/6/25, 8:34 AM - 8:35 AM)",Matcha,"Iced, Strawberry",6.0,1,6.0,0.58,Mastercard 4738,2025-05-06 10:56:00,10,4
+66,"5/6/25, 10:58 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel,"1 Bagel, Asiago, Butter",3.25,1,3.25,0.32,Visa 9351,2025-05-06 10:58:00,10,1
+69,"5/6/25, 10:59 AM","(5/6/25, 8:34 AM - 8:35 AM)",Cold Brew,Iced,5.5,1,5.5,0.54,Amex 1009,2025-05-06 10:59:00,10,4
+70,"5/6/25, 10:59 AM","(5/6/25, 8:34 AM - 8:35 AM)",The Dark Side,"Iced, Latte",5.5,1,5.5,0.54,Visa 9246,2025-05-06 10:59:00,10,4
+71,"5/6/25, 11:01 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Matcha, Vanilla, Lavender, Oat Milk, Iced",9.75,1,9.75,0.95,Visa 1156,2025-05-06 11:01:00,11,2
+72,"5/6/25, 11:04 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Cin Sug. Bagel, Plain CC, Latte, Oat Milk, Cold Foam, Lav Cf, Iced",9.75,1,9.75,0.95,Amex 8916,2025-05-06 11:04:00,11,2
+73,"5/6/25, 11:07 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel,"1 Bagel, Everything, Garlic Herb CC",4.25,1,4.25,0.41,Amex 1471,2025-05-06 11:07:00,11,1
+73,"5/6/25, 11:07 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel,"1 Bagel, Asiago, No CC",2.5,1,2.5,0.24,Amex 1471,2025-05-06 11:07:00,11,1
+74,"5/6/25, 11:08 AM","(5/6/25, 8:34 AM - 8:35 AM)",Eclipse,"Iced, Latte",6.5,1,6.5,0.63,Amex 1267,2025-05-06 11:08:00,11,4
+75,"5/6/25, 11:09 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Latte, Cin Sug. Bagel, Blueberry CC",8.0,1,8.0,0.78,Visa 6391,2025-05-06 11:09:00,11,2
+75,"5/6/25, 11:09 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Cin Sug. Bagel, Plain CC, Latte, Vanilla",8.5,1,8.5,0.83,Visa 6391,2025-05-06 11:09:00,11,2
+76,"5/6/25, 11:11 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Asiago Bagel, Plain CC, Latte, Snickerdoodle",9.0,1,9.0,0.88,Visa 6980,2025-05-06 11:11:00,11,2
+76,"5/6/25, 11:11 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Asiago Bagel, Diablo CC, Latte, Snickerdoodle",9.0,1,9.0,0.88,Visa 6980,2025-05-06 11:11:00,11,2
+78,"5/6/25, 11:14 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Latte, Asiago Bagel, Garlic Herb CC, Caramel",8.5,1,8.5,0.83,Visa 5872,2025-05-06 11:14:00,11,2
+78,"5/6/25, 11:14 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel,"1 Bagel, Asiago, Garlic Herb CC",4.25,1,4.25,0.41,Visa 5872,2025-05-06 11:14:00,11,1
+79,"5/6/25, 11:15 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Latte, Cin Sug. Bagel, Plain CC",8.0,1,8.0,0.78,Visa 1781,2025-05-06 11:15:00,11,2
+80,"5/6/25, 11:16 AM","(5/6/25, 8:34 AM - 8:35 AM)",Cold Brew,"Iced, Cane, Oat Milk",6.25,1,6.25,0.61,Visa 4330,2025-05-06 11:16:00,11,4
+81,"5/6/25, 11:18 AM","(5/6/25, 8:34 AM - 8:35 AM)",Latte,"Iced, Vanilla, Oat Milk",6.25,1,6.25,0.61,Mastercard 6731,2025-05-06 11:18:00,11,4
+82,"5/6/25, 11:18 AM","(5/6/25, 8:34 AM - 8:35 AM)",Matcha,Iced,5.5,1,5.5,0.54,Visa 2739,2025-05-06 11:18:00,11,4
+83,"5/6/25, 11:19 AM","(5/6/25, 8:34 AM - 8:35 AM)",Eclipse,"Iced, Latte",6.5,1,6.5,0.63,Visa 8845,2025-05-06 11:19:00,11,4
+84,"5/6/25, 11:21 AM","(5/6/25, 8:34 AM - 8:35 AM)",Latte,"Iced, Vanilla",5.5,1,5.5,0.54,Visa 2421,2025-05-06 11:21:00,11,4
+85,"5/6/25, 11:21 AM","(5/6/25, 8:34 AM - 8:35 AM)",Mocha Hazelnut,"Iced, Latte, Oat Milk",7.25,1,7.25,0.71,Discover 9257,2025-05-06 11:21:00,11,4
+86,"5/6/25, 11:23 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Everything Bagel, Garlic Herb CC, Latte, BSC, Iced",8.5,1,8.5,0.83,Visa 5509,2025-05-06 11:23:00,11,2
+88,"5/6/25, 11:25 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Everything Bagel, Plain CC, Matcha, Vanilla, Iced",9.0,1,9.0,0.88,Mastercard 1019,2025-05-06 11:25:00,11,2
+89,"5/6/25, 11:29 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Shaken Espresso, Cold Foam, Everything Bagel, Garlic Herb CC, Hazelnut Cd",9.0,1,9.0,0.88,Visa 7990,2025-05-06 11:29:00,11,2
+90,"5/6/25, 11:29 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel,"1 Bagel, Asiago, Garlic Herb CC",4.25,1,4.25,0.41,Discover 3714,2025-05-06 11:29:00,11,1
+91,"5/6/25, 11:30 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Chai, Poppy Bagel, Garlic Herb CC",8.5,1,8.5,0.83,Visa 2924,2025-05-06 11:30:00,11,2
+92,"5/6/25, 11:31 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Latte, Everything Bagel, Plain CC",8.0,1,8.0,0.78,Visa 4876,2025-05-06 11:31:00,11,2
+92,"5/6/25, 11:31 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel,"1 Bagel, Plain CC, Everything",4.0,1,4.0,0.39,Visa 4876,2025-05-06 11:31:00,11,1
+93,"5/6/25, 11:33 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Americano, Cold Foam, Van Cf, Everything Bagel, Garlic Herb CC",9.0,1,9.0,0.88,Mastercard 9524,2025-05-06 11:33:00,11,2
+94,"5/6/25, 11:34 AM","(5/6/25, 8:34 AM - 8:35 AM)",Matcha,"Iced, Strawberry, Oat Milk, Cold foam, Van Cf",7.75,1,7.75,0.76,Visa 7651,2025-05-06 11:34:00,11,4
+96,"5/6/25, 11:35 AM","(5/6/25, 8:34 AM - 8:35 AM)",Mocha,Iced,5.5,1,5.5,0.54,Visa 8240,2025-05-06 11:35:00,11,4
+97,"5/6/25, 11:39 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Latte, Oat Milk",8.75,1,8.75,0.85,Mastercard 2175,2025-05-06 11:39:00,11,2
+98,"5/6/25, 11:40 AM","(5/6/25, 8:34 AM - 8:35 AM)",Matcha,"Iced, Cane, Cold foam",6.5,1,6.5,0.63,Visa 9380,2025-05-06 11:40:00,11,4
+98,"5/6/25, 11:40 AM","(5/6/25, 8:34 AM - 8:35 AM)",Americano,Iced,4.5,1,4.5,0.44,Visa 9380,2025-05-06 11:40:00,11,4
+99,"5/6/25, 11:41 AM","(5/6/25, 8:34 AM - 8:35 AM)",Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Mastercard 9368,2025-05-06 11:41:00,11,4
+100,"5/6/25, 11:43 AM","(5/6/25, 8:34 AM - 8:35 AM)",Snickerdoodle,"Iced, Latte, Oat Milk",7.25,1,7.25,0.71,Visa 2335,2025-05-06 11:43:00,11,4
+101,"5/6/25, 11:43 AM","(5/6/25, 8:34 AM - 8:35 AM)",White Macadamia,"Iced, Latte",6.5,1,6.5,0.63,Mastercard 0610,2025-05-06 11:43:00,11,4
+106,"5/6/25, 11:50 AM","(5/6/25, 8:34 AM - 8:35 AM)",Matcha,"Hot, Almond Milk, Honey",6.25,1,6.25,0.61,Visa 8392,2025-05-06 11:50:00,11,4
+108,"5/6/25, 11:51 AM","(5/6/25, 8:34 AM - 8:35 AM)",Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Visa 2757,2025-05-06 11:51:00,11,4
+110,"5/6/25, 11:52 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Snickerdoodle, Latte",9.5,1,9.5,0.93,Discover 8099,2025-05-06 11:52:00,11,2
+114,"5/6/25, 11:56 AM","(5/6/25, 8:34 AM - 8:35 AM)",Matcha,"Iced, Almond Milk, Vanilla, Sf Van",6.75,1,6.75,0.66,Mastercard 3340,2025-05-06 11:56:00,11,4
+115,"5/6/25, 11:57 AM","(5/6/25, 8:34 AM - 8:35 AM)",Mr. Can't Go wrong,Sesame,10.0,1,10.0,0.98,Visa 2557,2025-05-06 11:57:00,11,2
+117,"5/6/25, 11:57 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel,"1 Bagel, Everything, Garlic Herb CC",4.25,1,4.25,0.41,Visa 5655,2025-05-06 11:57:00,11,1
+118,"5/6/25, 11:59 AM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Plain Bagel, Blueberry CC, Latte, Snickerdoodle, Almond Milk, Iced",10.25,1,10.25,1.0,Mastercard 6455,2025-05-06 11:59:00,11,2
+119,"5/6/25, 11:59 AM","(5/6/25, 8:34 AM - 8:35 AM)",Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Mastercard 6333,2025-05-06 11:59:00,11,4
+120,"5/6/25, 12:00 PM","(5/6/25, 8:34 AM - 8:35 AM)",Matcha,"Iced, Lavendar",6.0,1,6.0,0.58,Mastercard 4883,2025-05-06 12:00:00,12,5
+123,"5/6/25, 12:01 PM","(5/6/25, 8:34 AM - 8:35 AM)",Latte,"Iced, Vanilla, Oat Milk, Cold foam",7.25,1,7.25,0.71,Amex 1016,2025-05-06 12:01:00,12,6
+132,"5/6/25, 12:05 PM","(5/6/25, 8:34 AM - 8:35 AM)",White Macadamia,"Iced, Latte, Oat Milk",7.25,1,7.25,0.71,Visa 8678,2025-05-06 12:05:00,12,5
+134,"5/6/25, 12:06 PM","(5/6/25, 8:34 AM - 8:35 AM)",Cold Brew,Iced,5.5,1,5.5,0.54,Amex 7322,2025-05-06 12:06:00,12,5
+138,"5/6/25, 12:09 PM","(5/6/25, 8:34 AM - 8:35 AM)",Chai,Iced,6.0,1,6.0,0.58,Visa 7147,2025-05-06 12:09:00,12,5
+144,"5/6/25, 12:13 PM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Matcha, Asiago Bagel, Garlic Herb CC, Vanilla, Half Sweet",9.0,1,9.0,0.88,Mastercard 3139,2025-05-06 12:13:00,12,0
+144,"5/6/25, 12:13 PM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Latte, Eclipse, Asiago Bagel, Garlic Herb CC",9.0,1,9.0,0.88,Mastercard 3139,2025-05-06 12:13:00,12,0
+144,"5/6/25, 12:13 PM","(5/6/25, 8:34 AM - 8:35 AM)",$0.00,El Toro Rojo,11.0,1,11.0,1.07,Mastercard 3139,2025-05-06 12:13:00,12,0
+145,"5/6/25, 12:14 PM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel,"1 Bagel, Asiago, Garlic Herb CC",4.25,1,4.25,0.41,Discover 4169,2025-05-06 12:14:00,12,1
+146,"5/6/25, 12:15 PM","(5/6/25, 8:34 AM - 8:35 AM)",Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Visa 8454,2025-05-06 12:15:00,12,5
+149,"5/6/25, 12:16 PM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel,"1 Bagel, Asiago, Plain CC",4.0,1,4.0,0.39,Mastercard 3456,2025-05-06 12:16:00,12,1
+151,"5/6/25, 12:16 PM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel,"1 Bagel, Asiago, Plain CC",4.0,1,4.0,0.39,Amex 3297,2025-05-06 12:16:00,12,1
+155,"5/6/25, 12:19 PM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Everything Bagel, Plain CC, Americano, Oat Milk, Iced",8.75,1,8.75,0.85,Mastercard 9386,2025-05-06 12:19:00,12,0
+156,"5/6/25, 12:20 PM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Latte, BSC, Iced",8.5,1,8.5,0.83,Visa 6538,2025-05-06 12:20:00,12,0
+156,"5/6/25, 12:20 PM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel,"1 Bagel, Everything, Butter",3.25,1,3.25,0.32,Visa 6538,2025-05-06 12:20:00,12,1
+158,"5/6/25, 12:21 PM","(5/6/25, 8:34 AM - 8:35 AM)",Matcha,"Iced, Chocolate Milano",6.0,1,6.0,0.58,Visa 2836,2025-05-06 12:21:00,12,5
+159,"5/6/25, 12:23 PM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Tomatoes, Latte, Sf Van, Iced",9.0,1,9.0,0.88,Visa 7571,2025-05-06 12:23:00,12,0
+161,"5/6/25, 12:28 PM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Plain Bagel, Plain CC, Latte, Vanilla, Iced",8.5,1,8.5,0.83,Amex 9200,2025-05-06 12:28:00,12,0
+161,"5/6/25, 12:28 PM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel,"1 Bagel, Plain, Blueberry CC",4.25,1,4.25,0.41,Amex 9200,2025-05-06 12:28:00,12,1
+161,"5/6/25, 12:28 PM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Asiago Bagel, Plain CC, Latte, Caramel, Iced",8.5,1,8.5,0.83,Amex 9200,2025-05-06 12:28:00,12,0
+165,"5/6/25, 12:30 PM","(5/6/25, 8:34 AM - 8:35 AM)",Latte,"Iced, Vanilla, Cold foam, Van Cf",6.5,1,6.5,0.63,Visa 8426,2025-05-06 12:30:00,12,6
+167,"5/6/25, 12:31 PM","(5/6/25, 8:34 AM - 8:35 AM)",Latte,"Iced, Vanilla",5.5,1,5.5,0.54,Discover 1617,2025-05-06 12:31:00,12,6
+168,"5/6/25, 12:33 PM","(5/6/25, 8:34 AM - 8:35 AM)",The Dark Side,"Iced, Almond Milk, Latte",6.25,1,6.25,0.61,Visa 4922,2025-05-06 12:33:00,12,5
+169,"5/6/25, 12:34 PM","(5/6/25, 8:34 AM - 8:35 AM)",The Light Side,"Iced, Latte",5.5,1,5.5,0.54,Visa 5378,2025-05-06 12:34:00,12,5
+170,"5/6/25, 12:35 PM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Latte, Cin Sug. Bagel, Blueberry CC",8.0,1,8.0,0.78,Visa 3110,2025-05-06 12:35:00,12,0
+173,"5/6/25, 12:37 PM","(5/6/25, 8:34 AM - 8:35 AM)",Latte,Iced,5.0,1,5.0,0.49,Visa 5154,2025-05-06 12:37:00,12,6
+176,"5/6/25, 12:40 PM","(5/6/25, 8:34 AM - 8:35 AM)",Mocha Hazelnut,"Iced, Latte",6.5,1,6.5,0.63,Discover 4277,2025-05-06 12:40:00,12,5
+176,"5/6/25, 12:40 PM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel,"1 Bagel, Asiago, Garlic Herb CC",4.25,1,4.25,0.41,Discover 4277,2025-05-06 12:40:00,12,1
+177,"5/6/25, 12:40 PM","(5/6/25, 8:34 AM - 8:35 AM)",Latte,"Iced, Caramel",5.5,1,5.5,0.54,Visa 9572,2025-05-06 12:40:00,12,6
+178,"5/6/25, 12:41 PM","(5/6/25, 8:34 AM - 8:35 AM)",Latte,Iced,5.0,1,5.0,0.49,Mastercard 4928,2025-05-06 12:41:00,12,6
+180,"5/6/25, 12:45 PM","(5/6/25, 8:34 AM - 8:35 AM)",Latte,"Iced, Vanilla, 1/2 Sweet, Almond Milk, Honey",6.25,1,6.25,0.61,Mastercard 9993,2025-05-06 12:45:00,12,6
+181,"5/6/25, 12:47 PM","(5/6/25, 8:34 AM - 8:35 AM)",Matcha,"Iced, Strawberry, Cold foam",7.0,1,7.0,0.68,Visa 6116,2025-05-06 12:47:00,12,5
+182,"5/6/25, 12:48 PM","(5/6/25, 8:34 AM - 8:35 AM)",Mr. Can't Go wrong,Adf Bacon,13.0,1,13.0,1.27,Visa 4528,2025-05-06 12:48:00,12,0
+182,"5/6/25, 12:48 PM","(5/6/25, 8:34 AM - 8:35 AM)",Doppio,Iced,3.5,1,3.5,0.34,Visa 4528,2025-05-06 12:48:00,12,1
+184,"5/6/25, 12:50 PM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Everything Bagel, Plain CC, Latte, Oat Milk, Vanilla",9.25,1,9.25,0.9,Mastercard 4916,2025-05-06 12:50:00,12,0
+184,"5/6/25, 12:50 PM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Everything Bagel, Plain CC, Latte, Oat Milk, Vanilla",9.25,1,9.25,0.9,Mastercard 4916,2025-05-06 12:50:00,12,0
+188,"5/6/25, 12:52 PM","(5/6/25, 8:34 AM - 8:35 AM)",Latte,"Iced, Vanilla, Oat Milk, Cold foam, Van Cr",7.25,1,7.25,0.71,Mastercard 5427,2025-05-06 12:52:00,12,6
+190,"5/6/25, 12:54 PM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Matcha, Oat Milk, Raspberry, Sesame Bagel, Plain CC",9.25,1,9.25,0.9,Visa 6019,2025-05-06 12:54:00,12,0
+193,"5/6/25, 12:55 PM","(5/6/25, 8:34 AM - 8:35 AM)",Matcha,"Iced, Strawberry, Oat Milk",6.75,1,6.75,0.66,Visa 6637,2025-05-06 12:55:00,12,5
+193,"5/6/25, 12:55 PM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel,"1 Bagel, Sesame, Blueberry CC",4.25,1,4.25,0.41,Visa 6637,2025-05-06 12:55:00,12,1
+196,"5/6/25, 12:57 PM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel,"1 Bagel, Everything, Garlic Herb CC",4.25,1,4.25,0.41,Mastercard 1612,2025-05-06 12:57:00,12,1
+198,"5/6/25, 12:59 PM","(5/6/25, 8:34 AM - 8:35 AM)",Matcha,"Iced, Strawberry",6.0,1,6.0,0.58,Visa 3439,2025-05-06 12:59:00,12,5
+200,"5/6/25, 1:00 PM","(5/6/25, 8:34 AM - 8:35 AM)",Matcha,"Iced, Oat Milk, Vanilla",6.75,1,6.75,0.66,Visa 7028,2025-05-06 13:00:00,13,5
+202,"5/6/25, 1:02 PM","(5/6/25, 8:34 AM - 8:35 AM)",Matcha,"Iced, Strawberry",6.0,1,6.0,0.58,Visa 4610,2025-05-06 13:02:00,13,5
+207,"5/6/25, 1:03 PM","(5/6/25, 8:34 AM - 8:35 AM)",Matcha,"Iced, Strawberry",6.0,1,6.0,0.58,Visa 7706,2025-05-06 13:03:00,13,5
+209,"5/6/25, 1:05 PM","(5/6/25, 8:34 AM - 8:35 AM)",Doppio,Iced,3.5,1,3.5,0.34,Visa 6852,2025-05-06 13:05:00,13,5
+213,"5/6/25, 1:06 PM","(5/6/25, 8:34 AM - 8:35 AM)",Cold Brew,"Iced, Spl Whole",5.5,1,5.5,0.54,Visa 1585,2025-05-06 13:06:00,13,5
+214,"5/6/25, 1:07 PM","(5/6/25, 8:34 AM - 8:35 AM)",Matcha,"Iced, Strawberry",6.0,1,6.0,0.58,Visa 5753,2025-05-06 13:07:00,13,5
+216,"5/6/25, 1:12 PM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Asiago Bagel, Latte, Mocha Hazelbut, Plain CC",9.0,1,9.0,0.88,Discover 6416,2025-05-06 13:12:00,13,0
+217,"5/6/25, 1:12 PM","(5/6/25, 8:34 AM - 8:35 AM)",S'mores,"Iced, Latte",6.5,1,6.5,0.63,Visa 6698,2025-05-06 13:12:00,13,5
+218,"5/6/25, 1:16 PM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Matcha, Strawberry, Everything Bagel, Blueberry CC",9.0,1,9.0,0.88,Discover 5835,2025-05-06 13:16:00,13,0
+222,"5/6/25, 1:17 PM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Matcha, Strawberry, Poppy Bagel, Blueberry CC",9.0,1,9.0,0.88,Visa 4177,2025-05-06 13:17:00,13,0
+241,"5/6/25, 1:34 PM","(5/6/25, 8:34 AM - 8:35 AM)",Americano,"Iced, Spl Oat",4.5,1,4.5,0.44,Visa 4549,2025-05-06 13:34:00,13,5
+242,"5/6/25, 1:35 PM","(5/6/25, 8:34 AM - 8:35 AM)",Latte,"Iced, Caramel, Oat Milk, Cold foam",7.25,1,7.25,0.71,Visa 9227,2025-05-06 13:35:00,13,6
+251,"5/6/25, 1:43 PM","(5/6/25, 8:34 AM - 8:35 AM)",S'mores,"Iced, Latte",6.5,1,6.5,0.63,Visa 5179,2025-05-06 13:43:00,13,5
+252,"5/6/25, 1:43 PM","(5/6/25, 8:34 AM - 8:35 AM)",Chai,Iced,6.0,1,6.0,0.58,Visa 7131,2025-05-06 13:43:00,13,5
+254,"5/6/25, 1:44 PM","(5/6/25, 8:34 AM - 8:35 AM)",Mocha Hazelnut,"Iced, Almond Milk, Half Sweet, Latte",7.25,1,7.25,0.71,Visa 8697,2025-05-06 13:44:00,13,5
+255,"5/6/25, 1:44 PM","(5/6/25, 8:34 AM - 8:35 AM)",Matcha,"Iced, Almond Milk",6.25,1,6.25,0.61,Visa 6861,2025-05-06 13:44:00,13,5
+256,"5/6/25, 1:47 PM","(5/6/25, 8:34 AM - 8:35 AM)",Latte,"Iced, Lavendar Down, Cold foam",6.0,1,6.0,0.58,Mastercard 5296,2025-05-06 13:47:00,13,6
+260,"5/6/25, 1:50 PM","(5/6/25, 8:34 AM - 8:35 AM)",Matcha,"Iced, Vanilla",6.0,1,6.0,0.58,Visa 1439,2025-05-06 13:50:00,13,5
+261,"5/6/25, 1:52 PM","(5/6/25, 8:34 AM - 8:35 AM)",S'mores,"Iced, Latte",6.5,1,6.5,0.63,Visa 4503,2025-05-06 13:52:00,13,5
+263,"5/6/25, 1:54 PM","(5/6/25, 8:34 AM - 8:35 AM)",Latte,"Iced, Caramel, Almond Milk",6.25,1,6.25,0.61,Amex 2027,2025-05-06 13:54:00,13,6
+35001,"5/6/25, 1:55 PM","(5/6/25, 8:34 AM - 8:35 AM)",Matcha,"Iced, Strawberry, Oat Milk",6.75,1,6.75,0.66,Mastercard 3698,2025-05-06 13:55:00,13,5
+35002,"5/6/25, 1:58 PM","(5/6/25, 8:34 AM - 8:35 AM)",Latte,"Iced, Caramel, Oat Milk",6.25,1,6.25,0.61,Visa 8438,2025-05-06 13:58:00,13,6
+267,"5/6/25, 1:59 PM","(5/6/25, 8:34 AM - 8:35 AM)",Cold Brew,"Iced, Cold foam, Bsc, Almond Milk",7.25,1,7.25,0.71,Visa 8457,2025-05-06 13:59:00,13,5
+270,"5/6/25, 2:01 PM","(5/6/25, 8:34 AM - 8:35 AM)",Mocha Hazelnut,"Iced, Light Ice, Latte",6.5,1,6.5,0.63,Visa 6025,2025-05-06 14:01:00,14,5
+271,"5/6/25, 2:02 PM","(5/6/25, 8:34 AM - 8:35 AM)",Matcha,"Iced, Strawberry, Cold foam",7.0,1,7.0,0.68,Mastercard 2035,2025-05-06 14:02:00,14,5
+274,"5/6/25, 2:05 PM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Asiago Bagel, Matcha, Cane, Oat Milk, Plain CC",9.25,1,9.25,0.9,Mastercard 2805,2025-05-06 14:05:00,14,0
+280,"5/6/25, 2:06 PM","(5/6/25, 8:34 AM - 8:35 AM)",Cold Brew,Iced,5.5,1,5.5,0.54,Visa 1825,2025-05-06 14:06:00,14,5
+282,"5/6/25, 2:07 PM","(5/6/25, 8:34 AM - 8:35 AM)",Americano,Iced,4.5,1,4.5,0.44,Visa 9238,2025-05-06 14:07:00,14,5
+283,"5/6/25, 2:07 PM","(5/6/25, 8:34 AM - 8:35 AM)",Eclipse,"Iced, Latte",6.5,1,6.5,0.63,Visa 2806,2025-05-06 14:07:00,14,5
+286,"5/6/25, 2:14 PM","(5/6/25, 8:34 AM - 8:35 AM)",Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Visa 1473,2025-05-06 14:14:00,14,5
+290,"5/6/25, 2:16 PM","(5/6/25, 8:34 AM - 8:35 AM)",Matcha,"Iced, Vanilla",6.0,1,6.0,0.58,Visa 0468,2025-05-06 14:16:00,14,5
+291,"5/6/25, 2:18 PM","(5/6/25, 8:34 AM - 8:35 AM)",Matcha,Iced,5.5,1,5.5,0.54,Visa 9051,2025-05-06 14:18:00,14,5
+292,"5/6/25, 2:19 PM","(5/6/25, 8:34 AM - 8:35 AM)",Snickerdoodle,"Iced, Latte, Oat Milk",7.25,1,7.25,0.71,Visa 8576,2025-05-06 14:19:00,14,5
+294,"5/6/25, 2:22 PM","(5/6/25, 8:34 AM - 8:35 AM)",Snickerdoodle,"Iced, Light Ice, Latte",6.5,1,6.5,0.63,Visa 1660,2025-05-06 14:22:00,14,5
+295,"5/6/25, 2:23 PM","(5/6/25, 8:34 AM - 8:35 AM)",Bagel Combo,"_, Poppy Bagel, Matcha, Marshmallow, Blueberry CC",9.0,1,9.0,0.88,Visa 0800,2025-05-06 14:23:00,14,0
+296,"5/6/25, 2:25 PM","(5/6/25, 8:34 AM - 8:35 AM)",Latte,"Iced, Marshmallow, Cold foam",6.5,1,6.5,0.63,Visa 5575,2025-05-06 14:25:00,14,6
+297,"5/6/25, 2:26 PM","(5/6/25, 8:34 AM - 8:35 AM)",Mocha,"Iced, Strawberry",6.0,1,6.0,0.58,Mastercard 7293,2025-05-06 14:26:00,14,5
+300,"5/6/25, 2:31 PM","(5/6/25, 8:34 AM - 8:35 AM)",Matcha,"Iced, Strawberry",6.0,1,6.0,0.58,Visa 5539,2025-05-06 14:31:00,14,5
+301,"5/6/25, 2:33 PM","(5/6/25, 8:34 AM - 8:35 AM)",Matcha,"Iced, Almond Milk, Sf Stravwerybl",6.25,1,6.25,0.61,Visa 8220,2025-05-06 14:33:00,14,5
+301,"5/6/25, 2:33 PM","(5/6/25, 8:34 AM - 8:35 AM)",Matcha,"Iced, Vanilla, Almond Milk",6.75,1,6.75,0.66,Visa 8220,2025-05-06 14:33:00,14,5
+302,"5/6/25, 2:35 PM","(5/6/25, 8:34 AM - 8:35 AM)",Mocha Hazelnut,"Iced, Latte, Oat Milk",7.25,1,7.25,0.71,Visa 3900,2025-05-06 14:35:00,14,5
+303,"5/6/25, 2:40 PM","(5/6/25, 8:34 AM - 8:35 AM)",Latte,"Hot, Honey, Almond Milk",5.75,1,5.75,0.56,Mastercard 7775,2025-05-06 14:40:00,14,6
+303,"5/6/25, 2:40 PM","(5/6/25, 8:34 AM - 8:35 AM)",Mocha,"Iced, One Shot, Oat Milk",6.25,1,6.25,0.61,Mastercard 7775,2025-05-06 14:40:00,14,5
+303,"5/6/25, 2:40 PM","(5/6/25, 8:34 AM - 8:35 AM)",$0.00,Not So Aburrito,10.0,1,10.0,0.98,Mastercard 7775,2025-05-06 14:40:00,14,0
+303,"5/6/25, 2:40 PM","(5/6/25, 8:34 AM - 8:35 AM)",Latte,Hot,5.0,1,5.0,0.49,Mastercard 7775,2025-05-06 14:40:00,14,6
+306,"5/6/25, 2:44 PM","(5/6/25, 8:34 AM - 8:35 AM)",Snickerdoodle,"Iced, Latte, Light Ice",6.5,1,6.5,0.63,Visa 3293,2025-05-06 14:44:00,14,5
+307,"5/6/25, 2:50 PM","(5/6/25, 8:34 AM - 8:35 AM)",Matcha,"Iced, Oat Milk, Cane, Cold foam, Cane Cf",7.25,1,7.25,0.71,Amex 2867,2025-05-06 14:50:00,14,5
+308,"5/6/25, 2:52 PM","(5/6/25, 8:34 AM - 8:35 AM)",Matcha,"Iced, Strawberry",6.0,1,6.0,0.58,Visa 0789,2025-05-06 14:52:00,14,5
+310,"5/6/25, 2:56 PM","(5/6/25, 8:34 AM - 8:35 AM)",Matcha,"Iced, Double Matcha, Vanilla, Extra Sweet",7.25,1,7.25,0.71,Visa 8365,2025-05-06 14:56:00,14,5
+312,"5/6/25, 2:57 PM","(5/6/25, 8:34 AM - 8:35 AM)",Latte,"Iced, Caramel",5.5,1,5.5,0.54,Visa 6698,2025-05-06 14:57:00,14,6
+314,"5/6/25, 2:58 PM","(5/6/25, 8:34 AM - 8:35 AM)",Mocha,"Iced, Extra Shot, 1 Shot",6.5,1,6.5,0.63,Mastercard 2305,2025-05-06 14:58:00,14,5
+315,"5/6/25, 3:01 PM","(5/6/25, 8:34 AM - 8:35 AM)",Matcha,"Iced, Strawberry, Oat Milk, No Ice",6.75,1,6.75,0.66,Visa 5086,2025-05-06 15:01:00,15,5
+5,"5/7/25, 8:31 AM","(5/7/25, 8:31 AM - 3:39 PM)",Eclipse,"Iced, Latte",6.5,1,6.5,0.63,Mastercard 2521,2025-05-07 08:31:00,8,4
+5,"5/7/25, 8:31 AM","(5/7/25, 8:31 AM - 3:39 PM)",$0.00,Not So Aburrito,10.0,1,10.0,0.98,Mastercard 2521,2025-05-07 08:31:00,8,2
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Cappuccino,"Hot, Almond Milk, Honey",5.75,1,5.75,0.56,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Oat Milk, Cold foam",6.75,1,6.75,0.66,Visa 9507,2025-05-07 15:17:00,15,6
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Oat Milk, Cold foam",6.75,1,6.75,0.66,Visa 9507,2025-05-07 15:17:00,15,6
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Strawberry, Almond Milk",6.75,1,6.75,0.66,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Oat Milk, Cold foam",6.75,1,6.75,0.66,Visa 9507,2025-05-07 15:17:00,15,6
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Cold Brew,"Iced, Spl Whole, Cold foam",6.5,1,6.5,0.63,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Chai,"Iced, Caramel, Almond Milk",7.25,1,7.25,0.71,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Oat Milk, Hazelnut, Extra Shot, Cold foam, Van Cf",8.25,1,8.25,0.8,Visa 9507,2025-05-07 15:17:00,15,6
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Vanilla, Oat Milk, Cinnamon Powder, Extra Shot, Cold foam",8.25,1,8.25,0.8,Visa 9507,2025-05-07 15:17:00,15,6
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Mocha Hazelnut,"Iced, Latte, Extra Shot, Almond Milk",8.25,1,8.25,0.8,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Snickerdoodle,"Iced, Latte, Oat Milk",7.25,1,7.25,0.71,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Hazelnut, Oat Milk, Cold foam, Light Ice",7.25,1,7.25,0.71,Visa 9507,2025-05-07 15:17:00,15,6
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Raspberry, Almond Milk",5.75,1,5.75,0.56,Visa 9507,2025-05-07 15:17:00,15,6
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Theta Regulars,"Iced, Latte",6.5,2,13.0,1.27,Visa 9507,2025-05-07 15:17:00,15,3
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Vanilla, Cold foam, Vanilla Cf, Cinny",6.5,1,6.5,0.63,Visa 9507,2025-05-07 15:17:00,15,6
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Caramel, Cold foam, Extra Shot",7.5,1,7.5,0.73,Visa 9507,2025-05-07 15:17:00,15,6
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Vanilla, Cold foam, Oat Milk",7.25,1,7.25,0.71,Visa 9507,2025-05-07 15:17:00,15,6
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Vanilla, Cold foam, Oat Milk",7.25,1,7.25,0.71,Visa 9507,2025-05-07 15:17:00,15,6
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Oat Milk, Vanilla, Double Matcha",8.0,1,8.0,0.78,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Vanilla, Cold foam, Ari",6.5,1,6.5,0.63,Visa 9507,2025-05-07 15:17:00,15,6
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Iced Shaken Espresso,"Iced, Extra Shot, Spl Oat, Brown Sugar Cinnamon, Cold foam, Avery",7.0,1,7.0,0.68,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Cold foam, Vanilla. Sophia",6.5,1,6.5,0.63,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Eclipse,"Iced, Oat Milk, Aaliyah, Latte",7.25,1,7.25,0.71,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Americano,"Iced, Spl Whole, Cold foam, Van Cf, Nicole",5.5,1,5.5,0.54,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Oat Milk, Cold foam, Lauren",7.25,1,7.25,0.71,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Eclipse,"Iced, Oat Milk, Latte",7.25,1,7.25,0.71,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Vanilla, Cold foam, Eva",6.5,1,6.5,0.63,Visa 9507,2025-05-07 15:17:00,15,6
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Cold Brew,"Iced, Cold foam, Mia",6.5,1,6.5,0.63,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Vanilla, Lauren",6.0,1,6.0,0.58,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Strawberry, Oat Milk, Jackie",6.75,1,6.75,0.66,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Oat Milk, Sam",5.75,1,5.75,0.56,Visa 9507,2025-05-07 15:17:00,15,6
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Lavendar, Sam, Oat Milk",6.75,1,6.75,0.66,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Chai,"Iced, Extra Shot, Aneesha",7.0,1,7.0,0.68,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Brown Sugar Cinnamon, Almond Milk, Cold foam, Van Cf, Theodora",7.25,1,7.25,0.71,Visa 9507,2025-05-07 15:17:00,15,6
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Almond Milk, Agave, Cold foam",7.25,1,7.25,0.71,Visa 9507,2025-05-07 15:17:00,15,6
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Vanilla, Almond Milk",6.25,1,6.25,0.61,Visa 9507,2025-05-07 15:17:00,15,6
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Vanilla, Cold foam, Ari",6.5,1,6.5,0.63,Visa 9507,2025-05-07 15:17:00,15,6
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Eclipse,"Iced, Almond Milk, Ellie, Latte",7.25,1,7.25,0.71,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Cold Brew,"Iced, Spl Whole, Sophia",5.5,1,5.5,0.54,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Raspberry, Rasp Cf, Cold foam, Brooklyn",6.5,1,6.5,0.63,Visa 9507,2025-05-07 15:17:00,15,6
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Strawberry, Oat Milk, Rachel",6.75,1,6.75,0.66,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Theta Regulars,"Iced, Cate, Latte",6.5,1,6.5,0.63,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Oat Milk, Cold foam, Mary",7.25,1,7.25,0.71,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Oat Milk, Cold foam, Van Cf, Eva",7.25,1,7.25,0.71,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Iced Shaken Espresso,"Iced, Brown Sugar Cinnamon, Spl Almond, Lynn",5.0,1,5.0,0.49,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Theta Regulars,"Iced, Loren, Latte",6.5,1,6.5,0.63,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Cold Brew,"Iced, Cold foam, Cane Cf, Desta",6.5,1,6.5,0.63,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Strawberry, Dana",6.0,1,6.0,0.58,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Americano,"Iced, Hoeny, Cold foam, Van Cf, Nicole",6.0,1,6.0,0.58,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Vanilla, Cold foam, Katelyn",6.5,1,6.5,0.63,Visa 9507,2025-05-07 15:17:00,15,6
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Theta Regulars,"Iced, Oat Milk, Kiera, Latte",7.25,1,7.25,0.71,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Extra Shot, Almond Milk, Vanilla, Cold foam, Amelia",8.25,1,8.25,0.8,Visa 9507,2025-05-07 15:17:00,15,6
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Brown Sugar Cinnamon, Oat Milk",6.25,1,6.25,0.61,Visa 9507,2025-05-07 15:17:00,15,6
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Brown Sugar Cinnamon, Sophia",5.5,1,5.5,0.54,Visa 9507,2025-05-07 15:17:00,15,6
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Strawberry, Oat Milk, 1/2 Sweet, Ryan",6.75,1,6.75,0.66,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Vanilla, Cold foam, Sophia",7.0,1,7.0,0.68,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Vanilla, Oat Milk, Macey",6.75,1,6.75,0.66,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Vanilla, Double Matcha, Almond Milk, Olive",8.0,1,8.0,0.78,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Almond Milk, Vanilla, Csroline",6.75,1,6.75,0.66,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Vanilla, Almond Milk, Cold foam, Kate",7.75,1,7.75,0.76,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Theta Regulars,"Iced, Almond Milk, Theodora, Latte",7.25,1,7.25,0.71,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Theta Regulars,"Iced, Sheila, Latte",6.5,1,6.5,0.63,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Brown Sugar Cinnamon, Van Cf, Cold foam, Keira",6.5,1,6.5,0.63,Visa 9507,2025-05-07 15:17:00,15,6
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Vanilla, Sanji",5.5,1,5.5,0.54,Visa 9507,2025-05-07 15:17:00,15,6
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Cold foam, Cane Cf, Brooklyn",6.5,1,6.5,0.63,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Strawberry, Cold foam, Van Cf, Sopgia",7.0,1,7.0,0.68,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Vanilla, Cold foam",7.0,1,7.0,0.68,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Vanilla, Almond Milk, Daniekla",6.75,1,6.75,0.66,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",White Macadamia,"Iced, Ava, Latte",6.5,1,6.5,0.63,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Vanilla, Sanji",6.0,1,6.0,0.58,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Vanilla, Almond Milk, Olive",6.75,1,6.75,0.66,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Iced Shaken Espresso,"Iced, Brown Sugar Cinnamon, Spl Whole, Lily",5.0,1,5.0,0.49,Visa 9507,2025-05-07 15:17:00,15,5
+6,"5/7/25, 3:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Vanilla, Cold foam, Fia",6.5,1,6.5,0.63,Visa 9507,2025-05-07 15:17:00,15,6
+7,"5/7/25, 8:40 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Everything Bagel, Plain CC, Latte, Vanilla",8.5,1,8.5,0.83,Visa 3353,2025-05-07 08:40:00,8,2
+8,"5/7/25, 8:41 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Plain Bagel, Blueberry CC, Matcha, Strawberry, Oat Milk, Hot",9.75,1,9.75,0.95,Visa 3902,2025-05-07 08:41:00,8,2
+10,"5/7/25, 8:57 AM","(5/7/25, 8:31 AM - 3:39 PM)",Not So Aburrito,No Cheese,10.0,1,10.0,0.98,Visa 1104,2025-05-07 08:57:00,8,2
+12,"5/7/25, 9:10 AM","(5/7/25, 8:31 AM - 3:39 PM)",Americano,"Iced, Spl Whole",4.5,1,4.5,0.44,Discover 2565,2025-05-07 09:10:00,9,4
+13,"5/7/25, 9:12 AM","(5/7/25, 8:31 AM - 3:39 PM)",Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Visa 4780,2025-05-07 09:12:00,9,4
+14,"5/7/25, 9:26 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel,"1 Bagel, Everything, Garlic Herb CC",4.25,1,4.25,0.41,Discover 5199,2025-05-07 09:26:00,9,1
+15,"5/7/25, 9:30 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel,"1 Bagel, Everything, Garlic Herb CC",4.25,1,4.25,0.41,Visa 8474,2025-05-07 09:30:00,9,1
+16,"5/7/25, 9:38 AM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Cold foam, Light Icr",6.5,1,6.5,0.63,Amex 2039,2025-05-07 09:38:00,9,4
+18,"5/7/25, 9:46 AM","(5/7/25, 8:31 AM - 3:39 PM)",Doppio,Iced,3.5,1,3.5,0.34,Visa 6852,2025-05-07 09:46:00,9,1
+18,"5/7/25, 9:46 AM","(5/7/25, 8:31 AM - 3:39 PM)",El Toro Rojo,No Aioli,11.0,1,11.0,1.07,Visa 6852,2025-05-07 09:46:00,9,2
+20,"5/7/25, 10:00 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Cin Sug. Bagel, Maple CC, Matcha",8.5,1,8.5,0.83,Visa 0936,2025-05-07 10:00:00,10,2
+20,"5/7/25, 10:00 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Sesame Bagel, Plain CC, Latte, Hazelnut",8.5,2,17.0,1.66,Visa 0936,2025-05-07 10:00:00,10,3
+20,"5/7/25, 10:00 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Sesame Bagel, Garlic Herb CC, Latte, Almond Milk, Strawberry",9.25,1,9.25,0.9,Visa 0936,2025-05-07 10:00:00,10,2
+21,"5/7/25, 10:04 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Asiago Bagel, Plain CC, Shaken Espresso, Spl Milk",8.0,1,8.0,0.78,Mastercard 6554,2025-05-07 10:04:00,10,2
+22,"5/7/25, 10:07 AM","(5/7/25, 8:31 AM - 3:39 PM)",The Light Side,"Iced, Latte, Oat Milk",6.25,1,6.25,0.61,Mastercard 7293,2025-05-07 10:07:00,10,4
+22,"5/7/25, 10:07 AM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Marshmallow, Oat Milk",6.75,1,6.75,0.66,Mastercard 7293,2025-05-07 10:07:00,10,4
+22,"5/7/25, 10:07 AM","(5/7/25, 8:31 AM - 3:39 PM)",$0.00,El Toro Rojo,11.0,1,11.0,1.07,Mastercard 7293,2025-05-07 10:07:00,10,2
+22,"5/7/25, 10:07 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Everything Bagel, Garlic Herb CC, Latte, Strawberry",8.5,1,8.5,0.83,Mastercard 7293,2025-05-07 10:07:00,10,2
+23,"5/7/25, 10:12 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Sesame Bagel, Plain CC, Latte, Vanilla, Cold Foam, Sf Vanilla",9.5,1,9.5,0.93,Amex 1151,2025-05-07 10:12:00,10,2
+24,"5/7/25, 10:14 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Everything Bagel, Garlic Herb CC, Chai, Cold Foam, Cin Cf",9.5,1,9.5,0.93,Visa 7737,2025-05-07 10:14:00,10,2
+25,"5/7/25, 10:20 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel,"1 Bagel, Everything, Plain CC",4.0,1,4.0,0.39,Visa 2317,2025-05-07 10:20:00,10,1
+26,"5/7/25, 10:21 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel,"1 Bagel, Cinnamon Sugar, Blueberry CC",4.25,1,4.25,0.41,Visa 4796,2025-05-07 10:21:00,10,1
+27,"5/7/25, 10:23 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Chai, Rasberyy, Diablo CC, Asiago Bagel, Almond Milk",9.75,1,9.75,0.95,Visa 7900,2025-05-07 10:23:00,10,2
+27,"5/7/25, 10:23 AM","(5/7/25, 8:31 AM - 3:39 PM)",$0.00,Not So Aburrito,10.0,1,10.0,0.98,Visa 7900,2025-05-07 10:23:00,10,2
+27,"5/7/25, 10:23 AM","(5/7/25, 8:31 AM - 3:39 PM)",Eclipse,"Iced, Oat Milk, Latte",7.25,1,7.25,0.71,Visa 7900,2025-05-07 10:23:00,10,4
+28,"5/7/25, 10:27 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Latte, Almond Milk, Marshmallow",9.25,1,9.25,0.9,Discover 4169,2025-05-07 10:27:00,10,2
+29,"5/7/25, 10:27 AM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,Hot,5.0,2,10.0,0.98,Visa 5453,2025-05-07 10:27:00,10,3
+30,"5/7/25, 10:31 AM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Almond Milk, Agave",5.75,1,5.75,0.56,Amex 0034,2025-05-07 10:31:00,10,4
+30,"5/7/25, 10:31 AM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Almond Milk, Extra Honey",6.25,1,6.25,0.61,Amex 0034,2025-05-07 10:31:00,10,4
+30,"5/7/25, 10:31 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel,"1 Bagel, Everything, Plain CC",4.0,1,4.0,0.39,Amex 0034,2025-05-07 10:31:00,10,1
+31,"5/7/25, 10:32 AM","(5/7/25, 8:31 AM - 3:39 PM)",Snickerdoodle,"Iced, Latte",6.5,1,6.5,0.63,Mastercard 1766,2025-05-07 10:32:00,10,4
+31,"5/7/25, 10:32 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel,"1 Bagel, Sesame, Blueberry CC",4.25,1,4.25,0.41,Mastercard 1766,2025-05-07 10:32:00,10,1
+32,"5/7/25, 10:34 AM","(5/7/25, 8:31 AM - 3:39 PM)",The Light Side,"Iced, Latte",5.5,1,5.5,0.54,Visa 4422,2025-05-07 10:34:00,10,4
+34,"5/7/25, 10:37 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Everything Bagel, Diablo CC, Irish Cream, Latte, Oat Milk, Cold Foam",10.75,1,10.75,1.05,Visa 1884,2025-05-07 10:37:00,10,2
+37,"5/7/25, 10:38 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel,"1 Bagel, Everything, Garlic Herb CC",4.25,1,4.25,0.41,Mastercard 9524,2025-05-07 10:38:00,10,1
+38,"5/7/25, 10:39 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel,"1 Bagel, Asiago, Garlic Herb CC",4.25,1,4.25,0.41,Mastercard 0623,2025-05-07 10:39:00,10,1
+38,"5/7/25, 10:39 AM","(5/7/25, 8:31 AM - 3:39 PM)",Iced Shaken Espresso,"Iced, Spl Whole, Cold foam, Brownsugar Cin Voam",5.5,1,5.5,0.54,Mastercard 0623,2025-05-07 10:39:00,10,4
+39,"5/7/25, 10:40 AM","(5/7/25, 8:31 AM - 3:39 PM)",Iced Shaken Espresso,"Iced, Spl Almond, Brownsug Cin Foam, Cold foam",5.5,1,5.5,0.54,Amex 1212,2025-05-07 10:40:00,10,4
+42,"5/7/25, 10:44 AM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Sf Van, Almond Milk",6.25,1,6.25,0.61,Mastercard 7075,2025-05-07 10:44:00,10,4
+44,"5/7/25, 10:45 AM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Oat Milk, Sf Van",6.25,1,6.25,0.61,Amex 9200,2025-05-07 10:45:00,10,4
+44,"5/7/25, 10:45 AM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Vanilla",5.5,1,5.5,0.54,Amex 9200,2025-05-07 10:45:00,10,4
+44,"5/7/25, 10:45 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel,"1 Bagel, Plain, Plain CC, Cut in Half",4.0,1,4.0,0.39,Amex 9200,2025-05-07 10:45:00,10,1
+44,"5/7/25, 10:45 AM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Caramel",5.5,1,5.5,0.54,Amex 9200,2025-05-07 10:45:00,10,4
+45,"5/7/25, 10:46 AM","(5/7/25, 8:31 AM - 3:39 PM)",The Dark Side,"Iced, Latte",5.5,1,5.5,0.54,Mastercard 3987,2025-05-07 10:46:00,10,4
+45,"5/7/25, 10:46 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Latte, HOT, Asiago Bagel, Plain CC",8.0,1,8.0,0.78,Mastercard 3987,2025-05-07 10:46:00,10,2
+46,"5/7/25, 10:54 AM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Vanilla",5.5,1,5.5,0.54,Mastercard 3780,2025-05-07 10:54:00,10,4
+47,"5/7/25, 10:57 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Everything Bagel, Blueberry CC, Latte, Bsc Latte",8.0,1,8.0,0.78,Visa 8841,2025-05-07 10:57:00,10,2
+48,"5/7/25, 10:59 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Plain Bagel, Plain CC, Add Tomato, Matcha, Almond Milk, Vanilla",10.25,1,10.25,1.0,Visa 8687,2025-05-07 10:59:00,10,2
+49,"5/7/25, 11:01 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Shaken Espresso, Spl Milk, Spl Almknd, Everything Bagel, Plain CC, Add Tomato",9.0,1,9.0,0.88,Visa 8390,2025-05-07 11:01:00,11,2
+51,"5/7/25, 11:05 AM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Strawberry, Half, Cold foam",6.5,1,6.5,0.63,Visa 0423,2025-05-07 11:05:00,11,4
+51,"5/7/25, 11:05 AM","(5/7/25, 8:31 AM - 3:39 PM)",The Light Side,"Iced, Latte",5.5,1,5.5,0.54,Visa 0423,2025-05-07 11:05:00,11,4
+52,"5/7/25, 11:08 AM","(5/7/25, 8:31 AM - 3:39 PM)",The Dark Side,"Iced, Latte",5.5,1,5.5,0.54,Mastercard 4432,2025-05-07 11:08:00,11,4
+52,"5/7/25, 11:08 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel,"1 Bagel, Plain, Diablo CC",4.25,1,4.25,0.41,Mastercard 4432,2025-05-07 11:08:00,11,1
+53,"5/7/25, 11:10 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Cin Sug. Bagel, Plain CC, Toasted, Latte, Hot Chocolate",8.0,1,8.0,0.78,Visa 6862,2025-05-07 11:10:00,11,2
+55,"5/7/25, 11:12 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Sesame Bagel, Maple CC, White Macadamia, Almond Milk, Latte",10.25,1,10.25,1.0,Visa 5047,2025-05-07 11:12:00,11,2
+56,"5/7/25, 11:13 AM","(5/7/25, 8:31 AM - 3:39 PM)",Eclipse,"Iced, Cookie Monsta, Latte",6.5,1,6.5,0.63,Visa 9870,2025-05-07 11:13:00,11,4
+58,"5/7/25, 11:21 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Cin Sug. Bagel, Latte, Caramel, Extra Caramel, Plain CC",8.5,1,8.5,0.83,Visa 1150,2025-05-07 11:21:00,11,2
+58,"5/7/25, 11:21 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel,"1 Bagel, Asiago, Plain CC",4.0,1,4.0,0.39,Visa 1150,2025-05-07 11:21:00,11,1
+59,"5/7/25, 11:22 AM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Caramel, Almond Milk",6.25,1,6.25,0.61,Visa 0451,2025-05-07 11:22:00,11,4
+61,"5/7/25, 11:23 AM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Strawberry, Oat Milk",6.75,1,6.75,0.66,Visa 2731,2025-05-07 11:23:00,11,4
+61,"5/7/25, 11:23 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel,"1 Bagel, Everything, Garlic Herb CC",4.25,1,4.25,0.41,Visa 2731,2025-05-07 11:23:00,11,1
+62,"5/7/25, 11:23 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Plain Bagel, Garlic Herb CC, Latte, Mocha, Almond Milk",9.25,1,9.25,0.9,Visa 3292,2025-05-07 11:23:00,11,2
+63,"5/7/25, 11:27 AM","(5/7/25, 8:31 AM - 3:39 PM)",Not So Aburrito,"Add Diablo, Add Avocado",13.0,1,13.0,1.27,Visa 2323,2025-05-07 11:27:00,11,2
+64,"5/7/25, 11:28 AM","(5/7/25, 8:31 AM - 3:39 PM)",Snickerdoodle,"Iced, COOKIE MOBSTER!!!, Latte",6.5,1,6.5,0.63,Visa 7429,2025-05-07 11:28:00,11,4
+65,"5/7/25, 11:31 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Asiago Bagel, Matcha, Strawberry, Almond Milk, Garlic Herb CC",9.75,1,9.75,0.95,Visa 7025,2025-05-07 11:31:00,11,2
+65,"5/7/25, 11:31 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Matcha, Almond Milk, Everything Bagel, Garlic Herb CC",9.25,1,9.25,0.9,Visa 7025,2025-05-07 11:31:00,11,2
+66,"5/7/25, 11:32 AM","(5/7/25, 8:31 AM - 3:39 PM)",Eclipse,"Iced, Latte",6.5,1,6.5,0.63,Mastercard 1517,2025-05-07 11:32:00,11,4
+66,"5/7/25, 11:32 AM","(5/7/25, 8:31 AM - 3:39 PM)",Eclipse,"Iced, Latte",6.5,1,6.5,0.63,Mastercard 1517,2025-05-07 11:32:00,11,4
+66,"5/7/25, 11:32 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel,"1 Bagel, Asiago, Garlic Herb CC",4.25,1,4.25,0.41,Mastercard 1517,2025-05-07 11:32:00,11,1
+66,"5/7/25, 11:32 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel,"Asiago, 1 Bagel, Plain CC",4.0,1,4.0,0.39,Mastercard 1517,2025-05-07 11:32:00,11,1
+67,"5/7/25, 11:34 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Garlic Herb CC, Everything Bagel, Matcha, Strawberry",9.0,1,9.0,0.88,Visa 7468,2025-05-07 11:34:00,11,2
+67,"5/7/25, 11:34 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Garlic Herb CC, Everything Bagel, Matcha, Strawberry",9.0,1,9.0,0.88,Visa 7468,2025-05-07 11:34:00,11,2
+68,"5/7/25, 11:44 AM","(5/7/25, 8:31 AM - 3:39 PM)",S'mores,"Iced, Latte",6.5,1,6.5,0.63,Visa 3494,2025-05-07 11:44:00,11,4
+69,"5/7/25, 11:48 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel,"1 Bagel, Everything, Garlic Herb CC",4.25,1,4.25,0.41,Visa 7074,2025-05-07 11:48:00,11,1
+70,"5/7/25, 11:50 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Plain Bagel, Diablo CC, Latte",8.0,1,8.0,0.78,Mastercard 1620,2025-05-07 11:50:00,11,2
+72,"5/7/25, 11:53 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel,"1 Bagel, Plain, Plain CC",4.0,1,4.0,0.39,Mastercard 3755,2025-05-07 11:53:00,11,1
+73,"5/7/25, 11:54 AM","(5/7/25, 8:31 AM - 3:39 PM)",Eclipse,"Iced, Latte",6.5,1,6.5,0.63,Mastercard 6692,2025-05-07 11:54:00,11,4
+73,"5/7/25, 11:54 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel,"1 Bagel, Plain, Plain CC",4.0,1,4.0,0.39,Mastercard 6692,2025-05-07 11:54:00,11,1
+75,"5/7/25, 11:55 AM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Vanilla",5.5,1,5.5,0.54,Visa 5229,2025-05-07 11:55:00,11,4
+77,"5/7/25, 11:57 AM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel,"1 Bagel, Garlic Herb CC, Sesame, Add Bacon",7.25,1,7.25,0.71,Visa 8425,2025-05-07 11:57:00,11,2
+78,"5/7/25, 11:59 AM","(5/7/25, 8:31 AM - 3:39 PM)",Americano,"Iced, Spl Whole, Cinny Powder",4.5,1,4.5,0.44,Visa 2101,2025-05-07 11:59:00,11,4
+82,"5/7/25, 12:02 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Brown Sugar Cinnamon",5.5,1,5.5,0.54,Mastercard 9599,2025-05-07 12:02:00,12,6
+83,"5/7/25, 12:03 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Hazelnut",5.5,1,5.5,0.54,Visa 1402,2025-05-07 12:03:00,12,6
+87,"5/7/25, 12:06 PM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel,"1 Bagel, Plain, Plain CC",4.0,1,4.0,0.39,Visa 9818,2025-05-07 12:06:00,12,1
+88,"5/7/25, 12:06 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Vanilla",5.5,1,5.5,0.54,Mastercard 5367,2025-05-07 12:06:00,12,6
+91,"5/7/25, 12:08 PM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Latte, Smores, Poppy Bagel, Plain CC",9.0,1,9.0,0.88,Visa 8986,2025-05-07 12:08:00,12,0
+91,"5/7/25, 12:08 PM","(5/7/25, 8:31 AM - 3:39 PM)",S'mores,"Iced, Latte",6.5,1,6.5,0.63,Visa 8986,2025-05-07 12:08:00,12,5
+92,"5/7/25, 12:09 PM","(5/7/25, 8:31 AM - 3:39 PM)",Iced Shaken Espresso,"Iced, Cane",4.5,1,4.5,0.44,Visa 4890,2025-05-07 12:09:00,12,5
+92,"5/7/25, 12:09 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Almond Milk, Extra Shot",6.75,1,6.75,0.66,Visa 4890,2025-05-07 12:09:00,12,6
+95,"5/7/25, 12:10 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Rose, Almond Milk",6.25,1,6.25,0.61,Mastercard 7939,2025-05-07 12:10:00,12,6
+98,"5/7/25, 12:11 PM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Shaken Espresso, Poppy Bagel, Plain CC",8.0,1,8.0,0.78,Mastercard 6267,2025-05-07 12:11:00,12,0
+101,"5/7/25, 12:13 PM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Strawberry, Almond Milk",6.75,1,6.75,0.66,Mastercard 9985,2025-05-07 12:13:00,12,5
+101,"5/7/25, 12:13 PM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Cold foam, Cane Cf",6.5,1,6.5,0.63,Mastercard 9985,2025-05-07 12:13:00,12,5
+110,"5/7/25, 12:17 PM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Vanilla, Oat Milk, Cold foam",7.75,1,7.75,0.76,Visa 6985,2025-05-07 12:17:00,12,5
+112,"5/7/25, 12:18 PM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel,"1 Bagel, Asiago, Plain CC",4.0,1,4.0,0.39,Mastercard 9032,2025-05-07 12:18:00,12,1
+121,"5/7/25, 12:23 PM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Asiago Bagel, Diablo CC, Shaken Espresso, Spl Whole",8.0,1,8.0,0.78,Visa 5378,2025-05-07 12:23:00,12,0
+122,"5/7/25, 12:24 PM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Asiago Bagel, Garlic Herb CC, Matcha",8.5,1,8.5,0.83,Visa 4948,2025-05-07 12:24:00,12,0
+125,"5/7/25, 12:26 PM","(5/7/25, 8:31 AM - 3:39 PM)",Latte,"Iced, Oat Milk",5.75,1,5.75,0.56,Visa 5226,2025-05-07 12:26:00,12,6
+129,"5/7/25, 12:29 PM","(5/7/25, 8:31 AM - 3:39 PM)",The Dark Side,"Iced, Latte, Cold foam",6.5,1,6.5,0.63,Mastercard 6080,2025-05-07 12:29:00,12,5
+132,"5/7/25, 12:30 PM","(5/7/25, 8:31 AM - 3:39 PM)",Eclipse,"Iced, Latte",6.5,1,6.5,0.63,Visa 6298,2025-05-07 12:30:00,12,5
+135,"5/7/25, 12:31 PM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Poppy Bagel, Garlic Herb CC, Shaken Espresso, Oat Milk",8.75,1,8.75,0.85,Mastercard 7174,2025-05-07 12:31:00,12,0
+137,"5/7/25, 12:33 PM","(5/7/25, 8:31 AM - 3:39 PM)",Bagel Combo,"_, Sesame Bagel, Plain CC, Cold Brew, Spl Milk",8.0,1,8.0,0.78,Visa 4411,2025-05-07 12:33:00,12,0
+138,"5/7/25, 12:34 PM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,Iced,5.5,1,5.5,0.54,Mastercard 0250,2025-05-07 12:34:00,12,5
+139,"5/7/25, 12:35 PM","(5/7/25, 8:31 AM - 3:39 PM)",Doppio,Iced,3.5,1,3.5,0.34,Visa 6852,2025-05-07 12:35:00,12,1
+141,"5/7/25, 12:36 PM","(5/7/25, 8:31 AM - 3:39 PM)",Matcha,"Iced, Almond Milk, Honey",6.25,1,6.25,0.61,Mastercard 9993,2025-05-07 12:36:00,12,5

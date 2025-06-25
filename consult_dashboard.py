@@ -8,6 +8,8 @@ import re
 import textwrap
 import gspread
 from google.oauth2.service_account import Credentials
+
+
 from datetime import datetime
 from streamlit.components.v1 import html
 import pandas as pd
@@ -20,23 +22,22 @@ from pptx import Presentation
 from pptx.util import Inches, Pt
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
+import matplotlib.pyplot as plt
+
 
 
 from dotenv import load_dotenv
 load_dotenv()
 
 
-from models.foot_traffic_model import run as run_foot_traffic
-from models.margin_model import run as run_margin
 from models.arcgis_explorer import *
+from models import buckets
 from models.deep_dive_model import run_deep_dive
-from models.optimizer import run_optimization
-from models.presentation import generate_impress_html
 
 
 # --- GOOGLE SHEETS SETUP ---
-SHEET_ID    = "12Qvpi5jOdtWRaa1aL6yglCAJ5tFphW1fHsF8apTlEV4"
-WS_NAME     = "Data"
+SHEET_ID    = "1bviJIh9XYcg0I8V2B_DQ5S8Ar-qxo8_qFY-R-pS1ir8"
+WS_NAME     = "Sheet 1"
 AUTH_SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
 # 1) Decode the base64 JSON
@@ -61,13 +62,31 @@ def get_worksheet():
     client = get_gspread_client()
     return client.open_by_key(SHEET_ID).worksheet(WS_NAME)
 
-@st.cache_resource(show_spinner=False)
-def get_pos_sheet():
-    client = get_gspread_client()
+def load_remote_csv(url):
     try:
-        return client.open_by_key(SHEET_ID).worksheet("POS Raw")
-    except gspread.WorksheetNotFound:
-        return None
+        return pd.read_csv(url)
+    except Exception as e:
+        st.warning(f"❌ Failed to load file from {url}: {e}")
+        return pd.DataFrame()
+
+def load_uploaded_csvs(record):
+    file_mappings = {
+        "Sales Summary": "sales_summary_df",
+        "Product Mix": "product_mix_df",
+        "Order Details": "order_details_df",
+        "Expenses": "expenses_df",
+        "Employee Schedule": "employee_schedule_df",
+        "Rewards Program": "rewards_program_df",
+        "Menu PDF": "menu_pdf_df"  # if this is a CSV, otherwise skip loading
+    }
+
+    for col_name, session_key in file_mappings.items():
+        if session_key not in st.session_state:
+            url = str(record.get(col_name, "")).strip()
+            if url.startswith("http"):
+                df = load_remote_csv(url)
+                if not df.empty:
+                    st.session_state[session_key] = df
 
 ws = get_worksheet()
 # Cache the header row once
@@ -76,16 +95,7 @@ def get_headers():
     return [h for h in ws.row_values(1) if h.strip()]
 
 HEADERS = [
-    # your form fields + demos...
-    "Business Name","Location Address","Location Type","Years in Operation","Days/Hours of Operation",
-    "Seating Indoor","Seating Outdoor","Full Kitchen","Average Weekly Sales","Average Transaction Value",
-    "Top Item 1","Top Item 2","Top Item 3","% Sales Drinks","% Sales Food","Peak Hours",
-    "Sales Monday","Sales Tuesday","Sales Wednesday","Sales Thursday","Sales Friday","Sales Saturday","Sales Sunday",
-    "Avg Transactions/Day","Mobile/Online Ordering","Avg Wait Time","Target Age Range","Main Customer Segments",
-    "% Regulars","Collect Contact Info","Run Surveys","# Competitors within 1mi","Competitor 1","Competitor 2","Competitor 3",
-    "Near POI","Marketing Strategy","Partner Local","# Employees","Full-Time Staff","Part-Time Staff",
-    "Track Labor % of Revenue","Staffing Challenges","Training Procedures","POS Export Filename","Labor Report Filename","Benchmark Similar Businesses",
-    "Additional Insight","Timestamp",
+
     # demographic keys...
     "Total Population (2024)", "Total Households (2024)", "Avg Household Size (2024)", "Median Household Income (2024)",
     "Per-Capita Income (2024)", "Diversity Index (2024)", "Pop. Growth Rate ’24–’29 (%)", "Median Home Value (2024)",
@@ -96,614 +106,650 @@ HEADERS = [
     "Unemployment Rate (2024)", "Household Growth Rate ’24–’29 (%)", "Eating & Drinking Businesses (2024)", "Group Quarters Population (2024)"
 ]
 
-_existing = get_headers()
-if _existing != HEADERS:
-    # wipe & rewrite header row once
-    ws.delete_rows(1)
-    ws.insert_row(HEADERS, 1)
+
+# Check if demographic headers are already in the sheet
+sheet_headers = ws.row_values(1)
+if not any(header in sheet_headers for header in HEADERS):
+    # Append demographic headers to the end of row 1
+    updated_headers = sheet_headers + HEADERS
+    ws.delete_rows(1)  # remove original header row
+    ws.insert_row(updated_headers, index=1)
 
 def append_row_to_sheet(row: list):
     ws.append_row(row, value_input_option="USER_ENTERED")
 
-# Cache the entire sheet as a DataFrame (refresh every 5 minutes)
 
 def load_sheet_df() -> pd.DataFrame:
     values = ws.get_all_values()
     if not values:
         return pd.DataFrame()
+
     raw_headers = values[0]
-    idxs = [i for i,h in enumerate(raw_headers) if h.strip()]
+    idxs = [i for i, h in enumerate(raw_headers) if h.strip()]
     headers = [raw_headers[i] for i in idxs]
     data = []
     for row in values[1:]:
         row += [""] * (len(raw_headers) - len(row))
         data.append([row[i] for i in idxs])
-    return pd.DataFrame(data, columns=headers)
 
-# Save demographics helper
-def save_demographics_to_sheet(business_name: str, demo: dict):
+    df = pd.DataFrame(data, columns=headers)
 
-    df = load_sheet_df()
-    try:
-        # locate the row by Business Name
-        row_idx = df.index[df["Business Name"] == business_name][0] + 2
-    except IndexError:
-        st.error(f"Business '{business_name}' not found in sheet!")
-        return
+    # ✅ Move RENAME_COLUMNS inside function before returning
+    RENAME_COLUMNS = {
+        "What is your business name?": "Business Name",
+        "What is your Name and Position?": "Contact Name",
+        "Position": "Contact Position",
+        "What is your professional Email Address and Phone Number?": "Contact Info",
+        "(XXX) XXX-XXXX": "Phone Number",
+        "What is the Business Address?": "Location Address",
+        "1. Which stage is most accurate to your business?": "Stage",
+        "2. Describe in detail your target market.": "Target Market",
+        "3. What key factors sets your café apart from competitors?": "Differentiators",
+        "4. What are your top 3 goals in working with Take My [Advice]": "Goals",
+        "5. If your café could be known for one thing, what would it be - and why does that matter to your customer?": "Signature Item",
+        "6. How do you define success 6 months from now?": "Definition of Success",
+        "7. What do you believe is currently holding your business back from achieving that success?": "Current Challenges",
+        "8. If your café had a \"personality\" how would you describe it?": "Brand Personality",
+        "9. How do you think your business is currently perceived by your customers?": "Customer Perception",
+        "10. Are there specific competitors you admire or feel competitive pressure from? Why?": "Competitors",
+        "11. What does your ideal customer journey look like from walking in -> to ordering -> to exiting?": "Customer Journey",
+        "12. What are the biggest unknowns you hope we can help you answer?": "Unknowns",
+        "13. Is there a demographic in the area that you feel you are missing out on servicing? Is there a demographic you are excelling in servicing?": "Demographic Gaps",
+        "14. What does \"Growth\" mean to you right now?": "Growth Definition",
+        "15. Are there any recent changes (new items, staff, renovations, marketing efforts) that we should be aware of when analyzing performance?": "Recent Changes",
+        "16. Do you see the business staying in this current location long-term, or are you considering relocation or expansion?": "Location Plans",
+        "17. If you could change one thing about your café immediately, what would it be?": "Immediate Change",
+        "Sales Summary for the past 0-24 months (minimum 12 months)": "Sales Summary",
+        "Sales by Item": "Product Mix",
+        "Order Details": "Order Details",
+        "Expenses": "Expenses",
+        "Employee Schedule": "Employee Schedule",
+        "Rewards Program Details (If Applicable)": "Rewards Program",
+        "Downloadable Menu": "Menu PDF"
+    }
 
-    # Fetch current headers
-    headers = [h for h in ws.row_values(1) if h.strip() != ""]
+    df = df.rename(columns=RENAME_COLUMNS)
+    return df
 
-    # Add any new demo keys as columns
-    new_cols = [k for k in demo if k not in headers]
-    if new_cols:
-        headers += new_cols
-        ws.update("A1:1", [headers])
+def save_demographics_to_sheet(business_name, demo_dict):
+    gs_client = get_gspread_client()
+    sh = gs_client.open_by_key(SHEET_ID)
+    ws = sh.worksheet(WS_NAME)
 
-    # Write each demo value into its cell
-    with st.spinner("Saving demographics…"):
-        prog = st.progress(0)
-        total = len(demo)
-        for i, (k, v) in enumerate(demo.items(), start=1):
-            col_idx = headers.index(k) + 1
-            ws.update_cell(row_idx, col_idx, str(v))
-            prog.progress(i / total)
+    # Get current headers
+    headers = ws.row_values(1)
+    header_set = set(headers)
 
-    st.success("Demographics saved!")
+    # Add missing demographic headers
+    new_headers = [h for h in HEADERS if h not in header_set]
+    if new_headers:
+        updated_headers = headers + new_headers
+        ws.delete_rows(1)
+        ws.insert_row(updated_headers, index=1)
+        headers = updated_headers  # update reference
 
+    # Reload sheet data to find correct row index
+    df = pd.DataFrame(ws.get_all_records())
+
+    # Try both pre- and post-renamed business column keys
+    business_col = "Business Name" if "Business Name" in df.columns else "What is your business name?"
+    row_idx = df[df[business_col] == business_name].index
+
+    if not row_idx.empty:
+        row_number = row_idx[0] + 2  # +1 for header row, +1 because DataFrame is 0-indexed
+
+        for key, value in demo_dict.items():
+            if key in headers:
+                col_number = headers.index(key) + 1  # 1-indexed for Sheets
+                ws.update_cell(row_number, col_number, value)
+    else:
+        st.warning(f"⚠️ Could not find business name: '{business_name}' in the sheet.")
 
 # --- STREAMLIT APP ---
 def main():
+    st.set_page_config(layout="wide")
     st.title("Take My Advice [...]")
-    tab_form, tab_results, tab_explore, tab_optimize, tab_deep ,tab_summary = st.tabs(
-        ["Form","Results","Exploration","Optimizer", "Deep Dive", "Summary"]
+    tab_summary, tab_deep = st.tabs(
+        ["Summary", "Advice"]
     )
 
+    if "cached_df" not in st.session_state:
+        st.session_state.cached_df = load_sheet_df()
+    df_global = st.session_state.cached_df
+
     # --- Form Tab ---
-    with tab_form:
-        st.header("CAFÉ PROFILE")
-        business_name = st.text_input("Business Name")
-        location_address = st.text_input("Location Address")
-        location_type = st.radio("Standalone or inside another business?", ["Standalone","Inside another business"])
-        years_in_operation = st.number_input("Years in operation", 0, step=1)
-        days_hours = st.text_area("Days/hours of operation", help="e.g. Mon–Fri 7:00–19:00; Sat 8:00–16:00")
-        seating_indoor = st.number_input("Seating capacity (indoor)", 0, step=1)
-        seating_outdoor = st.number_input("Seating capacity (outdoor)", 0, step=1)
-        full_kitchen = st.radio("Do you have a full kitchen?", ["Yes","No"])
+    with tab_summary:
 
-        st.header("SALES & POS DATA")
-        avg_weekly_sales = st.number_input("Average weekly sales (last 4 weeks)", 0.0, format="%.2f")
-        avg_transaction_value = st.number_input("Average transaction value", 0.0, format="%.2f")
-        st.subheader("Top 3 best-selling items")
-        top1 = st.text_input("1st best-selling item")
-        top2 = st.text_input("2nd best-selling item")
-        top3 = st.text_input("3rd best-selling item")
-        pct_drinks = st.slider("% of sales from drinks", 0,100,50)
-        pct_food = 100 - pct_drinks
-        peak_hours = st.multiselect("Peak hours (POS)", [f"{h}:00" for h in range(24)])
-        st.subheader("Sales by day of week")
-        days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
-        sales_by_day = {d: st.number_input(d, 0.0, format="%.2f") for d in days}
-        avg_transactions = st.number_input("# transactions/day (avg)", 0, step=1)
-        online_sales = st.radio("Mobile/online ordering?", ["Yes","No"])
-        avg_wait_time = st.number_input("Avg wait time (min)", 0.0, format="%.1f")
+        df = df_global
+        st.header("📋 Café Submission Summary")
 
-        st.header("CUSTOMER DEMOGRAPHICS & INSIGHT")
-        age_range = st.text_input("Target customer age range")
-        segments = st.multiselect("Main customer segments", ["Students","Professionals","Tourists","Others"])
-        pct_regulars = st.slider("% regular customers (3+ visits/mo)", 0,100,20)
-        collect_emails = st.radio("Collect customer contacts?", ["Yes","No"])
-        run_surveys = st.radio("Run surveys/feedback?", ["Yes","No"])
-
-        st.header("COMPETITION & LOCATION")
-        num_competitors = st.number_input("# competitors within 1 mile", 0, step=1)
-        comp1 = st.text_input("Competitor 1 (name+loc)")
-        comp2 = st.text_input("Competitor 2 (name+loc)")
-        comp3 = st.text_input("Competitor 3 (name+loc)")
-        near_poi = st.radio("Near major POI?", ["Yes","No"])
-        marketing = st.selectbox("Marketing strategy", ["Social media","Events","None","Other"])
-        partner_local = st.radio("Partner with local businesses/events?", ["Yes","No"])
-
-        st.header("OPERATIONS & STAFFING")
-        num_employees = st.number_input("Number of employees", 0, step=1)
-        full_time = st.number_input("# full-time staff", 0, step=1)
-        part_time = st.number_input("# part-time staff", 0, step=1)
-        track_labor_pct = st.radio("Track labor % of revenue?", ["Yes","No"])
-        staffing_challenges = st.text_area("Staffing challenges")
-        training_procedures = st.radio("Standard training procedures?", ["Yes","No"])
-
-
-        st.header("OPTIONAL TECHNICAL INPUTS")
-        pos_export   = st.file_uploader("POS export (CSV)", type=["csv"])
-
-        if pos_export is not None:
-           st.markdown("✅ POS file loaded.")
-           if st.button("Upload POS to sheet"):
-               # Read the CSV
-               df_pos = pd.read_csv(pos_export)
-               # Try to open or else create the "POS Raw" sheet
-               try:
-                   ws_pos = gc.open_by_key(SHEET_ID).worksheet("POS Raw")
-               except gspread.WorksheetNotFound:
-                   ws_pos = gc.open_by_key(SHEET_ID).add_worksheet(
-                       title="POS Raw",
-                       rows=str(len(df_pos) + 10),
-                       cols=str(len(df_pos.columns) + 5),
-                   )
-            # Clear old data and write new
-               ws_pos.clear()
-               set_with_dataframe(ws_pos, df_pos)
-               st.success("POS CSV uploaded to tab ‘POS Raw’")
-        labor_report = st.file_uploader("Employee schedule/report", type=["csv","xlsx","pdf"])
-        benchmark    = st.radio("Benchmark against similar businesses?", ["Yes","No"])
-
-                # NEW: freeform Additional Insight
-        additional_insight = st.text_area(
-            "Additional insight (any extra context for the Deep Dive)",
-            help="This will be saved alongside your form inputs and fed into the Deep Dive model."
-        )
-
-        if st.button("Submit"):
-            row = [
-                business_name, location_address, location_type, years_in_operation, days_hours,
-                seating_indoor, seating_outdoor, full_kitchen,
-                avg_weekly_sales, avg_transaction_value,
-                top1, top2, top3, pct_drinks, pct_food, ",".join(peak_hours),
-                sales_by_day["Monday"], sales_by_day["Tuesday"], sales_by_day["Wednesday"],
-                sales_by_day["Thursday"], sales_by_day["Friday"], sales_by_day["Saturday"],
-                sales_by_day["Sunday"], avg_transactions, online_sales, avg_wait_time,
-                age_range, ",".join(segments), pct_regulars, collect_emails, run_surveys,
-                num_competitors, comp1, comp2, comp3, near_poi, marketing, partner_local,
-                num_employees, full_time, part_time, track_labor_pct, staffing_challenges, training_procedures,
-                pos_export.name if pos_export else "", labor_report.name if labor_report else "", benchmark,
-                additional_insight,                     # ← added here
-                datetime.utcnow().isoformat()
-            ]
-            append_row_to_sheet(row)
-            st.success("Form submitted!")
-
-    # --- Results Tab ---
-    with tab_results:
-        st.header("Foot-Traffic Model Results")
-        res = run_foot_traffic()
-        if res["mae"] is not None:
-            st.metric("MAE", f"{res['mae']:.2f}")
-            st.pyplot(res["figure"])
-        else:
-            st.info("Not enough data yet.")
-
-        st.header("Margin Optimization Results")
-        mres = run_margin()
-        if mres["metrics"]:
-            st.metric("MAE", f"{mres['metrics']['MAE']:.2f}")
-            st.metric("R²", f"{mres['metrics']['R2']:.2f}")
-            st.pyplot(mres["figure"])
-        else:
-            st.info("Not enough data yet.")
-
-    # --- Exploration Tab ---
-    with tab_explore:
-        st.header("Exploration")
-
-        df = load_sheet_df()
         if df.empty:
-            st.info("No cafés on file yet.")
-        else:
-            cafelist = df["Business Name"].unique().tolist()
-            selected = st.selectbox("Select café to explore", cafelist)
-
-            record = df[df["Business Name"] == selected].iloc[0]
-            address = record["Location Address"]
-
-            st.markdown(f"**Address:** {address}")
-
-            if st.button("Explore"):
-                map_html, demo, cafes = run_explorer(address)
-                if map_html:
-                    st.session_state["last_demo"] = demo
-                    st.session_state["last_cafes"] = cafes
-                    st.session_state["target_cafe_name"] = selected
-                    st.session_state["target_cafe_address"] = address
-
-                    st.subheader("Map View")
-                    st.components.v1.html(map_html, height=450)
-
-                    st.subheader("Key Demographics")
-                    df_demo = pd.DataFrame(list(demo.items()), columns=["Description", "Value"])
-                    st.table(df_demo)
-
-                    st.subheader("Nearby Cafés")
-                    df_cafes = pd.DataFrame(cafes)
-                    for c in df_cafes.columns:
-                        df_cafes[c] = df_cafes[c].fillna("").astype(str)
-                    st.session_state["last_cafes_df"] = df_cafes
-                    st.table(df_cafes)
-                else:
-                    st.error("Map generation failed.")
-
-            if "last_demo" in st.session_state and st.button("Save demographics"):
-                with st.spinner("Saving demographics to sheet…"):
-                    save_demographics_to_sheet(
-                        selected,
-                        st.session_state["last_demo"]
-                    )
-
-            # Compare with similar regions
-            if "last_demo" in st.session_state:
-                st.subheader("Compare with Similar Demographic Regions")
-                city = st.text_input("Enter city to search for similar regions", "Los Angeles")
-                k = st.slider("How many similar regions to find?", 1, 10, 5)
-
-                if st.button("Find Similar Regions"):
-                    token = get_token()
-                    lat, lon = geocode(city, token)
-                    if lat is not None:
-                        batch = fetch_demographics_batch(lat, lon, token, n=15)
-                        top_k = get_similar_regions(st.session_state["last_demo"], batch, k)
-                        st.session_state["top_k_regions"] = top_k
-
-                        region_names = top_k["_region_name"].tolist()
-                        selected_region = st.selectbox("Choose a similar region", region_names)
-
-                        selected_row = top_k[top_k["_region_name"] == selected_region].iloc[0]
-                        region_lat, region_lon = selected_row["_lat"], selected_row["_lon"]
-
-                        cafes_nearby = fetch_cafes_in_region(region_lat, region_lon)
-                        st.session_state["similar_region_cafes"] = cafes_nearby
-
-                        st.subheader("Cafés in Selected Similar Region")
-                        df_region_cafes = pd.DataFrame(cafes_nearby)
-                        st.session_state["region_cafe_df"] = df_region_cafes
-                        st.table(df_region_cafes)
-                    else:
-                        st.warning("Could not geocode city.")
-
-            if "region_cafe_df" in st.session_state:
-                        st.subheader("Compare with a Café from Selected Region")
-                        options = st.session_state["region_cafe_df"]["Name"].tolist()
-                        selected_comp = st.selectbox("Choose a competitor café", options)
-
-                        comp_row = st.session_state["region_cafe_df"][st.session_state["region_cafe_df"]["Name"] == selected_comp].iloc[0]
-
-                        # Construct GPT prompt
-                        prompt = f"""
-                        The target café is {st.session_state['target_cafe_name']} located at {st.session_state['target_cafe_address']}.
-                        Here are the key demographics: {st.session_state['last_demo']}.
-
-                        The competitor café is {comp_row['Name']} located at {comp_row['Address']}.
-                        It appears in a nearby region with similar demographics.
-
-                        Please compare these two cafés from a business strategy perspective:
-                        - Who they likely attract?
-                        - Opportunities for the target café to compete or differentiate?
-                        - What the competitor might be doing well?
-                        Return this in bullet points. Ensure each point has examples pulled from the internet or data to provide meaninfgul comparison
-                        """
-
-                        response = client.chat.completions.create(
-                            model="gpt-4o",
-                            messages=[{"role": "user", "content": prompt}]
-                        )
-
-                        st.subheader("GPT Insights")
-                        st.markdown(response.choices[0].message.content)
-
-    # --- Optimizer Tab ---
-    with tab_optimize:
-        st.header("🔧 Optimization Assistant")
-
-        # 1) Load submissions
-        df = load_sheet_df()
-        if df.empty:
-            st.info("No data submitted yet.")
+            st.info("No submissions available.")
             st.stop()
 
-        # 2) Café selector
-        cafes = df["Business Name"].unique().tolist()
-        selected = st.selectbox("Select café", cafes, key="optimize_cafe")
-        record = df[df["Business Name"] == selected].iloc[0]
+        cafes = df["Business Name"].dropna().unique().tolist()
+        selected_cafe = st.selectbox("Select a café to view ", cafes, key="form_tab_select")
 
-        # 3) Split form vs. demographics
-        headers = get_headers()
-        ts_index = headers.index("Timestamp") + 1
-        form_data = {c: record[c] for c in headers[:ts_index]}
-        demo_data = {c: record[c] for c in headers[ts_index:] if pd.notna(record[c])}
+        # ✅ Store selection for use in Explore and Deep Dive
+        st.session_state["target_cafe_name"] = selected_cafe
 
-        # 4) Load POS
-        ws_pos = get_pos_sheet()
-        pos_data = (
-            pd.DataFrame(ws_pos.get_all_records()).to_dict("records")
-            if ws_pos else []
-        )
+        matches = df[df["Business Name"] == selected_cafe]
+        if matches.empty:
+            st.warning("No data found for the selected café.")
+            st.stop()
 
-        extra = record.get("Additional Insight", "")
-        context = {
-            "form": form_data,
-            "demographics": demo_data,
-            "pos": pos_data,
-            "pos_raw": pos_data,
-            "labor_raw": None,
-            "extra": extra,
+        record = matches.iloc[0]
+
+        # ✅ Define grouped carousel structure
+        grouped_fields = {
+            "🏪 Business Overview": ["Business Name", "Location Address", "Stage"],
+            "🎯 Target Market": ["Target Market"],
+            "✨ What Sets Us Apart": ["Differentiators"],
+            "⭐ Signature Item": ["Signature Item"],
+            "📈 Goals": ["Goals"],
+            "🧩 Current Challenges": ["Current Challenges"],
+            "💬 Brand Personality": ["Brand Personality"],
+            "👥 Customer Perception": ["Customer Perception"],
+            "🏁 Success Means": ["Definition of Success"],
+            "🥊 Key Competitors": ["Competitors"],
+            "🛒 Customer Journey": ["Customer Journey"],
+            "🧠 Unknowns / Strategic Questions": ["Unknowns"],
+            "📊 Demographic Gaps": ["Demographic Gaps"],
+            "🚀 Growth Definition": ["Growth Definition"],
+            "📢 Recent Changes": ["Recent Changes"],
+            "🗺️ Location Plans": ["Location Plans"],
+            "⚡ Immediate Focus": ["Immediate Change"],
         }
 
-        if st.button("Run Optimization Engine"):
-            with st.spinner("Running GPT + ML to optimize your café operations..."):
-                results = run_optimization(context)
+        section_titles = list(grouped_fields.keys())
+        total_sections = len(section_titles)
 
-            st.success("Optimization complete!")
-            for res in results["responses"]:
-                st.subheader(f"🧠 Prompt: {res['prompt']}")
-                st.markdown(res["answer"])
+        if "summary_section_index" not in st.session_state:
+            st.session_state.summary_section_index = 0
 
-            if "charts" in results:
-                st.markdown("---")
-                st.subheader("📊 Visual Insights")
+        # ✅ Arrow navigation buttons
+        col1, col2, col3 = st.columns([1, 6, 1])
+        with col1:
+            if st.button("⬅️", use_container_width=True) and st.session_state.summary_section_index > 0:
+                st.session_state.summary_section_index -= 1
+        with col3:
+            if st.button("➡️", use_container_width=True) and st.session_state.summary_section_index < total_sections - 1:
+                st.session_state.summary_section_index += 1
 
-                if "prophet" in results["charts"]:
-                    st.markdown("**Sales Forecast (Prophet)**")
-                    st.pyplot(results["charts"]["prophet"])
+        # ✅ CSS Styling for section box
+        st.markdown("""
+        <style>
+        .section-box {
+            padding: 1.2em;
+            background-color: #2b2b2b;
+            border-radius: 15px;
+            margin-bottom: 1.2em;
+            color: #B0A698;
+        }
+        .section-box h3 {
+            color: #bda967;
+            margin-bottom: 0.3em;
+        }
+        .section-box ul {
+            padding-left: 1.2em;
+        }
+        </style>
+        """, unsafe_allow_html=True)
 
-                if "kmeans" in results["charts"]:
-                    st.markdown("**Menu Clustering (KMeans)**")
-                    st.pyplot(results["charts"]["kmeans"])
+        # ✅ Render current section content
+        section_key = section_titles[st.session_state.summary_section_index]
+        field_labels = grouped_fields[section_key]
 
-                if "regression" in results["charts"]:
-                    st.markdown("**Labor Efficiency (RandomForest)**")
-                    st.pyplot(results["charts"]["regression"])
+        html_content = f"<div class='section-box'><h3>{section_key}</h3><ul>"
+        for label in field_labels:
+            val = record.get(label, "")
+            if val:
+                lines = [line.strip() for line in str(val).split("\n") if line.strip()]
+                for line in lines:
+                    html_content += f"<li>{line}</li>"
+        html_content += "</ul></div>"
 
-                if "xgboost" in results["charts"]:
-                    st.markdown("**Waste Drivers (XGBoost Feature Importance)**")
-                    st.pyplot(results["charts"]["xgboost"])
+        st.markdown(html_content, unsafe_allow_html=True)
+        st.caption(f"{st.session_state.summary_section_index + 1} of {total_sections}")
 
-        st.markdown("---")
-        st.subheader("Ask the Optimizer Directly")
-        custom_q = st.text_area("Enter a specific optimization question")
-        if st.button("Ask Optimizer"):
-            with st.spinner("Analyzing your custom request..."):
-                follow_up = run_optimization(context, prompts=[custom_q])
-            for res in follow_up["responses"]:
-                st.subheader(res["prompt"])
-                st.write(res["answer"])
+        # ✅ Upload missing files section
+        st.subheader("📎 Upload Missing Files")
+        uploaded_file_fields = {
+            "Sales Summary (0–24 months)": "Sales Summary",
+            "Product Mix (by Item)": "Product Mix",
+            "Order Details": "Order Details",
+            "Expenses": "Expenses",
+            "Employee Schedule": "Employee Schedule",
+            "Rewards Program": "Rewards Program",
+            "Menu PDF": "Menu PDF"
+        }
 
-    # --- Presentation Tab ---
-    with tab_summary:
-        st.header("Interactive Presentation")
-        st.write("🧪 Presentation tab loaded correctly.")
+        for label, key in uploaded_file_fields.items():
+            col1, col2 = st.columns([2, 3])
+            with col1:
+                file_url = record.get(key, "")
+                if file_url and str(file_url).startswith("http"):
+                    st.markdown(f"[🔗 Download {label}]({file_url})")
+                else:
+                    st.markdown(f"❌ No link for {label}")
+            with col2:
+                uploaded = st.file_uploader(f"Re-upload {label}", key=key)
+                if uploaded:
+                    try:
+                        if uploaded.name.endswith(".csv"):
+                            df_uploaded = pd.read_csv(uploaded)
+                        elif uploaded.name.endswith((".xlsx", ".xls")):
+                            df_uploaded = pd.read_excel(uploaded)
+                        else:
+                            df_uploaded = None
 
-        # Example demo content (replace with real summaries later)
-        sections = [
-            ("Cafe Summary", ["Eruta Nature is a nature-themed café.", "Located in Los Angeles."]),
-            ("Key Demographics", ["Young adult population", "High diversity index"]),
-            ("Explore Insights", ["Strong regular base", "Bagel combo performs well"]),
-            ("Optimizer Suggestions", ["Reduce spend on underperforming items", "Optimize labor scheduling"]),
-            ("Deep Dive Goals", ["Align product mix with demographics", "Test targeted offers"]),
-            ("Next Steps", ["Pilot new menu items", "Monitor week-on-week revenue change"])
-        ]
-
-        if st.button("Generate Presentation"):
-            progress = st.progress(0.0)
-            progress.progress(0.3)
-
-            html = generate_impress_html(sections)
-            progress.progress(0.8)
-
-            components.html(html, height=600, scrolling=False)
-            progress.progress(1.0)
+                        if df_uploaded is not None:
+                            st.session_state[f"{key.lower().replace(' ', '_')}_df"] = df_uploaded
+                            st.success(f"{label} successfully re-uploaded!")
+                    except Exception as e:
+                        st.error(f"Failed to process {label}: {e}")
 
 
-    # --- Deep Dive Tab ---
-    with tab_deep:
-        st.header("Deep Dive Insights")
 
-        # 1) Load submissions
-        df = load_sheet_df()
-        if df.empty:
-            st.info("No data submitted yet.")
-            st.stop()
+        with st.expander("Explore", expanded=False):
+            st.header("📍 View whats around")
 
-        # 2) Café selector
-        cafes = df["Business Name"].unique().tolist()
-        selected = st.selectbox("Select café", cafes)
-        record = df[df["Business Name"] == selected].iloc[0]
+            selected = st.session_state.get("target_cafe_name", None)
+            if not selected:
+                st.info("Please select a café in the Summary tab first.")
+                st.stop()
 
-        # 3) Split form vs. demographics
-        headers = get_headers()
-        ts_index = headers.index("Timestamp") + 1
-        form_data = {c: record[c] for c in headers[:ts_index]}
-        demo_data = {c: record[c] for c in headers[ts_index:] if pd.notna(record[c])}
+            df = df_global
+            record = df[df["Business Name"] == selected].iloc[0]
+            address = record["Location Address"]
+            st.markdown(f"**Address:** {address}")
 
-        # 4) Load POS if exists
-        ws_pos = get_pos_sheet()
-        pos_data = (
-            pd.DataFrame(ws_pos.get_all_records()).to_dict("records")
-            if ws_pos
-            else []
-        )
+            # Only run exploration once or reuse results
+            if "last_demo" not in st.session_state or "last_cafes" not in st.session_state:
+                map_html, demo, cafes = run_explorer(address)
+                st.session_state["last_demo"] = demo
+                st.session_state["last_cafes"] = cafes
+                st.session_state["target_cafe_address"] = address
+                st.session_state["map_html"] = map_html  # Store initial map
 
-        extra = record.get("Additional Insight", "")
+            # Load previous results
+            demo = st.session_state["last_demo"]
+            cafes = st.session_state["last_cafes"]
 
-        # 5) Pick which goals
-        st.markdown("### Pick which Deep-Dive areas to run:")
-        do_marketing = st.checkbox("🟦 Marketing", value=True)
-        do_finance   = st.checkbox("🟥 Finance", value=True)
-        do_compete   = st.checkbox("🟩 Competitor Insight", value=True)
+            df_cafes = pd.DataFrame(cafes).fillna("").astype(str)
 
-        # 6) Define question buckets
-        marketing_qs = [
-            "Based on local ArcGIS demographics (age, income, ethnicity), do your current top-selling items align with dominant consumer preferences?",
-            "What percentage of your highest AOV customers belong to the reported target group (e.g., 18–24, students)?",
-            "Are there underserved demographic groups nearby (e.g., young professionals, working parents, older adults) who might respond to different offerings?",
-        ]
-        finance_qs = [
-            "Which top 10 selling items yield the highest vs. lowest net profit margins, after accounting for modifiers, discounts, and waste?",
-            "Are there high-volume, low-margin items (e.g., bagels, basic drinks) that could be bundled or upsold to increase AOV?",
-            "What % of weekly revenue comes from your top 3 items (e.g., Bagel Combo, Latte, Matcha)?",
-            "How do average order values differ between weekdays and weekends, and are certain hours consistently underperforming?",
-            "Based on item-level waste and refund rates, which products contribute most to unnecessary cost?",
-            "How many orders are fulfilled per employee during each shift, and where are the biggest bottlenecks?",
-        ]
-        competitor_qs = [
-            "How does your demographic profile (students 18–24) compare to those of your top 3 competitors within 1 mile?",
-            "Which competitors are leveraging seasonal specials, mobile ordering, or loyalty programs to drive repeat traffic — and what could you adapt?",
-            "Which product types (e.g., specialty drinks, protein-rich meals) are you not offering that competitors succeed with?",
-            "Is your revenue/sqft higher or lower than cafés with similar sales volume, seating, and staff count?",
-            "Which of your current differentiators (e.g., indoor space, menu creativity, healthiness) are under-leveraged based on online comparisons?",
-        ]
+            # -- Selectbox must come BEFORE the updated map call
+            selected_flash = st.selectbox("Select Café Nearby to View", df_cafes["Name"].tolist())
 
-        queries = []
-        if do_marketing:
-            queries += marketing_qs
-        if do_finance:
-            queries += finance_qs
-        if do_compete:
-            queries += competitor_qs
+            # Regenerate map with green marker on selected_flash
+            map_html, _, _ = run_explorer(address, selected_nearby_name=selected_flash)
+            st.session_state["map_html"] = map_html  # Update map in session state
 
-        if not queries:
-            st.warning("Select at least one area to deep-dive on.")
-        else:
+            col_map, col_info = st.columns([3, 2])
+
+            with col_map:
+                st.subheader("📍 Map View (your cafe in red)")
+                st.components.v1.html(map_html, height=500)
+
+            with col_info:
+                st.subheader("📊 Key Demographics")
+                selected_demo = st.selectbox("Select Demographic Metric", list(demo.keys()))
+                demo_val = demo[selected_demo]
+
+                st.markdown(f"""
+                <div style='padding: 1em; border-radius: 10px; background-color: #2b2b2b; color: #bda967; text-align: center;'>
+                    <h2 style='font-size: 2em; margin: 0;'>{demo_val}</h2>
+                    <div style='font-size: 1.1em; color: #B0A698;'>{selected_demo}</div>
+                </div>
+                """, unsafe_allow_html=True)
+
+                st.subheader("☕ Nearby Cafés (marked in green)")
+                selected_row = df_cafes[df_cafes["Name"] == selected_flash].iloc[0]
+                st.markdown(f"""
+                <div style='background-color:#2b2b2b; padding: 1em; border-radius: 10px;'>
+                    <h3 style='color:#bda967;'>{selected_row["Name"]}</h3>
+                    <p style='color:#B0A698;'>📍 {selected_row["Address"]}</p>
+                </div>
+                """, unsafe_allow_html=True)
+
+# === New Comparison Block (More Efficient, Split) ===
+            if "last_demo" in st.session_state:
+                st.subheader("Compare with Similar Demographic Regions")
+
+                city = st.text_input("Enter city to search for similar regions", "Los Angeles")
+                k = 3
+
+                if st.button("🔍 Find Similar Regions"):
+                    token = get_token()
+                    lat, lon = geocode(city, token)
+
+                    if lat is None:
+                        st.warning("Could not geocode city.")
+                    else:
+                        with st.spinner("Fetching regions..."):
+                            # Cache batch to avoid refetching if city hasn't changed
+                            if "cached_city" not in st.session_state or st.session_state["cached_city"] != city:
+                                batch = fetch_demographics_batch(lat, lon, token, n=10)
+                                st.session_state["cached_batch"] = batch
+                                st.session_state["cached_city"] = city
+                            else:
+                                batch = st.session_state["cached_batch"]
+
+                            top_k = get_similar_regions(st.session_state["last_demo"], batch, k)
+                            st.session_state["top_k_regions"] = top_k
+
+            # === Show Region Selector and Map/Cafés, independently ===
+            # === Show Region Selector and Map/Cafés independently ===
+            if "top_k_regions" in st.session_state:
+                top_k = st.session_state["top_k_regions"]
+                region_names = top_k["_region_name"].tolist()
+
+                # Store selected region persistently
+                selected_region = st.selectbox("Select region to view", region_names, key="region_select")
+
+                if "last_selected_region" not in st.session_state or st.session_state["last_selected_region"] != selected_region:
+                    st.session_state["last_selected_region"] = selected_region
+                    selected_row = top_k[top_k["_region_name"] == selected_region].iloc[0]
+                    region_lat, region_lon = selected_row["_lat"], selected_row["_lon"]
+                    cafes_nearby = fetch_cafes_in_region(region_lat, region_lon)
+                    st.session_state["selected_region_coords"] = (region_lat, region_lon)
+                    st.session_state["selected_region_cafes"] = cafes_nearby
+
+                # ✅ Always use latest values from session state (even if not newly selected)
+                region_lat, region_lon = st.session_state.get("selected_region_coords", (None, None))
+                cafes_nearby = st.session_state.get("selected_region_cafes", [])
+
+                if region_lat is not None and region_lon is not None:
+                    col_map, col_list = st.columns([2.5, 1.5])
+
+                    with col_map:
+                        m2 = folium.Map(location=[region_lat, region_lon], zoom_start=13)
+                        folium.Marker(
+                            [region_lat, region_lon],
+                            tooltip=f"📍 {selected_region}",
+                            icon=folium.Icon(color="red")
+                        ).add_to(m2)
+
+                        for cafe in cafes_nearby:
+                            clat, clon = cafe["Lat"], cafe["Lon"]
+                            if clat and clon:
+                                folium.Marker(
+                                    [clat, clon],
+                                    popup=f"{cafe['Name']} ({cafe['Address']})",
+                                    icon=folium.Icon(color="green", icon="coffee", prefix="fa")
+                                ).add_to(m2)
+
+                        st.components.v1.html(m2._repr_html_(), height=500)
+
+                    with col_list:
+                        st.markdown("### Nearby Cafés")
+                        df_similar = pd.DataFrame(cafes_nearby)
+                        for c in df_similar.columns:
+                            df_similar[c] = df_similar[c].fillna("").astype(str)
+                        st.dataframe(df_similar, use_container_width=True)
+
+
+                # --- Exploration Tab ---
+
+        with st.expander("Consumer Buckets", expanded=False):
+            st.header("🧠 Consumer Buckets")
+
+            # --- Load data ---
+            df = df_global
+            selected = st.session_state.get("target_cafe_name", None)
+            if not selected:
+                st.info("Please select a café in the Summary tab first.")
+                st.stop()
+
+            df = df_global
+            record = df[df["Business Name"] == selected].iloc[0]
+
+            columns = df.columns.tolist()
+            menu_index = columns.index("Menu PDF") + 1
+            form_data = record.loc[columns[:menu_index]].to_dict()
+            demo_data = record.loc[columns[menu_index:]].dropna().to_dict()
+
+            if "product_mix_df" not in st.session_state or "order_details_df" not in st.session_state:
+                st.warning("Please upload Product mix and Order Details in the form tab first.")
+                st.stop()
+
+            pos_data = st.session_state["product_mix_df"].to_dict("records")
+            order_data = st.session_state["order_details_df"].to_dict("records")
+
             context = {
                 "form": form_data,
                 "demographics": demo_data,
                 "pos": pos_data,
-                "extra": extra,
+                "order_details": order_data
             }
-            deep = run_deep_dive(context, queries)
 
-            for resp in deep["responses"]:
-                st.subheader(resp["query"])
-                st.write(resp["answer"])
+            # --- Run analysis if not cached ---
+            if "persona_result" not in st.session_state:
+                with st.spinner("Running persona clustering and assignment..."):
+                    st.session_state.persona_result = buckets.run(context)
 
-            if st.button("📑 Generate PPT & PDF Report"):
-                from pptx import Presentation
-                from pptx.util import Pt, Inches
-                from pptx.dml.color import RGBColor
-                from pptx.enum.shapes import MSO_SHAPE
-                from reportlab.pdfgen import canvas
-                from reportlab.lib.pagesizes import letter
-                import io
-                from datetime import datetime
-                import math
+            result = st.session_state.persona_result
 
-                prog = st.progress(0)
-                grouped = {}
-                for resp in deep["responses"]:
-                    q, a = resp["query"], resp["answer"]
-                    if q in marketing_qs:
-                        goal = "Marketing"
-                    elif q in finance_qs:
-                        goal = "Finance"
-                    else:
-                        goal = "Competitor Insight"
-                    grouped.setdefault(goal, []).append((q, a))
-                prog.progress(0.3)
+            cluster_df = result["persona_assignments"]
+            cluster_personas = result["desciptions"]
+            top_items_all = result["top_items"]
+            bucket_sizes = result["footfall_estimates"]
 
-                prs = Presentation()
-                theme_gold = RGBColor(189, 169, 103)
-                theme_text = RGBColor(176, 166, 152)
-                theme_bg = RGBColor(18, 18, 18)
+            # === Format: Persona Descriptions ===
+            persona_summary = {
+                f"Cluster {i}": cluster_personas.get(i, "No description available.")
+                for i in range(7)
+                if i in cluster_personas
+            }
 
-                title_slide = prs.slides.add_slide(prs.slide_layouts[6])
-                shape = title_slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, prs.slide_width, prs.slide_height)
-                shape.fill.solid()
-                shape.fill.fore_color.rgb = theme_bg
+            # === Format: Top Items Per Persona ===
+            top_items_summary = {
+                f"Cluster {i}": ", ".join([f"{k} ({v})" for k, v in top_items_all.get(i, {}).items()])
+                for i in range(7)
+                if top_items_all.get(i)
+            }
 
-                title = title_slide.shapes.title or title_slide.shapes.add_textbox(Inches(0.5), Inches(2), Inches(9), Inches(1))
-                title_tf = title.text_frame
-                title_tf.clear()
-                p = title_tf.paragraphs[0]
-                p.text = f"Take my Advice – {selected}"
-                p.font.size = Pt(36)
-                p.font.bold = True
-                p.font.color.rgb = theme_gold
+            # === Format: Persona Sizes ===
+            persona_sizes = {
+                f"Cluster {i}": int(bucket_sizes.get(i, 0))
+                for i in range(7)
+                if bucket_sizes.get(i, 0) > 0
+            }
 
-                sub = title_slide.shapes.add_textbox(Inches(0.5), Inches(3), Inches(9), Inches(1)).text_frame
-                p = sub.paragraphs[0]
-                p.text = "Generated on " + datetime.utcnow().strftime("%Y-%m-%d")
-                p.font.size = Pt(18)
-                p.font.color.rgb = theme_text
+            # === Format: Top Tags Per Persona ===
+            persona_tags = {
+                f"Cluster {i}": ", ".join(
+                    cluster_df[cluster_df["Matched Order Cluster"] == i]["tag"]
+                    .value_counts()
+                    .head(3)
+                    .index
+                ) or "N/A"
+                for i in range(7)
+                if not cluster_df[cluster_df["Matched Order Cluster"] == i].empty
+            }
 
-                all_qas = [(goal, q, a) for goal, qas in grouped.items() for q, a in qas]
-                total_qas = len(all_qas)
-                slides_needed = 10
-                chunk_size = math.ceil(total_qas / slides_needed)
-                chunks = [all_qas[i:i + chunk_size] for i in range(0, total_qas, chunk_size)]
-                while len(chunks) < slides_needed:
-                    chunks.append([])
+            # ✅ Save into session state
+            st.session_state["persona_gpt_summary"] = {
+                "persona_summary": persona_summary,
+                "top_items_summary": top_items_summary,
+                "persona_sizes": persona_sizes,
+                "persona_tags": persona_tags,
+            }
+            if result is None:
+                st.error("Analysis failed. Please check logs.")
+                return
 
-                for chunk in chunks:
-                    slide = prs.slides.add_slide(prs.slide_layouts[6])
-                    shape = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, 0, 0, prs.slide_width, prs.slide_height)
-                    shape.fill.solid()
-                    shape.fill.fore_color.rgb = theme_bg
+            st.success("✅ Persona estimation complete!")
+            cluster_df = result["persona_assignments"]
+            cluster_personas = result["desciptions"]
+            top_items_all = result["top_items"]
+            summary_df = result["cluster_summary"]
+            bucket_sizes = result["footfall_estimates"]
 
-                    tf = slide.shapes.add_textbox(Inches(0.5), Inches(0.5), Inches(9), Inches(6)).text_frame
-                    tf.word_wrap = True
-                    for goal, q, a in chunk:
-                        p1 = tf.add_paragraph()
-                        p1.text = f"[{goal}]"
-                        p1.font.size = Pt(16)
-                        p1.font.bold = True
-                        p1.font.color.rgb = theme_gold
+            # --- Top Row (3 Sections) ---
+            st.markdown("### 🔍 High-Level Consumer Breakdown")
+            col1, col2, col3 = st.columns([1, 1.2, 1])
 
-                        p2 = tf.add_paragraph()
-                        p2.text = f"Q: {q}"
-                        p2.font.size = Pt(14)
-                        p2.font.bold = True
-                        p2.font.color.rgb = theme_text
+            # Section 1: Pie chart of consumer personas
+            with col1:
+                fig, ax = plt.subplots()
+                pd.Series(bucket_sizes).plot.pie(autopct='%1.1f%%', ax=ax, startangle=90)
+                ax.set_ylabel('')
+                ax.set_title("Consumer Persona Distribution")
+                st.pyplot(fig)
 
-                        p3 = tf.add_paragraph()
-                        p3.text = f"A: {a}"
-                        p3.font.size = Pt(14)
-                        p3.font.color.rgb = theme_text
+            # Section 2: DataFrame of persona + tags + items
+            with col2:
+                def collect_tags(cluster):
+                    tags = cluster_df[cluster_df["Matched Order Cluster"] == cluster]["tag"].value_counts().head(3).index.tolist()
+                    return ", ".join(tags) if tags else "N/A"
 
-                        tf.add_paragraph().text = ""
+                def collect_items(cluster):
+                    items = top_items_all.get(cluster, {})
+                    return ", ".join([f"{k} ({v})" for k, v in items.items()]) if items else "N/A"
 
-                pptx_io = io.BytesIO()
-                prs.save(pptx_io)
-                pptx_bytes = pptx_io.getvalue()
-                prog.progress(0.6)
+                display_df = pd.DataFrame([
+                    {
+                        "Cluster": i,
+                        "People": bucket_sizes.get(i, 0),
+                        "Top Tags": collect_tags(i),
+                        "Top Items": collect_items(i)
+                    }
+                    for i in range(7)
+                ])
+                st.dataframe(display_df)
 
-                pdf_io = io.BytesIO()
-                c = canvas.Canvas(pdf_io, pagesize=letter)
-                width, height = letter
-                y = height - 50
-                c.setFont("Helvetica-Bold", 18)
-                c.setFillColorRGB(189/255, 169/255, 103/255)
-                c.drawString(50, y, f"Café Deep Dive – {selected}")
-                y -= 40
-                for goal, items in grouped.items():
-                    c.setFont("Helvetica-Bold", 14)
-                    c.setFillColorRGB(1, 1, 1)
-                    c.drawString(50, y, f"{goal} Insights")
-                    y -= 20
-                    c.setFont("Helvetica", 12)
-                    for q, a in items:
-                        lines = [f"Q: {q}", f"A: {a}"]
-                        for line in lines:
-                            for subline in line.split("\n"):
-                                c.drawString(70, y, subline)
-                                y -= 15
-                                if y < 50:
-                                    c.showPage()
-                                    y = height - 50
-                                    c.setFont("Helvetica", 12)
-                    y -= 20
-                c.save()
-                pdf_bytes = pdf_io.getvalue()
-                prog.progress(1.0)
+            # Section 3: Persona Description
+            with col3:
+                selected_cluster = st.selectbox("Select Cluster for Description", list(range(7)), key="desc_cluster")
+                desc = cluster_personas.get(selected_cluster, "No description available.")
 
-                st.download_button("Download PPTX", pptx_bytes, file_name=f"Take My Advice [{selected}].pptx", mime="application/vnd.openxmlformats-officedocument.presentationml.presentation")
-                st.download_button("Download PDF", pdf_bytes, file_name=f"Take My Advice [{selected}].pdf", mime="application/pdf")
+                # ✅ Extract clean title without "Cluster 0 –"
+                first_line = desc.splitlines()[0]
+                clean_title = first_line.split("–", 1)[-1].strip()
 
-        st.markdown("---")
-        st.subheader("Chat with the Café AI")
-        user_q = st.text_area("Your question")
-        if st.button("Send"):
-            with st.spinner("🤖 Café AI is thinking…"):
-                follow = run_deep_dive(context, [user_q])
-            for resp in follow["responses"]:
-                st.subheader(resp["query"])
-                st.write(resp["answer"])
+                st.markdown(f"""### {clean_title}\n\n{desc}""")
+
+
+            # --- Bottom Row (2 Pie Charts) ---
+            st.markdown("### 👥 Deep Dive into Selected Persona")
+
+            selected_cluster_bottom = st.selectbox("Persona to Visualize", list(range(7)), key="bottom_cluster")
+
+            tags = (
+                cluster_df[cluster_df["Matched Order Cluster"] == selected_cluster_bottom]["tag"]
+                .value_counts()
+            )
+            items = top_items_all.get(selected_cluster_bottom, {})
+
+            col4, col5 = st.columns(2)
+
+            with col4:
+                if not tags.empty:
+                    fig1, ax1 = plt.subplots()
+                    tags.plot.pie(autopct='%1.1f%%', ax=ax1, startangle=90)
+                    ax1.set_ylabel('')
+                    ax1.set_title("Tag Distribution in Persona")
+                    st.pyplot(fig1)
+                else:
+                    st.info("No tag data available for this persona.")
+
+            with col5:
+                if items:
+                    fig2, ax2 = plt.subplots()
+                    pd.Series(items).plot.pie(autopct='%1.1f%%', ax=ax2, startangle=90)
+                    ax2.set_ylabel('')
+                    ax2.set_title("Top Order Items in Persona")
+                    st.pyplot(fig2)
+                else:
+                    st.info("No item data available for this persona.")
+
+
+    # --- Deep Dive Tab ---
+    with tab_deep:
+        st.header("Advice AI [...]")
+
+        # 1) Load global submission
+        df = df_global
+        if df.empty:
+            st.info("No data submitted yet.")
+            st.stop()
+
+        # 2) Load preselected café from Summary tab
+        selected = st.session_state.get("target_cafe_name")
+        if not selected:
+            st.warning("Please select a café in the Summary tab first.")
+            st.stop()
+
+        record = df[df["Business Name"] == selected].iloc[0]
+
+        # 3) Parse form + demo data
+        columns = df.columns.tolist()
+        form_data = record.loc[columns[:menu_index]].to_dict()
+        demo_data = record.loc[columns[menu_index:]].dropna().to_dict()
+
+        if "product_mix_df" not in st.session_state:
+            st.warning("Please upload Product mix ")
+            st.stop()
+
+        pos_data = st.session_state["product_mix_df"].to_dict("records")
+
+        # 4) Define the 7 final prompts
+        AI_PROMPTS = [
+            "What patterns in product performance, margin, and customer behavior reveal the biggest opportunities for smarter pricing, bundling, or removal?",
+            "Which menu or inventory items represent the highest operational risk in terms of waste, workflow disruption, or service delay?",
+            "Which customer segments (by purchase behavior or frequency) are being under-served or pose a risk to long-term retention and revenue growth?",
+            "What changes in foot traffic or transaction volume would overwhelm current systems, and where are the choke points in labor, prep, and throughput?",
+            "Which timeframes (by hour or day) show misalignment between customer demand and sales efficiency, and how can the business better match supply to demand?",
+            "How does this business compare to similar businesses in the local area in terms of product mix, pricing, operational health, and revenue potential?",
+            "Based on current trajectory and financial performance, what growth, reinvestment, or optimization strategy will yield the highest ROI in the next 3–6 months?"
+        ]
+
+        # 5) Run once
+        context = {
+            "form": form_data,
+            "demographics": demo_data,
+            "pos": pos_data
+        }
+
+        # ➕ Add persona clustering results if available
+        if "persona_gpt_summary" in st.session_state:
+            context["persona_summary"] = st.session_state["persona_gpt_summary"]["persona_summary"]
+            context["top_items_summary"] = st.session_state["persona_gpt_summary"]["top_items_summary"]
+            context["persona_sizes"] = st.session_state["persona_gpt_summary"]["persona_sizes"]
+            context["persona_tags"] = st.session_state["persona_gpt_summary"]["persona_tags"]
+        else:
+            st.warning("Persona GPT summary not found in session. Deep dive may be limited.")
+
+
+        if "deep_dive_responses" not in st.session_state:
+            with st.spinner("Generating Advice [...]"):
+                st.session_state.deep_dive_responses = run_deep_dive(context, AI_PROMPTS)["responses"]
+                st.session_state.deep_followups = ["" for _ in AI_PROMPTS]
+                st.session_state.deep_followup_answers = ["" for _ in AI_PROMPTS]
+
+        # 6) Display each slide
+        num_prompts = len(AI_PROMPTS)
+        idx = st.slider("Slide", 1, num_prompts, 1, key="ai_slide_index") - 1
+
+        prompt = st.session_state.deep_dive_responses[idx]["query"]
+        answer = st.session_state.deep_dive_responses[idx]["answer"]
+
+        st.subheader(f"Q{idx + 1}: {prompt}")
+        st.write(answer)
+
+        st.markdown("#### Ask a follow-up:")
+        followup = st.text_area("Follow-up question", st.session_state.deep_followups[idx], key=f"followup_{idx}")
+
+        if st.button("Ask", key=f"ask_btn_{idx}"):
+            with st.spinner("Thinking..."):
+                followup_resp = run_deep_dive(context, [followup])["responses"][0]["answer"]
+                st.session_state.deep_followups[idx] = followup
+                st.session_state.deep_followup_answers[idx] = followup_resp
+
+        if st.session_state.deep_followup_answers[idx]:
+            st.markdown("#### Response:")
+            st.write(st.session_state.deep_followup_answers[idx])
 
 
 if __name__ == "__main__":

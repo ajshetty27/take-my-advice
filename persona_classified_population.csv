@@ -1,0 +1,101 @@
+age,age_group,employed,income,race,household_size,Persona Cluster,Reason
+19,18-24,True,20111,Other,1,1,"This person fits the age and income range of the Iced Latte Devotee. They are also employed, suggesting they might use the cafe space for work/study."
+23,18-24,False,11403,Other,2,1,"This person fits the age range of the Iced Latte Devotee and is not employed, suggesting they might use the cafe space for leisure or study."
+18,18-24,True,19476,Other,1,1,"This person fits the age and income range of the Iced Latte Devotee. They are also employed, suggesting they might use the cafe space for work/study."
+32,25-34,True,32260,Other,3,0,"This person fits the age and income range of the Classic Combo Loyalist. They are also employed, suggesting a need for a consistent, quality meal."
+31,25-34,False,4868,Other,3,6,"This person fits the age range of the Early Bagel Purist. Their lower income and unemployment status suggest a need for simple, consistent, and affordable meals."
+33,25-34,True,36214,White,2,0,"This person fits the age and income range of the Classic Combo Loyalist. They are also employed, suggesting a need for a consistent, quality meal."
+24,18-24,True,19111,Other,3,1,"This person fits the age and income range of the Iced Latte Devotee. They are also employed, suggesting they might use the cafe space for work/study."
+27,25-34,True,40952,White,1,3,"This person fits the age and income range of the Morning Latte Regular. They are also employed, suggesting a need for a quick grab-and-go coffee to start their day."
+24,18-24,False,6396,Other,1,1,"This person fits the age range of the Iced Latte Devotee and is not employed, suggesting they might use the cafe space for leisure or study."
+20,18-24,False,3514,Black,1,1,"This person fits the age range of the Iced Latte Devotee and is not employed, suggesting they might use the cafe space for leisure or study."
+28,25-34,True,23968,Other,1,1,This person falls into the age range and income bracket of the Iced Latte Devotee. They are employed and likely to use the café space for work or study.
+31,25-34,True,28926,White,1,0,This person's age and income align with the Classic Combo Loyalist. They may appreciate the quality and routine of a midday bagel combo.
+25,25-34,True,22617,Other,1,1,"This person's age and income align with the Iced Latte Devotee. They are likely to be a student or freelancer who values quick, aesthetic drinks."
+69,65+,False,12300,Other,2,6,"Despite the age difference, this person's income and employment status align with the Early Bagel Purist. They may value simplicity and consistency."
+28,25-34,True,35094,Asian,3,5,This person's age and income align with the Matcha Minimalist. They may value clean ingredients and alternative milk options.
+50,35-64,True,35479,Other,2,6,This person's age and income align with the Early Bagel Purist. They may value consistency and simplicity in their morning routine.
+82,65+,False,9420,Other,1,6,"Despite the age difference, this person's income and employment status align with the Early Bagel Purist. They may value simplicity and consistency."
+33,25-34,True,35472,Other,4,2,"This person's age and income align with the Power Snacker. They may be ordering for multiple people and value fast, filling options."
+54,35-64,False,9959,Other,2,6,This person's income and employment status align with the Early Bagel Purist. They may value simplicity and consistency in their morning routine.
+82,65+,False,11308,Asian,5,6,"Despite the age difference, this person's income and employment status align with the Early Bagel Purist. They may value simplicity and consistency."
+21,18-24,True,26715,Other,2,1,"This person falls into the age range and income bracket of the Iced Latte Devotee, who are often students or freelancers."
+30,25-34,True,36105,Other,3,2,"This person's age and income align with the Power Snacker, who are often heavy lunch orderers, possibly ordering for multiple people."
+28,25-34,True,31334,Other,4,0,"This person's age and income align with the Classic Combo Loyalist, who are midday regulars ordering Bagel Combos with flavorful modifiers."
+29,25-34,True,25821,Asian,2,3,"This person's age and income align with the Morning Latte Regular, who are in-and-out loyalists who start the day with coffee."
+48,35-64,True,29013,Asian,3,6,"This person's age and income align with the Early Bagel Purist, who are early-morning, fast-service loyalists with no frills."
+23,18-24,False,8913,Other,2,1,"This person's age aligns with the Iced Latte Devotee, who are often students or freelancers."
+28,25-34,True,31626,White,2,0,"This person's age and income align with the Classic Combo Loyalist, who are midday regulars ordering Bagel Combos with flavorful modifiers."
+18,18-24,False,3497,White,1,1,"This person's age aligns with the Iced Latte Devotee, who are often students or freelancers."
+35,35-64,False,9648,White,1,6,"This person's age aligns with the Early Bagel Purist, who are early-morning, fast-service loyalists with no frills."
+27,25-34,True,30106,Black,2,3,"This person's age and income align with the Morning Latte Regular, who are in-and-out loyalists who start the day with coffee."
+22,18-24,True,16857,Black,1,1,This person matches the age and income range of the Iced Latte Devotee. They are employed and likely to be a student or freelancer.
+22,18-24,True,24158,White,2,4,This person fits the age and income range of the Afternoon Refresher. They are likely to be looking for a place to relax in the afternoon.
+24,18-24,False,8686,White,1,1,"This person is in the age range of the Iced Latte Devotee and likely to be a student or freelancer, even though their income is lower."
+38,35-64,True,35012,Other,3,2,This person matches the age and income range of the Power Snacker. They are likely to be a small business or hospital worker.
+26,25-34,True,21335,Other,2,1,This person fits the age and income range of the Iced Latte Devotee. They are likely to be a student or freelancer.
+83,65+,False,11690,Asian,3,6,"This person does not fit any of the age or income ranges, but the Early Bagel Purist is the closest match due to their simple needs."
+33,25-34,True,33706,Other,2,0,This person matches the age and income range of the Classic Combo Loyalist. They are likely to be a grad student or staff.
+25,25-34,True,33444,Black,3,5,This person fits the age and income range of the Matcha Minimalist. They are likely to be a student-athlete or influencer.
+33,25-34,True,12803,White,4,6,"This person fits the age range of the Early Bagel Purist. They are likely to be a labor, delivery, or maintenance worker."
+62,35-64,True,11451,Black,4,6,"This person does not fit any of the age or income ranges, but the Early Bagel Purist is the closest match due to their simple needs."
+44,35-64,False,14429,White,3,1,"This person's income and employment status align with the Iced Latte Devotee persona, who are often students or freelancers with a lower income."
+26,25-34,True,30579,Black,2,1,"This person's age, income, and employment status align with the Iced Latte Devotee persona, who are often students or freelancers with a lower income."
+63,35-64,True,32778,Other,2,6,"This person's age and income align with the Early Bagel Purist persona, who are typically older and have a lower income."
+27,25-34,True,28880,White,2,3,"This person's age, income, and employment status align with the Morning Latte Regular persona, who are typically employed individuals in their late 20s to mid 30s."
+21,18-24,False,4687,Asian,2,1,"This person's age and income align with the Iced Latte Devotee persona, who are often students or freelancers with a lower income."
+18,18-24,False,10284,Other,2,1,"This person's age and income align with the Iced Latte Devotee persona, who are often students or freelancers with a lower income."
+29,25-34,True,31520,Black,5,0,"This person's age and income align with the Classic Combo Loyalist persona, who are typically employed individuals in their late 20s to mid 30s."
+31,25-34,True,24341,Asian,2,2,"This person's age and income align with the Power Snacker persona, who are typically employed individuals in their 30s."
+29,25-34,False,9025,Black,3,1,"This person's age and income align with the Iced Latte Devotee persona, who are often students or freelancers with a lower income."
+27,25-34,False,13628,Other,2,1,"This person's age and income align with the Iced Latte Devotee persona, who are often students or freelancers with a lower income."
+26,25-34,True,26868,Asian,3,1,"This individual falls into the age range and income bracket of the Iced Latte Devotee. They are employed, which could mean they use the café space for work or study."
+25,25-34,True,25804,Other,4,1,This individual fits the age and income range of the Iced Latte Devotee. Their employment status suggests they might use the café for work or study.
+48,35-64,True,39981,Other,2,6,"This person's age and income align with the Early Bagel Purist. Their employment status and smaller household size suggest a need for quick, consistent service."
+19,18-24,False,11537,Other,2,1,"This individual's age and income suggest they could be a student, fitting the profile of the Iced Latte Devotee. Their lower income and employment status may make them more likely to seek loyalty rewards."
+50,35-64,True,43489,Other,2,6,"This person's age and income align with the Early Bagel Purist. Their employment status and smaller household size suggest a need for quick, consistent service."
+26,25-34,True,26592,Other,1,1,This individual fits the age and income range of the Iced Latte Devotee. Their employment status and single-person household suggest they might use the café for work or study.
+84,65+,False,8992,Other,2,6,"Despite the age difference, this person's low income and employment status align them with the Early Bagel Purist, who values consistency and simplicity."
+27,25-34,True,40499,Other,2,0,"This person's age, income, and employment status align with the Classic Combo Loyalist. Their household size suggests they might appreciate customizable options."
+63,35-64,True,34250,White,2,6,"This person's income and employment status align with the Early Bagel Purist. Despite the age difference, their smaller household size suggests a need for quick, consistent service."
+33,25-34,True,43814,White,3,2,"This person's age, income, and employment status align with the Power Snacker. Their larger household size suggests they might often order for multiple people."
+20,18-24,True,31870,Other,1,1,"This individual falls into the age and income range of Cluster 1. As a young, employed individual, they are likely to be a student or freelancer who would appreciate quick, aesthetic drinks and loyalty rewards."
+27,25-34,True,30556,Black,1,3,"This individual falls into the age and income range of Cluster 3. As a young, employed individual, they are likely to be a teacher or office worker who would appreciate quick grab and friendly familiarity."
+31,25-34,True,27544,Other,3,2,"This individual falls into the age range of Cluster 2. As an employed individual with a household size of 3, they are likely to be ordering for multiple people and would appreciate filling, consistent, and fast service."
+28,25-34,True,41074,Asian,3,0,"This individual falls into the age and income range of Cluster 0. As a grad student or staff, they are likely to be a midday regular who appreciates quality, routine, and customizable options."
+30,25-34,True,26590,White,4,2,"This individual falls into the age range of Cluster 2. As an employed individual with a household size of 4, they are likely to be ordering for multiple people and would appreciate filling, consistent, and fast service."
+20,18-24,False,8521,Other,1,1,"This individual falls into the age range of Cluster 1. As a young individual, they are likely to be a student or freelancer who would appreciate quick, aesthetic drinks and loyalty rewards."
+83,65+,False,10723,Other,2,6,"Despite the age difference, this individual's low income and employment status suggest they would appreciate the consistency and simplicity of Cluster 6."
+29,25-34,True,24296,Other,1,3,"This individual falls into the age range of Cluster 3. As a young, employed individual, they are likely to be a teacher or office worker who would appreciate quick grab and friendly familiarity."
+28,25-34,True,15028,White,3,6,"Despite the income difference, this individual's age, employment status, and household size suggest they would appreciate the consistency and simplicity of Cluster 6."
+24,18-24,True,31949,Other,3,1,"This individual falls into the age and income range of Cluster 1. As a young, employed individual, they are likely to be a student or freelancer who would appreciate quick, aesthetic drinks and loyalty rewards."
+32,25-34,True,28675,Other,3,0,"The age and income range match with Cluster 0. The employment status and household size also suggest a preference for quality and routine, which aligns with the Classic Combo Loyalist persona."
+53,35-64,True,43408,Asian,2,6,"The age and income range, as well as employment status, align with Cluster 6. The smaller household size suggests a preference for simplicity and consistency, matching the Early Bagel Purist persona."
+25,25-34,True,18706,Black,2,1,"The age and income range match with Cluster 1. The employment status and household size suggest a need for quick, aesthetic drinks and loyalty rewards, aligning with the Iced Latte Devotee persona."
+31,25-34,True,29773,Other,1,3,"The age and income range match with Cluster 3. The employment status and single-person household suggest a preference for quick grab and friendly familiarity, matching the Morning Latte Regular persona."
+34,25-34,True,26887,Other,3,0,"The age and income range match with Cluster 0. The employment status and household size suggest a preference for quality and routine, which aligns with the Classic Combo Loyalist persona."
+28,25-34,True,25238,Other,4,5,"The age and income range match with Cluster 5. The employment status and larger household size suggest a preference for clean ingredients, alt milk, and aesthetics, aligning with the Matcha Minimalist persona."
+19,18-24,False,5373,Other,3,1,"The age matches with Cluster 1. The lower income and unemployment status suggest a need for quick, aesthetic drinks and loyalty rewards, aligning with the Iced Latte Devotee persona."
+24,18-24,True,21023,White,5,1,"The age and income range match with Cluster 1. The employment status and larger household size suggest a need for quick, aesthetic drinks and loyalty rewards, aligning with the Iced Latte Devotee persona."
+59,35-64,False,10343,Other,2,6,"The age matches with Cluster 6. The lower income and unemployment status suggest a preference for simplicity and consistency, matching the Early Bagel Purist persona."
+29,25-34,False,10556,Other,2,1,"The age matches with Cluster 1. The lower income and unemployment status suggest a need for quick, aesthetic drinks and loyalty rewards, aligning with the Iced Latte Devotee persona."
+25,25-34,False,1037,Black,2,1,"Person 0 is a young individual with low income, likely a student, which aligns with the Iced Latte Devotee persona."
+22,18-24,False,5279,Black,2,1,"Person 1 is a young individual with low income, likely a student, which aligns with the Iced Latte Devotee persona."
+86,65+,False,5838,Other,1,6,"Person 2 is an older individual with a modest income, likely retired, which aligns with the Early Bagel Purist persona."
+31,25-34,False,6279,White,2,0,"Person 3 is a middle-aged individual with a modest income, likely a grad student or staff, which aligns with the Classic Combo Loyalist persona."
+25,25-34,True,11443,White,1,5,"Person 4 is a young individual with a decent income, likely health-conscious and aesthetic-driven, which aligns with the Matcha Minimalist persona."
+44,35-64,False,1779,Other,3,6,"Person 5 is a middle-aged individual with a low income, likely a laborer, which aligns with the Early Bagel Purist persona."
+72,65+,True,19348,White,3,2,"Person 6 is an older individual with a good income, likely ordering for multiple people, which aligns with the Power Snacker persona."
+27,25-34,True,23696,Other,3,4,"Person 7 is a young individual with a good income, likely looking for energy and calm in the afternoon, which aligns with the Afternoon Refresher persona."
+20,18-24,False,6431,Black,2,1,"Person 8 is a young individual with low income, likely a student, which aligns with the Iced Latte Devotee persona."
+28,25-34,True,15426,Other,1,3,"Person 9 is a young individual with a good income, likely a teacher or office worker, which aligns with the Morning Latte Regular persona."
+51,35-64,True,23028,White,3,6,This person's age and income align with the Early Bagel Purist cluster. They are employed and likely value consistency and simplicity.
+69,65+,True,30027,Other,1,6,"Despite the age being higher, this person's income and employment status suggest they might align with the Early Bagel Purist cluster, valuing simplicity."
+22,18-24,True,23587,Asian,3,1,"This person's age and income align with the Iced Latte Devotee cluster. They are likely a student or young professional seeking quick, aesthetic drinks."
+30,25-34,True,19959,Asian,3,0,This person's age and income align with the Classic Combo Loyalist cluster. They are likely a grad student or staff member who values quality and routine.
+30,25-34,True,30667,White,2,2,"This person's age and income align with the Power Snacker cluster. They are likely a small business worker who values filling, consistent, and fast meals."
+33,25-34,True,31258,Asian,1,0,This person's age and income align with the Classic Combo Loyalist cluster. They are likely a grad student or staff member who values quality and routine.
+64,35-64,True,33267,White,2,6,This person's age and income align with the Early Bagel Purist cluster. They are likely a laborer who values consistency and simplicity.
+51,35-64,False,9862,Other,5,6,"Despite being unemployed, this person's age and household size suggest they might align with the Early Bagel Purist cluster, valuing simplicity."
+43,35-64,True,21332,White,3,6,This person's age and income align with the Early Bagel Purist cluster. They are likely a laborer who values consistency and simplicity.
+31,25-34,True,25354,Other,2,0,This person's age and income align with the Classic Combo Loyalist cluster. They are likely a grad student or staff member who values quality and routine.

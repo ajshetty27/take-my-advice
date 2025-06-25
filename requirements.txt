@@ -1,7 +1,6 @@
 streamlit
 pandas
-dotenv
-python-pptx
+python-dotenv
 reportlab
 scikit-learn
 matplotlib
@@ -13,3 +12,7 @@ google-auth
 openai
 prophet
 statsmodels
+python-pptx
+torch
+tqdm
+scipy

@@ -116,22 +116,34 @@ def fetch_nearby_cafes(lat, lon, radius_km=1):
         })
     return cafes
 
-def create_map(lat, lon, cafes, prog=None):
+def create_map(lat, lon, cafes, prog=None, selected_nearby_name=None):
     if prog: prog.progress(0.8)
-    m = folium.Map(location=[lat, lon], zoom_start=13)
-    folium.Marker([lat, lon], tooltip="Target Café", icon=folium.Icon(color="red")).add_to(m)
+    m = folium.Map(location=[lat, lon], zoom_start=15)
+
+    # Red marker for main café
+    folium.Marker(
+        [lat, lon],
+        tooltip="Target Café",
+        icon=folium.Icon(color="red", icon="star", prefix="fa")
+    ).add_to(m)
+
+    # Markers for nearby cafés
     for cafe in cafes:
         clat, clon = cafe["Lat"], cafe["Lon"]
+        name = cafe["Name"]
         if clat and clon:
+            color = "green" if name == selected_nearby_name else "blue"
             folium.Marker(
                 [clat, clon],
-                popup=f"{cafe['Name']} ({cafe['Address']})",
-                icon=folium.Icon(color="blue", icon="coffee", prefix="fa")
+                popup=f"{name} ({cafe['Address']})",
+                icon=folium.Icon(color=color, icon="coffee", prefix="fa")
             ).add_to(m)
+
     if prog: prog.progress(1.0)
     return m
 
-def run_explorer(address):
+
+def run_explorer(address, selected_nearby_name=None):
     prog = st.progress(0.0)
     token = get_token()
     if not token:
@@ -143,42 +155,69 @@ def run_explorer(address):
     prog.progress(0.15)
     demo = fetch_demographics(lat, lon, token, prog)
     cafes = fetch_nearby_cafes(lat, lon)
-    map_obj = create_map(lat, lon, cafes, prog)
+    map_obj = create_map(lat, lon, cafes, prog, selected_nearby_name=selected_nearby_name)
     return map_obj._repr_html_(), demo, cafes
 
 def reverse_geocode(lat, lon, token):
-    r = requests.get(GEOCODE_URL, params={
+    url = "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode"
+    r = requests.get(url, params={
         "location": f"{lon},{lat}",
         "f": "json",
         "token": token
     })
-    j = r.json()
-    cands = j.get("candidates", [])
-    if not cands:
-        return "Unnamed Region"
 
-    address = cands[0].get("address")
-    if not address or "Unnamed" in address:
-        return "Unnamed Region"
+    if r.status_code != 200:
+        return "Unknown Region"
 
-    return address
+    addr = r.json().get("address", {})
+
+    return (
+        addr.get("Neighborhood") or
+        addr.get("City") or
+        addr.get("Region") or
+        addr.get("Match_addr") or
+        "Unnamed Region"
+    )
+
+
 
 
 # NEW FUNCTION: Get multiple demo regions near a location
-def fetch_demographics_batch(lat, lon, token, n=5):
-    offsets = [(i / 1000.0, i / 1000.0) for i in range(1, n + 1)]
+from math import radians, cos, sin, asin, sqrt
+
+def haversine(lat1, lon1, lat2, lon2):
+    # Compute distance in kilometers between two lat/lon points
+    lat1, lon1, lat2, lon2 = map(radians, [lat1, lon1, lat2, lon2])
+    dlat = lat2 - lat1
+    dlon = lon2 - lon1
+    a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2)**2
+    c = 2 * asin(sqrt(a))
+    return 6371 * c  # Earth radius in kilometers
+
+def fetch_demographics_batch(lat, lon, token, n=9):
+    # Generate a 3x3 grid around center with ~5km spacing
+    step = 0.1  # ~5 km lat/lon offset
+    offsets = [  # (dy, dx)
+        (dy, dx)
+        for dy in [-step, 0, step]
+        for dx in [-step, 0, step]
+    ]
+
     regions = []
-    for dy, dx in offsets:
+    for dy, dx in offsets[:n]:  # Use only top-n if needed
         new_lat = lat + dy
         new_lon = lon + dx
         demo = fetch_demographics(new_lat, new_lon, token)
         region_name = reverse_geocode(new_lat, new_lon, token)
+        distance_km = haversine(lat, lon, new_lat, new_lon)
         regions.append({
             **demo,
             "_lat": new_lat,
             "_lon": new_lon,
-            "_region_name": region_name
+            "_region_name": region_name,
+            "_distance_km": round(distance_km, 2)
         })
+
     return regions
 
 
