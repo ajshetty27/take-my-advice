@@ -14,6 +14,7 @@ import pandas as pd
 from gspread_dataframe import set_with_dataframe
 
 from openai import OpenAI
+from openai.types.chat import ChatCompletionChunk
 
 import io
 import matplotlib.pyplot as plt
@@ -199,6 +200,7 @@ def save_demographics_to_sheet(business_name, demo_dict):
     else:
         st.warning(f"⚠️ Could not find business name: '{business_name}' in the sheet.")
 
+
 # --- STREAMLIT APP ---
 def main():
     st.set_page_config(layout="wide")
@@ -222,7 +224,7 @@ def main():
             st.stop()
 
         cafes = df["Business Name"].dropna().unique().tolist()
-        selected_cafe = st.selectbox("Select a café to view ", cafes, key="form_tab_select")
+        selected_cafe = st.selectbox("Select a café to view", cafes, key="form_tab_select")
 
         # ✅ Store selection for use in Explore and Deep Dive
         st.session_state["target_cafe_name"] = selected_cafe
@@ -234,43 +236,30 @@ def main():
 
         record = matches.iloc[0]
 
-        # ✅ Define grouped carousel structure
+        # --------------------------
+        # ✅ Grouped Field Setup
+        # --------------------------
         grouped_fields = {
-            "🏪 Business Overview": ["Business Name", "Location Address", "Stage"],
-            "🎯 Target Market": ["Target Market"],
-            "✨ What Sets Us Apart": ["Differentiators"],
-            "⭐ Signature Item": ["Signature Item"],
-            "📈 Goals": ["Goals"],
-            "🧩 Current Challenges": ["Current Challenges"],
-            "💬 Brand Personality": ["Brand Personality"],
-            "👥 Customer Perception": ["Customer Perception"],
-            "🏁 Success Means": ["Definition of Success"],
-            "🥊 Key Competitors": ["Competitors"],
-            "🛒 Customer Journey": ["Customer Journey"],
-            "🧠 Unknowns / Strategic Questions": ["Unknowns"],
-            "📊 Demographic Gaps": ["Demographic Gaps"],
-            "🚀 Growth Definition": ["Growth Definition"],
-            "📢 Recent Changes": ["Recent Changes"],
-            "🗺️ Location Plans": ["Location Plans"],
-            "⚡ Immediate Focus": ["Immediate Change"],
+            "Business Identity": [
+                "Business Name", "Location Address", "Stage", "Signature Item", "Brand Personality"
+            ],
+            "Market Fit & Differentiation": [
+                "Target Market", "Differentiators", "Demographic Gaps", "Competitors"
+            ],
+            "Goals & Strategy": [
+                "Goals", "Growth Definition", "Definition of Success", "Unknowns"
+            ],
+            "Current Hurdles & Plans": [
+                "Current Challenges", "Recent Changes", "Location Plans", "Immediate Change"
+            ],
+            "Customer Understanding": [
+                "Customer Perception", "Customer Journey"
+            ],
         }
 
         section_titles = list(grouped_fields.keys())
-        total_sections = len(section_titles)
 
-        if "summary_section_index" not in st.session_state:
-            st.session_state.summary_section_index = 0
-
-        # ✅ Arrow navigation buttons
-        col1, col2, col3 = st.columns([1, 6, 1])
-        with col1:
-            if st.button("⬅️", use_container_width=True) and st.session_state.summary_section_index > 0:
-                st.session_state.summary_section_index -= 1
-        with col3:
-            if st.button("➡️", use_container_width=True) and st.session_state.summary_section_index < total_sections - 1:
-                st.session_state.summary_section_index += 1
-
-        # ✅ CSS Styling for section box
+        # ✅ CSS Styling
         st.components.v1.html("""
         <style>
         .section-box {
@@ -290,26 +279,28 @@ def main():
         </style>
         """, height=0)
 
+        # --------------------------
+        # ✅ Render as Internal Tabs
+        # --------------------------
+        internal_tabs = st.tabs(section_titles)
 
-        # ✅ Render current section content
-        section_key = section_titles[st.session_state.summary_section_index]
-        field_labels = grouped_fields[section_key]
+        for tab, section_key in zip(internal_tabs, section_titles):
+            with tab:
+                field_labels = grouped_fields[section_key]
+                html_content = f"""
+    <div class='section-box'>
+        <h3>{section_key}</h3>
+        <ul>
+    """
+                for label in field_labels:
+                    val = record.get(label, "")
+                    if val:
+                        lines = [line.strip() for line in str(val).split("\n") if line.strip()]
+                        for line in lines:
+                            html_content += f"<li>{line}</li>"
+                html_content += "</ul></div>"
+                st.markdown(html_content, unsafe_allow_html=True)
 
-        html_content = f"""
-<div style='padding: 1.2em; background-color: #2b2b2b; border-radius: 15px; margin-bottom: 1.2em; color: #B0A698;'>
-    <h3 style='color: #bda967; margin-bottom: 0.3em;'>{section_key}</h3>
-    <ul>
-"""
-        for label in field_labels:
-            val = record.get(label, "")
-            if val:
-                lines = [line.strip() for line in str(val).split("\n") if line.strip()]
-                for line in lines:
-                    html_content += f"<li>{line}</li>"
-        html_content += "</ul></div>"
-
-        st.markdown(html_content, unsafe_allow_html=True)
-        st.caption(f"{st.session_state.summary_section_index + 1} of {total_sections}")
 
         # ✅ Upload missing files section
         st.subheader("📎 Upload Missing Files")
@@ -369,9 +360,15 @@ def main():
             address = record["Location Address"]
             st.markdown(f"**Address:** {address}")
 
+            if all(col in df.columns for col in HEADERS + ["Location Address"]):
+                demo_df = df[["Location Address"] + HEADERS].copy()
+            else:
+                demo_df = None
+
+
             # Only run exploration once or reuse results
             if "last_demo" not in st.session_state or "last_cafes" not in st.session_state:
-                map_html, demo, cafes = run_explorer(address)
+                map_html, demo, cafes = run_explorer(address, demo_df = demo_df)
                 st.session_state["last_demo"] = demo
                 st.session_state["last_cafes"] = cafes
                 st.session_state["target_cafe_address"] = address
@@ -720,12 +717,12 @@ def main():
         demo_data = record.loc[columns[menu_index:]].dropna().to_dict()
 
         if "product_mix_df" not in st.session_state:
-            st.warning("Please upload Product mix ")
+            st.warning("Please upload Product mix")
             st.stop()
 
         pos_data = st.session_state["product_mix_df"].to_dict("records")
 
-        # 4) Define the 7 final prompts
+        # 4) Define prompts
         AI_PROMPTS = [
             "What patterns in product performance, margin, and customer behavior reveal the biggest opportunities for smarter pricing, bundling, or removal?",
             "Which menu or inventory items represent the highest operational risk in terms of waste, workflow disruption, or service delay?",
@@ -736,51 +733,64 @@ def main():
             "Based on current trajectory and financial performance, what growth, reinvestment, or optimization strategy will yield the highest ROI in the next 3–6 months?"
         ]
 
-        # 5) Run once
         context = {
             "form": form_data,
             "demographics": demo_data,
-            "pos": pos_data
+            "pos": pos_data,
         }
 
-        # ➕ Add persona clustering results if available
         if "persona_gpt_summary" in st.session_state:
-            context["persona_summary"] = st.session_state["persona_gpt_summary"]["persona_summary"]
-            context["top_items_summary"] = st.session_state["persona_gpt_summary"]["top_items_summary"]
-            context["persona_sizes"] = st.session_state["persona_gpt_summary"]["persona_sizes"]
-            context["persona_tags"] = st.session_state["persona_gpt_summary"]["persona_tags"]
+            context.update({
+                "persona_summary": st.session_state["persona_gpt_summary"]["persona_summary"],
+                "top_items_summary": st.session_state["persona_gpt_summary"]["top_items_summary"],
+                "persona_sizes": st.session_state["persona_gpt_summary"]["persona_sizes"],
+                "persona_tags": st.session_state["persona_gpt_summary"]["persona_tags"],
+            })
         else:
             st.warning("Persona GPT summary not found in session. Deep dive may be limited.")
 
-
+        # 5) Init state containers for single-question caching
         if "deep_dive_responses" not in st.session_state:
-            with st.spinner("Generating Advice [...]"):
-                st.session_state.deep_dive_responses = run_deep_dive(context, AI_PROMPTS)["responses"]
-                st.session_state.deep_followups = ["" for _ in AI_PROMPTS]
-                st.session_state.deep_followup_answers = ["" for _ in AI_PROMPTS]
+            st.session_state.deep_dive_responses = {}
 
-        # 6) Display each slide
+        if "deep_followups" not in st.session_state:
+            st.session_state.deep_followups = {}
+
+        if "deep_followup_answers" not in st.session_state:
+            st.session_state.deep_followup_answers = {}
+
+        # 6) Display single slide at a time
         num_prompts = len(AI_PROMPTS)
         idx = st.slider("Slide", 1, num_prompts, 1, key="ai_slide_index") - 1
+        query = AI_PROMPTS[idx]
 
-        prompt = st.session_state.deep_dive_responses[idx]["query"]
-        answer = st.session_state.deep_dive_responses[idx]["answer"]
+        # Trigger GPT only if that prompt hasn't already been run
+        if idx not in st.session_state.deep_dive_responses:
+            with st.spinner("Generating insight..."):
+                response = run_deep_dive(context, [query])["responses"][0]["answer"]
+                st.session_state.deep_dive_responses[idx] = response
+
+        prompt = query
+        answer = st.session_state.deep_dive_responses[idx]
 
         st.subheader(f"Q{idx + 1}: {prompt}")
         st.write(answer)
 
+        # 7) Follow-up interface
         st.markdown("#### Ask a follow-up:")
-        followup = st.text_area("Follow-up question", st.session_state.deep_followups[idx], key=f"followup_{idx}")
+        followup_key = f"followup_{idx}"
+        followup = st.text_area("Follow-up question", st.session_state.deep_followups.get(idx, ""), key=followup_key)
 
         if st.button("Ask", key=f"ask_btn_{idx}"):
             with st.spinner("Thinking..."):
-                followup_resp = run_deep_dive(context, [followup])["responses"][0]["answer"]
+                followup_resp = run_deep_dive(context, [f"Follow-up to: {prompt}\n\n{followup}"])["responses"][0]["answer"]
                 st.session_state.deep_followups[idx] = followup
                 st.session_state.deep_followup_answers[idx] = followup_resp
 
-        if st.session_state.deep_followup_answers[idx]:
+        if idx in st.session_state.deep_followup_answers:
             st.markdown("#### Response:")
             st.write(st.session_state.deep_followup_answers[idx])
+
 
 
 if __name__ == "__main__":

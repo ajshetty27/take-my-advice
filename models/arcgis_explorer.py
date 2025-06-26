@@ -145,20 +145,32 @@ def create_map(lat, lon, cafes, prog=None, selected_nearby_name=None):
     return m
 
 
-def run_explorer(address, selected_nearby_name=None):
+def run_explorer(address, selected_nearby_name=None, demo_df=None):
     prog = st.progress(0.0)
+
     token = get_token()
     if not token:
         return None, {}, []
     prog.progress(0.1)
+
+    # Step 2: Geocode address to lat/lon
     lat, lon = geocode(address, token)
     if lat is None:
         return None, {}, []
     prog.progress(0.15)
-    demo = fetch_demographics(lat, lon, token, prog)
+
+    # Step 3: Use existing demographics if available
+    if demo_df is not None and not demo_df.empty:
+        demo_row = demo_df.iloc[0]
+        demo = {col: demo_row[col] for col in KEY_LABELS.values() if col in demo_row}
+    else:
+        # Fall back to ArcGIS API call
+        demo = fetch_demographics(lat, lon, token, prog)
+    # Step 4: Nearby cafés + map
     cafes = fetch_nearby_cafes(lat, lon)
     map_obj = create_map(lat, lon, cafes, prog, selected_nearby_name=selected_nearby_name)
     return map_obj._repr_html_(), demo, cafes
+
 
 def reverse_geocode(lat, lon, token):
     url = "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/reverseGeocode"
