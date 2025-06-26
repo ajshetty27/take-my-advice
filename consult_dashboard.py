@@ -3,7 +3,6 @@ import json
 import os
 import base64
 import streamlit as st
-import streamlit.components.v1 as components
 import re
 import textwrap
 import gspread
@@ -11,17 +10,12 @@ from google.oauth2.service_account import Credentials
 
 
 from datetime import datetime
-from streamlit.components.v1 import html
 import pandas as pd
 from gspread_dataframe import set_with_dataframe
 
 from openai import OpenAI
 
 import io
-from pptx import Presentation
-from pptx.util import Inches, Pt
-from reportlab.lib.pagesizes import letter
-from reportlab.pdfgen import canvas
 import matplotlib.pyplot as plt
 
 
@@ -277,30 +271,35 @@ def main():
                 st.session_state.summary_section_index += 1
 
         # ✅ CSS Styling for section box
-        st.markdown("""
+        st.components.v1.html("""
         <style>
         .section-box {
-            padding: 1.2em;
-            background-color: #2b2b2b;
-            border-radius: 15px;
-            margin-bottom: 1.2em;
-            color: #B0A698;
+          padding: 1.2em;
+          background-color: #2b2b2b;
+          border-radius: 15px;
+          margin-bottom: 1.2em;
+          color: #B0A698;
         }
         .section-box h3 {
-            color: #bda967;
-            margin-bottom: 0.3em;
+          color: #bda967;
+          margin-bottom: 0.3em;
         }
         .section-box ul {
-            padding-left: 1.2em;
+          padding-left: 1.2em;
         }
         </style>
-        """, unsafe_allow_html=True)
+        """, height=0)
+
 
         # ✅ Render current section content
         section_key = section_titles[st.session_state.summary_section_index]
         field_labels = grouped_fields[section_key]
 
-        html_content = f"<div class='section-box'><h3>{section_key}</h3><ul>"
+        html_content = f"""
+<div style='padding: 1.2em; background-color: #2b2b2b; border-radius: 15px; margin-bottom: 1.2em; color: #B0A698;'>
+    <h3 style='color: #bda967; margin-bottom: 0.3em;'>{section_key}</h3>
+    <ul>
+"""
         for label in field_labels:
             val = record.get(label, "")
             if val:
@@ -333,7 +332,9 @@ def main():
                 else:
                     st.markdown(f"❌ No link for {label}")
             with col2:
-                uploaded = st.file_uploader(f"Re-upload {label}", key=key)
+                upload_key = f"upload_{key.lower().replace(' ', '_')}"
+                uploaded = st.file_uploader(f"Re-upload {label}", key=upload_key, type=None)
+
                 if uploaded:
                     try:
                         if uploaded.name.endswith(".csv"):
@@ -341,13 +342,17 @@ def main():
                         elif uploaded.name.endswith((".xlsx", ".xls")):
                             df_uploaded = pd.read_excel(uploaded)
                         else:
-                            df_uploaded = None
+                            st.warning(f"Unsupported file type for {label}. Please upload CSV or Excel.")
+                            continue
 
-                        if df_uploaded is not None:
-                            st.session_state[f"{key.lower().replace(' ', '_')}_df"] = df_uploaded
-                            st.success(f"{label} successfully re-uploaded!")
+                        st.session_state[f"{upload_key}_df"] = df_uploaded
+                        st.success(f"{label} successfully re-uploaded!")
                     except Exception as e:
                         st.error(f"Failed to process {label}: {e}")
+
+
+            st.markdown("---")  # divider for clarity
+
 
 
 
@@ -387,9 +392,30 @@ def main():
 
             col_map, col_info = st.columns([3, 2])
 
+            def wrap_in_html_shell(html_snippet):
+                return f"""
+                <html>
+                <head>
+                    <meta charset="utf-8">
+                    <style>
+                        html, body {{
+                            margin: 0;
+                            padding: 0;
+                            height: 100%;
+                            background-color: #121212;
+                        }}
+                    </style>
+                </head>
+                <body>{html_snippet}</body>
+                </html>
+                """
+
+            wrapped_map = wrap_in_html_shell(map_html)
+
             with col_map:
                 st.subheader("📍 Map View (your cafe in red)")
-                st.components.v1.html(map_html, height=500)
+                st.components.v1.html(wrapped_map, height=500)
+
 
             with col_info:
                 st.subheader("📊 Key Demographics")
