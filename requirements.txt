@@ -16,3 +16,4 @@ python-pptx
 torch
 tqdm
 scipy
+oauth2client

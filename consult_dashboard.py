@@ -18,6 +18,7 @@ from openai import OpenAI
 import io
 import matplotlib.pyplot as plt
 
+from streamlit.components.v1 import html
 
 
 from dotenv import load_dotenv
@@ -336,25 +337,25 @@ def main():
                     st.markdown(f"❌ No link for {label}")
             with col2:
                 upload_key = f"upload_{key.lower().replace(' ', '_')}"
-                uploaded = st.file_uploader(f"Re-upload {label}", key=upload_key, type=None)
+                uploaded = st.file_uploader(f"Re-upload {label}", key=upload_key)
 
                 if uploaded:
                     try:
+                        df_uploaded = None
                         if uploaded.name.endswith(".csv"):
                             df_uploaded = pd.read_csv(uploaded)
+                            st.write(f"CSV uploaded, shape: {df_uploaded.shape}")
                         elif uploaded.name.endswith((".xlsx", ".xls")):
                             df_uploaded = pd.read_excel(uploaded)
+                            st.write(f"Excel uploaded, shape: {df_uploaded.shape}")
                         else:
-                            st.warning(f"Unsupported file type for {label}. Please upload CSV or Excel.")
-                            continue
+                            st.warning(f"Unsupported file type: {uploaded.name.split('.')[-1]} — only CSV or Excel supported.")
 
-                        st.session_state[f"{upload_key}_df"] = df_uploaded
-                        st.success(f"{label} successfully re-uploaded!")
+                        if df_uploaded is not None:
+                            st.session_state[f"{key.lower().replace(' ', '_')}_df"] = df_uploaded
+                            st.success(f"{label} successfully re-uploaded!")
                     except Exception as e:
                         st.error(f"Failed to process {label}: {e}")
-
-
-            st.markdown("---")  # divider for clarity
 
 
 
@@ -419,29 +420,35 @@ def main():
                 st.subheader("📍 Map View (your cafe in red)")
                 st.components.v1.html(wrapped_map, height=500)
 
+                if st.button("💾 Save This Demographic Insight"):
+                    save_demographics_to_sheet(selected, demo)
+                    st.success("Demographic insight saved!")
+
 
             with col_info:
                 st.subheader("📊 Key Demographics")
                 selected_demo = st.selectbox("Select Demographic Metric", list(demo.keys()))
                 demo_val = demo[selected_demo]
 
-                st.markdown(f"""
+                demo_card_html = f"""
                 <div style='padding: 1em; border-radius: 10px; background-color: #2b2b2b; color: #bda967; text-align: center;'>
                     <h2 style='font-size: 2em; margin: 0;'>{demo_val}</h2>
                     <div style='font-size: 1.1em; color: #B0A698;'>{selected_demo}</div>
                 </div>
-                """, unsafe_allow_html=True)
+                """
+                html(demo_card_html, height=120)
 
                 st.subheader("☕ Nearby Cafés (marked in green)")
                 selected_row = df_cafes[df_cafes["Name"] == selected_flash].iloc[0]
-                st.markdown(f"""
-                <div style='background-color:#2b2b2b; padding: 1em; border-radius: 10px;'>
+                cafe_card_html = f"""
+                <div style='background-color:#2b2b2b; padding: 1em; border-radius: 10px; text-align: center;'>
                     <h3 style='color:#bda967;'>{selected_row["Name"]}</h3>
                     <p style='color:#B0A698;'>📍 {selected_row["Address"]}</p>
                 </div>
-                """, unsafe_allow_html=True)
+                """
+                html(cafe_card_html, height=120)
 
-# === New Comparison Block (More Efficient, Split) ===
+            # === New Comparison Block (More Efficient, Split) ===
             if "last_demo" in st.session_state:
                 st.subheader("Compare with Similar Demographic Regions")
 
@@ -467,7 +474,6 @@ def main():
                             top_k = get_similar_regions(st.session_state["last_demo"], batch, k)
                             st.session_state["top_k_regions"] = top_k
 
-            # === Show Region Selector and Map/Cafés, independently ===
             # === Show Region Selector and Map/Cafés independently ===
             if "top_k_regions" in st.session_state:
                 top_k = st.session_state["top_k_regions"]
