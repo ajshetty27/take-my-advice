@@ -35,14 +35,14 @@ WS_NAME     = "Sheet 1"
 AUTH_SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
 # 1) Decode the base64 JSON
-b64 = os.environ["GCLOUD_SA_KEY_B64"]
+b64 = st.secrets["GCLOUD_SA_KEY_B64"]
 sa_json = base64.b64decode(b64).decode("utf-8")
 info = json.loads(sa_json)
 
 # 2) Build your creds & client
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 client = OpenAI(api_key=OPENAI_API_KEY)
 
 
