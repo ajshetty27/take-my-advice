@@ -271,24 +271,7 @@ def main():
                 st.session_state.summary_section_index += 1
 
         # ✅ CSS Styling for section box
-        st.components.v1.html("""
-        <style>
-        .section-box {
-          padding: 1.2em;
-          background-color: #2b2b2b;
-          border-radius: 15px;
-          margin-bottom: 1.2em;
-          color: #B0A698;
-        }
-        .section-box h3 {
-          color: #bda967;
-          margin-bottom: 0.3em;
-        }
-        .section-box ul {
-          padding-left: 1.2em;
-        }
-        </style>
-        """, height=0)
+        # Removed unsafe HTML component for Render compatibility
 
 
         # ✅ Render current section content
@@ -414,7 +397,7 @@ def main():
 
             with col_map:
                 st.subheader("📍 Map View (your cafe in red)")
-                st.components.v1.html(wrapped_map, height=500)
+                # Removed unsafe HTML component for Render compatibility
 
                 if st.button("💾 Save This Demographic Insight"):
                     save_demographics_to_sheet(selected, demo)
@@ -510,7 +493,7 @@ def main():
                                     icon=folium.Icon(color="green", icon="coffee", prefix="fa")
                                 ).add_to(m2)
 
-                        st.components.v1.html(m2._repr_html_(), height=500)
+                        # Removed unsafe HTML component for Render compatibility, height=500)
 
                     with col_list:
                         st.markdown("### Nearby Cafés")
