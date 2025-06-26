@@ -29,10 +29,6 @@ from models.arcgis_explorer import *
 from models import buckets
 from models.deep_dive_model import run_deep_dive
 
-os.environ["STREAMLIT_SERVER_PORT"] = os.environ.get("PORT", "8501")
-os.environ["STREAMLIT_SERVER_ENABLECORS"] = "false"
-
-
 # --- GOOGLE SHEETS SETUP ---
 SHEET_ID    = "1bviJIh9XYcg0I8V2B_DQ5S8Ar-qxo8_qFY-R-pS1ir8"
 WS_NAME     = "Sheet 1"
