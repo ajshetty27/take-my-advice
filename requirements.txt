@@ -19,3 +19,4 @@ scipy
 oauth2client
 openpyxl
 fitz
+PyMuPDF
