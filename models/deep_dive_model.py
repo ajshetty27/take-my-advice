@@ -46,6 +46,15 @@ def run_deep_dive(context: dict, queries: list[str]) -> dict:
             *[f"{k}: {v}" for k, v in context["demographics"].items()],
             "=== POS Data ===",
             *(str(r) for r in context.get("pos", []) or ["No POS data provided."]),
+            "=== Expenses Data ===",
+            *(str(r) for r in context.get("expenses", []) or ["No Expenses data provided."]),
+            "=== Sales Data ===",
+            *(str(r) for r in context.get("sales", []) or ["No Sales data provided."]),
+            "=== Schedule ===",
+            *(str(r) for r in context.get("schedule", []) or ["No Schedule."]),
+            "=== competitors ===",
+            *(str(r) for r in context.get("competitors", []) or ["No Competitors"]),
+
             "=== Persona Summary ===",
             *(
                 [f"Cluster {c}: {d}" for c, d in context.get("persona_summary", {}).items()]
@@ -74,7 +83,7 @@ def run_deep_dive(context: dict, queries: list[str]) -> dict:
 
         # Actual OpenAI call (unchanged)
         resp = client.responses.create(
-            model="gpt-4o",
+            model="gpt-4o-mini",
             input=full_prompt,
             tools=[{"type": "web_search_preview"}]
         )

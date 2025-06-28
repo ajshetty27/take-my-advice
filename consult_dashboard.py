@@ -7,7 +7,8 @@ import re
 import textwrap
 import gspread
 from google.oauth2.service_account import Credentials
-
+import fitz
+import openpyxl
 
 from datetime import datetime
 import pandas as pd
@@ -236,9 +237,6 @@ def main():
 
         record = matches.iloc[0]
 
-        # --------------------------
-        # ✅ Grouped Field Setup
-        # --------------------------
         grouped_fields = {
             "Business Identity": [
                 "Business Name", "Location Address", "Stage", "Signature Item", "Brand Personality"
@@ -335,16 +333,34 @@ def main():
                         elif uploaded.name.endswith((".xlsx", ".xls")):
                             df_uploaded = pd.read_excel(uploaded)
                             st.write(f"Excel uploaded, shape: {df_uploaded.shape}")
+                        elif uploaded.name.endswith(".pdf"):
+                            try:
+                                pdf_text_key = f"{key.lower().replace(' ', '_')}_pdf_text"
+                                pdf_doc = fitz.open(stream=uploaded.read(), filetype="pdf")
+                                text = ""
+                                for page in pdf_doc:
+                                    text += page.get_text()
+
+                                # This sets and shows the text in one place — avoids conflict
+                                st.text_area("📄 Extracted PDF Content:", value=text, height=300, key=pdf_text_key)
+
+                                st.success(f"PDF uploaded and processed. Total pages: {len(pdf_doc)}")
+                                st.caption(f"✅ Stored in session_state under key: `{pdf_text_key}`")
+                            except Exception as e:
+                                st.error(f"Failed to read PDF: {e}")
+
+
                         else:
                             st.warning(f"Unsupported file type: {uploaded.name.split('.')[-1]} — only CSV or Excel supported.")
 
                         if df_uploaded is not None:
-                            st.session_state[f"{key.lower().replace(' ', '_')}_df"] = df_uploaded
-                            st.success(f"{label} successfully re-uploaded!")
+                            storage_key = f"{key.lower().replace(' ', '_')}_df"
+                            st.session_state[storage_key] = df_uploaded
+                            st.success(f"{label} successfully re-uploaded")
+                            st.caption(f"✅ Stored in session_state under key: `{storage_key}`")
+
                     except Exception as e:
                         st.error(f"Failed to process {label}: {e}")
-
-
 
 
         with st.expander("Explore", expanded=False):
@@ -379,6 +395,7 @@ def main():
             cafes = st.session_state["last_cafes"]
 
             df_cafes = pd.DataFrame(cafes).fillna("").astype(str)
+            st.session_state["nearby_cafes_df"] = df_cafes
 
             # -- Selectbox must come BEFORE the updated map call
             selected_flash = st.selectbox("Select Café Nearby to View", df_cafes["Name"].tolist())
@@ -722,6 +739,31 @@ def main():
 
         pos_data = st.session_state["product_mix_df"].to_dict("records")
 
+                # --- Check and load Employee Schedule PDF text ---
+        if "employee_schedule_pdf_text" not in st.session_state:
+            st.warning("❗ Please upload Employee Schedule PDF.")
+            st.stop()
+        schedule_text = st.session_state["employee_schedule_pdf_text"]
+
+        # --- Check and load Expenses ---
+        if "expenses_df" not in st.session_state:
+            st.warning("❗ Please upload Expenses file.")
+            st.stop()
+        expenses_data = st.session_state["expenses_df"].to_dict("records")
+
+        # --- Check and load Sales Summary ---
+        if "sales_summary_df" not in st.session_state:
+            st.warning("❗ Please upload Sales Summary file.")
+            st.stop()
+        sales_summary_data = st.session_state["sales_summary_df"].to_dict("records")
+
+        if "nearby_cafes_df" not in st.session_state:
+            st.warning("❗ Please upload Nearby")
+            st.stop()
+        competitors_data = st.session_state["nearby_cafes_df"].to_dict("records")
+
+
+
         # 4) Define prompts
         AI_PROMPTS = [
             "What patterns in product performance, margin, and customer behavior reveal the biggest opportunities for smarter pricing, bundling, or removal?",
@@ -737,6 +779,10 @@ def main():
             "form": form_data,
             "demographics": demo_data,
             "pos": pos_data,
+            "expenses": expenses_data,
+            "sales": sales_summary_data,
+            "schedule": schedule_text,
+            "competitors": competitors_data
         }
 
         if "persona_gpt_summary" in st.session_state:
